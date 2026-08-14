@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Yuning Gu · Blog</title>
+    <link>https://blog.yingqiu.me/</link>
+    <description>Notes on pharmaceutical sciences, research practice, and life between labs.</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 14 Aug 2026 15:44:40 GMT</lastBuildDate>
+    <item>
+      <title>Hello, blog.yingqiu.me</title>
+      <link>https://blog.yingqiu.me/posts/hello-yingqiu/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/hello-yingqiu/</guid>
+      <description>The blog now has its own home: a dedicated site on a subdomain, separate from the academic portfolio.</description>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+    </item>
+    <item>
+      <title>你好，blog.yingqiu.me</title>
+      <link>https://blog.yingqiu.me/zh/posts/hello-yingqiu/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/zh/posts/hello-yingqiu/</guid>
+      <description>博客有了自己的家：独立子域、独立站点，与学术主页分开，各自专注。</description>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+    </item>
+    <item>
+      <title>Writing a post on this blog</title>
+      <link>https://blog.yingqiu.me/posts/writing-a-post/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/writing-a-post/</guid>
+      <description>A short manual for this blog: where files live, what the front matter means, and how the Markdown / MDX features render.</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+    </item>
+    <item>
+      <title>如何在本博客写一篇文章</title>
+      <link>https://blog.yingqiu.me/zh/posts/writing-a-post/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/zh/posts/writing-a-post/</guid>
+      <description>本博客的简短手册：文件放在哪里、front matter 各字段的含义，以及 Markdown / MDX 特性的渲染效果。</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+    </item>
+  </channel>
+</rss>

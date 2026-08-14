@@ -1,0 +1,94 @@
+---
+title: '如何在本博客写一篇文章'
+description: '本博客的简短手册：文件放在哪里、front matter 各字段的含义，以及 Markdown / MDX 特性的渲染效果。'
+date: 2026-08-12
+tags: [指南, MDX]
+---
+
+这篇文章本身就是文档——下面所有效果，任何文章都可以直接使用。
+
+## 文件放在哪里
+
+文章是 `content/blog/` 下的 MDX 文件，每种语言一个文件：
+
+```text
+content/blog/
+├── en/
+│   ├── hello-yingqiu.mdx
+│   └── writing-a-post.mdx
+└── zh/
+    ├── hello-yingqiu.mdx
+    └── writing-a-post.mdx
+```
+
+文件名（去掉 `.mdx`）就是 slug，也就是网址：英文 `/posts/writing-a-post/`、中文 `/zh/posts/writing-a-post/`。中英版本通过相同的文件名配对。
+
+## Front matter
+
+每个文件以 YAML front matter 开头：
+
+```yaml
+---
+title: '文章标题'
+description: '一句话摘要，会出现在列表、RSS 和搜索结果里。'
+date: 2026-08-12
+updated: 2026-08-14   # 可选
+tags: [指南, MDX]     # 也支持逗号分隔的字符串
+draft: true           # 可选；为 true 时文章不出现在列表和 RSS 中
+---
+```
+
+| 字段            | 必填 | 用途                                       |
+| --------------- | ---- | ------------------------------------------ |
+| `title`         | 是   | 文章标题                                   |
+| `description`   | 是   | 卡片、RSS 与元数据使用的摘要               |
+| `date`          | 是   | `YYYY-MM-DD`，按时间倒序排列               |
+| `updated`       | 否   | 有值时显示在日期旁边                       |
+| `tags`          | 否   | 一组短标签                                 |
+| `draft`         | 否   | 设为 `true` 可暂时隐藏未完成的文章         |
+
+草稿不会出现在列表、RSS 和站点地图里，但可以用 `npm run dev` 在本地预览。
+
+## Markdown 特性
+
+- **加粗**、*斜体*、`行内代码`照常使用。
+- 链接是普通的：[博客首页](/zh/)。
+
+> 引用块会渲染成柔和的提示面板，就像这样。
+
+列表当然也没问题：
+
+1. 第一项
+2. 第二项
+3. 第三项
+
+### 代码块
+
+带语言的围栏代码块会自动语法高亮：
+
+```ts
+export function getPosts(lang: string): BlogPost[] {
+  return fs
+    .readdirSync(path.join(BLOG_DIR, lang))
+    .filter((file) => file.endsWith('.mdx'))
+    .map((file) => readPost(lang, file.replace(/\.mdx$/, '')))
+    .filter((post): post is BlogPost => post !== null && !post.draft)
+    .sort((a, b) => b.date.localeCompare(a.date));
+}
+```
+
+### 图片
+
+图片放到 `public/images/` 下，用绝对路径引用：
+
+```md
+![图片说明](/images/example.png)
+```
+
+## 双语文章
+
+同时写 `content/blog/en/<slug>.mdx` 和 `content/blog/zh/<slug>.mdx`。如果缺少某种语言版本，读者会看到一个指向已有版本的友好提示面板。两版不要求同时发布——只有英文版时，中文路由上会显示回退面板。
+
+## 发布
+
+提交到 `main` 并推送。GitHub Actions 工作流会用 `NEXT_PUBLIC_SITE_URL` 构建站点、重新生成 RSS，并把 `out/` 同步到服务器的 `/var/www/blog`——完整流程见主仓库的 `deploy/DEPLOY.md`。

@@ -1,0 +1,33 @@
+---
+title: 'Hello, blog.yingqiu.me'
+description: 'The blog now has its own home: a dedicated site on a subdomain, separate from the academic portfolio.'
+date: 2026-08-14
+tags: [Announcement, Website]
+---
+
+Welcome. This is the new, independent home of my writing — a blog of its own at `blog.yingqiu.me`, while the academic portfolio keeps living at [yingqiu.me](https://yingqiu.me/).
+
+## Why a separate site?
+
+> A portfolio is a shop window; a blog is a workshop. Keeping them apart keeps both focused.
+
+- **The portfolio stays academic.** Publications, experience, research — nothing else.
+- **The blog is free-form.** Research notes, reading summaries, and things I learn about drug development, in whatever length they need.
+- **Each site deploys independently.** Updating one never touches the other, and both are static files served from the same small server.
+
+## The plumbing
+
+Both sites are built with the same stack — Next.js, statically exported, Markdown / MDX posts, bilingual English and Chinese. The blog generates its own RSS feed, and every push to `main` rebuilds and ships it automatically:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://blog.yingqiu.me npm run build
+rsync -az --delete out/ deployer@yingqiu.me:/var/www/blog/
+```
+
+## What comes next
+
+1. Write here — research notes, reading summaries, and lessons from the lab.
+2. Keep the portfolio clean and up to date.
+3. Polish the details as I go: typography, dark mode, and the RSS feed.
+
+You can subscribe via [RSS](/feed.xml) if you prefer feeds over bookmarks. Questions and feedback are welcome — the fastest way to reach me is through the [portfolio contact page](https://yingqiu.me/en/contact/).

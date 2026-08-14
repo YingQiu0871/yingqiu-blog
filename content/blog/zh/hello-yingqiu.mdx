@@ -1,0 +1,33 @@
+---
+title: '你好，blog.yingqiu.me'
+description: '博客有了自己的家：独立子域、独立站点，与学术主页分开，各自专注。'
+date: 2026-08-14
+tags: [公告, 网站]
+---
+
+欢迎。这里是我的写作新家——博客独立成站，住在 `blog.yingqiu.me`，而学术主页继续在 [yingqiu.me](https://yingqiu.me/) 专注学术内容。
+
+## 为什么要拆成两个站？
+
+> 主页是橱窗，博客是工作室。分开，才能各司其职。
+
+- **主页保持纯学术。** 论文、经历、研究方向——别无其他。
+- **博客自由书写。** 科研笔记、文献小结、药物研发路上的所学所思，长短随意。
+- **两个站独立部署。** 改一个不影响另一个；二者都是静态文件，跑在同一台小服务器上。
+
+## 背后的管线
+
+两个站用同一套技术——Next.js 静态导出、Markdown / MDX 文章、中英双语。博客自带 RSS，每次 push 到 `main` 自动构建上线：
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://blog.yingqiu.me npm run build
+rsync -az --delete out/ deployer@yingqiu.me:/var/www/blog/
+```
+
+## 接下来
+
+1. 在这里写东西——科研笔记、文献小结、实验室里的经验教训。
+2. 让主页保持干净、常更新。
+3. 一路打磨细节：排版、暗色模式、RSS。
+
+喜欢订阅器的话可以通过 [RSS](/feed.xml) 订阅。有问题或建议，通过[主页联系页](https://yingqiu.me/zh/contact/)找我最方便。

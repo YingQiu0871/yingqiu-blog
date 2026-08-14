@@ -1,0 +1,94 @@
+---
+title: 'Writing a post on this blog'
+description: 'A short manual for this blog: where files live, what the front matter means, and how the Markdown / MDX features render.'
+date: 2026-08-12
+tags: [Guide, MDX]
+---
+
+This post doubles as documentation. Everything below is written with the same features available to any article.
+
+## Where files live
+
+Posts are MDX files under `content/blog/`, one file per language:
+
+```text
+content/blog/
+├── en/
+│   ├── hello-yingqiu.mdx
+│   └── writing-a-post.mdx
+└── zh/
+    ├── hello-yingqiu.mdx
+    └── writing-a-post.mdx
+```
+
+The filename (without `.mdx`) is the slug — it becomes the URL: `/posts/writing-a-post/` (English) or `/zh/posts/writing-a-post/` (Chinese). The two language versions pair up by using the same filename.
+
+## Front matter
+
+Every file starts with YAML front matter:
+
+```yaml
+---
+title: 'The post title'
+description: 'One sentence shown in listings, RSS, and search results.'
+date: 2026-08-12
+updated: 2026-08-14   # optional
+tags: [Guide, MDX]    # comma-separated string also works
+draft: true           # optional; hides the post from listings and RSS
+---
+```
+
+| Field         | Required | Purpose                                          |
+| ------------- | -------- | ------------------------------------------------ |
+| `title`       | yes      | Post title                                       |
+| `description` | yes      | Summary for cards, RSS, and metadata             |
+| `date`        | yes      | `YYYY-MM-DD`, sorted newest first                |
+| `updated`     | no       | Shown next to the date when present              |
+| `tags`        | no       | List of short labels                              |
+| `draft`       | no       | Set `true` to hide a post until it is ready      |
+
+Drafts are ignored by listings, RSS, and the sitemap, but you can preview them locally with `npm run dev`.
+
+## Markdown features
+
+- **Bold**, *italic*, and `inline code` work as usual.
+- Links are normal: [the blog index](/).
+
+> Blockquotes render as a soft panel, like this one.
+
+Lists, of course:
+
+1. First item
+2. Second item
+3. Third item
+
+### Code blocks
+
+Fenced code with a language gets syntax highlighting:
+
+```ts
+export function getPosts(lang: string): BlogPost[] {
+  return fs
+    .readdirSync(path.join(BLOG_DIR, lang))
+    .filter((file) => file.endsWith('.mdx'))
+    .map((file) => readPost(lang, file.replace(/\.mdx$/, '')))
+    .filter((post): post is BlogPost => post !== null && !post.draft)
+    .sort((a, b) => b.date.localeCompare(a.date));
+}
+```
+
+### Images
+
+Put images in `public/images/` and reference them with an absolute path:
+
+```md
+![Alt text](/images/example.png)
+```
+
+## Bilingual posts
+
+Write both `content/blog/en/<slug>.mdx` and `content/blog/zh/<slug>.mdx`. If a language version is missing, readers see a friendly panel linking to the existing one. There is no requirement to publish both at once — an English post alone simply shows the fallback panel on the Chinese route.
+
+## Publishing
+
+Commit to `main` and push. The GitHub Actions workflow builds the site with `NEXT_PUBLIC_SITE_URL`, regenerates the RSS feed, and syncs `out/` to `/var/www/blog` on the server — the full setup is documented in the portfolio repository's `deploy/DEPLOY.md`.
