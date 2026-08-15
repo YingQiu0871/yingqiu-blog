@@ -58,11 +58,6 @@ body {
   min-height: 100vh;
   margin: 0;
   color: var(--ink);
-  background:
-    radial-gradient(circle at 10% 6%, rgba(237, 110, 160, 0.17), transparent 26rem),
-    radial-gradient(circle at 90% 12%, rgba(111, 184, 236, 0.2), transparent 28rem),
-    radial-gradient(circle at 50% 96%, rgba(168, 220, 240, 0.22), transparent 30rem),
-    linear-gradient(180deg, var(--page) 10%, var(--page-deep) 100%);
   font-family:
     'Baloo 2', Inter, Aptos, 'Segoe UI', 'LXGW WenKai Screen', 'PingFang SC',
     'Microsoft YaHei', system-ui, sans-serif;
@@ -72,22 +67,28 @@ body {
   overflow-x: hidden;
 }
 
-/* Full-page scenery backdrop; content floats above as frosted glass */
+/* Full-page scenery backdrop; content floats above as frosted glass.
+   z-index 0 (not -1) so it paints ABOVE the body's own background. */
 body::before {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   content: '';
+  pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(253, 251, 251, 0.42) 0%, rgba(253, 251, 251, 0.56) 100%),
+    radial-gradient(circle at 10% 6%, rgba(237, 110, 160, 0.14), transparent 26rem),
+    radial-gradient(circle at 90% 12%, rgba(111, 184, 236, 0.16), transparent 28rem),
+    linear-gradient(180deg, rgba(253, 251, 251, 0.24) 0%, rgba(253, 251, 251, 0.42) 100%),
     url('/images/scenery-1920.jpg') center / cover no-repeat;
 }
 
 :root[data-theme='dark'] body::before {
   background:
-    linear-gradient(180deg, rgba(33, 37, 43, 0.55) 0%, rgba(33, 37, 43, 0.72) 100%),
+    radial-gradient(circle at 10% 6%, rgba(241, 139, 179, 0.08), transparent 26rem),
+    radial-gradient(circle at 90% 12%, rgba(111, 184, 236, 0.1), transparent 28rem),
+    linear-gradient(180deg, rgba(33, 37, 43, 0.34) 0%, rgba(33, 37, 43, 0.54) 100%),
     url('/images/scenery-1920.jpg') center / cover no-repeat;
-  filter: brightness(0.62) saturate(1.05);
+  filter: brightness(0.72) saturate(1.05);
 }
 
 a {
