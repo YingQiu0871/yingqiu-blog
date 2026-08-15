@@ -1510,7 +1510,7 @@ a.tag:hover {
     display: none;
   }
 
-  .blog-nav > a {
+  .blog-nav > a:not(.language-link) {
     display: none;
   }
 
