@@ -25,30 +25,37 @@ export default function EnglishIndexPage() {
 
   return (
     <>
-      <section className="hero">
-        <div className="hero-avatar" aria-hidden="true">
-          🌸
+      <section className="hero-banner">
+        <div className="hero-petals" aria-hidden="true">
+          {Array.from({ length: 10 }, (_, index) => (
+            <span className="petal" key={index} />
+          ))}
         </div>
-        <h1>Yuning Gu · Blog</h1>
-        <p className="slogan" lang="zh">
-          {SLOGAN}
-        </p>
-        <p className="slogan-en">{SLOGAN_EN}</p>
-        <div className="hero-stats">
-          <div>
-            <strong>{posts.length}</strong>
-            <span>Articles</span>
+        <div className="hero">
+          <div className="hero-avatar">
+            <img src="/images/avatar.jpg" alt="" width={460} height={460} />
           </div>
-          <span className="hero-divider" aria-hidden="true" />
-          <div>
-            <strong>{tagCount}</strong>
-            <span>Tags</span>
+          <h1>Yuning Gu · Blog</h1>
+          <p className="slogan" lang="zh">
+            {SLOGAN}
+          </p>
+          <p className="slogan-en">{SLOGAN_EN}</p>
+          <div className="hero-stats">
+            <div>
+              <strong>{posts.length}</strong>
+              <span>Articles</span>
+            </div>
+            <span className="hero-divider" aria-hidden="true" />
+            <div>
+              <strong>{tagCount}</strong>
+              <span>Tags</span>
+            </div>
+            <span className="hero-divider" aria-hidden="true" />
+            <a href="/feed.xml">
+              <strong>RSS</strong>
+              <span>Subscribe</span>
+            </a>
           </div>
-          <span className="hero-divider" aria-hidden="true" />
-          <a href="/feed.xml">
-            <strong>RSS</strong>
-            <span>Subscribe</span>
-          </a>
         </div>
       </section>
 

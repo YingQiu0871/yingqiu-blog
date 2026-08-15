@@ -38,20 +38,15 @@ export default function BlogFrame({
   return (
     <div className="blog-frame">
       <div className="petals" aria-hidden="true">
-        <span className="petal" />
-        <span className="petal" />
-        <span className="petal" />
-        <span className="petal" />
-        <span className="petal" />
-        <span className="petal" />
-        <span className="petal" />
-        <span className="petal" />
+        {Array.from({ length: 24 }, (_, index) => (
+          <span className="petal" key={index} />
+        ))}
       </div>
       <header className="blog-header">
         <div className="blog-header-inner">
           <Link className="blog-brand" href={lang === 'zh' ? '/zh/' : '/'}>
             <span className="brand-mark" aria-hidden="true">
-              🌸
+              <img src="/images/avatar.jpg" alt="" width={460} height={460} />
             </span>
             <span className="brand-copy">
               <strong>{lang === 'zh' ? '谷昱宁的博客' : 'Yuning Gu · Blog'}</strong>

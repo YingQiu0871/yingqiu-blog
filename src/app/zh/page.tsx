@@ -24,27 +24,34 @@ export default function ChineseIndexPage() {
 
   return (
     <>
-      <section className="hero">
-        <div className="hero-avatar" aria-hidden="true">
-          🌸
+      <section className="hero-banner">
+        <div className="hero-petals" aria-hidden="true">
+          {Array.from({ length: 10 }, (_, index) => (
+            <span className="petal" key={index} />
+          ))}
         </div>
-        <h1>谷昱宁的博客</h1>
-        <p className="slogan">{SLOGAN}</p>
-        <div className="hero-stats">
-          <div>
-            <strong>{posts.length}</strong>
-            <span>文章</span>
+        <div className="hero">
+          <div className="hero-avatar">
+            <img src="/images/avatar.jpg" alt="" width={460} height={460} />
           </div>
-          <span className="hero-divider" aria-hidden="true" />
-          <div>
-            <strong>{tagCount}</strong>
-            <span>标签</span>
+          <h1>谷昱宁的博客</h1>
+          <p className="slogan">{SLOGAN}</p>
+          <div className="hero-stats">
+            <div>
+              <strong>{posts.length}</strong>
+              <span>文章</span>
+            </div>
+            <span className="hero-divider" aria-hidden="true" />
+            <div>
+              <strong>{tagCount}</strong>
+              <span>标签</span>
+            </div>
+            <span className="hero-divider" aria-hidden="true" />
+            <a href="/feed.xml">
+              <strong>RSS</strong>
+              <span>订阅</span>
+            </a>
           </div>
-          <span className="hero-divider" aria-hidden="true" />
-          <a href="/feed.xml">
-            <strong>RSS</strong>
-            <span>订阅</span>
-          </a>
         </div>
       </section>
 
