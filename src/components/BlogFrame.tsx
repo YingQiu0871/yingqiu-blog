@@ -37,11 +37,21 @@ export default function BlogFrame({
 
   return (
     <div className="blog-frame">
+      <div className="petals" aria-hidden="true">
+        <span className="petal" />
+        <span className="petal" />
+        <span className="petal" />
+        <span className="petal" />
+        <span className="petal" />
+        <span className="petal" />
+        <span className="petal" />
+        <span className="petal" />
+      </div>
       <header className="blog-header">
         <div className="blog-header-inner">
           <Link className="blog-brand" href={lang === 'zh' ? '/zh/' : '/'}>
             <span className="brand-mark" aria-hidden="true">
-              YG
+              🌸
             </span>
             <span className="brand-copy">
               <strong>{lang === 'zh' ? '谷昱宁的博客' : 'Yuning Gu · Blog'}</strong>

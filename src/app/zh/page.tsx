@@ -16,23 +16,43 @@ export function generateMetadata() {
   });
 }
 
+const SLOGAN = '人面不知何处去，桃花依旧笑春风';
+
 export default function ChineseIndexPage() {
   const posts = getPosts('zh');
+  const tagCount = new Set(posts.flatMap((post) => post.tags)).size;
 
   return (
     <>
+      <section className="hero">
+        <div className="hero-avatar" aria-hidden="true">
+          🌸
+        </div>
+        <h1>谷昱宁的博客</h1>
+        <p className="slogan">{SLOGAN}</p>
+        <div className="hero-stats">
+          <div>
+            <strong>{posts.length}</strong>
+            <span>文章</span>
+          </div>
+          <span className="hero-divider" aria-hidden="true" />
+          <div>
+            <strong>{tagCount}</strong>
+            <span>标签</span>
+          </div>
+          <span className="hero-divider" aria-hidden="true" />
+          <a href="/feed.xml">
+            <strong>RSS</strong>
+            <span>订阅</span>
+          </a>
+        </div>
+      </section>
+
       <header className="blog-heading">
         <p className="eyebrow">随笔与笔记</p>
-        <h1>博客</h1>
+        <h1>最新文章</h1>
         <p>记录药物科学、科研方法与学习生活中的思考。文章以 Markdown / MDX 撰写，支持 RSS 订阅。</p>
       </header>
-
-      <div className="blog-toolbar">
-        <span>{posts.length === 0 ? '还没有文章' : `共 ${posts.length} 篇文章`}</span>
-        <a className="text-link" href="/feed.xml">
-          RSS ↗
-        </a>
-      </div>
 
       <div className="stack-list">
         {posts.map((post) => (
