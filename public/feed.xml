@@ -5,7 +5,7 @@
     <link>https://blog.yingqiu.me/</link>
     <description>Notes, letters and fragments by Yingqiu — life, old writings, music, reading, and the long road of learning.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Aug 2026 14:13:48 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 14:24:29 GMT</lastBuildDate>
     <item>
       <title>A Letter about Phones and Computers (Kunming No.1)</title>
       <link>https://blog.yingqiu.me/posts/kunming-no1-letter/</link>
@@ -67,6 +67,18 @@
       <category>Primary school</category>
       <category>2012</category>
       <category>Swimming</category>
+    </item>
+    <item>
+      <title>NetEase Cloud Music Playlist (auto-synced)</title>
+      <link>https://blog.yingqiu.me/posts/wangyi-playlist/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/wangyi-playlist/</guid>
+      <description>My NetEase Cloud Music &quot;Favourite Songs&quot; playlist, auto-synced to this blog on every build — the most recent 120 tracks, with the full playlist in the player below.</description>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Music</category>
+      <category>NetEase</category>
+      <category>Playlist</category>
+      <category>Auto-sync</category>
     </item>
     <item>
       <title>My Great-Grandfather</title>
@@ -242,6 +254,18 @@
       <category>2012</category>
       <category>随笔</category>
       <category>游泳</category>
+    </item>
+    <item>
+      <title>网易云歌单（自动同步）</title>
+      <link>https://blog.yingqiu.me/zh/posts/wangyi-playlist/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/zh/posts/wangyi-playlist/</guid>
+      <description>我的网易云「喜欢的音乐」歌单自动同步到本站：每次构建时更新，展示最近收藏的 120 首；完整歌单用下方播放器播放。</description>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>流声</category>
+      <category>网易云</category>
+      <category>歌单</category>
+      <category>自动同步</category>
     </item>
     <item>
       <title>我的太姥爷</title>

@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-feed.mjs",
+    "prebuild": "node scripts/generate-feed.mjs && node scripts/sync-wangyi.mjs",
     "build": "next build",
     "start": "next start",
     "feed": "node scripts/generate-feed.mjs",
+    "music:sync": "node scripts/sync-wangyi.mjs",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
