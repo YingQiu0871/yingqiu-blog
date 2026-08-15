@@ -74,6 +74,19 @@ function toDateString(value: unknown): string {
   return '';
 }
 
+/**
+ * For 旧笺 originalDate: YAML may parse `2016` as a number, `2017-10-21` as a
+ * Date, and `2021-06` as a string — normalize all of them to `YYYY[-MM[-DD]]`.
+ */
+function toOriginalDateString(value: unknown): string | undefined {
+  if (value instanceof Date) return value.toISOString().slice(0, 10);
+  if (typeof value === 'string') return value;
+  if (typeof value === 'number' && Number.isInteger(value) && value > 1900 && value < 2200) {
+    return String(value);
+  }
+  return undefined;
+}
+
 function estimateReadingMinutes(lang: Locale, body: string): number {
   // Strip code fences for a fairer estimate.
   const text = body.replace(/```[\s\S]*?```/g, ' ');
@@ -106,7 +119,7 @@ function readPost(lang: Locale, slug: string): BlogPost | null {
     date,
     updated: updated || undefined,
     category: isCategoryId(data.category) ? data.category : 'fuguang',
-    originalDate: data.originalDate ? toDateString(data.originalDate) || undefined : undefined,
+    originalDate: toOriginalDateString(data.originalDate),
     rereadNote: typeof data.rereadNote === 'string' ? data.rereadNote : undefined,
     quote: typeof data.quote === 'string' ? data.quote : undefined,
     quoteSource: typeof data.quoteSource === 'string' ? data.quoteSource : undefined,
