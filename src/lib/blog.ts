@@ -154,10 +154,11 @@ export function getPosts(lang: string, options?: { category?: string; tag?: stri
     });
 
   if (options?.category === 'jiujian') {
+    // 旧笺 sorts by original writing date, newest first.
     return posts.sort(
       (a, b) =>
-        (a.originalDate ?? '9999-99').localeCompare(b.originalDate ?? '9999-99') ||
-        a.date.localeCompare(b.date),
+        (b.originalDate ?? '').localeCompare(a.originalDate ?? '') ||
+        b.date.localeCompare(a.date),
     );
   }
   return posts.sort((a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug));

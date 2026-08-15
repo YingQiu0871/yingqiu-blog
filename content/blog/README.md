@@ -43,7 +43,7 @@ music:
 ---
 ```
 
-- **旧笺**栏目按 `originalDate` 升序排列（童年在前），其余栏目按 `date` 倒序。
+- **旧笺**栏目按 `originalDate` 倒序排列（最近在前），其余栏目按 `date` 倒序。
 - **流声**文章可在正文中用 `<Embed src="https://open.spotify.com/embed/track/…" height="152" />` 嵌入 Spotify / Apple Music / 网易云等 iframe 播放器。
 - **拾句**的 `quote`/`quoteSource` 会在卡片和文章页渲染成摘句面板，正文可以只写一两句感想。
 
