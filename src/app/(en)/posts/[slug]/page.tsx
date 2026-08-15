@@ -1,11 +1,8 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import remarkGfm from 'remark-gfm';
-import rehypeHighlight from 'rehype-highlight';
-import rehypeSlug from 'rehype-slug';
-import { formatPostDate, getAllSlugs, getPost, postPath, readingTimeLabel } from '@/lib/blog';
+import { getAllSlugs, getPost, postPath } from '@/lib/blog';
 import { createPageMetadata } from '@/lib/metadata';
+import PostView from '@/components/PostView';
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
@@ -23,13 +20,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     zh: { title: post.title, description: post.description },
   });
 }
-
-const mdxOptions = {
-  mdxOptions: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeSlug, rehypeHighlight],
-  },
-};
 
 export default async function EnglishPostPage({
   params,
@@ -63,36 +53,5 @@ export default async function EnglishPostPage({
     );
   }
 
-  return (
-    <article>
-      <header className="blog-post-header">
-        <p className="eyebrow">Blog</p>
-        <h1>{post.title}</h1>
-        <div className="blog-post-meta">
-          <time dateTime={post.date}>{formatPostDate(post.date, 'en')}</time>
-          <span>{readingTimeLabel(post)}</span>
-          {post.updated ? <span>Updated {formatPostDate(post.updated, 'en')}</span> : null}
-        </div>
-        {post.tags.length > 0 && (
-          <div className="tag-list">
-            {post.tags.map((tag) => (
-              <span className="tag" key={tag}>
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-      </header>
-
-      <div className="blog-article">
-        <MDXRemote source={post.source} options={mdxOptions} />
-      </div>
-
-      <footer className="blog-post-footer">
-        <Link className="text-link" href="/">
-          ← Back to blog
-        </Link>
-      </footer>
-    </article>
-  );
+  return <PostView lang="en" post={post} />;
 }

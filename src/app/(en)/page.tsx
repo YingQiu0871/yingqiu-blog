@@ -1,17 +1,18 @@
-import Link from 'next/link';
-import { formatPostDate, getPosts, postPath, readingTimeLabel } from '@/lib/blog';
+import { getCategoryCounts, getPosts } from '@/lib/blog';
+import { categoryName, categoryPath } from '@/lib/categories';
 import { createPageMetadata } from '@/lib/metadata';
+import PostCard from '@/components/PostCard';
 
 export function generateMetadata() {
   return createPageMetadata('en', '/', {
     en: {
       title: 'Home',
       description:
-        'Notes, letters and fragments by Yingqiu — on pharmaceutical sciences, research practice, and life between labs.',
+        'Notes, letters and fragments by Yingqiu — on life, old writings, music, reading, and the long road of learning.',
     },
     zh: {
       title: '首页',
-      description: '来自 Yingqiu 的笔记、信笺与片段，记录药物科学、科研方法与学习生活的思考。',
+      description: '来自 Yingqiu 的笔记、信笺与片段：生活、旧文、音乐、阅读，以及求索的长路。',
     },
   });
 }
@@ -20,8 +21,10 @@ const SLOGAN = '人面不知何处去，桃花依旧笑春风';
 const SLOGAN_EN = 'The face I knew is nowhere to be found; the peach blossoms still smile in the spring breeze.';
 
 export default function EnglishIndexPage() {
-  const posts = getPosts('en');
-  const tagCount = new Set(posts.flatMap((post) => post.tags)).size;
+  const allPosts = getPosts('en');
+  const posts = allPosts.slice(0, 8);
+  const tagCount = new Set(allPosts.flatMap((post) => post.tags)).size;
+  const counts = getCategoryCounts('en');
 
   return (
     <>
@@ -37,8 +40,8 @@ export default function EnglishIndexPage() {
         <p className="slogan-en">{SLOGAN_EN}</p>
         <div className="hero-stats">
           <div>
-            <strong>{posts.length}</strong>
-            <span>Articles</span>
+            <strong>{allPosts.length}</strong>
+            <span>Entries</span>
           </div>
           <span className="hero-divider" aria-hidden="true" />
           <div>
@@ -54,36 +57,38 @@ export default function EnglishIndexPage() {
       </section>
 
       <header className="blog-heading">
-        <p className="eyebrow">Writing &amp; notes</p>
-        <h1>Latest</h1>
+        <p className="eyebrow">Contents</p>
+        <h1>Five sections</h1>
         <p>
-          Notes on pharmaceutical sciences, research practice, and life between
-          labs. Posts are written in Markdown / MDX, and an RSS feed is available.
+          Moments are the self of now, Old Letters the self of then, Music what
+          I love, Quest what I seek, and Quotes what I meet in other people&apos;s
+          words and keep.
         </p>
       </header>
+      <div className="category-grid">
+        {counts.map(({ category, count }) => (
+          <a className="category-card" key={category.id} href={categoryPath('en', category.id)}>
+            <span className="category-dot" style={{ background: category.accent }} aria-hidden="true" />
+            <span className="category-card-name">{categoryName(category, 'en')}</span>
+            <span className="category-card-line">{category.en.homeLine}</span>
+            <span className="category-card-count">
+              {count} {count === 1 ? 'entry' : 'entries'}
+            </span>
+          </a>
+        ))}
+      </div>
 
+      <header className="blog-heading">
+        <p className="eyebrow">Recent</p>
+        <h1>Recent writings</h1>
+        <p>
+          Occasional notes on life, old times, sounds and reading. New pages
+          appear slowly — only when there is something worth keeping.
+        </p>
+      </header>
       <div className="stack-list">
         {posts.map((post) => (
-          <article className="content-card" key={post.slug}>
-            <Link className="blog-card-link" href={postPath('en', post.slug)}>
-              <h2>{post.title}</h2>
-              <span className="meta">
-                <time dateTime={post.date}>{formatPostDate(post.date, 'en')}</time>
-                {' · '}
-                {readingTimeLabel(post)}
-              </span>
-              <p>{post.description}</p>
-            </Link>
-            {post.tags.length > 0 && (
-              <div className="tag-list">
-                {post.tags.map((tag) => (
-                  <span className="tag" key={tag}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
-          </article>
+          <PostCard key={post.slug} post={post} lang="en" showCategory />
         ))}
       </div>
     </>

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     default: '秋水有信',
     template: '%s | 秋水有信',
   },
-  description: '关于药物科学、科研方法与学习生活的随笔与笔记。',
+  description: '来自 Yingqiu 的笔记、信笺与片段：生活、旧文、音乐、阅读，以及求索的长路。',
 };
 
 export default function ChineseLayout({ children }: { children: React.ReactNode }) {

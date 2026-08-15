@@ -8,6 +8,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://blog.yingqiu.me';
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'blog');
 const OUT_FILE = path.join(process.cwd(), 'public', 'feed.xml');
 
+// Mirrors src/lib/categories.ts (kept standalone so the script needs no TS build).
+const CATEGORY_LABELS = {
+  fuguang: { en: 'Moments', zh: '浮光' },
+  jiujian: { en: 'Old Letters', zh: '旧笺' },
+  liusheng: { en: 'Music', zh: '流声' },
+  qiushu: { en: 'Quest', zh: '求索' },
+  shiju: { en: 'Quotes', zh: '拾句' },
+};
+
 const escapeXml = (value) =>
   String(value)
     .replaceAll('&', '&amp;')
@@ -20,6 +29,17 @@ const escapeXml = (value) =>
 const toDateString = (value) => {
   if (value instanceof Date) return value.toISOString().slice(0, 10);
   return typeof value === 'string' ? value : '';
+};
+
+const parseTags = (raw) => {
+  if (Array.isArray(raw)) return raw.map(String);
+  if (typeof raw === 'string') {
+    return raw
+      .split(',')
+      .map((tag) => tag.trim())
+      .filter(Boolean);
+  }
+  return [];
 };
 
 const postUrl = (lang, slug) =>
@@ -47,6 +67,8 @@ async function collectPosts() {
         date,
         lang,
         slug: file.replace(/\.mdx$/, ''),
+        category: typeof data.category === 'string' ? data.category : 'fuguang',
+        tags: parseTags(data.tags),
       });
     }
   }
@@ -56,16 +78,22 @@ async function collectPosts() {
 const posts = await collectPosts();
 
 const items = posts
-  .map(
-    (post) => `    <item>
+  .map((post) => {
+    const categoryLabel = CATEGORY_LABELS[post.category]?.[post.lang] ?? post.category;
+    const tagLines = post.tags
+      .map((tag) => `      <category>${escapeXml(tag)}</category>`)
+      .join('\n');
+    return `    <item>
       <title>${escapeXml(post.title)}</title>
       <link>${postUrl(post.lang, post.slug)}</link>
       <guid isPermaLink="true">${postUrl(post.lang, post.slug)}</guid>
       <description>${escapeXml(post.description)}</description>
       <pubDate>${new Date(`${post.date}T00:00:00Z`).toUTCString()}</pubDate>
       <language>${post.lang === 'zh' ? 'zh-CN' : 'en-GB'}</language>
-    </item>`,
-  )
+      <category>${escapeXml(categoryLabel)}</category>
+${tagLines}
+    </item>`;
+  })
   .join('\n');
 
 const feed = `<?xml version="1.0" encoding="UTF-8"?>
@@ -73,7 +101,7 @@ const feed = `<?xml version="1.0" encoding="UTF-8"?>
   <channel>
     <title>Qiushui Youxin · 秋水有信</title>
     <link>${SITE_URL}/</link>
-    <description>Notes, letters and fragments by Yingqiu — on pharmaceutical sciences, research practice, and life between labs.</description>
+    <description>Notes, letters and fragments by Yingqiu — life, old writings, music, reading, and the long road of learning.</description>
     <language>en</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 ${items}

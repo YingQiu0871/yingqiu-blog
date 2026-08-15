@@ -3,6 +3,13 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { Locale } from '@/lib/i18n/config';
+import {
+  CATEGORIES,
+  archivePath,
+  categoryName,
+  categoryPath,
+  getCategoryBySlug,
+} from '@/lib/categories';
 import { MAIN_SITE_URL } from '@/lib/metadata';
 
 const SITE_FEED = '/feed.xml';
@@ -16,17 +23,30 @@ export default function BlogFrame({
 }) {
   const pathname = usePathname();
 
+  const homePath = (locale: Locale) => (locale === 'zh' ? '/zh/' : '/');
+
   const switchLanguage = (nextLang: Locale): string => {
-    if (nextLang === 'zh') {
-      if (pathname.startsWith('/zh')) return pathname;
-      return pathname === '/' ? '/zh/' : `/zh${pathname}`;
+    if (nextLang === lang) return pathname;
+    const isZhPath = pathname.startsWith('/zh');
+    const rest = isZhPath ? pathname.replace(/^\/zh/, '') : pathname;
+    const base = rest === '' ? '/' : rest;
+    const firstSegment = base.split('/')[1] ?? '';
+
+    // Category pages: map the slug across languages.
+    const category = getCategoryBySlug(lang, firstSegment);
+    if (category) return categoryPath(nextLang, category.id);
+
+    if (base.startsWith('/archive')) return archivePath(nextLang);
+    // Tags differ between languages; land on the counterpart archive page.
+    if (base.startsWith('/tags/')) return archivePath(nextLang);
+    if (base.startsWith('/posts/')) {
+      const slug = base.replace('/posts/', '').replace(/\/$/, '');
+      return nextLang === 'zh' ? `/zh/posts/${slug}/` : `/posts/${slug}/`;
     }
-    if (pathname.startsWith('/zh')) {
-      const rest = pathname.replace(/^\/zh/, '');
-      return rest === '' || rest === '/' ? '/' : rest;
-    }
-    return pathname;
+    return homePath(nextLang);
   };
+
+  const isActive = (href: string) => (href === homePath(lang) ? pathname === href : pathname === href);
 
   const toggleTheme = () => {
     const root = document.documentElement;
@@ -44,7 +64,7 @@ export default function BlogFrame({
       </div>
       <header className="blog-header">
         <div className="blog-header-inner">
-          <Link className="blog-brand" href={lang === 'zh' ? '/zh/' : '/'}>
+          <Link className="blog-brand" href={homePath(lang)}>
             <span className="brand-mark" aria-hidden="true">
               <img src="/images/avatar.jpg" alt="" width={460} height={460} />
             </span>
@@ -55,6 +75,21 @@ export default function BlogFrame({
               </small>
             </span>
           </Link>
+
+          <nav className="category-strip" aria-label={lang === 'zh' ? '栏目导航' : 'Section navigation'}>
+            <Link className={isActive(homePath(lang)) ? 'active' : ''} href={homePath(lang)}>
+              {lang === 'zh' ? '首页' : 'Home'}
+            </Link>
+            {CATEGORIES.map((category) => (
+              <Link
+                key={category.id}
+                className={isActive(categoryPath(lang, category.id)) ? 'active' : ''}
+                href={categoryPath(lang, category.id)}
+              >
+                {categoryName(category, lang)}
+              </Link>
+            ))}
+          </nav>
 
           <nav className="blog-nav" aria-label={lang === 'zh' ? '博客导航' : 'Blog navigation'}>
             <a href={MAIN_SITE_URL} target="_blank" rel="noreferrer">
@@ -91,6 +126,8 @@ export default function BlogFrame({
         <span>
           {lang === 'zh' ? '© 2026 谷昱宁 · ' : '© 2026 Yuning Gu · '}
           <a href={`${SITE_FEED}`}>RSS</a>
+          {' · '}
+          <Link href={archivePath(lang)}>{lang === 'zh' ? '归档' : 'Archive'}</Link>
         </span>
         <a href={MAIN_SITE_URL} target="_blank" rel="noreferrer">
           yingqiu.me ↗

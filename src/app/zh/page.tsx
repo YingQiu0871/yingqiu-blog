@@ -1,17 +1,18 @@
-import Link from 'next/link';
-import { formatPostDate, getPosts, postPath, readingTimeLabel } from '@/lib/blog';
+import { getCategoryCounts, getPosts } from '@/lib/blog';
+import { categoryName, categoryPath } from '@/lib/categories';
 import { createPageMetadata } from '@/lib/metadata';
+import PostCard from '@/components/PostCard';
 
 export function generateMetadata() {
   return createPageMetadata('zh', '/zh/', {
     en: {
       title: 'Home',
       description:
-        'Notes, letters and fragments by Yingqiu — on pharmaceutical sciences, research practice, and life between labs.',
+        'Notes, letters and fragments by Yingqiu — on life, old writings, music, reading, and the long road of learning.',
     },
     zh: {
       title: '首页',
-      description: '来自 Yingqiu 的笔记、信笺与片段，记录药物科学、科研方法与学习生活的思考。',
+      description: '来自 Yingqiu 的笔记、信笺与片段：生活、旧文、音乐、阅读，以及求索的长路。',
     },
   });
 }
@@ -19,8 +20,10 @@ export function generateMetadata() {
 const SLOGAN = '人面不知何处去，桃花依旧笑春风';
 
 export default function ChineseIndexPage() {
-  const posts = getPosts('zh');
-  const tagCount = new Set(posts.flatMap((post) => post.tags)).size;
+  const allPosts = getPosts('zh');
+  const posts = allPosts.slice(0, 8);
+  const tagCount = new Set(allPosts.flatMap((post) => post.tags)).size;
+  const counts = getCategoryCounts('zh');
 
   return (
     <>
@@ -33,7 +36,7 @@ export default function ChineseIndexPage() {
         <p className="slogan">{SLOGAN}</p>
         <div className="hero-stats">
           <div>
-            <strong>{posts.length}</strong>
+            <strong>{allPosts.length}</strong>
             <span>文章</span>
           </div>
           <span className="hero-divider" aria-hidden="true" />
@@ -50,33 +53,32 @@ export default function ChineseIndexPage() {
       </section>
 
       <header className="blog-heading">
-        <p className="eyebrow">随笔与笔记</p>
-        <h1>最新文章</h1>
-        <p>记录药物科学、科研方法与学习生活中的思考。文章以 Markdown / MDX 撰写，支持 RSS 订阅。</p>
+        <p className="eyebrow">栏目</p>
+        <h1>五个栏目</h1>
+        <p>
+          浮光是现在的我，旧笺是过去的我，流声是我喜欢的，求索是我追寻的，
+          拾句是我从他人的文字里遇见并留下的。
+        </p>
       </header>
+      <div className="category-grid">
+        {counts.map(({ category, count }) => (
+          <a className="category-card" key={category.id} href={categoryPath('zh', category.id)}>
+            <span className="category-dot" style={{ background: category.accent }} aria-hidden="true" />
+            <span className="category-card-name">{categoryName(category, 'zh')}</span>
+            <span className="category-card-line">{category.zh.homeLine}</span>
+            <span className="category-card-count">{count} 篇</span>
+          </a>
+        ))}
+      </div>
 
+      <header className="blog-heading">
+        <p className="eyebrow">近作</p>
+        <h1>最近书写</h1>
+        <p>关于生活、旧时光、声音与阅读的零星记录。写得不多，值得留下的才落笔。</p>
+      </header>
       <div className="stack-list">
         {posts.map((post) => (
-          <article className="content-card" key={post.slug}>
-            <Link className="blog-card-link" href={postPath('zh', post.slug)}>
-              <h2>{post.title}</h2>
-              <span className="meta">
-                <time dateTime={post.date}>{formatPostDate(post.date, 'zh')}</time>
-                {' · '}
-                {readingTimeLabel(post)}
-              </span>
-              <p>{post.description}</p>
-            </Link>
-            {post.tags.length > 0 && (
-              <div className="tag-list">
-                {post.tags.map((tag) => (
-                  <span className="tag" key={tag}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
-          </article>
+          <PostCard key={post.slug} post={post} lang="zh" showCategory />
         ))}
       </div>
     </>

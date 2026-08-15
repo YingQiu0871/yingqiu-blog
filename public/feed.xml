@@ -3,9 +3,9 @@
   <channel>
     <title>Qiushui Youxin · 秋水有信</title>
     <link>https://blog.yingqiu.me/</link>
-    <description>Notes, letters and fragments by Yingqiu — on pharmaceutical sciences, research practice, and life between labs.</description>
+    <description>Notes, letters and fragments by Yingqiu — life, old writings, music, reading, and the long road of learning.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Aug 2026 11:36:27 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 13:06:27 GMT</lastBuildDate>
     <item>
       <title>Hello, blog.yingqiu.me</title>
       <link>https://blog.yingqiu.me/posts/hello-yingqiu/</link>
@@ -13,6 +13,9 @@
       <description>The blog now has its own home: a dedicated site on a subdomain, separate from the academic portfolio.</description>
       <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
       <language>en-GB</language>
+      <category>Moments</category>
+      <category>Announcement</category>
+      <category>Website</category>
     </item>
     <item>
       <title>你好，blog.yingqiu.me</title>
@@ -21,22 +24,31 @@
       <description>博客有了自己的家：独立子域、独立站点，与学术主页分开，各自专注。</description>
       <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
+      <category>浮光</category>
+      <category>公告</category>
+      <category>网站</category>
     </item>
     <item>
       <title>Writing a post on this blog</title>
       <link>https://blog.yingqiu.me/posts/writing-a-post/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/writing-a-post/</guid>
-      <description>A short manual for this blog: where files live, what the front matter means, and how the Markdown / MDX features render.</description>
+      <description>A short manual for this blog: the five sections, what the front matter means, and how the Markdown / MDX features render.</description>
       <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
       <language>en-GB</language>
+      <category>Moments</category>
+      <category>Guide</category>
+      <category>MDX</category>
     </item>
     <item>
       <title>如何在本博客写一篇文章</title>
       <link>https://blog.yingqiu.me/zh/posts/writing-a-post/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/zh/posts/writing-a-post/</guid>
-      <description>本博客的简短手册：文件放在哪里、front matter 各字段的含义，以及 Markdown / MDX 特性的渲染效果。</description>
+      <description>本博客的简短手册：五个栏目、front matter 各字段的含义，以及 Markdown / MDX 特性的渲染效果。</description>
       <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
+      <category>浮光</category>
+      <category>指南</category>
+      <category>MDX</category>
     </item>
   </channel>
 </rss>

@@ -1,11 +1,27 @@
 ---
 title: '如何在本博客写一篇文章'
-description: '本博客的简短手册：文件放在哪里、front matter 各字段的含义，以及 Markdown / MDX 特性的渲染效果。'
+description: '本博客的简短手册：五个栏目、front matter 各字段的含义，以及 Markdown / MDX 特性的渲染效果。'
 date: 2026-08-12
+updated: 2026-08-17
+category: fuguang
 tags: [指南, MDX]
 ---
 
 这篇文章本身就是文档——下面所有效果，任何文章都可以直接使用。
+
+## 五个栏目
+
+每篇文章归属五个稳定栏目之一。栏目是博客的长期结构，不随文章增多而膨胀；具体主题一律用**标签（tags）**表达。
+
+| `category`  | 栏目 | 中文 URL         | 收录内容                 |
+| ----------- | ---- | ---------------- | ------------------------ |
+| `fuguang`   | 浮光 | `/zh/fuguang/`   | 日常、旅行、心情与当下   |
+| `jiujian`   | 旧笺 | `/zh/jiujian/`   | 童年、小学到高中时期的旧文 |
+| `liusheng`  | 流声 | `/zh/liusheng/`  | 音乐、歌单与歌的记忆     |
+| `qiushu`    | 求索 | `/zh/qiushu/`    | 求学、科研与实验室       |
+| `shiju`     | 拾句 | `/zh/shiju/`     | 摘抄、诗词与阅读片段     |
+
+英文路由与之对应（如 `/moments/`）。
 
 ## 文件放在哪里
 
@@ -31,10 +47,24 @@ content/blog/
 ---
 title: '文章标题'
 description: '一句话摘要，会出现在列表、RSS 和搜索结果里。'
-date: 2026-08-12
-updated: 2026-08-14   # 可选
-tags: [指南, MDX]     # 也支持逗号分隔的字符串
-draft: true           # 可选；为 true 时文章不出现在列表和 RSS 中
+date: 2026-08-12            # 必填：整理/发布到这里的日期
+updated: 2026-08-14         # 可选
+category: fuguang           # 五个栏目 id 之一，缺省为 fuguang
+tags: [指南, MDX]           # 主题标签，也支持逗号分隔的字符串
+cover: /images/covers/x.jpg # 可选：卡片封面图
+draft: true                 # 可选；为 true 时文章不出现在列表和 RSS 中
+# —— 旧笺（jiujian）专用 ——
+originalDate: 2019-06       # 原作时间：2019 / 2019-06 / 2019-06-15 均可
+rereadNote: '多年后重读：……'   # 正文前的按语
+# —— 拾句（shiju）专用 ——
+quote: '句子原文'
+quoteSource: '《书名》· 作者'
+# —— 流声（liusheng）专用 ——
+music:
+  - title: 歌名
+    artist: 歌手
+    url: https://music.163.com/#/song?id=123   # 可选：外部链接
+    note: 一句关于这首歌的记忆                    # 可选
 ---
 ```
 
@@ -44,10 +74,17 @@ draft: true           # 可选；为 true 时文章不出现在列表和 RSS 中
 | `description`   | 是   | 卡片、RSS 与元数据使用的摘要               |
 | `date`          | 是   | `YYYY-MM-DD`，按时间倒序排列               |
 | `updated`       | 否   | 有值时显示在日期旁边                       |
-| `tags`          | 否   | 一组短标签                                 |
+| `category`      | 否   | 栏目 id，缺省为 `fuguang`                  |
+| `tags`          | 否   | 主题标签，数量与粒度不限                   |
+| `cover`         | 否   | 卡片封面图路径                             |
 | `draft`         | 否   | 设为 `true` 可暂时隐藏未完成的文章         |
+| `originalDate`  | 否   | 旧笺专用：原作时间                         |
+| `rereadNote`    | 否   | 旧笺专用：正文前的“多年后重读”按语         |
+| `quote`         | 否   | 拾句专用：摘句原文                         |
+| `quoteSource`   | 否   | 拾句专用：出处                             |
+| `music`         | 否   | 流声专用：曲目列表，渲染成玻璃面板         |
 
-草稿不会出现在列表、RSS 和站点地图里，但可以用 `npm run dev` 在本地预览。
+旧笺按 `originalDate` 升序排列（童年在前），其余栏目按 `date` 倒序。草稿不会出现在列表、RSS 和站点地图里，但可以用 `npm run dev` 在本地预览。
 
 ## Markdown 特性
 
@@ -83,6 +120,14 @@ export function getPosts(lang: string): BlogPost[] {
 
 ```md
 ![图片说明](/images/example.png)
+```
+
+### 音乐嵌入
+
+流声栏目可以在 MDX 里直接嵌入 Spotify / Apple Music / 网易云播放器：
+
+```mdx
+<Embed src="https://open.spotify.com/embed/track/4cOdK2wGLETKBW3PvgPWqT" height="152" />
 ```
 
 ## 双语文章

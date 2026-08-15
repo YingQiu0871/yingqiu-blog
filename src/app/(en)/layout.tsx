@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: '%s | Qiushui Youxin',
   },
   description:
-    'Notes on pharmaceutical sciences, research practice, and life between labs.',
+    'Notes, letters and fragments by Yingqiu — on life, old writings, music, reading, and the long road of learning.',
 };
 
 export default function EnglishLayout({ children }: { children: React.ReactNode }) {
