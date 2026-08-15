@@ -1,8 +1,8 @@
-import Link from 'next/link';
 import type { Locale } from '@/lib/i18n/config';
 import { getPosts } from '@/lib/blog';
 import { categoryName, type Category } from '@/lib/categories';
 import PostCard from '@/components/PostCard';
+import PlaylistIndex from '@/components/PlaylistIndex';
 
 export default function CategoryIndex({
   lang,
@@ -20,13 +20,6 @@ export default function CategoryIndex({
         <p className="eyebrow">{lang === 'zh' ? '栏目' : 'Section'}</p>
         <h1>{categoryName(category, lang)}</h1>
         <p>{copy.description}</p>
-        {category.id === 'liusheng' && (
-          <p className="category-extra-link">
-            <Link href={lang === 'zh' ? '/zh/playlists/' : '/playlists/'}>
-              {lang === 'zh' ? '查看我的全部歌单 →' : 'See all my playlists →'}
-            </Link>
-          </p>
-        )}
       </header>
 
       {posts.length === 0 ? (
@@ -44,6 +37,8 @@ export default function CategoryIndex({
           ))}
         </div>
       )}
+
+      {category.id === 'liusheng' && <PlaylistIndex lang={lang} embedded />}
     </>
   );
 }

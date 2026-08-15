@@ -66,18 +66,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 1,
     },
-    {
-      url: `${SITE_URL}/playlists/`,
-      lastModified: new Date('2026-08-15'),
-      changeFrequency: 'weekly' as const,
-      priority: 0.6,
-    },
-    {
-      url: `${SITE_URL}/zh/playlists/`,
-      lastModified: new Date('2026-08-15'),
-      changeFrequency: 'weekly' as const,
-      priority: 0.6,
-    },
     ...categoryEntries,
     ...archiveEntries,
     ...tagEntries,

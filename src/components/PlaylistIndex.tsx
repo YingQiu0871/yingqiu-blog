@@ -28,7 +28,7 @@ function loadData(): PlaylistsData | null {
   }
 }
 
-export default function PlaylistIndex({ lang }: { lang: Locale }) {
+export default function PlaylistIndex({ lang, embedded = false }: { lang: Locale; embedded?: boolean }) {
   const data = loadData();
   const zh = lang === 'zh';
 
@@ -53,15 +53,26 @@ export default function PlaylistIndex({ lang }: { lang: Locale }) {
 
   return (
     <>
-      <header className="blog-heading">
-        <p className="eyebrow">{zh ? '歌单' : 'Playlists'}</p>
-        <h1>{zh ? '我的歌单' : 'My playlists'}</h1>
-        <p>
-          {zh
-            ? `从我的网易云音乐账号自动同步（更新于 ${updated}），喜欢的音乐、创建的歌单与收藏的歌单都收在这里。`
-            : `Auto-synced from my NetEase Cloud Music account (updated ${updated}) — favourites, created playlists and collected playlists.`}
-        </p>
-      </header>
+      {embedded ? (
+        <>
+          <h2 className="section-title">{zh ? '我的歌单（自动同步）' : 'My playlists (auto-synced)'}</h2>
+          <p className="playlist-synced-note">
+            {zh
+              ? `从网易云自动同步 · 更新于 ${updated}`
+              : `Auto-synced from NetEase Cloud Music · updated ${updated}`}
+          </p>
+        </>
+      ) : (
+        <header className="blog-heading">
+          <p className="eyebrow">{zh ? '歌单' : 'Playlists'}</p>
+          <h1>{zh ? '我的歌单' : 'My playlists'}</h1>
+          <p>
+            {zh
+              ? `从我的网易云音乐账号自动同步（更新于 ${updated}），喜欢的音乐、创建的歌单与收藏的歌单都收在这里。`
+              : `Auto-synced from my NetEase Cloud Music account (updated ${updated}) — favourites, created playlists and collected playlists.`}
+          </p>
+        </header>
+      )}
 
       {data.favourite && (
         <div className="content-card playlist-hero">

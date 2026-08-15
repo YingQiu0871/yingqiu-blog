@@ -1376,6 +1376,12 @@ a.tag:hover {
   color: transparent;
 }
 
+.playlist-synced-note {
+  margin: -4px 0 16px;
+  color: var(--ink-faint);
+  font-size: 0.8rem;
+}
+
 .playlist-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
