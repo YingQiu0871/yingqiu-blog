@@ -23,12 +23,12 @@ export default function BlogFrame({
 }) {
   const pathname = usePathname();
 
-  const homePath = (locale: Locale) => (locale === 'zh' ? '/zh/' : '/');
+  const homePath = (locale: Locale) => (locale === 'zh' ? '/' : '/en/');
 
   const switchLanguage = (nextLang: Locale): string => {
     if (nextLang === lang) return pathname;
-    const isZhPath = pathname.startsWith('/zh');
-    const rest = isZhPath ? pathname.replace(/^\/zh/, '') : pathname;
+    const isEnPath = pathname.startsWith('/en');
+    const rest = isEnPath ? pathname.replace(/^\/en/, '') : pathname;
     const base = rest === '' ? '/' : rest;
     const firstSegment = base.split('/')[1] ?? '';
 
@@ -41,7 +41,7 @@ export default function BlogFrame({
     if (base.startsWith('/tags/')) return archivePath(nextLang);
     if (base.startsWith('/posts/')) {
       const slug = base.replace('/posts/', '').replace(/\/$/, '');
-      return nextLang === 'zh' ? `/zh/posts/${slug}/` : `/posts/${slug}/`;
+      return nextLang === 'en' ? `/en/posts/${slug}/` : `/posts/${slug}/`;
     }
     return homePath(nextLang);
   };

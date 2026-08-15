@@ -9,8 +9,8 @@ GitHub Actions to the same VPS as the portfolio (`/var/www/blog`).
 
 - `content/blog/en` · `content/blog/zh` — posts, one MDX file per language (paired by filename)
 - `src/lib/blog.ts` — content pipeline
-- `src/app/(en)` — English routes (`/`, `/posts/<slug>`)
-- `src/app/zh` — Chinese routes (`/zh/`, `/zh/posts/<slug>`)
+- `src/app/` — Chinese routes at the root (`/`, `/posts/<slug>`, `/fuguang/` …)
+- `src/app/en` — English routes (`/en/`, `/en/posts/<slug>`)
 - `scripts/generate-feed.mjs` — regenerates `public/feed.xml` before every build
 - `.github/workflows/deploy.yml` — build + rsync to `/var/www/blog`
 

@@ -4,7 +4,7 @@ import { createPageMetadata } from '@/lib/metadata';
 import PostCard from '@/components/PostCard';
 
 export function generateMetadata() {
-  return createPageMetadata('zh', '/zh/', {
+  return createPageMetadata('en', '/en/', {
     en: {
       title: 'Home',
       description:
@@ -18,12 +18,13 @@ export function generateMetadata() {
 }
 
 const SLOGAN = '人面不知何处去，桃花依旧笑春风';
+const SLOGAN_EN = 'The face I knew is nowhere to be found; the peach blossoms still smile in the spring breeze.';
 
-export default function ChineseIndexPage() {
-  const allPosts = getPosts('zh');
+export default function EnglishIndexPage() {
+  const allPosts = getPosts('en');
   const posts = allPosts.slice(0, 8);
   const tagCount = new Set(allPosts.flatMap((post) => post.tags)).size;
-  const counts = getCategoryCounts('zh');
+  const counts = getCategoryCounts('en');
 
   return (
     <>
@@ -31,54 +32,63 @@ export default function ChineseIndexPage() {
         <div className="hero-avatar">
           <img src="/images/avatar.jpg" alt="" width={460} height={460} />
         </div>
-        <h1>秋水有信</h1>
+        <h1>Qiushui Youxin</h1>
         <p className="site-tagline">Notes, letters and fragments by Yingqiu.</p>
-        <p className="slogan">{SLOGAN}</p>
+        <p className="slogan" lang="zh">
+          {SLOGAN}
+        </p>
+        <p className="slogan-en">{SLOGAN_EN}</p>
         <div className="hero-stats">
           <div>
             <strong>{allPosts.length}</strong>
-            <span>文章</span>
+            <span>Entries</span>
           </div>
           <span className="hero-divider" aria-hidden="true" />
           <div>
             <strong>{tagCount}</strong>
-            <span>标签</span>
+            <span>Tags</span>
           </div>
           <span className="hero-divider" aria-hidden="true" />
           <a href="/feed.xml">
             <strong>RSS</strong>
-            <span>订阅</span>
+            <span>Subscribe</span>
           </a>
         </div>
       </section>
 
       <header className="blog-heading">
-        <p className="eyebrow">栏目</p>
-        <h1>五个栏目</h1>
+        <p className="eyebrow">Contents</p>
+        <h1>Five sections</h1>
         <p>
-          浮光是现在的我，旧笺是过去的我，流声是我喜欢的，求索是我追寻的，
-          拾句是我从他人的文字里遇见并留下的。
+          Moments are the self of now, Old Letters the self of then, Music what
+          I love, Quest what I seek, and Quotes what I meet in other people&apos;s
+          words and keep.
         </p>
       </header>
       <div className="category-grid">
         {counts.map(({ category, count }) => (
-          <a className="category-card" key={category.id} href={categoryPath('zh', category.id)}>
+          <a className="category-card" key={category.id} href={categoryPath('en', category.id)}>
             <span className="category-dot" style={{ background: category.accent }} aria-hidden="true" />
-            <span className="category-card-name">{categoryName(category, 'zh')}</span>
-            <span className="category-card-line">{category.zh.homeLine}</span>
-            <span className="category-card-count">{count} 篇</span>
+            <span className="category-card-name">{categoryName(category, 'en')}</span>
+            <span className="category-card-line">{category.en.homeLine}</span>
+            <span className="category-card-count">
+              {count} {count === 1 ? 'entry' : 'entries'}
+            </span>
           </a>
         ))}
       </div>
 
       <header className="blog-heading">
-        <p className="eyebrow">近作</p>
-        <h1>最近书写</h1>
-        <p>关于生活、旧时光、声音与阅读的零星记录。写得不多，值得留下的才落笔。</p>
+        <p className="eyebrow">Recent</p>
+        <h1>Recent writings</h1>
+        <p>
+          Occasional notes on life, old times, sounds and reading. New pages
+          appear slowly — only when there is something worth keeping.
+        </p>
       </header>
       <div className="stack-list">
         {posts.map((post) => (
-          <PostCard key={post.slug} post={post} lang="zh" showCategory />
+          <PostCard key={post.slug} post={post} lang="en" showCategory />
         ))}
       </div>
     </>

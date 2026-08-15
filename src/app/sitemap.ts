@@ -61,7 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${SITE_URL}/zh/`,
+      url: `${SITE_URL}/en/`,
       lastModified: new Date('2026-08-14'),
       changeFrequency: 'weekly' as const,
       priority: 1,

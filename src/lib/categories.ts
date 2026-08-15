@@ -4,8 +4,8 @@
  * These are long-lived structural sections — do not grow this list as new
  * posts appear; topics belong to `tags` instead. URLs are also stable:
  *
- *   zh: /zh/fuguang/ /zh/jiujian/ /zh/liusheng/ /zh/qiushu/ /zh/shiju/
- *   en: /moments/    /old-letters/ /music/      /quest/     /quotes/
+ *   zh: /fuguang/ /jiujian/ /liusheng/ /qiushu/ /shiju/
+ *   en: /en/moments/ /en/old-letters/ /en/music/ /en/quest/ /en/quotes/
  *
  * Narrative identity:
  *   浮光 = the self of now · 旧笺 = the self of then · 流声 = what I love
@@ -133,19 +133,19 @@ export function categoryName(category: Category, lang: string): string {
   return lang === 'zh' ? category.zh.name : category.en.name;
 }
 
-/** Stable public path of a category, e.g. `/zh/fuguang/` or `/music/`. */
+/** Stable public path of a category, e.g. `/fuguang/` or `/en/moments/`. */
 export function categoryPath(lang: string, categoryId: string): string {
   const category = getCategory(categoryId);
-  if (!category) return lang === 'zh' ? '/zh/' : '/';
+  if (!category) return lang === 'zh' ? '/' : '/en/';
   const slug = lang === 'zh' ? category.zh.slug : category.en.slug;
-  return lang === 'zh' ? `/zh/${slug}/` : `/${slug}/`;
+  return lang === 'zh' ? `/${slug}/` : `/en/${slug}/`;
 }
 
 export function archivePath(lang: string): string {
-  return lang === 'zh' ? '/zh/archive/' : '/archive/';
+  return lang === 'zh' ? '/archive/' : '/en/archive/';
 }
 
 export function tagPath(lang: string, tag: string): string {
   const encoded = encodeURIComponent(tag);
-  return lang === 'zh' ? `/zh/tags/${encoded}/` : `/tags/${encoded}/`;
+  return lang === 'zh' ? `/tags/${encoded}/` : `/en/tags/${encoded}/`;
 }

@@ -25,7 +25,7 @@ export default function PostView({ lang, post }: { lang: Locale; post: BlogPost 
   const category = getCategory(post.category);
   const originalYear = originalYearLabel(post);
   const isOldLetter = post.category === 'jiujian' && !!originalYear;
-  const homeHref = lang === 'zh' ? '/zh/' : '/';
+  const homeHref = lang === 'zh' ? '/' : '/en/';
 
   return (
     <article>

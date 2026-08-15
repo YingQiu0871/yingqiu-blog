@@ -4,7 +4,7 @@ import ArchiveIndex from '@/components/ArchiveIndex';
 export const dynamic = 'force-static';
 
 export function generateMetadata() {
-  return createPageMetadata('zh', '/zh/archive/', {
+  return createPageMetadata('en', '/en/archive/', {
     en: {
       title: 'Archive',
       description: 'Every post on Qiushui Youxin, filed by year — notes, letters and fragments by Yingqiu.',
@@ -16,6 +16,6 @@ export function generateMetadata() {
   });
 }
 
-export default function ChineseArchivePage() {
-  return <ArchiveIndex lang="zh" />;
+export default function EnglishArchivePage() {
+  return <ArchiveIndex lang="en" />;
 }

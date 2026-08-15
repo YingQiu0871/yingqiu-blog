@@ -8,11 +8,11 @@
 
 | id       | 中文 | 英文 | 中文 URL            | 英文 URL            | 含义           |
 | -------- | ---- | ---- | ------------------- | ------------------- | -------------- |
-| fuguang  | 浮光 | Moments | `/zh/fuguang/`      | `/moments/`         | 现在的我       |
-| jiujian  | 旧笺 | Old Letters | `/zh/jiujian/`      | `/old-letters/`     | 过去的我       |
-| liusheng | 流声 | Music | `/zh/liusheng/`     | `/music/`           | 我喜欢的       |
-| qiushu   | 求索 | Quest | `/zh/qiushu/`       | `/quest/`           | 我追寻的       |
-| shiju    | 拾句 | Quotes | `/zh/shiju/`        | `/quotes/`          | 我遇见的       |
+| fuguang  | 浮光 | Moments | `/fuguang/`          | `/en/moments/`      | 现在的我       |
+| jiujian  | 旧笺 | Old Letters | `/jiujian/`      | `/en/old-letters/`  | 过去的我       |
+| liusheng | 流声 | Music | `/liusheng/`         | `/en/music/`        | 我喜欢的       |
+| qiushu   | 求索 | Quest | `/qiushu/`           | `/en/quest/`        | 我追寻的       |
+| shiju    | 拾句 | Quotes | `/shiju/`            | `/en/quotes/`       | 我遇见的       |
 
 `category` 缺省或写错时回退为 `fuguang`，不会导致构建失败。
 
@@ -49,12 +49,12 @@ music:
 
 ## 路由一览
 
-| 页面 | 英文 | 中文 |
+| 页面 | 中文 | 英文 |
 | ---- | ---- | ---- |
-| 首页 | `/` | `/zh/` |
-| 栏目页 | `/{en-slug}/` | `/zh/{zh-slug}/` |
-| 文章页 | `/posts/{slug}/` | `/zh/posts/{slug}/` |
-| 标签页 | `/tags/{tag}/` | `/zh/tags/{tag}/` |
-| 归档页 | `/archive/` | `/zh/archive/` |
+| 首页 | `/` | `/en/` |
+| 栏目页 | `/{zh-slug}/` | `/en/{en-slug}/` |
+| 文章页 | `/posts/{slug}/` | `/en/posts/{slug}/` |
+| 标签页 | `/tags/{tag}/` | `/en/tags/{tag}/` |
+| 归档页 | `/archive/` | `/en/archive/` |
 
 RSS：`/feed.xml`（构建前由 `scripts/generate-feed.mjs` 生成，勿手改）。

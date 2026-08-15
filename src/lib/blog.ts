@@ -262,5 +262,5 @@ export function readingTimeLabel(post: BlogPost): string {
 
 /** Public URL path of a post for a given language. */
 export function postPath(lang: string, slug: string): string {
-  return lang === 'zh' ? `/zh/posts/${slug}/` : `/posts/${slug}/`;
+  return lang === 'zh' ? `/posts/${slug}/` : `/en/posts/${slug}/`;
 }

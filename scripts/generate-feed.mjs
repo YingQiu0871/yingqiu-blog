@@ -43,7 +43,7 @@ const parseTags = (raw) => {
 };
 
 const postUrl = (lang, slug) =>
-  lang === 'zh' ? `${SITE_URL}/zh/posts/${slug}/` : `${SITE_URL}/posts/${slug}/`;
+  lang === 'zh' ? `${SITE_URL}/posts/${slug}/` : `${SITE_URL}/en/posts/${slug}/`;
 
 async function collectPosts() {
   const posts = [];

@@ -13,42 +13,45 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = getPost('zh', slug);
+  const post = getPost('en', slug);
   if (!post) return {};
-  return createPageMetadata('zh', postPath('zh', slug), {
+  return createPageMetadata('en', postPath('en', slug), {
     en: { title: post.title, description: post.description },
     zh: { title: post.title, description: post.description },
   });
 }
 
-export default async function ChinesePostPage({
+export default async function EnglishPostPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getPost('zh', slug);
+  const post = getPost('en', slug);
 
   if (!post) {
-    const counterpart = getPost('en', slug);
+    const counterpart = getPost('zh', slug);
     if (!counterpart) notFound();
 
     return (
       <div className="content-card blog-fallback">
-        <p className="eyebrow">博客</p>
+        <p className="eyebrow">Blog</p>
         <h1>{counterpart.title}</h1>
-        <p>这篇文章暂时只有英文版。你可以阅读原文，或回到博客列表。</p>
+        <p>
+          This post is not available in English yet. You can read the original,
+          or head back to the blog.
+        </p>
         <div className="blog-fallback-actions">
-          <Link className="button" href={postPath('en', slug)}>
-            阅读英文版
+          <Link className="button" href={postPath('zh', slug)}>
+            Read it in 中文
           </Link>
-          <Link className="text-link" href="/zh/">
-            返回博客
+          <Link className="text-link" href="/en/">
+            Back to blog
           </Link>
         </div>
       </div>
     );
   }
 
-  return <PostView lang="zh" post={post} />;
+  return <PostView lang="en" post={post} />;
 }

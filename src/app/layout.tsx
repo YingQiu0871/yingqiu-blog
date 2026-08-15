@@ -4,7 +4,7 @@ import '@fontsource/baloo-2/600.css';
 import '@fontsource/baloo-2/700.css';
 import '@fontsource/baloo-2/800.css';
 import '@fontsource/zcool-kuaile/index.css';
-import '../globals.css';
+import './globals.css';
 import BlogFrame from '@/components/BlogFrame';
 import ThemeScript from '@/components/ThemeScript';
 

@@ -7,7 +7,7 @@ export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getAllTags('en').map(({ tag }) => ({ tag }));
+  return getAllTags('zh').map(({ tag }) => ({ tag }));
 }
 
 export async function generateMetadata({
@@ -20,14 +20,14 @@ export async function generateMetadata({
     en: { title: `#${tag}`, description: `Posts tagged ${tag} — notes, letters and fragments by Yingqiu.` },
     zh: { title: `#${tag}`, description: `标签 ${tag} 下的文章 — 来自 Yingqiu 的笔记与信笺。` },
   };
-  return createPageMetadata('en', `/tags/${encodeURIComponent(tag)}/`, copy);
+  return createPageMetadata('zh', `/tags/${encodeURIComponent(tag)}/`, copy);
 }
 
-export default async function EnglishTagPage({
+export default async function ChineseTagPage({
   params,
 }: {
   params: Promise<{ tag: string }>;
 }) {
   const { tag } = await params;
-  return <TagIndex lang="en" tag={tag} />;
+  return <TagIndex lang="zh" tag={tag} />;
 }

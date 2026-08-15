@@ -49,7 +49,7 @@ export default function PlaylistIndex({ lang, embedded = false }: { lang: Locale
     month: 'long',
     day: 'numeric',
   });
-  const favPostHref = zh ? '/zh/posts/wangyi-playlist/' : '/posts/wangyi-playlist/';
+  const favPostHref = zh ? '/posts/wangyi-playlist/' : '/en/posts/wangyi-playlist/';
 
   return (
     <>

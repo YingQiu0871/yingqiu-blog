@@ -8,7 +8,7 @@ export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return CATEGORIES.map((category) => ({ category: category.zh.slug }));
+  return CATEGORIES.map((category) => ({ category: category.en.slug }));
 }
 
 export async function generateMetadata({
@@ -17,21 +17,21 @@ export async function generateMetadata({
   params: Promise<{ category: string }>;
 }): Promise<Metadata> {
   const { category: slug } = await params;
-  const category = getCategoryBySlug('zh', slug);
+  const category = getCategoryBySlug('en', slug);
   if (!category) return {};
-  return createPageMetadata('zh', `/zh/${category.zh.slug}/`, {
+  return createPageMetadata('en', `/en/${category.en.slug}/`, {
     en: { title: category.en.name, description: category.en.description },
     zh: { title: category.zh.name, description: category.zh.description },
   });
 }
 
-export default async function ChineseCategoryPage({
+export default async function EnglishCategoryPage({
   params,
 }: {
   params: Promise<{ category: string }>;
 }) {
   const { category: slug } = await params;
-  const category = getCategoryBySlug('zh', slug);
+  const category = getCategoryBySlug('en', slug);
   if (!category) notFound();
-  return <CategoryIndex lang="zh" category={category} />;
+  return <CategoryIndex lang="en" category={category} />;
 }
