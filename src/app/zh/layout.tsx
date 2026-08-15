@@ -1,22 +1,12 @@
 import type { Metadata, Viewport } from 'next';
-import { Baloo_2, ZCOOL_KuaiLe } from 'next/font/google';
+// Self-hosted fonts (fontsource, unicode-range sliced) — no Google Fonts fetch at build time.
+import '@fontsource/baloo-2/600.css';
+import '@fontsource/baloo-2/700.css';
+import '@fontsource/baloo-2/800.css';
+import '@fontsource/zcool-kuaile/index.css';
 import '../globals.css';
 import BlogFrame from '@/components/BlogFrame';
 import ThemeScript from '@/components/ThemeScript';
-
-const baloo = Baloo_2({
-  weight: ['600', '700', '800'],
-  subsets: ['latin'],
-  variable: '--font-baloo',
-  display: 'swap',
-});
-
-const kuaiLe = ZCOOL_KuaiLe({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-kuai',
-  display: 'swap',
-});
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -38,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function ChineseLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh" className={`${baloo.variable} ${kuaiLe.variable}`} suppressHydrationWarning>
+    <html lang="zh" suppressHydrationWarning>
       <head>
         <ThemeScript />
         <link
