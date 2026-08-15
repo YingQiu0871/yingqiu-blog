@@ -30,8 +30,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Yuning Gu · Blog',
-    template: '%s | Yuning Gu',
+    default: 'Qiushui Youxin',
+    template: '%s | Qiushui Youxin',
   },
   description:
     'Notes on pharmaceutical sciences, research practice, and life between labs.',

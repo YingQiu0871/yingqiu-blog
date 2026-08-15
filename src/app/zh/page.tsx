@@ -5,13 +5,13 @@ import { createPageMetadata } from '@/lib/metadata';
 export function generateMetadata() {
   return createPageMetadata('zh', '/zh/', {
     en: {
-      title: 'Blog',
+      title: 'Home',
       description:
-        'Notes on pharmaceutical sciences, research practice, and life between labs, written by Yuning Gu.',
+        'Notes, letters and fragments by Yingqiu — on pharmaceutical sciences, research practice, and life between labs.',
     },
     zh: {
-      title: '博客',
-      description: '谷昱宁关于药物科学、科研方法与学习生活的随笔与笔记。',
+      title: '首页',
+      description: '来自 Yingqiu 的笔记、信笺与片段，记录药物科学、科研方法与学习生活的思考。',
     },
   });
 }
@@ -34,7 +34,8 @@ export default function ChineseIndexPage() {
           <div className="hero-avatar">
             <img src="/images/avatar.jpg" alt="" width={460} height={460} />
           </div>
-          <h1>谷昱宁的博客</h1>
+          <h1>秋水有信</h1>
+          <p className="site-tagline">Notes, letters and fragments by Yingqiu.</p>
           <p className="slogan">{SLOGAN}</p>
           <div className="hero-stats">
             <div>

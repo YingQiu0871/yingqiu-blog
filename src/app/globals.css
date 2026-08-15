@@ -462,6 +462,14 @@ h3,
   color: transparent;
 }
 
+.site-tagline {
+  margin-bottom: 14px;
+  color: var(--ink-faint);
+  font-size: 0.88rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+}
+
 .slogan {
   margin-bottom: 6px;
   color: var(--ink-soft);

@@ -5,7 +5,7 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://blog.yingqi
 
 export const MAIN_SITE_URL = 'https://yingqiu.me';
 
-const siteName = 'Yuning Gu · Blog';
+const siteName = 'Qiushui Youxin';
 
 export function createPageMetadata(
   lang: 'en' | 'zh',
@@ -20,8 +20,8 @@ export function createPageMetadata(
 
   return {
     title: {
-      default: lang === 'zh' ? '谷昱宁的博客' : 'Yuning Gu · Blog',
-      template: lang === 'zh' ? '%s | 谷昱宁的博客' : '%s | Yuning Gu',
+      default: lang === 'zh' ? '秋水有信' : 'Qiushui Youxin',
+      template: lang === 'zh' ? '%s | 秋水有信' : '%s | Qiushui Youxin',
     },
     description: localized.description,
     alternates: {
@@ -39,7 +39,7 @@ export function createPageMetadata(
           url: `${SITE_URL}/og.png`,
           width: 1733,
           height: 909,
-          alt: 'Yuning Gu — Blog',
+          alt: 'Qiushui Youxin — notes, letters and fragments by Yingqiu',
         },
       ],
     },

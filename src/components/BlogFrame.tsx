@@ -49,9 +49,9 @@ export default function BlogFrame({
               <img src="/images/avatar.jpg" alt="" width={460} height={460} />
             </span>
             <span className="brand-copy">
-              <strong>{lang === 'zh' ? '谷昱宁的博客' : 'Yuning Gu · Blog'}</strong>
+              <strong>{lang === 'zh' ? '秋水有信' : 'Qiushui Youxin'}</strong>
               <small>
-                {lang === 'zh' ? '随笔 · 笔记 · 科研手记' : 'Notes · Writing · Research'}
+                {lang === 'zh' ? '随笔 · 信笺 · 片段' : 'Notes · Letters · Fragments'}
               </small>
             </span>
           </Link>

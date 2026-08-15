@@ -71,9 +71,9 @@ const items = posts
 const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Yuning Gu · Blog</title>
+    <title>Qiushui Youxin · 秋水有信</title>
     <link>${SITE_URL}/</link>
-    <description>Notes on pharmaceutical sciences, research practice, and life between labs.</description>
+    <description>Notes, letters and fragments by Yingqiu — on pharmaceutical sciences, research practice, and life between labs.</description>
     <language>en</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
 ${items}

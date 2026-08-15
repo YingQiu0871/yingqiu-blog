@@ -30,8 +30,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: '谷昱宁的博客',
-    template: '%s | 谷昱宁的博客',
+    default: '秋水有信',
+    template: '%s | 秋水有信',
   },
   description: '关于药物科学、科研方法与学习生活的随笔与笔记。',
 };
