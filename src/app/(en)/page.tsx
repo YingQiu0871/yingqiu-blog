@@ -25,13 +25,6 @@ export default function EnglishIndexPage() {
 
   return (
     <>
-      <section className="hero-banner">
-        <div className="hero-petals" aria-hidden="true">
-          {Array.from({ length: 10 }, (_, index) => (
-            <span className="petal" key={index} />
-          ))}
-        </div>
-      </section>
       <section className="hero">
         <div className="hero-avatar">
           <img src="/images/avatar.jpg" alt="" width={460} height={460} />
