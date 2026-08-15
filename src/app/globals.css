@@ -17,12 +17,11 @@
   --header-grad: linear-gradient(-225deg, #dceefb 0%, #ffe6fa 100%);
   --btn-grad: linear-gradient(279deg, #f96676 0%, #4a9fd8 100%);
   --btn-grad-soft: linear-gradient(279deg, #ed6ea0 0%, #6fb8ec 100%);
-  --banner-wash: linear-gradient(180deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.52) 54%, rgba(253, 251, 251, 0.8) 100%);
   --glow: 0 12px 36px rgba(233, 30, 99, 0.16);
   --header-height: 72px;
   --radius-lg: 24px;
   --radius-md: 18px;
-  --content: 840px;
+  --content: 900px;
 }
 
 :root[data-theme='dark'] {
@@ -42,7 +41,6 @@
   --blue: #6fb8ec;
   --mint: #8fd0f5;
   --header-grad: linear-gradient(-225deg, #24303a 0%, #33273a 100%);
-  --banner-wash: linear-gradient(180deg, rgba(33, 37, 43, 0.45) 0%, rgba(33, 37, 43, 0.62) 54%, rgba(33, 37, 43, 0.85) 100%);
   --glow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
@@ -377,28 +375,21 @@ h3,
 
 .hero-banner {
   position: relative;
-  margin-bottom: 30px;
-  padding: clamp(26px, 5vw, 54px);
+  margin-bottom: 18px;
   overflow: hidden;
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   background-color: #97a9c4;
   background-image: url('/images/scenery-1920.jpg');
   background-size: cover;
-  background-position: center 38%;
+  background-position: center;
+  aspect-ratio: 2.144 / 1;
   box-shadow: var(--glow);
 }
 
 :root[data-theme='dark'] .hero-banner {
   background-color: #2c3540;
-}
-
-.hero-banner::before {
-  position: absolute;
-  inset: 0;
-  content: '';
-  background: var(--banner-wash);
-  pointer-events: none;
+  filter: brightness(0.86) saturate(1.08);
 }
 
 .hero-petals {
@@ -409,12 +400,11 @@ h3,
 }
 
 .hero {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   padding: 34px 28px 30px;
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
@@ -998,7 +988,7 @@ h3,
   }
 
   .hero-banner {
-    padding: 16px;
+    aspect-ratio: 4 / 3;
   }
 
   .hero {

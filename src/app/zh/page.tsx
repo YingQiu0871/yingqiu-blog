@@ -30,29 +30,29 @@ export default function ChineseIndexPage() {
             <span className="petal" key={index} />
           ))}
         </div>
-        <div className="hero">
-          <div className="hero-avatar">
-            <img src="/images/avatar.jpg" alt="" width={460} height={460} />
+      </section>
+      <section className="hero">
+        <div className="hero-avatar">
+          <img src="/images/avatar.jpg" alt="" width={460} height={460} />
+        </div>
+        <h1>秋水有信</h1>
+        <p className="site-tagline">Notes, letters and fragments by Yingqiu.</p>
+        <p className="slogan">{SLOGAN}</p>
+        <div className="hero-stats">
+          <div>
+            <strong>{posts.length}</strong>
+            <span>文章</span>
           </div>
-          <h1>秋水有信</h1>
-          <p className="site-tagline">Notes, letters and fragments by Yingqiu.</p>
-          <p className="slogan">{SLOGAN}</p>
-          <div className="hero-stats">
-            <div>
-              <strong>{posts.length}</strong>
-              <span>文章</span>
-            </div>
-            <span className="hero-divider" aria-hidden="true" />
-            <div>
-              <strong>{tagCount}</strong>
-              <span>标签</span>
-            </div>
-            <span className="hero-divider" aria-hidden="true" />
-            <a href="/feed.xml">
-              <strong>RSS</strong>
-              <span>订阅</span>
-            </a>
+          <span className="hero-divider" aria-hidden="true" />
+          <div>
+            <strong>{tagCount}</strong>
+            <span>标签</span>
           </div>
+          <span className="hero-divider" aria-hidden="true" />
+          <a href="/feed.xml">
+            <strong>RSS</strong>
+            <span>订阅</span>
+          </a>
         </div>
       </section>
 

@@ -31,32 +31,32 @@ export default function EnglishIndexPage() {
             <span className="petal" key={index} />
           ))}
         </div>
-        <div className="hero">
-          <div className="hero-avatar">
-            <img src="/images/avatar.jpg" alt="" width={460} height={460} />
+      </section>
+      <section className="hero">
+        <div className="hero-avatar">
+          <img src="/images/avatar.jpg" alt="" width={460} height={460} />
+        </div>
+        <h1>Qiushui Youxin</h1>
+        <p className="site-tagline">Notes, letters and fragments by Yingqiu.</p>
+        <p className="slogan" lang="zh">
+          {SLOGAN}
+        </p>
+        <p className="slogan-en">{SLOGAN_EN}</p>
+        <div className="hero-stats">
+          <div>
+            <strong>{posts.length}</strong>
+            <span>Articles</span>
           </div>
-          <h1>Qiushui Youxin</h1>
-          <p className="site-tagline">Notes, letters and fragments by Yingqiu.</p>
-          <p className="slogan" lang="zh">
-            {SLOGAN}
-          </p>
-          <p className="slogan-en">{SLOGAN_EN}</p>
-          <div className="hero-stats">
-            <div>
-              <strong>{posts.length}</strong>
-              <span>Articles</span>
-            </div>
-            <span className="hero-divider" aria-hidden="true" />
-            <div>
-              <strong>{tagCount}</strong>
-              <span>Tags</span>
-            </div>
-            <span className="hero-divider" aria-hidden="true" />
-            <a href="/feed.xml">
-              <strong>RSS</strong>
-              <span>Subscribe</span>
-            </a>
+          <span className="hero-divider" aria-hidden="true" />
+          <div>
+            <strong>{tagCount}</strong>
+            <span>Tags</span>
           </div>
+          <span className="hero-divider" aria-hidden="true" />
+          <a href="/feed.xml">
+            <strong>RSS</strong>
+            <span>Subscribe</span>
+          </a>
         </div>
       </section>
 
