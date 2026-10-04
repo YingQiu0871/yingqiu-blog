@@ -1603,75 +1603,115 @@ a.tag:hover {
   }
 }
 
-/* ---- Columns (求索 › 学习笔记) ---- */
+/* ---- Columns (求索 › 学习笔记) — same glass language as .content-card ---- */
+.column-card,
+.stage-nav,
+.stage-heading,
+.stage-empty {
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    var(--glow);
+}
+
+:root[data-theme='dark'] .column-card,
+:root[data-theme='dark'] .stage-nav,
+:root[data-theme='dark'] .stage-heading,
+:root[data-theme='dark'] .stage-empty {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    var(--glow);
+}
+
 .column-card {
   display: grid;
   gap: 6px;
-  margin-bottom: 28px;
-  padding: 22px 26px;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: var(--surface);
-  transition: transform 160ms ease, border-color 160ms ease;
+  margin-bottom: 26px;
+  padding: 24px 26px;
+  border-radius: var(--radius-md);
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .column-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--pink) 55%, var(--glass-border));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    0 16px 44px rgba(233, 30, 99, 0.22);
 }
 
 .column-card-label {
-  color: var(--accent);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  color: var(--blue);
+  font-size: 0.77rem;
+  font-weight: 800;
 }
 
 .column-card strong {
-  font-size: 1.3rem;
+  font-size: 1.26rem;
+  line-height: 1.3;
+}
+
+.column-card:hover strong {
+  color: var(--pink-deep);
+}
+
+.column-card > span:not(.column-card-label):not(.column-card-stages) {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
 }
 
 .column-card-stages {
   color: var(--ink-faint);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .stage-nav {
   position: sticky;
-  top: 8px;
+  top: calc(var(--header-height) + 10px);
   z-index: 5;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 36px;
+  margin-bottom: 26px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
 }
 
 .stage-nav a {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 7px 16px;
-  border: 1px solid var(--line);
+  gap: 7px;
+  padding: 6px 14px;
   border-radius: 999px;
-  background: var(--surface);
-  backdrop-filter: blur(10px);
-  font-size: 0.9rem;
-  font-weight: 600;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  font-weight: 700;
+  transition:
+    color 160ms ease,
+    background 160ms ease;
 }
 
 .stage-nav a:hover {
-  border-color: var(--accent);
+  color: var(--pink-deep);
+  background: linear-gradient(120deg, rgba(237, 110, 160, 0.16), rgba(111, 184, 236, 0.18));
 }
 
 .stage-count {
   color: var(--ink-faint);
-  font-size: 0.78rem;
-  font-weight: 500;
+  font-size: 0.72rem;
+  font-weight: 700;
 }
 
 .stage-section {
-  margin-bottom: 44px;
-  scroll-margin-top: 72px;
+  margin-bottom: 30px;
+  scroll-margin-top: calc(var(--header-height) + 80px);
 }
 
 .stage-heading {
@@ -1679,21 +1719,23 @@ a.tag:hover {
   align-items: baseline;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 16px;
-  font-size: 1.6rem;
+  margin: 0 0 14px;
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+  font-size: 1.26rem;
 }
 
 .stage-heading small {
   color: var(--ink-faint);
-  font-size: 0.85rem;
-  font-weight: 400;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .stage-empty {
   margin: 0;
-  padding: 18px 22px;
-  border: 1px dashed var(--line);
-  border-radius: 16px;
+  padding: 20px 24px;
+  border-radius: var(--radius-md);
   color: var(--ink-faint);
   font-size: 0.92rem;
+  text-align: center;
 }
