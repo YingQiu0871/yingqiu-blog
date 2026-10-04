@@ -142,4 +142,6 @@ async function main() {
 
 main().catch((err) => {
   console.warn(`wangyi sync skipped: ${err.message}`);
+  // Surface the failure in the Actions run summary instead of burying it in the log.
+  if (process.env.GITHUB_ACTIONS) console.log(`::warning title=wangyi sync skipped::${err.message}`);
 });

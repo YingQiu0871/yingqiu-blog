@@ -10,6 +10,10 @@ env:
 on:
   push:
     branches: [main]
+  # The 流声 NetEase sync runs in `prebuild`, so it only refreshes when a build runs.
+  # Rebuild daily (04:17 Beijing time) to keep it in sync without a manual push.
+  schedule:
+    - cron: '17 20 * * *'
   workflow_dispatch:
 
 permissions:
@@ -74,3 +78,17 @@ jobs:
           rsync -az --delete \
             -e "ssh -p $DEPLOY_PORT -o StrictHostKeyChecking=accept-new" \
             out/ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ vars.DEPLOY_PATH || '/var/www/blog' }}/"
+
+  # GitHub disables scheduled workflows in public repos after 60 days without
+  # repository activity; re-enabling this workflow on each run resets that timer.
+  keepalive:
+    needs: deploy
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Keep scheduled workflow enabled
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/deploy.yml/enable"
