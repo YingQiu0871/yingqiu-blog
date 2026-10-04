@@ -1602,3 +1602,98 @@ a.tag:hover {
     display: none;
   }
 }
+
+/* ---- Columns (求索 › 学习笔记) ---- */
+.column-card {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 28px;
+  padding: 22px 26px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.column-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.column-card-label {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.column-card strong {
+  font-size: 1.3rem;
+}
+
+.column-card-stages {
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+}
+
+.stage-nav {
+  position: sticky;
+  top: 8px;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+
+.stage-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.stage-nav a:hover {
+  border-color: var(--accent);
+}
+
+.stage-count {
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.stage-section {
+  margin-bottom: 44px;
+  scroll-margin-top: 72px;
+}
+
+.stage-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+}
+
+.stage-heading small {
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.stage-empty {
+  margin: 0;
+  padding: 18px 22px;
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  color: var(--ink-faint);
+  font-size: 0.92rem;
+}

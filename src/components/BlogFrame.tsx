@@ -1,5 +1,6 @@
 'use client';
 
+import { COLUMNS, columnPath } from '@/lib/columns';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { Locale } from '@/lib/i18n/config';
@@ -31,6 +32,13 @@ export default function BlogFrame({
     const rest = isEnPath ? pathname.replace(/^\/en/, '') : pathname;
     const base = rest === '' ? '/' : rest;
     const firstSegment = base.split('/')[1] ?? '';
+
+    // Columns live under a category: /qiushu/xuexi-biji/ <-> /en/quest/study-notes/
+    const parent = lang === 'zh' ? 'qiushu' : 'quest';
+    const column = COLUMNS.find((c) =>
+      base.startsWith(`/${parent}/${lang === 'zh' ? c.zh.slug : c.en.slug}`),
+    );
+    if (column) return columnPath(nextLang, column.id);
 
     // Category pages: map the slug across languages.
     const category = getCategoryBySlug(lang, firstSegment);
