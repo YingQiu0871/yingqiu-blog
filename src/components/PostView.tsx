@@ -11,6 +11,7 @@ import {
   readingTimeLabel,
   type BlogPost,
 } from '@/lib/blog';
+import { getColumn, columnPath, stageName } from '@/lib/columns';
 import { categoryName, categoryPath, getCategory, tagPath } from '@/lib/categories';
 import { Embed, MusicList } from '@/components/embeds';
 
@@ -25,6 +26,8 @@ export default function PostView({ lang, post }: { lang: Locale; post: BlogPost 
   const category = getCategory(post.category);
   const originalYear = originalYearLabel(post);
   const isOldLetter = post.category === 'jiujian' && !!originalYear;
+  const column = post.column ? getColumn(post.column) : undefined;
+  const stage = column?.stages.find((item) => item.id === post.stage);
   const homeHref = lang === 'zh' ? '/' : '/en/';
 
   return (
@@ -33,6 +36,15 @@ export default function PostView({ lang, post }: { lang: Locale; post: BlogPost 
         {category && (
           <p className="eyebrow">
             <Link href={categoryPath(lang, post.category)}>{categoryName(category, lang)}</Link>
+            {column && (
+              <>
+                {' › '}
+                <Link href={columnPath(lang, column.id)}>
+                  {lang === 'zh' ? column.zh.name : column.en.name}
+                </Link>
+                {stage && ` › ${stageName(stage, lang)}`}
+              </>
+            )}
           </p>
         )}
         <h1>{post.title}</h1>

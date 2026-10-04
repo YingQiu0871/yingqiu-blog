@@ -58,3 +58,15 @@ music:
 | 归档页 | `/archive/` | `/en/archive/` |
 
 RSS：`/feed.xml`（构建前由 `scripts/generate-feed.mjs` 生成，勿手改）。
+
+## 专栏（column）：求索 › 学习笔记
+
+专栏是挂在栏目下的子分组，可以随时增加。目前只有「学习笔记」（`/qiushu/xuexi-biji/`，英文 `/en/quest/study-notes/`），按学习阶段分为大一、大二、大三、大四、M1、M2。写笔记时：
+
+```yaml
+category: qiushu
+column: study-notes
+stage: y1        # y1 大一 · y2 大二 · y3 大三 · y4 大四 · m1 · m2
+```
+
+没写 `stage` 的笔记会出现在专栏页底部的「其他」里。

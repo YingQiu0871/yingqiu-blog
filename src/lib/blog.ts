@@ -3,6 +3,7 @@ import path from 'node:path';
 import matter from 'gray-matter';
 import { isValidLocale, locales, type Locale } from '@/lib/i18n/config';
 import { CATEGORIES, isCategoryId, type Category, type CategoryId } from '@/lib/categories';
+import { isStageId, type StageId } from '@/lib/columns';
 
 export type MusicTrack = {
   title: string;
@@ -32,6 +33,10 @@ export type BlogPost = {
   cover?: string;
   /** For 流声 (liusheng): track list rendered as a glass panel. */
   music?: MusicTrack[];
+  /** Optional column inside the category, e.g. `study-notes` (under 求索). */
+  column?: string;
+  /** For the study-notes column: `y1`-`y4` (大一-大四), `m1`, `m2`. */
+  stage?: StageId;
   tags: string[];
   /** Draft posts are skipped in production listings, RSS and sitemap. */
   draft: boolean;
@@ -125,6 +130,8 @@ function readPost(lang: Locale, slug: string): BlogPost | null {
     quoteSource: typeof data.quoteSource === 'string' ? data.quoteSource : undefined,
     cover: typeof data.cover === 'string' ? data.cover : undefined,
     music: parseMusic(data.music),
+    column: typeof data.column === 'string' ? data.column : undefined,
+    stage: isStageId(data.stage) ? data.stage : undefined,
     tags: parseTags(data.tags),
     draft: data.draft === true,
     source: content.trim(),
@@ -162,6 +169,11 @@ export function getPosts(lang: string, options?: { category?: string; tag?: stri
     );
   }
   return posts.sort((a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug));
+}
+
+/** Published posts of one column, newest first. */
+export function getColumnPosts(lang: string, column: string): BlogPost[] {
+  return getPosts(lang).filter((post) => post.column === column);
 }
 
 export function getPost(lang: string, slug: string): BlogPost | null {
