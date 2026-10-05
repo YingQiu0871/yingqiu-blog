@@ -5,6 +5,7 @@ import {
   formatPostDate,
   originalYearLabel,
   postPath,
+  hasReadingTime,
   readingTimeLabel,
   type BlogPost,
 } from '@/lib/blog';
@@ -62,8 +63,7 @@ export default function PostCard({
           ) : (
             <time dateTime={post.date}>{formatPostDate(post.date, lang)}</time>
           )}
-          {' · '}
-          {readingTimeLabel(post)}
+          {hasReadingTime(post) && ` · ${readingTimeLabel(post)}`}
         </span>
         {post.quote ? (
           <p className="card-quote">

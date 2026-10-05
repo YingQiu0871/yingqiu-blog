@@ -266,6 +266,11 @@ export function originalYearLabel(post: BlogPost): string | null {
   return year ? year : null;
 }
 
+/** Notes embedded with <NoteFrame> have no meaningful body length, so no reading time is shown. */
+export function hasReadingTime(post: BlogPost): boolean {
+  return !post.source.includes('<NoteFrame');
+}
+
 export function readingTimeLabel(post: BlogPost): string {
   return post.lang === 'zh'
     ? `约 ${post.readingMinutes} 分钟`

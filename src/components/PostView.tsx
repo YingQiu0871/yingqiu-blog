@@ -8,6 +8,7 @@ import {
   formatOriginalDate,
   formatPostDate,
   originalYearLabel,
+  hasReadingTime,
   readingTimeLabel,
   type BlogPost,
 } from '@/lib/blog';
@@ -55,7 +56,7 @@ export default function PostView({ lang, post }: { lang: Locale; post: BlogPost 
         <h1>{post.title}</h1>
         <div className="blog-post-meta">
           <time dateTime={post.date}>{formatPostDate(post.date, lang)}</time>
-          <span>{readingTimeLabel(post)}</span>
+          {hasReadingTime(post) && <span>{readingTimeLabel(post)}</span>}
           {post.updated ? (
             <span>
               {lang === 'zh'
