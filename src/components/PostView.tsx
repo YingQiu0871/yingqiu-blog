@@ -11,7 +11,7 @@ import {
   readingTimeLabel,
   type BlogPost,
 } from '@/lib/blog';
-import { getColumn, columnPath, stageName } from '@/lib/columns';
+import { getColumn, columnPath, stageName, stagePath } from '@/lib/columns';
 import { categoryName, categoryPath, getCategory, tagPath } from '@/lib/categories';
 import { Embed, MusicList } from '@/components/embeds';
 
@@ -42,7 +42,12 @@ export default function PostView({ lang, post }: { lang: Locale; post: BlogPost 
                 <Link href={columnPath(lang, column.id)}>
                   {lang === 'zh' ? column.zh.name : column.en.name}
                 </Link>
-                {stage && ` › ${stageName(stage, lang)}`}
+                {stage && (
+                  <>
+                    {' › '}
+                    <Link href={stagePath(lang, column.id, stage.id)}>{stageName(stage, lang)}</Link>
+                  </>
+                )}
               </>
             )}
           </p>

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { getAllPosts, getAllTags, postPath } from '@/lib/blog';
 import { CATEGORIES, archivePath, categoryPath, tagPath } from '@/lib/categories';
-import { COLUMNS, columnPath } from '@/lib/columns';
+import { COLUMNS, columnPath, stagePath } from '@/lib/columns';
 import { SITE_URL } from '@/lib/metadata';
 
 export const dynamic = 'force-static';
@@ -39,12 +39,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   const columnEntries = COLUMNS.flatMap((column) =>
-    (['en', 'zh'] as const).map((lang) => ({
-      url: `${SITE_URL}${columnPath(lang, column.id)}`,
-      lastModified: new Date('2026-10-05'),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    })),
+    (['en', 'zh'] as const).flatMap((lang) =>
+      [columnPath(lang, column.id), ...column.stages.map((stage) => stagePath(lang, column.id, stage.id))].map((path) => ({
+        url: `${SITE_URL}${path}`,
+        lastModified: new Date('2026-10-05'),
+        changeFrequency: 'weekly' as const,
+        priority: 0.7,
+      })),
+    ),
   );
 
   const tagEntries = (['en', 'zh'] as const).flatMap((lang) =>

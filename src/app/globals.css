@@ -1605,9 +1605,8 @@ a.tag:hover {
 
 /* ---- Columns (求索 › 学习笔记) — same glass language as .content-card ---- */
 .column-card,
-.stage-nav,
-.stage-heading,
-.stage-empty {
+.stage-card,
+.stage-tabs {
   border: 1px solid var(--glass-border);
   background: var(--glass);
   backdrop-filter: blur(18px) saturate(160%);
@@ -1618,19 +1617,17 @@ a.tag:hover {
 }
 
 :root[data-theme='dark'] .column-card,
-:root[data-theme='dark'] .stage-nav,
-:root[data-theme='dark'] .stage-heading,
-:root[data-theme='dark'] .stage-empty {
+:root[data-theme='dark'] .stage-card,
+:root[data-theme='dark'] .stage-tabs {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.07),
     var(--glow);
 }
 
-.column-card {
+.column-card,
+.stage-card {
   display: grid;
   gap: 6px;
-  margin-bottom: 26px;
-  padding: 24px 26px;
   border-radius: var(--radius-md);
   transition:
     transform 200ms ease,
@@ -1638,12 +1635,18 @@ a.tag:hover {
     box-shadow 200ms ease;
 }
 
-.column-card:hover {
+.column-card:hover,
+.stage-card:hover {
   transform: translateY(-4px);
   border-color: color-mix(in srgb, var(--pink) 55%, var(--glass-border));
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.42),
     0 16px 44px rgba(233, 30, 99, 0.22);
+}
+
+.column-card {
+  margin-bottom: 26px;
+  padding: 24px 26px;
 }
 
 .column-card-label {
@@ -1657,7 +1660,8 @@ a.tag:hover {
   line-height: 1.3;
 }
 
-.column-card:hover strong {
+.column-card:hover strong,
+.stage-card:hover strong {
   color: var(--pink-deep);
 }
 
@@ -1672,23 +1676,50 @@ a.tag:hover {
   font-weight: 600;
 }
 
-.stage-nav {
-  position: sticky;
-  top: calc(var(--header-height) + 10px);
-  z-index: 5;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 26px;
+/* Column landing: one card per stage */
+.stage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.stage-card {
+  align-content: start;
+  min-height: 150px;
+  padding: 24px 26px;
+}
+
+.stage-card strong {
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.stage-card > span:not(.stage-card-count) {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.stage-card-count {
+  align-self: end;
+  margin-top: 14px;
+  color: var(--blue);
+  font-size: 0.77rem;
+  font-weight: 800;
+}
+
+/* Stage page: tabs to hop between stages */
+.stage-tabs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-bottom: 22px;
   padding: 10px 12px;
   border-radius: var(--radius-md);
 }
 
-.stage-nav a {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 6px 14px;
+.stage-tabs a {
+  padding: 8px 6px;
+  text-align: center;
   border-radius: 999px;
   color: var(--ink-soft);
   font-size: 0.86rem;
@@ -1698,44 +1729,28 @@ a.tag:hover {
     background 160ms ease;
 }
 
-.stage-nav a:hover {
+.stage-tabs a:hover {
   color: var(--pink-deep);
   background: linear-gradient(120deg, rgba(237, 110, 160, 0.16), rgba(111, 184, 236, 0.18));
 }
 
-.stage-count {
-  color: var(--ink-faint);
-  font-size: 0.72rem;
-  font-weight: 700;
+.stage-tabs a.active {
+  color: #fff;
+  background: var(--btn-grad-soft);
 }
 
-.stage-section {
-  margin-bottom: 30px;
-  scroll-margin-top: calc(var(--header-height) + 80px);
-}
+@media (max-width: 720px) {
+  .stage-tabs {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-.stage-heading {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 0 0 14px;
-  padding: 14px 22px;
-  border-radius: var(--radius-md);
-  font-size: 1.26rem;
-}
+  .stage-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
 
-.stage-heading small {
-  color: var(--ink-faint);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.stage-empty {
-  margin: 0;
-  padding: 20px 24px;
-  border-radius: var(--radius-md);
-  color: var(--ink-faint);
-  font-size: 0.92rem;
-  text-align: center;
+  .stage-card {
+    min-height: 130px;
+    padding: 18px 18px;
+  }
 }

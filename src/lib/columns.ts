@@ -70,3 +70,8 @@ export function columnPath(lang: string, columnId: string): string {
   if (!column) return lang === 'zh' ? '/' : '/en/';
   return lang === 'zh' ? `/qiushu/${column.zh.slug}/` : `/en/quest/${column.en.slug}/`;
 }
+
+/** Public path of one stage page, e.g. `/qiushu/xuexi-biji/y1/` or `/en/quest/study-notes/y1/`. */
+export function stagePath(lang: string, columnId: string, stageId: string): string {
+  return `${columnPath(lang, columnId)}${stageId}/`;
+}
