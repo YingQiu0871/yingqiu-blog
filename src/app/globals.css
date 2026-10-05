@@ -1754,3 +1754,36 @@ a.tag:hover {
     padding: 18px 18px;
   }
 }
+
+/* ---------- Embedded HTML notes ---------- */
+
+.note-frame {
+  margin: 1.2em 0;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  background: var(--glass-strong);
+  box-shadow: var(--glow);
+}
+
+.note-frame iframe {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 150px);
+  min-height: 560px;
+  border: 0;
+}
+
+.note-frame-open {
+  display: block;
+  padding: 10px 16px;
+  border-top: 1px solid var(--glass-border);
+  color: var(--ink-faint);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.note-frame-open:hover {
+  color: var(--pink-deep);
+}

@@ -1,0 +1,1859 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>TU23 化学计量学笔记</title>
+<style>
+/* Layout: lab-notebook reading page. Sticky contents rail on wide screens, single column on phones.
+   Teal = structure (chapters, links), wine = section headings, amber = importance stars. */
+:root{
+ --bg:#f6f8f8; --surface:#ffffff; --ink:#17222a; --ink2:#36454d; --mut:#65747b; --line:#d9e1e3; --line2:#eef2f3;
+ --teal:#0f5c6b; --teal-ink:#ffffff; --wine:#86224d; --star:#b45309;
+ --deep-bg:#eef6f7; --key-bg:#fbf0f5; --warn-bg:#fff6e5; --warn-line:#d99a2b;
+ --code-bg:#edf1f3; --code-ink:#3a1a4a; --pre-bg:#1d2a30; --pre-ink:#e4edf0; --out-bg:#fffbea; --out-line:#e5d58a; --out-ink:#3d3412;
+ --th-bg:#f0f4f5; --zebra:#fafcfc; --en:#4a5960; --en-rule:#cfd9dc; --dot:#0f5c6b;
+ --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Noto Sans CJK SC",sans-serif;
+ --f-head:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,serif;
+ --f-mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,Menlo,monospace;
+ color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+ --bg:#11171a; --surface:#182126; --ink:#e2eaec; --ink2:#c2ced2; --mut:#8c9ca3; --line:#2b383d; --line2:#202b30;
+ --teal:#5db5c5; --teal-ink:#0c1b1f; --wine:#e889b2; --star:#f0b35a;
+ --deep-bg:#15282c; --key-bg:#2a1a22; --warn-bg:#2a2315; --warn-line:#b9852c;
+ --code-bg:#223036; --code-ink:#e9c8f5; --pre-bg:#0b1114; --pre-ink:#e4edf0; --out-bg:#23200f; --out-line:#5b5122; --out-ink:#efe6bd;
+ --th-bg:#1f2b30; --zebra:#1b252a; --en:#a8b7bd; --en-rule:#34444a; --dot:#5db5c5; color-scheme:dark}}
+:root[data-theme="dark"]{
+ --bg:#11171a; --surface:#182126; --ink:#e2eaec; --ink2:#c2ced2; --mut:#8c9ca3; --line:#2b383d; --line2:#202b30;
+ --teal:#5db5c5; --teal-ink:#0c1b1f; --wine:#e889b2; --star:#f0b35a;
+ --deep-bg:#15282c; --key-bg:#2a1a22; --warn-bg:#2a2315; --warn-line:#b9852c;
+ --code-bg:#223036; --code-ink:#e9c8f5; --pre-bg:#0b1114; --pre-ink:#e4edf0; --out-bg:#23200f; --out-line:#5b5122; --out-ink:#efe6bd;
+ --th-bg:#1f2b30; --zebra:#1b252a; --en:#a8b7bd; --en-rule:#34444a; --dot:#5db5c5; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 var(--f-body);-webkit-text-size-adjust:100%}
+
+/* header */
+.top{background:var(--teal);color:var(--teal-ink);padding-inline:16px;padding-block:36px 30px}
+.top-in{max-width:1180px;margin:0 auto}
+.eyebrow{margin:0 0 6px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.top h1{font-family:var(--f-head);font-weight:700;font-size:clamp(26px,5vw,38px);line-height:1.25;margin:0;text-wrap:balance}
+.top .sub{margin:6px 0 0;font-size:16px;opacity:.9}
+.top .meta{margin:14px 0 0;font-size:13.5px;opacity:.82}
+
+/* language bar */
+.langbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line);padding-inline:16px;padding-block:8px}
+.langbar-in{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--mut)}
+.langbar button{font:inherit;font-size:13px;padding:4px 14px;border-radius:999px;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--ink2)}
+.langbar button.on{background:var(--teal);border-color:var(--teal);color:var(--teal-ink)}
+.totop{margin-left:auto;color:var(--teal);text-decoration:none;font-size:13px}
+button:focus-visible,a:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
+
+/* layout */
+.layout{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:8px 80px;display:grid;grid-template-columns:minmax(0,1fr);gap:0 40px}
+.doc{min-width:0;max-width:780px}
+.side{min-width:0}
+.side-in{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-top:22px}
+.side-t{font-family:var(--f-head);font-weight:700;font-size:15px;margin-bottom:6px}
+.side-t span{font-family:var(--f-body);font-weight:400;color:var(--mut);font-size:12.5px;margin-left:4px}
+.toc,.toc ol{list-style:none;margin:0;padding:0}
+.toc a{color:var(--ink2);text-decoration:none;display:block;padding:3px 0}
+.toc a:hover{color:var(--teal);text-decoration:underline}
+.toc .t2>a{font-weight:600;color:var(--teal)}
+.toc .t3{display:none}
+@media (min-width:1000px){
+ .layout{grid-template-columns:250px minmax(0,1fr)}
+ .side-in{position:sticky;top:calc(env(safe-area-inset-top,0px) + 56px);max-height:calc(100vh - 76px);overflow-y:auto;margin-top:30px;font-size:13.5px;line-height:1.45}
+ .toc .t3{display:block}
+ .toc .t3 a{padding:2px 0 2px 12px;color:var(--mut);font-size:13px}
+ .toc .t2{margin-bottom:6px}
+}
+
+/* type */
+h2{font-family:var(--f-head);font-size:clamp(21px,3.6vw,25px);line-height:1.35;margin:56px 0 8px;padding-bottom:10px;border-bottom:2px solid var(--teal);text-wrap:balance;scroll-margin-top:60px;color:var(--ink)}
+h3{font-family:var(--f-head);font-size:18px;line-height:1.45;margin:34px 0 8px;color:var(--wine);text-wrap:balance;scroll-margin-top:60px}
+h4{font-size:15.5px;margin:22px 0 4px;color:var(--ink)}
+.en-h{font-family:var(--f-body);font-weight:400;font-size:.78em;color:var(--mut);margin-left:6px}
+.star{color:var(--star);letter-spacing:.04em;white-space:nowrap}
+p{margin:9px 0}
+ul,ol{margin:8px 0 8px 22px;padding:0} li{margin:5px 0}
+strong{font-weight:650}
+a{color:var(--teal)}
+code{background:var(--code-bg);border-radius:4px;padding:1px 5px;font:13.5px/1.5 var(--f-mono);color:var(--code-ink);overflow-wrap:anywhere}
+pre{border-radius:8px;padding:12px 15px;overflow-x:auto;font:13px/1.6 var(--f-mono);margin:10px 0}
+pre code{background:none;border:0;padding:0;color:inherit;font:inherit;overflow-wrap:normal}
+pre,pre.code{background:var(--pre-bg);color:var(--pre-ink)}
+pre.out{background:var(--out-bg);color:var(--out-ink);border:1px solid var(--out-line);margin-top:-4px}
+.out-l{display:block;font:11.5px/1.4 var(--f-body);letter-spacing:.06em;color:var(--mut);margin-bottom:4px}
+
+/* bilingual layer: English sits under the Chinese it translates */
+.en{display:block;color:var(--en);font-size:14px;line-height:1.6;margin:3px 0 0;padding:2px 0 0 11px;border-left:2px solid var(--en-rule)}
+li.en{list-style:none;margin-left:0}
+td .en,th .en{border-left:0;padding:2px 0 0;margin:2px 0 0;font-size:13px;font-weight:400;line-height:1.45}
+figcaption .en{border-left:0;padding-left:0}
+.en-inline{opacity:.9}
+body[data-lang="zh"] .en,body[data-lang="zh"] .en-h,body[data-lang="zh"] .en-inline,body[data-lang="zh"] .side-t span{display:none}
+
+/* tables */
+.tw{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:var(--surface);font-variant-numeric:tabular-nums}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th-bg);font-weight:600}
+tbody tr:nth-child(even){background:var(--zebra)}
+
+/* boxes */
+blockquote{margin:14px 0;padding:10px 16px;background:var(--key-bg);border-left:4px solid var(--wine);border-radius:0 8px 8px 0}
+blockquote p{margin:4px 0}
+blockquote.sum{margin-top:22px}
+.box{border-radius:10px;padding:14px 18px;margin:18px 0;border:1px solid var(--line);background:var(--surface)}
+.box-t{font-weight:700;font-size:15px;margin-bottom:6px;color:var(--teal)}
+.box.deep{background:var(--deep-bg);border-color:transparent}
+.box.deep .box-t::before{content:"深入理解";display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.05em;background:var(--teal);color:var(--teal-ink);border-radius:4px;padding:1px 7px;margin-right:8px;vertical-align:2px}
+.box.key{background:var(--key-bg);border-color:transparent}
+.box.key .box-t{color:var(--wine)}
+.box.warn{background:var(--warn-bg);border-color:transparent;border-left:4px solid var(--warn-line);border-radius:0 10px 10px 0}
+.box.warn .box-t{color:var(--star)}
+.box .tw table{background:var(--surface)}
+.tag-deep{display:inline-block;font-size:12px;font-weight:600;background:var(--teal);color:var(--teal-ink);border-radius:4px;padding:1px 7px;white-space:nowrap}
+.eq{background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:9px 14px;margin:10px 0;overflow-x:auto;text-align:center;font-variant-numeric:tabular-nums}
+
+/* figures */
+.fig{margin:16px 0}
+.fig-scroll{overflow-x:auto}
+.fig svg{display:block;max-width:100%;height:auto;margin:0 auto}
+.fig figcaption{font-size:13.5px;color:var(--mut);text-align:center;margin-top:6px}
+.fig .ax{stroke:var(--mut);stroke-width:1;fill:none}
+.fig .ell{fill:var(--deep-bg);stroke:var(--line);stroke-width:1}
+.box.deep .fig .ell{fill:var(--surface)}
+.fig .dot{fill:var(--dot);opacity:.7}
+.fig .pc1{stroke:var(--wine);stroke-width:2.5;fill:none}
+.fig .pc2{stroke:var(--star);stroke-width:2.5;stroke-dasharray:6 4;fill:none}
+.fig .pc1t{fill:var(--wine);font-weight:700}
+.fig .pc2t{fill:var(--star);font-weight:700}
+.fig .who{fill:var(--surface);stroke:var(--ink);stroke-width:2}
+.fig .lab{fill:var(--ink2);font:12.5px var(--f-body)}
+.fig .small{font-size:11.5px}
+.fig .ring{fill:none;stroke:var(--ink2);stroke-width:1.2}
+.fig .arc{fill:none;stroke:var(--star);stroke-width:1.5}
+.fig .arrow{stroke:var(--wine);stroke-width:2.2}
+.fig .head{fill:var(--wine)}
+
+/* glossary */
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0 18px;margin:8px 0 0;padding:0}
+.gloss div{display:flex;gap:10px;justify-content:space-between;border-bottom:1px solid var(--line2);padding:6px 0;min-width:0}
+.gloss dt{font-weight:600;flex:none}
+.gloss dd{margin:0;color:var(--en);text-align:right;font-size:14px;min-width:0}
+body[data-lang="zh"] .gloss dd{display:block}
+
+.foot{margin-top:60px;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mut)}
+
+@media (max-width:600px){body{font-size:15.5px}.box{padding:12px 14px}h2{margin-top:44px}}
+
+@media print{
+ :root{--bg:#fff;--surface:#fff;--ink:#000;--ink2:#222;--mut:#555;--en:#444;--line:#999;--th-bg:#eee;--zebra:#fff;--deep-bg:#f4f8f9;--key-bg:#f8f2f5;--warn-bg:#fdf7ea;--pre-bg:#f3f3f3;--pre-ink:#000;--out-bg:#fffbea;--code-bg:#f0f0f0;--code-ink:#000;color-scheme:light}
+ body{font-size:11pt}
+ .langbar,.side,.totop{display:none!important}
+ .layout{display:block;max-width:none;padding:0}
+ .doc{max-width:none}
+ .top{background:#fff;color:#000;border-bottom:2px solid #000;padding:0 0 12px}
+ h2{break-before:page;border-color:#000}
+ h2#s0{break-before:auto}
+ h2,h3,h4{break-after:avoid}
+ tr,.fig,pre,.box,blockquote{break-inside:avoid}
+ a{color:inherit;text-decoration:none}
+ pre{white-space:pre-wrap}
+}
+
+</style>
+<div id="top"></div>
+<header class="top"><div class="top-in">
+<p class="eyebrow">TU23 · Introduction to Chemometrics</p>
+<h1>化学计量学导论 · 学习笔记</h1>
+<p class="sub">Introduction to Chemometrics · study notes</p>
+<p class="meta">导论 P. Chaminade · Part 1–3 S. Tfaili · 中英对照<span class="en-inline"> · Introduction by P. Chaminade, Parts 1–3 by S. Tfaili · bilingual</span></p>
+</div></header>
+<div class="langbar"><div class="langbar-in">
+<span class="lb-l">显示 Display</span>
+<button type="button" id="l-both" data-l="both" class="on">中英对照</button>
+<button type="button" id="l-zh" data-l="zh">只看中文</button>
+<a class="totop" href="#top">↑ 顶部 Top</a>
+</div></div>
+<div class="layout"><nav class="side" aria-label="目录 Contents"><div class="side-in"><div class="side-t">目录 <span>Contents</span></div><ol class="toc"><li class="t2"><a href="#s0">关于这份笔记</a><ol></ol></li><li class="t2"><a href="#s1">1. 导论：化学计量学是什么</a><ol><li class="t3"><a href="#s1.1">1.1 定义和四个主要目标</a></li><li class="t3"><a href="#s1.2">1.2 经典方法和化学计量学的区别</a></li><li class="t3"><a href="#s1.3">1.3 目标一：实验设计（DoE）</a></li><li class="t3"><a href="#s1.4">1.4 目标二：分类（癌细胞例子）</a></li><li class="t3"><a href="#s1.5">1.5 目标三：校准与预测（从单波长到 PLS）</a></li><li class="t3"><a href="#s1.6">1.6 过拟合与交叉验证</a></li><li class="t3"><a href="#s1.7">1.7 目标四：数据提取（代谢组学）</a></li></ol></li><li class="t2"><a href="#s2">2. Part 1：Python 与矩阵基础</a><ol><li class="t3"><a href="#s2.1">2.1 这一章讲什么</a></li><li class="t3"><a href="#s2.2">2.2 工具：Anaconda、Jupyter、.py 和 .ipynb</a></li><li class="t3"><a href="#s2.3">2.3 运算符</a></li><li class="t3"><a href="#s2.4">2.4 模块、变量、字符串和列表</a></li><li class="t3"><a href="#s2.5">2.5 矩阵的基本概念</a></li><li class="t3"><a href="#s2.6">2.6 NumPy 里的矩阵操作</a></li><li class="t3"><a href="#s2.7">2.7 逐元素运算和矩阵乘法</a></li><li class="t3"><a href="#s2.8">2.8 条件和循环</a></li><li class="t3"><a href="#s2.9">2.9 函数</a></li><li class="t3"><a href="#s2.10">2.10 读取和显示数据</a></li><li class="t3"><a href="#s2.11">2.11 六个最容易看错的地方</a></li></ol></li><li class="t2"><a href="#s3">3. Part 2：统计分析在研究里的位置</a><ol><li class="t3"><a href="#s3.1">3.1 研究的六步</a></li><li class="t3"><a href="#s3.2">3.2 假设检验的基本逻辑（课件外补充）</a></li></ol></li><li class="t2"><a href="#s4">4. Part 2：回归复习与 Fisher 检验</a><ol><li class="t3"><a href="#s4.1">4.1 回归在做什么</a></li><li class="t3"><a href="#s4.2">4.2 斜率、R 和 R²</a></li><li class="t3"><a href="#s4.3">4.3 Fisher 检验</a></li><li class="t3"><a href="#s4.4">4.4 外推（课件外补充）</a></li></ol></li><li class="t2"><a href="#s5">5. Part 2：主成分分析 PCA</a><ol><li class="t3"><a href="#s5.1">5.1 课件开头的三个复习</a></li><li class="t3"><a href="#s5.2">5.2 为什么要降维</a></li><li class="t3"><a href="#s5.3">5.3 多变量方法总览</a></li><li class="t3"><a href="#s5.4">5.4 PCA 是什么</a></li><li class="t3"><a href="#s5.5">5.5 预处理：第一步缩放，第二步中心化</a></li><li class="t3"><a href="#s5.6">5.6 三个矩阵</a></li><li class="t3"><a href="#s5.7">5.7 分解：特征值和特征向量</a></li><li class="t3"><a href="#s5.8">5.8 PC1 和 PC2 是怎么找到的</a></li><li class="t3"><a href="#s5.9">5.9 用一个小例子把名词串起来：身高和体重</a></li><li class="t3"><a href="#s5.10">5.10 PCA 的四个步骤</a></li><li class="t3"><a href="#s5.11">5.11 PCA 的五种图</a></li><li class="t3"><a href="#s5.12">5.12 怎么描述一张 PCA 图</a></li><li class="t3"><a href="#s5.13">5.13 常见误解</a></li></ol></li><li class="t2"><a href="#s6">6. Part 3：数据库与数据管理</a><ol><li class="t3"><a href="#s6.1">6.1 数据库和科学数据库</a></li><li class="t3"><a href="#s6.2">6.2 数据管理</a></li><li class="t3"><a href="#s6.3">6.3 VRE：虚拟研究环境</a></li><li class="t3"><a href="#s6.4">6.4 DAAP：分析平台的数据采集</a></li><li class="t3"><a href="#s6.5">6.5 RDF 和 SPARQL</a></li><li class="t3"><a href="#s6.6">6.6 J774 巨噬细胞案例：两个好处</a></li></ol></li><li class="t2"><a href="#s7">7. 全课一页总结</a><ol></ol></li><li class="t2"><a href="#s8">8. 中英术语表</a><ol><li class="t3"><a href="#g-Introduction">导论</a></li><li class="t3"><a href="#g-Part1">Part 1</a></li><li class="t3"><a href="#g-Part2">Part 2</a></li><li class="t3"><a href="#g-Part3">Part 3</a></li></ol></li></ol></div></nav><main class="doc">
+<h2 id="s0">关于这份笔记 <span class="en-h">About these notes</span></h2>
+<p>这是 TU23「化学计量学导论」（Introduction to Chemometrics）的完整学习笔记，按课件的顺序整理：导论、Part 1（Python 与矩阵）、Part 2（回归复习和 PCA）、Part 3（数据库与数据管理）。</p>
+<p class="en">These are complete study notes for TU23, Introduction to Chemometrics, following the order of the slides: introduction, Part 1 (Python and matrices), Part 2 (regression reminder and PCA) and Part 3 (databases and data management).</p>
+<p>笔记的重点是「理解」：每个概念都用大白话和一个小例子来讲，不需要数学基础也能看懂。</p>
+<p class="en">The focus is understanding: every concept is explained in plain words with a tiny example, so no maths background is needed.</p>
+<p>内容逐页对照过课件原件，例子和数字都以课件为准。</p>
+<p class="en">The content has been checked page by page against the original slides, and the examples and numbers follow the slides.</p>
+<p>课件里没有、只是帮助理解的背景内容，都标了「课件外补充」。</p>
+<p class="en">Background that is not in the slides and is only there to aid understanding is marked "not in the slides" (课件外补充).</p>
+<div class="tw"><table>
+<thead><tr><th>标记<br><span class="en">Mark</span></th><th>意思<br><span class="en">Meaning</span></th></tr></thead>
+<tbody>
+<tr><td><span class="star">★★★</span></td><td>课件核心，要真正理解<br><span class="en">Core of the course; worth really understanding</span></td></tr>
+<tr><td><span class="star">★★</span></td><td>理解大意，能用自己的话说出来<br><span class="en">Understand the main idea and be able to say it in your own words</span></td></tr>
+<tr><td><span class="star">★</span></td><td>知道有这回事就行<br><span class="en">Just know that it exists</span></td></tr>
+<tr><td><span class="tag-deep">深入理解</span></td><td>用一个具体小例子把概念讲透的展开部分<br><span class="en">An expanded explanation that works a concept through one concrete example</span></td></tr>
+</tbody>
+</table></div>
+<p>每章最后都有一个「一句话总结」，第 7 章把全课压缩在一张表里，第 8 章是中英术语表。</p>
+<p class="en">Every chapter ends with a "one-sentence summary"; chapter 7 condenses the whole course into one table, and chapter 8 is a Chinese–English glossary.</p>
+<p>页面顶部可以切换「中英对照」和「只看中文」。</p>
+<p class="en">The bar at the top of the page switches between "Chinese and English" and "Chinese only".</p>
+<h2 id="s1">1. 导论：化学计量学是什么 <span class="en-h">1. Introduction: what chemometrics is</span></h2>
+<h3 id="s1.1">1.1 定义和四个主要目标 <span class="star">★★★</span> <span class="en-h">1.1 Definition and four main goals</span></h3>
+<p>课件的定义：化学计量学（chemometrics）是一门化学学科，它用数学、统计和其他方法来设计或选择最优的测量程序和实验，并通过分析化学数据提供最多的相关化学信息。</p>
+<p class="en">The slides' definition: chemometrics is the chemical discipline that uses mathematical, statistical and other methods to design or select optimal measurement procedures and experiments, and to provide maximum relevant chemical information by analysing chemical data.</p>
+<p>它是分析化学的一个分支学科，出现在 70 年代初。</p>
+<p class="en">It is a sub-discipline of analytical chemistry that appeared in the early 1970s.</p>
+<p>课件说它是「统计学、计算机和信息时代的孩子」：没有计算机，就处理不了这么多数据。</p>
+<p class="en">The slides call it "the child of statistics, computers and the information age": without computers, this much data could not be handled.</p>
+<p>定义里有两半：前一半是「设计实验」，后一半是「从数据里提取信息」。</p>
+<p class="en">The definition has two halves: the first is "designing experiments" and the second is "extracting information from data".</p>
+<p>课件把化学计量学的用途归纳成四个主要目标，导论后面的例子正好一个目标对应一组：</p>
+<p class="en">The slides sum up the uses of chemometrics as four main goals, and the examples in the rest of the introduction match them one to one:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>目标<br><span class="en">Goal</span></th>
+<th>意思<br><span class="en">Meaning</span></th>
+<th>课件里的例子<br><span class="en">Example in the slides</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 工艺开发与优化（process development &amp; optimisation）<br><span class="en">1. Process development and optimisation</span></td>
+<td>用实验设计找到最好的实验条件<br><span class="en">Use experimental design to find the best experimental conditions</span></td>
+<td>蛋黄酱、荧光测定（1.3）<br><span class="en">Mayonnaise, fluorescence assay (1.3)</span></td>
+</tr>
+<tr>
+<td>2. 分类 / 模式识别（classification / pattern recognition）<br><span class="en">2. Classification / pattern recognition</span></td>
+<td>把样品分成组，或判断一个样品属于哪一组<br><span class="en">Sort samples into groups, or decide which group a sample belongs to</span></td>
+<td>良性和恶性癌细胞（1.4）<br><span class="en">Benign and malignant cancer cells (1.4)</span></td>
+</tr>
+<tr>
+<td>3. 方法校准与预测（method calibration &amp; prediction）<br><span class="en">3. Method calibration and prediction</span></td>
+<td>由光谱等信号预测浓度等性质<br><span class="en">Predict properties such as concentration from signals such as spectra</span></td>
+<td>单波长校准对比 PLS（1.5、1.6）<br><span class="en">Single-wavelength calibration versus PLS (1.5, 1.6)</span></td>
+</tr>
+<tr>
+<td>4. 数据提取（data extraction）<br><span class="en">4. Data extraction</span></td>
+<td>从海量信号里找出真正有意义的那几个<br><span class="en">Find the few meaningful signals among a huge number</span></td>
+<td>HPLC/HRMS 代谢组学（1.7）<br><span class="en">HPLC/HRMS metabolomics (1.7)</span></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s1.2">1.2 经典方法和化学计量学的区别 <span class="star">★★★</span> <span class="en-h">1.2 Classical approach vs chemometrics</span></h3>
+<p>这是导论里最核心的一张对比表，课件的意思如下：</p>
+<p class="en">This is the key comparison in the introduction; the slides say the following:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>经典方法<br><span class="en">Classical approach</span></th>
+<th>化学计量学方法<br><span class="en">Chemometric approach</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>目的<br><span class="en">Aim</span></td>
+<td>理解现象，并给各个因素的重要性排序<br><span class="en">Understand the phenomenon and rank the importance of the factors</span></td>
+<td>放弃「理解」，换来能预测、能分类<br><span class="en">Gives up on understanding in exchange for being able to predict and classify</span></td>
+</tr>
+<tr>
+<td>思路<br><span class="en">Way of thinking</span></td>
+<td>还原论（reductionist）：一次只看一个因素<br><span class="en">Reductionist: one factor at a time</span></td>
+<td>多变量（multivariate）：所有变量一起看<br><span class="en">Multivariate: all variables together</span></td>
+</tr>
+<tr>
+<td>模型从哪来<br><span class="en">Where the model comes from</span></td>
+<td>来自理论<br><span class="en">From theory</span></td>
+<td>只在多维空间里拟合数据，不一定有理论意义<br><span class="en">It only fits the data in a multidimensional space and need not have a theoretical meaning</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>最关键的一句：化学计量学的模型「好用」但不一定「讲得出道理」，它追求的是预测和分类，而不是解释机理。</p>
+<p class="en">The key sentence: a chemometric model is useful but cannot necessarily be explained; it aims at prediction and classification, not at explaining the mechanism.</p>
+<h3 id="s1.3">1.3 目标一：实验设计（DoE） <span class="star">★★★</span> <span class="en-h">1.3 Goal 1: experimental design (DoE)</span></h3>
+<p><strong>因素（factor）</strong> 就是实验参数，比如温度、时间、试剂量。</p>
+<p class="en"><strong>A factor</strong> is an experimental parameter, such as temperature, time or the amount of reagent.</p>
+<p><strong>传统做法 OFAT（One Factor At A Time，一次一个因素）</strong>：只改变一个因素，其他因素都固定在中间值。</p>
+<p class="en"><strong>The traditional approach, OFAT (One Factor At A Time)</strong>: vary only one factor while all the others are held at their intermediate value.</p>
+<p>课件的蛋黄酱（mayonnaise）例子有三个因素，各三个水平：</p>
+<p class="en">The slides' mayonnaise example has three factors with three levels each:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>因素<br><span class="en">Factor</span></th>
+<th>三个水平<br><span class="en">Three levels</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>芥末量<br><span class="en">Amount of mustard</span></td>
+<td>¼、½、¾ 勺<br><span class="en">¼, ½, ¾ spoon</span></td>
+</tr>
+<tr>
+<td>油的体积<br><span class="en">Volume of oil</span></td>
+<td>少、中、多<br><span class="en">Low, medium, high</span></td>
+</tr>
+<tr>
+<td>搅拌机速度<br><span class="en">Blender speed</span></td>
+<td>低、中、高<br><span class="en">Low, medium, high</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>OFAT 就是把三个因素分别、独立地测试，课件指出它有两个问题：</p>
+<p class="en">OFAT tests the three factors separately and independently, and the slides point out two problems with it:</p>
+<ol>
+<li value="1">多米诺效应（domino effect）：一个实验失败，后面依赖它的结论全部受影响。</li>
+<li class="en">The domino effect: if one experiment fails, every conclusion that depends on it is compromised.</li>
+<li value="2">看不到交互作用（interaction）：因素是一个个单独改的，所以永远发现不了「两个因素一起变时才出现」的效果。</li>
+<li class="en">Interactions cannot be seen: because the factors are changed one at a time, an effect that appears only when two factors change together can never be found.</li>
+</ol>
+<p><strong>交互作用是什么？</strong> 如果因素 A 的效果在因素 B 的不同水平下不一样，就说 A 和 B 有交互作用。</p>
+<p class="en"><strong>What is an interaction?</strong> If the effect of factor A is different at different levels of factor B, A and B are said to interact.</p>
+<p><strong>全因子设计 2³（full factorial design）</strong>：三个因素各取低、高两个水平，所有组合都做一遍（2 × 2 × 2 = 8 个），再加一个中心点（central point），一共 9 个实验。</p>
+<p class="en"><strong>The 2³ full factorial design</strong>: each of the three factors takes a low and a high level, every combination is run (2 × 2 × 2 = 8), and a central point is added, giving 9 experiments in total.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>全因子设计的优点（课件）<br><span class="en">Advantages of the full factorial design (slides)</span></th>
+<th>解释<br><span class="en">Explanation</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>因素之间不相关<br><span class="en">The factors are uncorrelated</span></td>
+<td>每个因素的效果可以干净地分开估计<br><span class="en">Each factor's effect can be estimated cleanly on its own</span></td>
+</tr>
+<tr>
+<td>能得到主效应和交互作用<br><span class="en">Main effects and interactions are obtained</span></td>
+<td>主效应（main effect）是一个因素单独的作用<br><span class="en">A main effect is the effect of one factor on its own</span></td>
+</tr>
+<tr>
+<td>得到多变量线性模型<br><span class="en">A multivariate linear model is obtained</span></td>
+<td>再用拟合优度（goodness of fit）检查模型好不好<br><span class="en">Its goodness of fit is then checked</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>课件的第二个例子：荧光测定（EGF + NBD-Cl）</strong>。</p>
+<p class="en"><strong>The slides' second example: a fluorescence assay (EGF + NBD-Cl)</strong>.</p>
+<p>目标是让荧光强度（FI）最大，研究了四个因素：</p>
+<p class="en">The goal is to maximise the fluorescence intensity (FI), and four factors were studied:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>因素<br><span class="en">Factor</span></th>
+<th>低 / 高<br><span class="en">Low / high</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A 温度<br><span class="en">A Temperature</span></td>
+<td>25 / 80 °C</td>
+</tr>
+<tr>
+<td>B 时间<br><span class="en">B Time</span></td>
+<td>5 / 35 min</td>
+</tr>
+<tr>
+<td>C 试剂体积<br><span class="en">C Reagent volume</span></td>
+<td>0.2 / 1.5 mL</td>
+</tr>
+<tr>
+<td>D 缓冲液体积<br><span class="en">D Buffer volume</span></td>
+<td>0.5 / 2.0 mL</td>
+</tr>
+</tbody>
+</table></div>
+<p>结果怎么读：</p>
+<p class="en">How to read the results:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>课件里的图<br><span class="en">Plot in the slides</span></th>
+<th>怎么读<br><span class="en">How to read it</span></th>
+<th>这个例子的结论<br><span class="en">Conclusion in this example</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>帕累托图（Pareto chart）<br><span class="en">Pareto chart</span></td>
+<td>各效应按大小排成横条，有一条显著性参考线（α = 0.05）；超过参考线的效应才显著<br><span class="en">The effects are sorted by size as bars with a significance line (α = 0.05); only effects beyond the line are significant</span></td>
+<td>A（温度）最重要，其次是 C 和 B，交互作用 AB 也显著；它们都使 FI 增大；其他效应不显著<br><span class="en">A (temperature) matters most, then C and B, and the AB interaction is also significant; all of them increase FI; the other effects are not significant</span></td>
+</tr>
+<tr>
+<td>等值线图（contour plot）<br><span class="en">Contour plot</span></td>
+<td>每条线代表相同的响应，数值最高的区域就是最优条件；线是斜的或弯的说明有交互作用<br><span class="en">Each line has the same response, and the region with the highest value is the optimum; slanted or curved lines mean an interaction</span></td>
+<td>用来找让 FI 最大的因素组合<br><span class="en">Used to find the combination of factors that maximises FI</span></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s1.4">1.4 目标二：分类（癌细胞例子） <span class="star">★★★</span> <span class="en-h">1.4 Goal 2: classification (cancer cells)</span></h3>
+<p>数据：683 位病人的细胞，每个细胞测了 10 个描述符（descriptors），要区分良性和恶性。</p>
+<p class="en">The data: cells from 683 patients, each described by 10 descriptors, and the task is to distinguish benign from malignant.</p>
+<p><strong>经典方法</strong>：每个变量单独比较良性组和恶性组，结果 10 个变量全部有显著差异，所以看起来区分很简单。</p>
+<p class="en"><strong>The classical approach</strong>: each variable is compared on its own between the benign and malignant groups, and all 10 variables differ significantly, so the distinction seems simple.</p>
+<p>但经典方法默认了两件事：变量之间互相独立，而且每个变量事先就被认为是相关的。</p>
+<p class="en">But the classical approach assumes two things: that the variables are independent of each other, and that each variable is relevant a priori.</p>
+<p><strong>化学计量学方法（PCA）</strong>：所有变量一起分析，Dim1 解释 65.55%，Dim2 解释 8.62%，两个轴加起来约 75%。</p>
+<p class="en"><strong>The chemometric approach (PCA)</strong>: all variables are analysed together; Dim1 explains 65.55% and Dim2 explains 8.62%, about 75% for the two axes together.</p>
+<p>PCA 揭示了更复杂的真实情况：</p>
+<p class="en">PCA reveals a more complex real situation:</p>
+<ul>
+<li>10 个变量里有 9 个在第一轴上高度相关，说明它们其实在重复同一种信息，并不是 10 个独立的证据。</li>
+<li class="en">Nine of the 10 variables are strongly correlated on the first axis, which means they largely repeat the same information rather than being 10 independent pieces of evidence.</li>
+<li>剩下的「有丝分裂」（mitoses）这个变量对应第二轴，它解释了恶性细胞在第二轴方向上的分散。</li>
+<li class="en">The remaining variable, mitoses, corresponds to the second axis and explains the spread of the malignant cells along that axis.</li>
+<li>树状图（dendrogram）根据个体之间的距离把病人一层一层聚成组。</li>
+<li class="en">The dendrogram groups the patients level by level according to the distances between individuals.</li>
+</ul>
+<p>这个例子要记住的道理：单变量检验说「都显著」，并不代表我们理解了数据；多变量方法能看到变量之间的相关结构，这是单变量方法看不到的。</p>
+<p class="en">The lesson of this example: when univariate tests say "all significant", that does not mean we understand the data; multivariate methods can see the correlation structure between variables, which univariate methods cannot.</p>
+<h3 id="s1.5">1.5 目标三：校准与预测（从单波长到 PLS） <span class="star">★★★</span> <span class="en-h">1.5 Goal 3: calibration and prediction (from one wavelength to PLS)</span></h3>
+<p><strong>校准（calibration）</strong> 是用已知浓度的标准样品建立信号和浓度的关系，<strong>预测（prediction）</strong> 是反过来用这个关系由未知样品的信号求浓度。</p>
+<p class="en"><strong>Calibration</strong> builds the relationship between signal and concentration using standards of known concentration; <strong>prediction</strong> goes the other way, using that relationship to find an unknown sample's concentration from its signal.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>经典单波长校准<br><span class="en">Classical single-wavelength calibration</span></th>
+<th>PLS 回归<br><span class="en">PLS regression</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用了什么<br><span class="en">What it uses</span></td>
+<td>只用最灵敏的一个波长（课件例子是 550 nm）<br><span class="en">Only the single most sensitive wavelength (550 nm in the slides)</span></td>
+<td>降维以后的整条光谱<br><span class="en">The whole spectrum after dimension reduction</span></td>
+</tr>
+<tr>
+<td>怎么建模<br><span class="en">How the model is built</span></td>
+<td>一元线性回归<br><span class="en">Simple linear regression</span></td>
+<td>找使 y（浓度）和 X（光谱）协方差最大的方向<br><span class="en">Finds the directions that maximise the covariance between y (concentration) and X (spectra)</span></td>
+</tr>
+<tr>
+<td>样品里混进别的物质<br><span class="en">A foreign substance in the sample</span></td>
+<td>发现不了，悄悄给出一个错误浓度<br><span class="en">Goes unnoticed and silently gives a wrong concentration</span></td>
+<td>预测之前就能发现光谱「不对劲」<br><span class="en">Detects that the spectrum looks wrong before predicting</span></td>
+</tr>
+<tr>
+<td>性能<br><span class="en">Performance</span></td>
+<td>一般<br><span class="en">Ordinary</span></td>
+<td>更稳健、更准确，还能同时预测多个性质<br><span class="en">More robust and accurate, and can predict several properties at once</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>PLS 和 PCA 最根本的区别：PCA 只看 X，PLS 找方向时同时看 X 和 y。</p>
+<p class="en">The most fundamental difference between PLS and PCA: PCA looks only at X, while PLS uses both X and y when it looks for directions.</p>
+<p><strong>课件的 PLS 例子</strong>：混合物里有三个成分，用了 100 个真实样品建模。</p>
+<p class="en"><strong>The slides' PLS example</strong>: mixtures with three components, modelled with 100 real samples.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>用真实样品<br><span class="en">Using real samples</span></th>
+<th>说明<br><span class="en">Explanation</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>优点<br><span class="en">Advantage</span></td>
+<td>样品是真的，包含了实际会遇到的所有变化<br><span class="en">The samples are real, so they contain all the variation met in practice</span></td>
+</tr>
+<tr>
+<td>缺点<br><span class="en">Drawback</span></td>
+<td>需要一个参考方法（reference method）先测出每个样品的真实浓度<br><span class="en">A reference method is needed to measure each sample's true concentration first</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>怎么判断模型好：画「预测值 对 参考值」的图，点越贴近斜率 1、截距 0 的对角线，预测越准。</p>
+<p class="en">How to judge the model: plot predicted values against reference values; the closer the points lie to the diagonal with slope 1 and intercept 0, the more accurate the prediction.</p>
+<p><strong>课件外补充</strong>：为什么不把几百个波长直接塞进普通多元回归？因为相邻波长几乎一样（共线性，collinearity），系数会极不稳定；PLS 先降维就避开了这个问题。</p>
+<p class="en"><strong>Not in the slides</strong>: why not put hundreds of wavelengths straight into ordinary multiple regression? Because neighbouring wavelengths are almost identical (collinearity), so the coefficients become very unstable; PLS avoids this by reducing the dimensions first.</p>
+<h3 id="s1.6">1.6 过拟合与交叉验证 <span class="star">★★★</span> <span class="en-h">1.6 Overfitting and cross-validation</span></h3>
+<p>PLS 要决定用几个成分（潜变量），课件用 RMSE（均方根误差）曲线来选。</p>
+<p class="en">PLS has to decide how many components (latent variables) to use, and the slides choose it with an RMSE (root mean square error) curve.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>曲线<br><span class="en">Curve</span></th>
+<th>随成分数增加<br><span class="en">As components are added</span></th>
+<th>意思<br><span class="en">Meaning</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>校准误差（calibration）<br><span class="en">Calibration error</span></td>
+<td>一直下降<br><span class="en">Keeps falling</span></td>
+<td>模型越复杂，对建模样品拟合得越好，所以不能用它来选成分数<br><span class="en">The more complex the model, the better it fits the modelling samples, so it cannot be used to choose the number of components</span></td>
+</tr>
+<tr>
+<td>验证误差（validation）<br><span class="en">Validation error</span></td>
+<td>先降后升<br><span class="en">Falls then rises</span></td>
+<td>上升的部分就是过拟合；最低点对应最好的成分数<br><span class="en">The rising part is overfitting; the lowest point gives the best number of components</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>过拟合（overfitting）</strong>：模型太复杂，把建模数据里的噪声也学进去了，对老样品很准，对新样品很差。</p>
+<p class="en"><strong>Overfitting</strong>: the model is too complex and has also learned the noise in the modelling data, so it is accurate on the old samples and poor on new ones.</p>
+<p>就像死背练习题答案的学生，练习题全对，换一道新题就不会。</p>
+<p class="en">It is like a student who memorises the answers to practice questions: perfect on the practice set, lost on a new question.</p>
+<p>课件用的是完全留一交叉验证（full leave-one-out cross-validation）：每次拿出一个样品当「新样品」，用剩下的样品建模去预测它，所有样品轮一遍。</p>
+<p class="en">The slides use full leave-one-out cross-validation: each time one sample is taken out as a "new sample", the model is built on the rest to predict it, and this is repeated for every sample.</p>
+<p>这个例子最后选了 3 个成分，正好对应混合物里的三个成分。</p>
+<p class="en">This example finally chose 3 components, which matches the three components in the mixture.</p>
+<h3 id="s1.7">1.7 目标四：数据提取（代谢组学） <span class="star">★★</span> <span class="en-h">1.7 Goal 4: data extraction (metabolomics)</span></h3>
+<p>用 HPLC/HRMS（液相色谱 / 高分辨质谱）分析生物样品，会得到几万个信号。</p>
+<p class="en">Analysing biological samples by HPLC/HRMS (liquid chromatography / high-resolution mass spectrometry) gives tens of thousands of signals.</p>
+<p>其中绝大多数是身体本来就有的内源性物质，并不是疾病标志物。</p>
+<p class="en">Most of them are endogenous substances that the body always contains, not disease markers.</p>
+<p>用 PCA 衍生的方法，可以找回对照组和病理组的分组，并找出在病人身上表达偏高或偏低的变量。</p>
+<p class="en">Methods derived from PCA can recover the control and pathological groups and pick out the variables that are over- or under-expressed in the patients.</p>
+<p>最后只有这些「有意义的信号」才拿去数据库检索鉴定，省去了逐个鉴定几万个峰的工作。</p>
+<p class="en">In the end only these signals of interest are identified by database search, which saves identifying tens of thousands of peaks one by one.</p>
+<blockquote class="sum">
+<p><strong>一句话总结</strong>：化学计量学放弃「理解每个因素」，换来用全部变量一起去优化实验（DoE）、分类样品（PCA）、准确预测（PLS，要用交叉验证防过拟合）和从海量信号里提取有用信息。</p>
+<p class="en"><strong>One-sentence summary</strong>: Chemometrics gives up on understanding each factor in exchange for using all variables together to optimise experiments (DoE), classify samples (PCA), predict accurately (PLS, with cross-validation against overfitting) and extract useful information from huge numbers of signals.</p>
+</blockquote>
+<h2 id="s2">2. Part 1：Python 与矩阵基础 <span class="en-h">2. Part 1: Python and matrix basics</span></h2>
+<h3 id="s2.1">2.1 这一章讲什么 <span class="star">★★</span> <span class="en-h">2.1 What this chapter covers</span></h3>
+<p>Part 1 是上机课：用 Python 处理实验数据，为后面的 PCA 做准备。</p>
+<p class="en">Part 1 is the computer-lab part: using Python to handle experimental data, in preparation for PCA later on.</p>
+<p>这一章的目标是「看到一行代码，能说出它在做什么」，不需要背函数名怎么拼。</p>
+<p class="en">The goal of this chapter is "when you see a line of code, you can say what it does"; you do not need to memorise how function names are spelled.</p>
+<p>和后面关系最大的是矩阵概念（2.5、2.7）：PCA 里的转置、矩阵乘法、对称矩阵都是在这里第一次出现的。</p>
+<p class="en">The most relevant part for later is the matrix concepts (2.5, 2.7): the transpose, matrix multiplication and symmetric matrices used in PCA all first appear here.</p>
+<p>每条指令后面都有一个小例子和它的输出，例子都用课件里的矩阵。</p>
+<p class="en">Each command comes with a tiny example and its output, and the examples use the matrices from the slides.</p>
+<h3 id="s2.2">2.2 工具：Anaconda、Jupyter、.py 和 .ipynb <span class="star">★★</span> <span class="en-h">2.2 Tools: Anaconda, Jupyter, .py and .ipynb</span></h3>
+<div class="tw"><table>
+<thead><tr><th>工具<br><span class="en">Tool</span></th><th>是什么<br><span class="en">What it is</span></th></tr></thead>
+<tbody>
+<tr><td>Python</td><td>编程语言<br><span class="en">The programming language</span></td></tr>
+<tr><td>Anaconda</td><td>一个发行版：Anaconda = Python + 各种模块 + 已经配好的设置<br><span class="en">A distribution: Anaconda = Python + modules + configuration already set up</span></td></tr>
+<tr><td>Jupyter notebook</td><td>在浏览器里一格一格写代码、马上看到结果的环境<br><span class="en">An environment in the browser where you write code cell by cell and see the result immediately</span></td></tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead><tr><th>文件<br><span class="en">File</span></th><th>里面有什么<br><span class="en">What it contains</span></th></tr></thead>
+<tbody>
+<tr><td><code>.py</code></td><td>普通 Python 文件，纯文本，只有代码；课上把函数定义写在 .py 文件里<br><span class="en">A standard Python file, plain text with code only; in class the function definitions are written in a .py file</span></td></tr>
+<tr><td><code>.ipynb</code></td><td>Python 笔记本，包含代码、运行结果和其他内部参数，只能在 Jupyter 环境里运行<br><span class="en">A Python notebook containing the code, the execution results and other internal parameters; it can only be run in the Jupyter environment</span></td></tr>
+</tbody>
+</table></div>
+<p>课件的一句话：一个函数有输入，也有输出。</p>
+<p class="en">One sentence from the slides: a function has an input and an output.</p>
+<h3 id="s2.3">2.3 运算符 <span class="star">★★</span> <span class="en-h">2.3 Operators</span></h3>
+<div class="tw"><table>
+<thead><tr><th>运算符<br><span class="en">Operator</span></th><th>意思<br><span class="en">Meaning</span></th><th>小例子<br><span class="en">Tiny example</span></th></tr></thead>
+<tbody>
+<tr><td><code>+ - * /</code></td><td>加、减、乘、除<br><span class="en">Addition, subtraction, multiplication, division</span></td><td><code>7/2</code> → 3.5</td></tr>
+<tr><td><code>//</code></td><td>整除，只留商的整数部分<br><span class="en">Integer division, keeping only the whole part of the quotient</span></td><td><code>7//2</code> → 3</td></tr>
+<tr><td><code>%</code></td><td>取余数；判断偶数就看 <code>x % 2</code> 是不是 0<br><span class="en">Remainder; to test for an even number, check whether <code>x % 2</code> is 0</span></td><td><code>7%2</code> → 1</td></tr>
+<tr><td><code>**</code></td><td>乘方<br><span class="en">Power</span></td><td><code>2**3</code> → 8</td></tr>
+<tr><td><code>=</code></td><td>赋值：把右边的值存进左边的变量，不是「等于」<br><span class="en">Assignment: store the value on the right in the variable on the left; it does not mean "equals"</span></td><td><code>x = 5</code></td></tr>
+<tr><td><code>+= -= *=</code> …</td><td>复合赋值：在原来的值上再算一次，结果存回去<br><span class="en">Compound assignment: do the operation on the old value and store the result back</span></td><td><code>x=5; x+=3</code> → x 是 8<br><span class="en"><code>x=5; x+=3</code> → x is 8</span></td></tr>
+<tr><td><code>' '</code></td><td>引号里的是字符串（文字）<br><span class="en">Anything in quotes is a character string (text)</span></td><td><code>'amandine'</code></td></tr>
+<tr><td><code>== != &lt; &gt; &lt;= &gt;=</code></td><td>比较：等于、不等于、小于、大于、小于等于、大于等于；结果是 True 或 False<br><span class="en">Comparison: equal, not equal, less, greater, less or equal, greater or equal; the result is True or False</span></td><td><code>5 == 5</code> → True</td></tr>
+<tr><td><code>and or</code></td><td>逻辑「并且」「或者」：and 要两个都对，or 有一个对就行<br><span class="en">Logical "and" and "or": and needs both to be true, or needs at least one</span></td><td>见下 / see below</td></tr>
+</tbody>
+</table></div>
+<p>课件的例子，x = 5：</p>
+<p class="en">The slides' example, with x = 5:</p>
+<pre class="code"><code>x = 5
+x &lt; 8 and x &lt; 10
+x &lt; 8 and x &gt; 10
+x &lt; 8 or x &gt; 10
+x &gt; 8 and x &lt; 10</code></pre>
+<pre class="out"><span class="out-l">输出 · Output</span>
+<code>True
+False
+True
+False</code></pre>
+<p>最容易混的一对：一个等号 <code>=</code> 是赋值，两个等号 <code>==</code> 是比较。</p>
+<p class="en">The pair most easily confused: a single <code>=</code> is assignment, and a double <code>==</code> is comparison.</p>
+<h3 id="s2.4">2.4 模块、变量、字符串和列表 <span class="star">★★</span> <span class="en-h">2.4 Modules, variables, strings and lists</span></h3>
+<p>Python 本身只有基本函数，其他函数放在模块（module）里，用之前要先导入（import）；一个包（package）就是一组模块。</p>
+<p class="en">Python itself has only basic functions; other functions live in modules, which must be imported before use, and a package is a collection of modules.</p>
+<div class="tw"><table>
+<thead><tr><th>导入方式<br><span class="en">How to import</span></th><th>用的时候怎么写<br><span class="en">How you then write it</span></th></tr></thead>
+<tbody>
+<tr><td><code>import math</code></td><td>要写模块名：<code>math.floor()</code><br><span class="en">You write the module name: <code>math.floor()</code></span></td></tr>
+<tr><td><code>from math import *</code></td><td>可以直接写 <code>floor()</code>，不用再写 <code>math.</code><br><span class="en">You can write <code>floor()</code> directly, without <code>math.</code></span></td></tr>
+<tr><td><code>import numpy as np</code></td><td>给模块起简称，之后写 <code>np.array()</code><br><span class="en">Gives the module a short alias, so you then write <code>np.array()</code></span></td></tr>
+</tbody>
+</table></div>
+<p>课件提到的常用模块：math（计算）、numpy（矩阵）、matplotlib.pyplot（画图）、os（文件和系统）、pandas（读表格）。</p>
+<p class="en">Common modules mentioned in the slides: math (calculation), numpy (matrices), matplotlib.pyplot (plotting), os (files and system) and pandas (reading tables).</p>
+<div class="tw"><table>
+<thead><tr><th>math 里的函数<br><span class="en">Functions in math</span></th><th>做什么<br><span class="en">What it does</span></th><th>小例子<br><span class="en">Tiny example</span></th></tr></thead>
+<tbody>
+<tr><td><code>abs()</code></td><td>绝对值（这个不用导入）<br><span class="en">Absolute value (no import needed)</span></td><td><code>abs(-3)</code> → 3</td></tr>
+<tr><td><code>math.floor()</code> / <code>math.ceil()</code></td><td>向下取整 / 向上取整<br><span class="en">Round down / round up</span></td><td><code>floor(2.7)</code> → 2, <code>ceil(2.1)</code> → 3</td></tr>
+<tr><td><code>math.sqrt()</code></td><td>平方根<br><span class="en">Square root</span></td><td><code>sqrt(16)</code> → 4.0</td></tr>
+<tr><td><code>math.pi</code>, <code>math.e</code></td><td>圆周率 π 和自然常数 e<br><span class="en">The constants π and e</span></td><td>3.14159…, 2.71828…</td></tr>
+<tr><td><code>math.cos()</code> …</td><td>三角函数<br><span class="en">Trigonometric functions</span></td><td><code>cos(0)</code> → 1.0</td></tr>
+</tbody>
+</table></div>
+<p>变量（variable）：名字必须以字母开头，例如 <code>x = 8</code>、<code>prenom = 'amandine'</code>；<code>print(prenom)</code> 会显示 amandine。</p>
+<p class="en">Variables: the name must start with a letter, for example <code>x = 8</code> or <code>prenom = 'amandine'</code>; <code>print(prenom)</code> displays amandine.</p>
+<p>列表（list）：方括号里一串东西排在一起；<code>len()</code> 求长度，<code>range(起点, 终点, 步长)</code> 生成一串数。</p>
+<p class="en">Lists: a row of items inside square brackets; <code>len()</code> gives the length, and <code>range(start, end, step)</code> generates a run of numbers.</p>
+<pre class="code"><code>prenoms = ['kodjo','michel','sonia','nadine','almar']
+prenoms[0]
+len(prenoms)
+list(range(0,11,2))</code></pre>
+<pre class="out"><span class="out-l">输出 · Output</span>
+<code>'kodjo'
+5
+[0, 2, 4, 6, 8, 10]</code></pre>
+<p>最重要的提醒：Python 从 0 开始数，第一个元素的位置是 0，不是 1；range 的终点不包含在内，所以 <code>list(range(0,10))</code> 是 0 到 9。</p>
+<p class="en">The most important warning: Python counts from 0, so the first element is at position 0, not 1; the end of a range is not included, so <code>list(range(0,10))</code> is 0 to 9.</p>
+<h3 id="s2.5">2.5 矩阵的基本概念 <span class="star">★★★</span> <span class="en-h">2.5 Basic matrix concepts</span></h3>
+<p>一个 m × n 矩阵就是 m 行、n 列的一张数字表，里面的数叫元素（elements），m × n 叫它的维度（dimension）。</p>
+<p class="en">An m × n matrix is a table of numbers with m rows and n columns; the numbers in it are called elements, and m × n is its dimension.</p>
+<p>比如 HER 数据是 80 个人 × 14 个变量，就是一个 80 × 14 的矩阵：一行是一个人，一列是一个变量。</p>
+<p class="en">For example, the HER data are 80 people × 14 variables, an 80 × 14 matrix: one row is one person and one column is one variable.</p>
+<div class="tw"><table>
+<thead><tr><th>特殊矩阵<br><span class="en">Special matrix</span></th><th>样子<br><span class="en">What it looks like</span></th><th>后面在哪里用到<br><span class="en">Where it is used later</span></th></tr></thead>
+<tbody>
+<tr><td>方阵（square）<br><span class="en">Square matrix</span></td><td>行数等于列数<br><span class="en">Same number of rows and columns</span></td><td>协方差矩阵、相关矩阵都是方阵<br><span class="en">Covariance and correlation matrices are square</span></td></tr>
+<tr><td>对角矩阵（diagonal）<br><span class="en">Diagonal matrix</span></td><td>只有对角线上有数，其他都是 0<br><span class="en">Values only on the diagonal, zeros elsewhere</span></td><td>—</td></tr>
+<tr><td>单位矩阵 I（identity）<br><span class="en">Identity matrix I</span></td><td>对角线全是 1，其他全是 0<br><span class="en">Ones on the diagonal, zeros everywhere else</span></td><td>用来定义逆矩阵<br><span class="en">Used to define the inverse</span></td></tr>
+<tr><td>逆矩阵 A⁻¹（inverse）<br><span class="en">Inverse matrix A⁻¹</span></td><td>满足 AB = BA = I 的 B 就是 A 的逆<br><span class="en">B is the inverse of A if AB = BA = I</span></td><td>—</td></tr>
+<tr><td>对称矩阵（symmetric）<br><span class="en">Symmetric matrix</span></td><td>沿对角线两边的数一样<br><span class="en">The same values on either side of the diagonal</span></td><td>化学计量学里很常见，比如 XᵀX<br><span class="en">Very common in chemometrics, such as XᵀX</span></td></tr>
+<tr><td>转置 Dᵀ（transpose）<br><span class="en">Transpose Dᵀ</span></td><td>行变列、列变行：D 是 2 × 3，Dᵀ 就是 3 × 2<br><span class="en">Rows become columns: if D is 2 × 3, Dᵀ is 3 × 2</span></td><td>PCA 里的 XᵀX；HER 从 80 × 14 转成 14 × 80<br><span class="en">XᵀX in PCA; HER turning from 80 × 14 into 14 × 80</span></td></tr>
+</tbody>
+</table></div>
+<div class="box warn"><div class="box-t">课件笔误 <span class="en-h">A slip in the slides</span></div>
+<p>课件有一处把转置写成了「D-1 or DT」。转置的正确记号是 Dᵀ；D⁻¹ 是逆矩阵，两者不是一回事。</p>
+<p class="en">One slide writes the transpose as "D-1 or DT". The correct notation for the transpose is Dᵀ; D⁻¹ is the inverse, and the two are not the same thing.</p>
+</div>
+<h3 id="s2.6">2.6 NumPy 里的矩阵操作 <span class="star">★★</span> <span class="en-h">2.6 Matrix operations in NumPy</span></h3>
+<p>NumPy 是做科学计算的包，支持 N 维数组，通常写成 <code>import numpy as np</code>。</p>
+<p class="en">NumPy is a package for scientific computing that supports N-dimensional arrays, usually imported as <code>import numpy as np</code>.</p>
+<p>下面的例子都用课件的两个矩阵 A1 和 A2：</p>
+<p class="en">The examples below all use the slides' two matrices A1 and A2:</p>
+<pre class="code"><code>A1 = np.arange(1,10).reshape(3,3)
+A2 = np.arange(5,14).reshape(3,3)</code></pre>
+<pre class="out"><span class="out-l">输出 · Output</span>
+<code>A1 = [[1 2 3]
+      [4 5 6]
+      [7 8 9]]
+
+A2 = [[ 5  6  7]
+      [ 8  9 10]
+      [11 12 13]]</code></pre>
+<div class="tw"><table>
+<thead><tr><th>代码<br><span class="en">Code</span></th><th>做什么<br><span class="en">What it does</span></th><th>小例子的结果<br><span class="en">Result of the tiny example</span></th></tr></thead>
+<tbody>
+<tr><td><code>np.array([[1,2,3],[4,1,1],[1,0,0]])</code></td><td>一行一行地写出一个 3 × 3 矩阵；每个 [ ] 是一行<br><span class="en">Writes out a 3 × 3 matrix row by row; each [ ] is one row</span></td><td>课件的矩阵 M<br><span class="en">The slides' matrix M</span></td></tr>
+<tr><td><code>np.arange(1,10)</code></td><td>生成 1 到 9（不含 10）的一维数组<br><span class="en">Creates a 1-D array from 1 to 9 (10 not included)</span></td><td><code>[1 2 3 4 5 6 7 8 9]</code></td></tr>
+<tr><td><code>.reshape(3,3)</code></td><td>把一排数改成 3 × 3；数的个数必须刚好够（9 = 3 × 3）<br><span class="en">Reshapes a row into 3 × 3; the count must fit exactly (9 = 3 × 3)</span></td><td>得到上面的 A1<br><span class="en">Gives A1 above</span></td></tr>
+<tr><td><code>np.linspace(1, 6, 10)</code></td><td>从 1 到 6 均匀取 10 个数<br><span class="en">Takes 10 evenly spaced numbers from 1 to 6</span></td><td>1, 1.56, 2.11, … 6</td></tr>
+<tr><td><code>D.transpose()</code></td><td>转置<br><span class="en">Transpose</span></td><td>2 × 3 变 3 × 2<br><span class="en">2 × 3 becomes 3 × 2</span></td></tr>
+<tr><td><code>np.ones((n,p))</code>, <code>np.zeros((n,p))</code></td><td>n × p 的全 1 矩阵、全 0 矩阵<br><span class="en">An n × p matrix of ones, of zeros</span></td><td>—</td></tr>
+<tr><td><code>np.eye(n)</code></td><td>n × n 单位矩阵<br><span class="en">The n × n identity matrix</span></td><td>—</td></tr>
+<tr><td><code>np.diag(v)</code></td><td>对角矩阵<br><span class="en">A diagonal matrix</span></td><td>—</td></tr>
+<tr><td><code>np.linalg.inv(A)</code></td><td>逆矩阵<br><span class="en">The inverse matrix</span></td><td>—</td></tr>
+<tr><td><code>np.shape(A1)</code>, <code>np.size(A1)</code></td><td>维度（几行几列）、元素总个数<br><span class="en">The dimensions (rows, columns), the total number of elements</span></td><td><code>(3, 3)</code>, <code>9</code></td></tr>
+<tr><td><code>np.min / max / mean / std</code></td><td>最小值、最大值、平均值、标准差<br><span class="en">Minimum, maximum, mean, standard deviation</span></td><td>对 A1：1、9、5.0、2.58…<br><span class="en">For A1: 1, 9, 5.0, 2.58…</span></td></tr>
+<tr><td><code>np.concatenate((A1,A2), axis=1)</code></td><td>左右拼接（axis=1）；axis=0 是上下叠<br><span class="en">Joins side by side (axis=1); axis=0 stacks top to bottom</span></td><td>得到 3 × 6 的 AA<br><span class="en">Gives the 3 × 6 matrix AA</span></td></tr>
+</tbody>
+</table></div>
+<p>后面的练习都用拼出来的 AA：</p>
+<p class="en">The later exercises all use the joined matrix AA:</p>
+<pre class="code"><code>AA = np.concatenate((A1,A2), axis=1)</code></pre>
+<pre class="out"><span class="out-l">输出 · Output</span>
+<code>AA = [[ 1  2  3  5  6  7]
+      [ 4  5  6  8  9 10]
+      [ 7  8  9 11 12 13]]</code></pre>
+<div class="tw"><table>
+<thead><tr><th>代码<br><span class="en">Code</span></th><th>做什么<br><span class="en">What it does</span></th><th>结果<br><span class="en">Result</span></th></tr></thead>
+<tbody>
+<tr><td><code>AA[1,1]</code></td><td>[行号, 列号]，从 0 数，所以是第 2 行第 2 列<br><span class="en">[row, column], counting from 0, so row 2, column 2</span></td><td>5</td></tr>
+<tr><td><code>AA[:,:]</code></td><td>冒号单独出现表示「全部」，所以是整个矩阵<br><span class="en">A colon on its own means "all", so this is the whole matrix</span></td><td>整个 AA<br><span class="en">All of AA</span></td></tr>
+<tr><td><code>AA[0:2,:]</code></td><td>前两行（第 0、1 行），所有列；0:2 不含 2<br><span class="en">The first two rows (rows 0 and 1), all columns; 0:2 excludes 2</span></td><td><code>[[1 2 3 5 6 7]<br>&nbsp;[4 5 6 8 9 10]]</code></td></tr>
+<tr><td><code>AA[-2:,:]</code></td><td>负数从后往前数：最后两行<br><span class="en">Negative numbers count from the end: the last two rows</span></td><td><code>[[4 5 6 8 9 10]<br>&nbsp;[7 8 9 11 12 13]]</code></td></tr>
+<tr><td><code>np.delete(AA, 2, axis=0)</code></td><td>删掉序号 2 的那一行（第 3 行）；axis=1 就是删列<br><span class="en">Deletes index 2, the 3rd row; axis=1 deletes a column</span></td><td>变成 2 × 6<br><span class="en">Becomes 2 × 6</span></td></tr>
+<tr><td><code>np.insert(AA, 1, b, axis=0)</code></td><td>在序号 1 的位置（第 2 行）插入一行 b<br><span class="en">Inserts row b at index 1 (the 2nd row)</span></td><td>变成 4 × 6<br><span class="en">Becomes 4 × 6</span></td></tr>
+<tr><td><code>AA == np.min(AA)</code></td><td>每个位置问「是不是最小值？」，得到 True/False 矩阵<br><span class="en">Each position asks "is this the minimum?", giving a True/False matrix</span></td><td>只有左上角是 True<br><span class="en">Only the top-left is True</span></td></tr>
+<tr><td><code>AA[:,2] = np.zeros(3)</code></td><td>把第 3 列（序号 2）全部换成 0<br><span class="en">Replaces the whole 3rd column (index 2) with zeros</span></td><td>—</td></tr>
+</tbody>
+</table></div>
+<p>读这些代码只要记住三条：从 0 开始数；冒号表示全部；axis=0 是行方向（上下），axis=1 是列方向（左右）。</p>
+<p class="en">To read this code you only need three rules: counting starts at 0; a colon means all; axis=0 is the row direction (top to bottom) and axis=1 is the column direction (side by side).</p>
+<h3 id="s2.7">2.7 逐元素运算和矩阵乘法 <span class="star">★★★</span> <span class="en-h">2.7 Element-wise operations vs matrix multiplication</span></h3>
+<p>这是 Part 1 里最重要的区别，因为 PCA 里的 XᵀX 就是矩阵乘法。</p>
+<p class="en">This is the most important distinction in Part 1, because XᵀX in PCA is a matrix multiplication.</p>
+<div class="tw"><table>
+<thead><tr><th></th><th>逐元素运算（element-by-element）<br><span class="en">Element-by-element operation</span></th><th>矩阵乘法（matrix product）<br><span class="en">Matrix product</span></th></tr></thead>
+<tbody>
+<tr><td>写法<br><span class="en">How it is written</span></td><td><code>A + B</code>, <code>A - C</code>, <code>A * A</code>, <code>A / A</code></td><td><code>A1.dot(A2)</code></td></tr>
+<tr><td>怎么算<br><span class="en">How it works</span></td><td>相同位置的两个数相加、相乘<br><span class="en">The two numbers in the same position are added or multiplied</span></td><td>A 的一行和 B 的一列对应相乘再加起来，得到结果里的一个数<br><span class="en">A row of A is multiplied number by number with a column of B and summed, giving one number of the result</span></td></tr>
+<tr><td>条件<br><span class="en">Condition</span></td><td>两个矩阵大小必须完全相同<br><span class="en">The two matrices must have exactly the same size</span></td><td>A 的列数必须等于 B 的行数<br><span class="en">The number of columns of A must equal the number of rows of B</span></td></tr>
+<tr><td>结果大小<br><span class="en">Size of the result</span></td><td>和原来一样<br><span class="en">Same as the originals</span></td><td>A（n × m）乘 B（m × p）得到 C（n × p）<br><span class="en">A (n × m) times B (m × p) gives C (n × p)</span></td></tr>
+</tbody>
+</table></div>
+<p>先看逐元素乘法：每个数和同一位置的自己相乘，也就是平方。</p>
+<p class="en">First, element-by-element multiplication: each number is multiplied by the number in the same position, here itself, so it is squared.</p>
+<pre class="code"><code>A1 * A1</code></pre>
+<pre class="out"><span class="out-l">输出 · Output</span>
+<code>[[ 1  4  9]
+ [16 25 36]
+ [49 64 81]]</code></pre>
+<p>再看矩阵乘法：结果左上角的数，是 A1 第一行 (1, 2, 3) 和 A2 第一列 (5, 8, 11) 对应相乘再相加。</p>
+<p class="en">Now the matrix product: the top-left number of the result comes from A1's first row (1, 2, 3) and A2's first column (5, 8, 11), multiplied pair by pair and added.</p>
+<div class="eq">1 × 5 + 2 × 8 + 3 × 11 = 5 + 16 + 33 = <strong>54</strong></div>
+<p>打个比方：一行是「买了几件」，一列是「每件多少钱」，对应相乘再加起来就是「一共花了多少钱」。</p>
+<p class="en">An analogy: a row is "how many of each item you bought", a column is "the price of each item", and multiplying pair by pair then adding gives "how much you spent in total".</p>
+<pre class="code"><code>A4 = A1.dot(A2)</code></pre>
+<pre class="out"><span class="out-l">输出 · Output</span>
+<code>[[ 54  60  66]
+ [126 141 156]
+ [198 222 246]]</code></pre>
+<p>课件的例子：Xᵀ 是 3 × 4，X 是 4 × 3，中间的 4 对上了，所以可以相乘，结果是 3 × 3 的方阵。</p>
+<p class="en">The slides' example: Xᵀ is 3 × 4 and X is 4 × 3; the inner 4s match, so they can be multiplied, and the result is a 3 × 3 square matrix.</p>
+<p>课件的结论：一个矩阵乘以它自己的转置，结果总是对称矩阵；这就是 Part 2 里协方差矩阵、相关矩阵都对称的原因。</p>
+<p class="en">The slides' conclusion: a matrix multiplied by its own transpose always gives a symmetric matrix; this is why the covariance and correlation matrices in Part 2 are symmetric.</p>
+<p>一个能直接看到的小例子（课件外补充）：X 是 3 × 2，XᵀX 就是 2 × 2，右上和左下的数一样。</p>
+<p class="en">A small example you can see directly (not in the slides): X is 3 × 2, so XᵀX is 2 × 2, and the top-right and bottom-left numbers are the same.</p>
+<pre class="code"><code>X = np.array([[1,2],[3,4],[5,6]])
+X.transpose().dot(X)</code></pre>
+<pre class="out"><span class="out-l">输出 · Output</span>
+<code>[[35 44]
+ [44 56]]</code></pre>
+<p>为什么一样：右上是「第 1 列 · 第 2 列」，左下是「第 2 列 · 第 1 列」，两次算的是同样的乘积 1×2 + 3×4 + 5×6 = 44。</p>
+<p class="en">Why they match: top-right is "column 1 · column 2" and bottom-left is "column 2 · column 1", and both compute the same products 1×2 + 3×4 + 5×6 = 44.</p>
+<h3 id="s2.8">2.8 条件和循环 <span class="star">★★</span> <span class="en-h">2.8 Conditions and loops</span></h3>
+<div class="tw"><table>
+<thead><tr><th>结构<br><span class="en">Structure</span></th><th>意思<br><span class="en">Meaning</span></th></tr></thead>
+<tbody>
+<tr><td><code>if 条件:</code><br><span class="en"><code>if condition:</code></span></td><td>条件为真（True）就执行下面缩进的那块代码<br><span class="en">If the condition is true, run the indented block below it</span></td></tr>
+<tr><td><code>if … else:</code></td><td>条件为真执行 A，否则执行 B<br><span class="en">If the condition is true run A, otherwise run B</span></td></tr>
+<tr><td><code>for</code> 循环（有界循环）<br><span class="en"><code>for</code> loop (bounded loop)</span></td><td>事先知道要重复几次时用<br><span class="en">Used when you know in advance how many times to repeat</span></td></tr>
+<tr><td><code>while</code> 循环（无界循环）<br><span class="en"><code>while</code> loop (unbounded loop)</span></td><td>事先不知道要重复几次，只要条件成立就一直重复<br><span class="en">Used when the number of repetitions is not known in advance; it repeats as long as the condition holds</span></td></tr>
+</tbody>
+</table></div>
+<p>Python 用冒号和缩进来表示「一块」代码，这就是课件说的「块」（block）。</p>
+<p class="en">Python uses a colon and indentation to mark a block of code; this is the "block" the slides talk about.</p>
+<p>课件练习一：用 for 循环只显示 0 到 9 里 2 的倍数，判断条件是余数为 0。</p>
+<p class="en">The slides' exercise 1: use a for loop to display only the multiples of 2 from 0 to 9; the test is that the remainder is 0.</p>
+<pre class="code"><code>for x in range(10):
+    if x % 2 == 0:
+        print(x)</code></pre>
+<pre class="out"><span class="out-l">输出 · Output</span>
+<code>0
+2
+4
+6
+8</code></pre>
+<p>课件练习二：从 x = 2 开始一直乘 1.5，只要结果小于 16 就打印；不知道要乘几次，所以用 while。</p>
+<p class="en">The slides' exercise 2: start from x = 2 and keep multiplying by 1.5, printing as long as the value is below 16; the number of steps is not known in advance, so while is used.</p>
+<pre class="code"><code>x = 2
+while x &lt; 16:
+    print(x)
+    x = x * 1.5</code></pre>
+<pre class="out"><span class="out-l">输出 · Output</span>
+<code>2
+3.0
+4.5
+6.75
+10.125
+15.1875</code></pre>
+<p>下一个值是 22.78…，不小于 16，所以循环停下。</p>
+<p class="en">The next value would be 22.78…, which is not below 16, so the loop stops.</p>
+<h3 id="s2.9">2.9 函数 <span class="star">★★</span> <span class="en-h">2.9 Functions</span></h3>
+<p>建一个函数，就能反复做同一个操作，不用每次重写整段代码。</p>
+<p class="en">Creating a function lets you perform the same operation again and again without rewriting the whole script.</p>
+<pre class="code"><code>def function_name(input_parameters):
+    instruction_block</code></pre>
+<p>函数要先保存、运行（定义好），之后才能调用。下面用课上的函数名 direbonjour 写一个最简单的样子（内容是示意）：</p>
+<p class="en">A function has to be saved and run (defined) before it can be called. Here is the simplest form, using the function name direbonjour from class (the body is illustrative):</p>
+<pre class="code"><code>def direbonjour():
+    print('bonjour')
+
+direbonjour()</code></pre>
+<pre class="out"><span class="out-l">输出 · Output</span>
+<code>bonjour</code></pre>
+<h3 id="s2.10">2.10 读取和显示数据 <span class="star">★★</span> <span class="en-h">2.10 Loading and displaying data</span></h3>
+<p>课上用的数据是 her.xlsx（美国卫生与公众服务部的数据），就是 Part 2 PCA 里一直用的 HER 数据集。</p>
+<p class="en">The data used in class is her.xlsx (from the US Department of Health and Human Services), the same HER dataset used throughout the PCA in Part 2.</p>
+<div class="tw"><table>
+<thead><tr><th>步骤<br><span class="en">Step</span></th><th>代码<br><span class="en">Code</span></th></tr></thead>
+<tbody>
+<tr><td>导入 pandas（读 Excel 还要 xlrd）<br><span class="en">Import pandas (xlrd is also needed for Excel)</span></td><td><code>import pandas as pd</code></td></tr>
+<tr><td>读表格<br><span class="en">Read the table</span></td><td><code>data = pd.read_excel('her.xlsx')</code></td></tr>
+<tr><td>画体重对身高的散点图<br><span class="en">Plot weight against height</span></td><td><code>plt.plot(X, Y, 'o')</code>, <code>plt.show()</code></td></tr>
+</tbody>
+</table></div>
+<p>读进来的数据是一个 DataFrame：二维的、大小可变的表格，行和列都有标签（名字），不同列可以是不同类型的数据。</p>
+<p class="en">The data read in is a DataFrame: a two-dimensional, size-modifiable table whose rows and columns have labels (names), and whose columns can hold different types of data.</p>
+<h3 id="s2.11">2.11 六个最容易看错的地方 <span class="star">★★★</span> <span class="en-h">2.11 Six things most easily misread</span></h3>
+<div class="tw"><table>
+<thead><tr><th>容易错的地方<br><span class="en">Easy to get wrong</span></th><th>正确理解<br><span class="en">Correct reading</span></th><th>例子<br><span class="en">Example</span></th></tr></thead>
+<tbody>
+<tr><td>从几开始数<br><span class="en">Where counting starts</span></td><td>Python 从 0 开始数<br><span class="en">Python counts from 0</span></td><td><code>prenoms[0]</code> 是第 1 个<br><span class="en"><code>prenoms[0]</code> is the 1st item</span></td></tr>
+<tr><td>切片的结尾<br><span class="en">The end of a slice</span></td><td>切片和 range 都不含结尾<br><span class="en">Slices and ranges exclude their end</span></td><td><code>0:2</code> 取 0 和 1<br><span class="en"><code>0:2</code> takes 0 and 1</span></td></tr>
+<tr><td><code>*</code> 和 <code>.dot()</code><br><span class="en"><code>*</code> and <code>.dot()</code></span></td><td><code>*</code> 是逐元素相乘，<code>.dot()</code> 才是矩阵乘法<br><span class="en"><code>*</code> multiplies element by element; <code>.dot()</code> is the matrix product</span></td><td>A1*A1 的左上是 1，A1.dot(A2) 的左上是 54<br><span class="en">Top-left of A1*A1 is 1; of A1.dot(A2) it is 54</span></td></tr>
+<tr><td>axis<br><span class="en">axis</span></td><td>axis=0 上下叠（行方向），axis=1 左右拼（列方向）<br><span class="en">axis=0 stacks top to bottom (rows), axis=1 joins side by side (columns)</span></td><td>两个 3 × 3 拼成 6 × 3 或 3 × 6<br><span class="en">Two 3 × 3 become 6 × 3 or 3 × 6</span></td></tr>
+<tr><td><code>=</code> 和 <code>==</code><br><span class="en"><code>=</code> and <code>==</code></span></td><td>一个等号赋值，两个等号比较<br><span class="en">One equals sign assigns, two compare</span></td><td><code>x==5</code> 的答案是 True 或 False<br><span class="en"><code>x==5</code> answers True or False</span></td></tr>
+<tr><td>冒号和缩进<br><span class="en">Colon and indentation</span></td><td>if、for、while、def 后面要冒号，下一行要缩进<br><span class="en">if, for, while and def need a colon, and the next line is indented</span></td><td>见 2.8 的两个练习<br><span class="en">See the two exercises in 2.8</span></td></tr>
+</tbody>
+</table></div>
+<blockquote class="sum">
+<p><strong>一句话总结</strong>：Part 1 用 Python（Anaconda + Jupyter）处理数据：记住 Python 从 0 开始数、<code>=</code> 是赋值 <code>==</code> 是比较；矩阵乘法要求 A 的列数等于 B 的行数，而矩阵乘以自己的转置总是对称矩阵，这正是 PCA 要用的。</p>
+<p class="en"><strong>One-sentence summary</strong>: Part 1 uses Python (Anaconda + Jupyter) to handle data: remember that Python counts from 0 and that <code>=</code> is assignment while <code>==</code> is comparison; a matrix product needs the columns of A to equal the rows of B, and a matrix times its own transpose is always symmetric, which is exactly what PCA uses.</p>
+</blockquote>
+<h2 id="s3">3. Part 2：统计分析在研究里的位置 <span class="en-h">3. Part 2: where statistical analysis fits in research</span></h2>
+<h3 id="s3.1">3.1 研究的六步 <span class="star">★★</span> <span class="en-h">3.1 The six steps of research</span></h3>
+<p>课件给出的科学研究流程是：</p>
+<p class="en">The research workflow given in the slides is:</p>
+<ol>
+<li value="1">准备研究（prepare the study）</li>
+<li class="en">Prepare the study</li>
+<li value="2">进行测量（perform measurements）</li>
+<li class="en">Perform measurements</li>
+<li value="3">观察数据（observe the data）</li>
+<li class="en">Observe the data</li>
+<li value="4">统计分析（analyse statistically）</li>
+<li class="en">Analyse statistically</li>
+<li value="5">得出结论、提出假设（conclude, formulate a hypothesis）</li>
+<li class="en">Conclude and formulate a hypothesis</li>
+<li value="6">写报告（write a report）</li>
+<li class="en">Write a report</li>
+</ol>
+<p>注意顺序：先测量、再观察数据、再做统计；「提出假设」是在分析之后、和结论放在一起的。</p>
+<p class="en">Note the order: measure first, then observe the data, then do the statistics; "formulate a hypothesis" comes after the analysis, together with the conclusion.</p>
+<p>Part 2 讲的就是第四步「统计分析」该用什么方法，课件只讲了两样：一元线性回归（复习，第 4 章）和 PCA（第 5 章）。</p>
+<p class="en">Part 2 is about which methods to use in step four, statistical analysis, and the slides cover only two: simple linear regression (a reminder, chapter 4) and PCA (chapter 5).</p>
+<p><strong>重要</strong>：Part 2 课件里没有 t 检验、ANOVA、描述统计这些内容。</p>
+<p class="en"><strong>Important</strong>: the Part 2 slides contain no t-tests, ANOVA or descriptive statistics.</p>
+<h3 id="s3.2">3.2 假设检验的基本逻辑（课件外补充） <span class="star">★</span> <span class="en-h">3.2 The basic logic of hypothesis tests (not in the slides)</span></h3>
+<p>第 4 章的 Fisher 检验要用到 H0、H1 和 p 值，这里只用一张表把这几个词讲清楚。</p>
+<p class="en">The Fisher test in chapter 4 uses H0, H1 and the p-value, so this table just explains those few words.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>词<br><span class="en">Term</span></th>
+<th>意思<br><span class="en">Meaning</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H0（原假设，null hypothesis）<br><span class="en">H0 (null hypothesis)</span></td>
+<td>「没有效应」的假设，先假定它成立<br><span class="en">The "no effect" hypothesis, assumed true to begin with</span></td>
+</tr>
+<tr>
+<td>H1（备择假设，alternative hypothesis）<br><span class="en">H1 (alternative hypothesis)</span></td>
+<td>「有效应」的假设<br><span class="en">The "there is an effect" hypothesis</span></td>
+</tr>
+<tr>
+<td>α（显著性水平）<br><span class="en">α (significance level)</span></td>
+<td>事先定好的门槛，通常 0.05<br><span class="en">A threshold set in advance, usually 0.05</span></td>
+</tr>
+<tr>
+<td>p 值（p-value）<br><span class="en">p-value</span></td>
+<td>假如 H0 是对的，看到这么极端的数据的概率；p &lt; α 就拒绝 H0<br><span class="en">The probability of data this extreme if H0 were true; if p &lt; α, reject H0</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>像法庭一样：先假定被告无罪（H0），证据足够强（p &lt; 0.05）才判有罪（接受 H1）。</p>
+<p class="en">It works like a court: the defendant is presumed innocent (H0), and is found guilty (H1 accepted) only if the evidence is strong enough (p &lt; 0.05).</p>
+<blockquote class="sum">
+<p><strong>一句话总结</strong>：研究流程是准备 → 测量 → 观察数据 → 统计分析 → 结论和假设 → 报告；Part 2 的统计分析只包括回归复习和 PCA。</p>
+<p class="en"><strong>One-sentence summary</strong>: The research workflow is prepare → measure → observe the data → statistical analysis → conclusion and hypothesis → report; the statistical analysis in Part 2 covers only the regression reminder and PCA.</p>
+</blockquote>
+<h2 id="s4">4. Part 2：回归复习与 Fisher 检验 <span class="en-h">4. Part 2: regression reminder and the Fisher test</span></h2>
+<h3 id="s4.1">4.1 回归在做什么 <span class="star">★★★</span> <span class="en-h">4.1 What regression does</span></h3>
+<p>分析化学里最常见的回归（regression）就是校准曲线（calibration curve）：用几个已知浓度的标准样品（x）和测到的信号（y）画一条直线。</p>
+<p class="en">The most common regression in analytical chemistry is the calibration curve: a straight line through the signals (y) measured for a few standards of known concentration (x).</p>
+<p>以后测到未知样品的信号，就能从直线上反推出它的浓度。</p>
+<p class="en">Later, when an unknown sample's signal is measured, its concentration can be read back from the line.</p>
+<p>最小二乘法（least squares）的意思是：在所有可能的直线里，选让各点到直线的竖直距离平方和最小的那一条。</p>
+<p class="en">Least squares means choosing, out of all possible lines, the one that makes the sum of the squared vertical distances from the points to the line as small as possible.</p>
+<p>每个点到直线的竖直距离叫残差（residual）。</p>
+<p class="en">The vertical distance from each point to the line is called the residual.</p>
+<h3 id="s4.2">4.2 斜率、R 和 R² <span class="star">★★★</span> <span class="en-h">4.2 Slope, R and R²</span></h3>
+<p>课件的回归复习页列出了三件要检查的事：</p>
+<p class="en">The regression reminder in the slides lists three things to check:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>量<br><span class="en">Quantity</span></th>
+<th>意思<br><span class="en">Meaning</span></th>
+<th>要看什么<br><span class="en">What to look for</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>斜率 S（slope）<br><span class="en">Slope S</span></td>
+<td>x 每增加 1，y 平均增加多少；在校准里就是灵敏度<br><span class="en">How much y increases on average for each 1-unit increase in x; in calibration it is the sensitivity</span></td>
+<td>S 必须不等于 0，否则 x 和 y 没有关系<br><span class="en">S must be different from 0, otherwise x and y are unrelated</span></td>
+</tr>
+<tr>
+<td>R（相关系数）<br><span class="en">R (correlation coefficient)</span></td>
+<td>点有多贴近直线，在 −1 到 1 之间<br><span class="en">How closely the points follow the line, between −1 and 1</span></td>
+<td>越接近 ±1 越好<br><span class="en">The closer to ±1, the better</span></td>
+</tr>
+<tr>
+<td>R²（决定系数）<br><span class="en">R² (coefficient of determination)</span></td>
+<td>y 的总变化中有多少比例被直线解释了<br><span class="en">The proportion of the total variation in y explained by the line</span></td>
+<td>越接近 1 越好<br><span class="en">The closer to 1, the better</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>R² 很高也不能证明斜率「显著」不为 0，所以还要做 Fisher 检验。</p>
+<p class="en">Even a high R² does not prove that the slope is significantly different from 0, so the Fisher test is also needed.</p>
+<h3 id="s4.3">4.3 Fisher 检验 <span class="star">★★★</span> <span class="en-h">4.3 The Fisher test</span></h3>
+<p>思路：y 的总变化可以分成两部分，被直线解释掉的部分（回归），和直线解释不了的部分（残差）。</p>
+<p class="en">The idea: the total variation in y can be split into two parts, the part explained by the line (regression) and the part the line cannot explain (residual).</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>课件里的量<br><span class="en">Quantity in the slides</span></th>
+<th>意思<br><span class="en">Meaning</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SCEreg（回归平方和）<br><span class="en">SCEreg (regression sum of squares)</span></td>
+<td>被直线解释掉的变化<br><span class="en">The variation explained by the line</span></td>
+</tr>
+<tr>
+<td>SCEres（残差平方和）<br><span class="en">SCEres (residual sum of squares)</span></td>
+<td>直线解释不了的变化<br><span class="en">The variation the line cannot explain</span></td>
+</tr>
+<tr>
+<td>S²reg = SCEreg / 1</td>
+<td>回归方差（自由度为 1）<br><span class="en">The regression variance (1 degree of freedom)</span></td>
+</tr>
+<tr>
+<td>S²res = SCEres / (n − 2)</td>
+<td>残差方差（估计了斜率和截距两个参数，所以减 2）<br><span class="en">The residual variance (two parameters, slope and intercept, were estimated, so subtract 2)</span></td>
+</tr>
+<tr>
+<td>F = S²reg / S²res</td>
+<td>被解释的方差 ÷ 没被解释的方差<br><span class="en">Explained variance ÷ unexplained variance</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>课件的两个假设：</p>
+<p class="en">The two hypotheses in the slides:</p>
+<ul>
+<li>H0：回归方差并不显著大于残差方差（直线没有真正解释 y）。</li>
+<li class="en">H0: the regression variance is not significantly greater than the residual variance (the line does not really explain y).</li>
+<li>H1：回归方差显著大于残差方差（回归有意义，斜率显著不为 0）。</li>
+<li class="en">H1: the regression variance is significantly greater than the residual variance (the regression is meaningful and the slope is significantly different from 0).</li>
+</ul>
+<p>怎么读：F 很大（p &lt; 0.05）就拒绝 H0，说明 x 和 y 之间存在真实的线性关系。</p>
+<p class="en">How to read it: if F is large (p &lt; 0.05), reject H0, which means there is a real linear relationship between x and y.</p>
+<p>直觉就是「信号 ÷ 噪声」：直线解释的部分远大于剩下的随机误差，这条线才可信。</p>
+<p class="en">The intuition is "signal ÷ noise": the line can be trusted only when the part it explains is much bigger than the remaining random error.</p>
+<div class="box deep"><div class="box-t">自由度从哪来 <span class="en-h">Going deeper: where the degrees of freedom come from</span></div>
+<p>4.3 的表里出现了两次「除以自由度」，一共有两个自由度，分子分母各一个：</p>
+<p class="en">The table in this section divides by degrees of freedom twice; there are two of them, one for the top of the fraction and one for the bottom:</p>
+<div class="tw"><table>
+<thead><tr><th>部分<br><span class="en">Part</span></th><th>自由度<br><span class="en">Degrees of freedom</span></th><th>除完叫什么<br><span class="en">What you get after dividing</span></th></tr></thead>
+<tbody>
+<tr><td>回归（直线解释掉的变化）<br><span class="en">Regression (variation explained by the line)</span></td><td><strong>1</strong></td><td>S²reg = SCEreg / 1</td></tr>
+<tr><td>残差（直线解释不了的变化）<br><span class="en">Residuals (variation the line cannot explain)</span></td><td><strong>n − 2</strong></td><td>S²res = SCEres / (n − 2)</td></tr>
+</tbody>
+</table></div>
+<p><strong>回归是 1</strong>：一元回归只有一个 x，直线只靠一个斜率去「解释」y，所以是 1；课件公式里的「/ 1」就是这么来的。</p>
+<p class="en"><strong>Regression has 1</strong>: simple regression has a single x, and the line "explains" y through just one slope, so it is 1; that is where the "/ 1" in the slides' formula comes from.</p>
+<p><strong>残差是 n − 2</strong>：画直线时估计了斜率和截距两个数，用掉了 2 个「自由」。</p>
+<p class="en"><strong>Residuals have n − 2</strong>: drawing the line estimated two numbers, the slope and the intercept, which uses up 2 "freedoms".</p>
+<p>可以这样想：只有 2 个点时，直线一定正好穿过它们，残差全是 0，什么都检验不了；从第 3 个点开始，才有真正的「误差」信息。</p>
+<p class="en">Think of it this way: with only 2 points the line passes through both, every residual is 0, and nothing can be tested; only from the 3rd point on is there real information about error.</p>
+<p>小例子：10 个标准样品，回归自由度是 1，残差自由度是 10 − 2 = 8。</p>
+<p class="en">A tiny example: with 10 standards, the regression has 1 degree of freedom and the residuals have 10 − 2 = 8.</p>
+<p>顺便说一下记号：S² 带平方，是因为它是方差；方差开平方根就是标准差 S（见 5.5）。</p>
+<p class="en">A note on notation: S² carries a square because it is a variance; the square root of a variance is the standard deviation S (see 5.5).</p>
+</div>
+<h3 id="s4.4">4.4 外推（课件外补充） <span class="star">★</span> <span class="en-h">4.4 Extrapolation (not in the slides)</span></h3>
+<p>在校准范围内预测叫内插（interpolation），可靠；超出校准范围预测叫外推（extrapolation），不可靠。</p>
+<p class="en">Predicting inside the calibration range is called interpolation and is reliable; predicting outside it is called extrapolation and is unreliable.</p>
+<p>原因是直线关系只在测过的范围内被验证过，范围外可能弯曲或饱和，R² 再高也说明不了范围外的情况。</p>
+<p class="en">The reason is that the straight-line relationship has only been checked within the measured range; outside it the response may curve or saturate, and however high R² is, it says nothing about what happens outside.</p>
+<blockquote class="sum">
+<p><strong>一句话总结</strong>：回归用最小二乘直线描述 x 和 y 的关系；斜率必须不为 0，R² 说明解释了多少，Fisher 检验（F = S²reg / S²res）判断回归方差是否显著大于残差方差。</p>
+<p class="en"><strong>One-sentence summary</strong>: Regression describes the x–y relationship with a least-squares line; the slope must be non-zero, R² shows how much is explained, and the Fisher test (F = S²reg / S²res) decides whether the regression variance is significantly greater than the residual variance.</p>
+</blockquote>
+<h2 id="s5">5. Part 2：主成分分析 PCA <span class="en-h">5. Part 2: principal component analysis (PCA)</span></h2>
+<h3 id="s5.1">5.1 课件开头的三个复习 <span class="star">★★</span> <span class="en-h">5.1 The three reminders at the start</span></h3>
+<p>课件全程用同一个数据集 HER：80 个人（行）× 14 个变量（列），变量包括性别（sexe）、年龄（age）、身高（taille）、体重（poids）、腰围（ttaille）、脉搏（pouls）、收缩压（sys）、舒张压（dia）、胆固醇（chol）、BMI（imc）、腿长（jmbg）、肘宽（coud）、腕宽（poign）、臂围（bras）。</p>
+<p class="en">The slides use the same dataset, HER, throughout: 80 people (rows) × 14 variables (columns), namely sex (sexe), age, height (taille), weight (poids), waist (ttaille), pulse (pouls), systolic pressure (sys), diastolic pressure (dia), cholesterol (chol), BMI (imc), leg length (jmbg), elbow width (coud), wrist width (poign) and arm circumference (bras).</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>复习<br><span class="en">Reminder</span></th>
+<th>要理解的意思<br><span class="en">What to understand</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>转置（transpose）<br><span class="en">Transpose</span></td>
+<td>行和列对调：her 是 80 × 14，转置后 herᵀ 是 14 × 80<br><span class="en">Rows and columns are swapped: her is 80 × 14, and its transpose herᵀ is 14 × 80</span></td>
+</tr>
+<tr>
+<td>中心化约简变量（centred and reduced variables）<br><span class="en">Centred and reduced variables</span></td>
+<td>减去均值、再除以标准差，让每个变量的均值为 0、方差为 1<br><span class="en">Subtract the mean and divide by the standard deviation, so every variable has mean 0 and variance 1</span></td>
+</tr>
+<tr>
+<td>二维表示<br><span class="en">2-D representation</span></td>
+<td>身高对体重画四种图：点云是同一个，只是坐标随标准化方式不同而改变<br><span class="en">Four plots of weight against height: the point cloud is the same, only the coordinates change with the way the data are standardized</span></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s5.2">5.2 为什么要降维 <span class="star">★★★</span> <span class="en-h">5.2 Why reduce dimensions</span></h3>
+<p>课件说：选什么统计方法，取决于要解决的问题和数据集的结构，也就是样品数和变量数。</p>
+<p class="en">The slides say: the choice of statistical method depends on the question and on the structure of the dataset, that is, the number of samples and the number of variables.</p>
+<p>双变量方法最多只能研究两个变量之间的关系，想走得更远就要用多变量分析。</p>
+<p class="en">Bivariate methods can at most study the relationship between two variables; to go further you need multivariate analysis.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>数据表的两种形状<br><span class="en">Two shapes of data table</span></th>
+<th>样子<br><span class="en">What it looks like</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>经典多变量数据（K &lt; N）<br><span class="en">Classic multivariate data (K &lt; N)</span></td>
+<td>变量少于样品，表格「又长又窄」<br><span class="en">Fewer variables than samples; the table is "long and narrow"</span></td>
+</tr>
+<tr>
+<td>超多变量数据（K &gt;&gt; N）<br><span class="en">Megavariate data (K &gt;&gt; N)</span></td>
+<td>变量远多于样品，表格「又短又宽」，比如光谱<br><span class="en">Far more variables than samples; the table is "short and wide", as with spectra</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>两个变量可以画在平面上，三个变量就不好画了，从四个变量开始根本画不出来。</p>
+<p class="en">Two variables can be drawn on a plane, three are hard to draw, and from four variables on it is impossible.</p>
+<p>课件把 HER 的 14 个变量直接画成线图，原始的和标准化以后的都试过，都看不出趋势，和一格一格读表格一样困难。</p>
+<p class="en">The slides plot HER's 14 variables directly as line plots, both raw and standardized, and neither shows any trend; it is as hard as reading the table cell by cell.</p>
+<p>所以变量很多时，必须用空间降维（spatial reduction）的方法，PCA 就是其中最基础的一种。</p>
+<p class="en">So when there are many variables, a spatial reduction method is required, and PCA is the most basic one.</p>
+<h3 id="s5.3">5.3 多变量方法总览 <span class="star">★★</span> <span class="en-h">5.3 Overview of multivariate methods</span></h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>大类<br><span class="en">Family</span></th>
+<th>小类<br><span class="en">Sub-group</span></th>
+<th>方法<br><span class="en">Methods</span></th>
+<th>代表<br><span class="en">Flagship</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>描述性方法（descriptive）<br><span class="en">Descriptive methods</span></td>
+<td>变量之间的相互依赖<br><span class="en">Interdependence of variables</span></td>
+<td>因子分析<br><span class="en">Factor analysis</span></td>
+<td>PCA</td>
+</tr>
+<tr>
+<td>描述性方法<br><span class="en">Descriptive methods</span></td>
+<td>样品之间的相似性<br><span class="en">Similarity between samples</span></td>
+<td>分组分析（聚类）、多维标度（MDS）<br><span class="en">Analysis by groupings (clustering), multidimensional scaling (MDS)</span></td>
+<td>PCA</td>
+</tr>
+<tr>
+<td>解释性方法（explanatory）<br><span class="en">Explanatory methods</span></td>
+<td>一个因变量<br><span class="en">One dependent variable</span></td>
+<td>交叉表、方差和协方差分析、多元回归、联合分析<br><span class="en">Cross-tabulation, analysis of variance and covariance, multiple regression, joint analysis</span></td>
+<td>PLS 回归<br><span class="en">PLS regression</span></td>
+</tr>
+<tr>
+<td>解释性方法<br><span class="en">Explanatory methods</span></td>
+<td>一个以上因变量<br><span class="en">More than one dependent variable</span></td>
+<td>多元方差分析（MANOVA）、典型相关、多重判别分析<br><span class="en">MANOVA, canonical correlation, multiple discriminant analysis</span></td>
+<td>PLS 回归<br><span class="en">PLS regression</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>一句话：描述性方法的代表是 PCA（只看 X），解释性方法的代表是 PLS（用 X 解释 Y）。</p>
+<p class="en">In one sentence: the flagship descriptive method is PCA (X only), and the flagship explanatory method is PLS (X explains Y).</p>
+<h3 id="s5.4">5.4 PCA 是什么 <span class="star">★★★</span> <span class="en-h">5.4 What PCA is</span></h3>
+<p>课件的要点：</p>
+<p class="en">The key points in the slides:</p>
+<ul>
+<li>PCA 是多变量数据分析的基础。</li>
+<li class="en">PCA is the basis of multivariate data analysis.</li>
+<li>它是无监督（unsupervised）、描述性的方法，用来把数据可视化。</li>
+<li class="en">It is an unsupervised, descriptive method used to visualise data.</li>
+<li>它是空间降维方法：在保留尽可能多信息（尤其是变化最大的信息）的前提下，把成千上万个变量浓缩成几个成分（轴），从而找到一个方向、一个趋势。</li>
+<li class="en">It is a spatial reduction method: while keeping as much information as possible (especially the information with the greatest variation), it sums up thousands of variables in a few components (axes), making it possible to find a direction, a trend.</li>
+<li>它把原始变量变换成一组新的、互不相关的变量，叫主成分（PC, principal components）。</li>
+<li class="en">It transforms the original variables into a new set of uncorrelated variables called principal components (PCs).</li>
+</ul>
+<p><strong>数据表的约定</strong>：行是观测（个体、样品），列是变量；一行是对一个个体做的所有测量，一列是一种测量在所有个体上的值。</p>
+<p class="en"><strong>Data table convention</strong>: rows are observations (individuals, samples) and columns are variables; a row is all the measurements made on one individual, and a column is one measurement over all individuals.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>PCA 能做什么（课件）<br><span class="en">What PCA makes possible (slides)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>降维后看到数据的全貌<br><span class="en">See the big picture of the data with reduced dimensions</span></td>
+</tr>
+<tr>
+<td>发现观测的聚类、趋势和离群点<br><span class="en">Reveal clusters of observations, trends and outliers</span></td>
+</tr>
+<tr>
+<td>找出观测和变量之间、以及变量和变量之间的关系<br><span class="en">Find relationships between observations and variables, and among the variables themselves</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>统计上的意思</strong>：PCA 用最小二乘法找一条轴（或一个平面），让它尽可能好地逼近数据点。</p>
+<p class="en"><strong>Statistical meaning</strong>: PCA uses least squares to find an axis (or plane) that approximates the data points as well as possible.</p>
+<p>「残差最小」和「点投影到轴上以后方差最大」是同一件事的两种说法。</p>
+<p class="en">"Smallest residuals" and "largest variance of the points projected onto the axis" are two ways of saying the same thing.</p>
+<div class="box deep"><div class="box-t">PCA 在做什么 <span class="en-h">Going deeper: what PCA does</span></div>
+<p>打个比方：给一个立体雕塑拍照，有的角度一看就知道是什么，有的角度只看到一团。</p>
+<p class="en">An analogy: photograph a 3-D sculpture; from some angles you recognise it at once, from others you see only a blob.</p>
+<p>PCA 就是自动找到「看得最清楚」的那个角度，然后只用两三根轴把数据画出来。</p>
+<p class="en">PCA automatically finds the angle from which you see it most clearly, and then draws the data on just two or three axes.</p>
+<p>新的轴按「装了多少信息」排好队：PC1 装得最多，PC2 第二多，依此类推。</p>
+<p class="en">The new axes are ranked by how much information they hold: PC1 holds the most, PC2 the second most, and so on.</p>
+<div class="tw"><table>
+<thead><tr><th>关键词<br><span class="en">Key word</span></th><th>意思<br><span class="en">Meaning</span></th></tr></thead>
+<tbody>
+<tr><td>降维<br><span class="en">Dimension reduction</span></td><td>很多变量浓缩成几个主成分（HER：14 个变量 → 看 2 根轴）<br><span class="en">Many variables condensed into a few components (HER: 14 variables → look at 2 axes)</span></td></tr>
+<tr><td>互不相关<br><span class="en">Uncorrelated</span></td><td>每个主成分装不同的信息，不重复<br><span class="en">Each component holds different information, with no repetition</span></td></tr>
+<tr><td>无监督<br><span class="en">Unsupervised</span></td><td>只用数据 X，做之前不告诉它谁属于哪一组；分组是做完以后从图上看出来的<br><span class="en">Uses only the data X and is not told the groups beforehand; groups are seen on the plot afterwards</span></td></tr>
+<tr><td>描述性<br><span class="en">Descriptive</span></td><td>用来「看清」数据，不是用来预测<br><span class="en">Used to "see" the data, not to predict</span></td></tr>
+</tbody>
+</table></div>
+</div>
+<h3 id="s5.5">5.5 预处理：第一步缩放，第二步中心化 <span class="star">★★★</span> <span class="en-h">5.5 Pretreatment: scaling first, then centering</span></h3>
+<p><strong>第一步：缩放（scaling）</strong>。</p>
+<p class="en"><strong>Step 1: scaling</strong>.</p>
+<p>不同变量的数值范围不一样，范围大的变量方差就大。</p>
+<p class="en">Variables have different numerical ranges, and a variable with a large range has a large variance.</p>
+<p>PCA 找的是方差最大的方向，所以方差大的变量会压过方差小的变量。</p>
+<p class="en">PCA looks for the directions of largest variance, so variables with large variance overpower those with small variance.</p>
+<p>课件的例子：HER 里胆固醇在 2 到 1252 mg 之间，年龄在 12 到 73 岁之间；不缩放的话，胆固醇会主导一切，不是因为它重要，只是因为数字大。</p>
+<p class="en">The slides' example: in HER, cholesterol ranges from 2 to 1252 mg and age from 12 to 73 years; without scaling, cholesterol dominates everything, not because it matters more but because its numbers are larger.</p>
+<p>最常用的是单位方差缩放（UV scaling）：算出每一列的标准差 sₖ，把这一列乘以 1/sₖ，于是每一列的方差都等于 1。</p>
+<p class="en">The most common is unit variance (UV) scaling: compute each column's standard deviation sₖ and multiply the column by 1/sₖ, so every column has a variance of 1.</p>
+<p>课件的形象说法：UV 缩放把「长」的变量压短，把「短」的变量拉长。</p>
+<p class="en">The slides' image: UV scaling shrinks the "long" variables and stretches the "short" ones.</p>
+<p><strong>第二步：中心化（centering）</strong>。</p>
+<p class="en"><strong>Step 2: centering</strong>.</p>
+<p>算出每个变量的均值，再从数据里减掉。</p>
+<p class="en">Compute each variable's mean and subtract it from the data.</p>
+<p>缩放加中心化以后，所有变量「一样长」，均值都是 0。</p>
+<p class="en">After scaling and centering, all variables have equal "length" and a mean of 0.</p>
+<p>课件的效果图：原始数据 → 中心化 → 约简（标准化）；最后一张图里，变量的值有 99% 的机会落在 −2.96 到 +2.96 之间。</p>
+<p class="en">The slides' illustration: raw → centred → reduced (standardized); in the last plot there is a 99% chance that the values lie between −2.96 and +2.96.</p>
+<div class="box deep"><div class="box-t">标准差 sₖ 是什么、怎么算 <span class="en-h">Going deeper: what the standard deviation sₖ is and how it is computed</span></div>
+<p>缩放要除以标准差 sₖ，所以先弄清楚标准差是什么。</p>
+<p class="en">Scaling divides by the standard deviation sₖ, so first let us be clear about what a standard deviation is.</p>
+<p>标准差衡量一列数据「平均离平均值有多远」，也就是数据有多分散；sₖ 里的 k 只是表示「第 k 列」，也就是第 k 个变量。</p>
+<p class="en">The standard deviation measures how far, on average, a column of data lies from its mean, that is, how spread out the data are; the k in sₖ just means "column k", the k-th variable.</p>
+<p>用一个最小的例子：某个变量只有 3 个人的值，2、4、6。</p>
+<p class="en">A tiny example: one variable with values for 3 people, 2, 4 and 6.</p>
+<div class="tw"><table>
+<thead><tr><th>步骤<br><span class="en">Step</span></th><th>做什么<br><span class="en">What to do</span></th><th>例子<br><span class="en">Example</span></th></tr></thead>
+<tbody>
+<tr><td>1</td><td>求平均值<br><span class="en">Find the mean</span></td><td>(2 + 4 + 6) ÷ 3 = 4</td></tr>
+<tr><td>2</td><td>每个数减去平均值（离差）<br><span class="en">Subtract the mean from each value (deviations)</span></td><td>−2, 0, 2</td></tr>
+<tr><td>3</td><td>离差平方再加起来<br><span class="en">Square the deviations and add them up</span></td><td>4 + 0 + 4 = 8</td></tr>
+<tr><td>4</td><td>除以 n − 1 得到方差，再开平方根得到标准差<br><span class="en">Divide by n − 1 to get the variance, then take the square root to get the standard deviation</span></td><td>8 ÷ 2 = 4，√4 = <strong>2</strong><br><span class="en">8 ÷ 2 = 4, √4 = <strong>2</strong></span></td></tr>
+</tbody>
+</table></div>
+<p><strong>为什么要平方</strong>：离差有正有负（−2 和 +2），直接加起来会互相抵消变成 0；平方以后都是正数，最后再开平方根，让单位变回原来的单位。</p>
+<p class="en"><strong>Why square</strong>: deviations are positive and negative (−2 and +2), so adding them directly cancels out to 0; squaring makes them all positive, and the square root at the end brings the units back.</p>
+<p><strong>为什么除以 n − 1</strong>：和回归里的自由度是同一个道理，平均值是用这几个数自己算出来的，用掉了 1 个自由度；有的软件除以 n，数据多时两者几乎没区别。</p>
+<p class="en"><strong>Why divide by n − 1</strong>: the same idea as the degrees of freedom in regression; the mean was computed from these same numbers, which uses up 1 degree of freedom; some software divides by n, and with plenty of data the difference is negligible.</p>
+<div class="tw"><table>
+<thead><tr><th>符号<br><span class="en">Symbol</span></th><th>名字<br><span class="en">Name</span></th><th>例子<br><span class="en">Example</span></th></tr></thead>
+<tbody>
+<tr><td>s²</td><td>方差<br><span class="en">Variance</span></td><td>4</td></tr>
+<tr><td>s</td><td>标准差<br><span class="en">Standard deviation</span></td><td>2</td></tr>
+</tbody>
+</table></div>
+<p>标准差 × 标准差 = 方差（sₖ × sₖ = sₖ²），所以课件里带平方的 S²reg、S²res、S²X 都是方差类的量。</p>
+<p class="en">Standard deviation × standard deviation = variance (sₖ × sₖ = sₖ²), so the squared symbols in the slides, S²reg, S²res and S²X, are all variance-type quantities.</p>
+<p><strong>在预处理里怎么用</strong>：缩放就是这一列每个数除以 sₖ = 2，得到 1、2、3，这一列的方差变成 1；再中心化（减去新的平均值 2），得到 −1、0、1，均值 0、方差 1，这就是标准化后的样子。</p>
+<p class="en"><strong>How it is used in pretreatment</strong>: scaling divides every value in the column by sₖ = 2, giving 1, 2, 3, so the column's variance becomes 1; centering then subtracts the new mean, 2, giving −1, 0, 1, with mean 0 and variance 1, which is what standardized data look like.</p>
+<p>打个比方：身高（厘米）和体重（公斤）的数字没法直接比，先都换成「比平均高几个标准差」，就能公平比较了。</p>
+<p class="en">An analogy: height in cm and weight in kg cannot be compared as raw numbers, but once both are expressed as "how many standard deviations above the mean", they can be compared fairly.</p>
+</div>
+<h3 id="s5.6">5.6 三个矩阵 <span class="star">★★</span> <span class="en-h">5.6 The three matrices</span></h3>
+<p>预处理决定了 PCA 在哪个矩阵上做分解：</p>
+<p class="en">The preprocessing decides which matrix PCA decomposes:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>先得到的矩阵<br><span class="en">Matrix obtained first</span></th>
+<th>再算出的矩阵<br><span class="en">Matrix then computed</span></th>
+<th>意思<br><span class="en">Meaning</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X：原始数据<br><span class="en">X: raw data</span></td>
+<td>XᵀX：离散矩阵（dispersion matrix）<br><span class="en">XᵀX: dispersion matrix</span></td>
+<td>原始值的平方和与交叉乘积和<br><span class="en">Sums of squares and cross-products of the raw values</span></td>
+</tr>
+<tr>
+<td>A = X − μ：中心化矩阵<br><span class="en">A = X − μ: centred matrix</span></td>
+<td>AᵀA：方差-协方差矩阵（variance-covariance matrix）<br><span class="en">AᵀA: variance-covariance matrix</span></td>
+<td>离差平方和，表示个体和变量的变化<br><span class="en">Sums of squared deviations, expressing the variability of individuals and variables</span></td>
+</tr>
+<tr>
+<td>Z = (X − μ)/σ：中心化约简矩阵<br><span class="en">Z = (X − μ)/σ: centred reduced matrix</span></td>
+<td>ZᵀZ：相关矩阵（correlation matrix）<br><span class="en">ZᵀZ: correlation matrix</span></td>
+<td>去掉单位影响以后的相关性<br><span class="en">Correlation with the effect of units removed</span></td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>词<br><span class="en">Term</span></th>
+<th>课件的意思<br><span class="en">Meaning in the slides</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方差、标准差<br><span class="en">Variance, standard deviation</span></td>
+<td>告诉你数值有多分散<br><span class="en">Tell you how spread out the values are</span></td>
+</tr>
+<tr>
+<td>协方差（covariance）<br><span class="en">Covariance</span></td>
+<td>两个变量同时变化的程度<br><span class="en">How much two variables vary simultaneously</span></td>
+</tr>
+<tr>
+<td>相关（correlation）<br><span class="en">Correlation</span></td>
+<td>用每个变量自身的变化去校正协方差，所以不受单位影响<br><span class="en">Covariance corrected by each variable's own variability, so it is not affected by units</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>矩阵乘以它自己的转置，结果总是一个对称的方阵（沿对角线对称）。</p>
+<p class="en">A matrix multiplied by its own transpose always gives a symmetric square matrix (symmetric about the diagonal).</p>
+<h3 id="s5.7">5.7 分解：特征值和特征向量 <span class="star">★★★</span> <span class="en-h">5.7 Decomposition: eigenvalues and eigenvectors</span></h3>
+<p>对方差-协方差矩阵（或相关矩阵）做分解，得到特征值（eigenvalues）和特征向量（eigenvectors）。</p>
+<p class="en">Decomposing the variance-covariance matrix (or the correlation matrix) gives eigenvalues and eigenvectors.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>课件的说法<br><span class="en">What the slides say</span></th>
+<th>意思<br><span class="en">Meaning</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分解是换一个参照系，是空间里的一次旋转<br><span class="en">The decomposition is a change of referential, a rotation in space</span></td>
+<td>数据点本身没变，只是换了一套坐标轴去看<br><span class="en">The data points do not change; we simply look at them on a new set of axes</span></td>
+</tr>
+<tr>
+<td>特征向量定义方向<br><span class="en">Eigenvectors define the directions</span></td>
+<td>新坐标轴朝哪里，也就是载荷（loadings）<br><span class="en">Where the new axes point, i.e. the loadings</span></td>
+</tr>
+<tr>
+<td>特征值表示这些方向的重要性<br><span class="en">Eigenvalues show the importance of these directions</span></td>
+<td>这个方向上数据散得多开、装了多少信息<br><span class="en">How spread out the data are along that direction, i.e. how much information it holds</span></td>
+</tr>
+<tr>
+<td>能得到的主成分个数 = 变量数和个体数中较小的那个<br><span class="en">Number of components = the smaller of the number of variables and the number of individuals</span></td>
+<td>HER 是 80 × 14，所以最多 14 个主成分<br><span class="en">HER is 80 × 14, so at most 14 components</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>怎么找方向</strong>：</p>
+<p class="en"><strong>How the directions are found</strong>:</p>
+<ol>
+<li value="1">第一个方向 PC1：方差最大、个体分散最大、残差总和最小，三个条件同时满足。</li>
+<li class="en">First direction, PC1: maximum variance, maximum dispersion of the individuals and minimum total residuals, all three at once.</li>
+<li value="2">第二个方向 PC2：和 PC1 垂直，在这个前提下方差最大；垂直是为了不重复 PC1 已有的信息。</li>
+<li class="en">Second direction, PC2: perpendicular to PC1 and with maximum variance under that condition; it is perpendicular so that it does not repeat the information already in PC1.</li>
+<li value="3">后面的主成分依此类推，然后沿着这些新轴观察和解释数据。</li>
+<li class="en">The later components follow in the same way, and the data are then observed and interpreted along these new axes.</li>
+</ol>
+<p><strong>C = X · P</strong>：</p>
+<p class="en"><strong>C = X · P</strong>:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>符号<br><span class="en">Symbol</span></th>
+<th>名字<br><span class="en">Name</span></th>
+<th>意思<br><span class="en">Meaning</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td>原始数据<br><span class="en">Original data</span></td>
+<td>个体在原始变量空间里的坐标<br><span class="en">Coordinates of the individuals in the space of the original variables</span></td>
+</tr>
+<tr>
+<td>P</td>
+<td>载荷（loadings）<br><span class="en">Loadings</span></td>
+<td>变量的因子贡献（factorial contributions），是用来旋转坐标轴的系数<br><span class="en">The factorial contributions of the variables, the coefficients that rotate the axes</span></td>
+</tr>
+<tr>
+<td>C</td>
+<td>得分（scores）<br><span class="en">Scores</span></td>
+<td>个体的因子坐标（factorial coordinates），也就是个体在主成分新轴上的位置<br><span class="en">The factorial coordinates of the individuals, i.e. their positions on the new principal-component axes</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>记忆方法：得分看样品（个体），载荷看变量。</p>
+<p class="en">Memory aid: scores are about samples (individuals), loadings are about variables.</p>
+<p>最后要把向量都缩放到长度为 1（单位向量），这样方向（特征向量）和重要性（特征值）就分开了。</p>
+<p class="en">Finally the vectors are rescaled to length 1 (unit vectors), so that the direction (eigenvector) and the importance (eigenvalue) are separated.</p>
+<h3 id="s5.8">5.8 PC1 和 PC2 是怎么找到的 <span class="star">★★★</span> <span class="en-h">5.8 How PC1 and PC2 are found</span></h3>
+<p>先只看两个变量：身高和体重，每个人是平面上的一个点。</p>
+<p class="en">Take only two variables first, height and weight; each person is one point on a plane.</p>
+<p>高的人一般也重，所以点会排成一个斜着的椭圆形点云；预处理以后，点云的中心正好在原点。</p>
+<p class="en">Taller people are usually heavier, so the points form a slanted, oval-shaped cloud; after pretreatment the centre of the cloud sits exactly at the origin.</p>
+<figure class="fig"><div class="fig-scroll"><svg viewBox="0 0 360 300" width="360" height="300" role="img" aria-label="身高-体重点云和两根新轴 PC1、PC2 / Height–weight point cloud with the new axes PC1 and PC2">
+<line x1="20" y1="150" x2="330" y2="150" class="ax"/><line x1="170" y1="285" x2="170" y2="15" class="ax"/>
+<text x="330" y="144" class="lab" text-anchor="end">身高 height</text>
+<text x="176" y="24" class="lab">体重 weight</text>
+<ellipse cx="170" cy="150" rx="120" ry="34" transform="rotate(-45 170 150)" class="ell"/>
+<circle cx="158.2" cy="145.3" r="3.6" class="dot"/><circle cx="159.6" cy="167.0" r="3.6" class="dot"/><circle cx="127.2" cy="190.1" r="3.6" class="dot"/><circle cx="221.1" cy="97.4" r="3.6" class="dot"/><circle cx="217.7" cy="105.0" r="3.6" class="dot"/><circle cx="188.2" cy="130.4" r="3.6" class="dot"/><circle cx="93.4" cy="187.7" r="3.6" class="dot"/><circle cx="193.3" cy="117.6" r="3.6" class="dot"/><circle cx="92.2" cy="260.4" r="3.6" class="dot"/><circle cx="129.1" cy="195.7" r="3.6" class="dot"/><circle cx="184.1" cy="140.0" r="3.6" class="dot"/><circle cx="194.0" cy="148.6" r="3.6" class="dot"/><circle cx="184.2" cy="127.8" r="3.6" class="dot"/><circle cx="139.6" cy="126.9" r="3.6" class="dot"/><circle cx="195.6" cy="96.5" r="3.6" class="dot"/><circle cx="141.5" cy="193.2" r="3.6" class="dot"/><circle cx="154.2" cy="165.6" r="3.6" class="dot"/><circle cx="199.1" cy="119.9" r="3.6" class="dot"/><circle cx="149.4" cy="192.9" r="3.6" class="dot"/><circle cx="146.1" cy="135.5" r="3.6" class="dot"/><circle cx="132.8" cy="173.0" r="3.6" class="dot"/><circle cx="189.6" cy="175.4" r="3.6" class="dot"/><circle cx="172.2" cy="112.2" r="3.6" class="dot"/><circle cx="77.3" cy="233.0" r="3.6" class="dot"/><circle cx="165.1" cy="176.5" r="3.6" class="dot"/><circle cx="192.9" cy="133.4" r="3.6" class="dot"/>
+<line x1="75.7" y1="244.3" x2="264.3" y2="55.7" class="pc1"/>
+<line x1="129.3" y1="109.3" x2="210.7" y2="190.7" class="pc2"/>
+<text x="268.3" y="59.7" class="lab pc1t">PC1</text>
+<text x="93.3" y="107.3" class="lab pc2t">PC2</text>
+<circle cx="216" cy="104" r="6" class="who"/><text x="204" y="94" class="lab" text-anchor="end">小明 Ming</text>
+<circle cx="216" cy="196" r="6" class="who"/><text x="225" y="212" class="lab">小红 Hong</text>
+</svg></div>
+<figcaption>点云沿斜线铺得最开，那个方向就是 PC1；和它垂直的是 PC2。（示意图，数据是虚构的）<span class="en">The cloud spreads out most along the slanted line, which is PC1; the perpendicular direction is PC2. (Illustration with made-up data.)</span></figcaption></figure>
+<h4>找 PC1：转一根直线 <span class="en-h">Finding PC1: rotate a line</span></h4>
+<p>想象一根穿过中心的直线，可以像钟表指针一样转；每转到一个角度，就把所有点垂直投影到这根线上。</p>
+<p class="en">Imagine a straight line through the centre that can turn like the hand of a clock; at each angle, every point is dropped perpendicularly onto the line.</p>
+<p>有的角度，点在线上挤成一小团；有的角度，点在线上铺得很开。</p>
+<p class="en">At some angles the points bunch up on the line; at others they spread out widely.</p>
+<p><strong>铺得最开（方差最大）的那个方向就是 PC1。</strong>在这个例子里，它沿着椭圆的长轴，可以理解为「整体个子大小」。</p>
+<p class="en"><strong>The direction where they spread out most (largest variance) is PC1.</strong> In this example it runs along the long axis of the oval and can be read as "overall body size".</p>
+<p>这时点离直线的距离（残差）也最小，所以课件说 PC1 同时满足：方差最大、分散最大、残差最小，这三条其实是同一件事。</p>
+<p class="en">At this angle the distances from the points to the line (residuals) are also smallest, which is why the slides say PC1 has maximum variance, maximum dispersion and minimum residuals; the three are really the same thing.</p>
+<h4>找 PC2：和 PC1 垂直 <span class="en-h">Finding PC2: perpendicular to PC1</span></h4>
+<p>PC2 必须和 PC1 垂直，在这个条件下再找点铺得最开的方向。</p>
+<p class="en">PC2 must be perpendicular to PC1, and under that condition it is again the direction where the points spread out most.</p>
+<p>两个变量时，垂直的方向只剩一个，所以 PC2 就是椭圆的短轴，可以理解为「偏瘦还是偏壮」。</p>
+<p class="en">With two variables only one perpendicular direction is left, so PC2 is the short axis of the oval, which can be read as "slim or stocky".</p>
+<p>垂直是为了让 PC2 只装 PC1 没装的新信息，不重复。</p>
+<p class="en">Being perpendicular means PC2 holds only new information that PC1 does not, with no repetition.</p>
+<h4>14 个变量时也一样 <span class="en-h">The same with 14 variables</span></h4>
+<p>14 个变量就是 14 维空间，画不出来，但道理完全一样：PC1 是铺得最开的方向，PC2 和它垂直、铺得第二开，然后是 PC3、PC4……</p>
+<p class="en">With 14 variables it is a 14-dimensional space that cannot be drawn, but the idea is exactly the same: PC1 is the most spread-out direction, PC2 is perpendicular to it and the second most spread out, then PC3, PC4…</p>
+<p>实际上没人一个角度一个角度去试，电脑对相关矩阵做分解，一次就算出来：</p>
+<p class="en">Nobody actually tries angle after angle; the computer decomposes the correlation matrix and gets the answer in one go:</p>
+<div class="tw"><table>
+<thead><tr><th>分解得到<br><span class="en">Result of the decomposition</span></th><th>对应<br><span class="en">Corresponds to</span></th></tr></thead>
+<tbody>
+<tr><td>特征值最大的特征向量<br><span class="en">The eigenvector with the largest eigenvalue</span></td><td>PC1 的方向<br><span class="en">The direction of PC1</span></td></tr>
+<tr><td>特征值第二大的特征向量<br><span class="en">The eigenvector with the second-largest eigenvalue</span></td><td>PC2 的方向<br><span class="en">The direction of PC2</span></td></tr>
+<tr><td>特征值的大小<br><span class="en">The size of the eigenvalue</span></td><td>这个主成分装了多少信息（碎石图上的百分比）<br><span class="en">How much information the component holds (the percentage on the scree plot)</span></td></tr>
+</tbody>
+</table></div>
+<h3 id="s5.9">5.9 用一个小例子把名词串起来：身高和体重 <span class="star">★★★</span> <span class="en-h">5.9 One small example that ties the terms together: height and weight</span></h3>
+<p>这里的数字只是帮助理解，是为了看清每个名词指的是什么。</p>
+<p class="en">The numbers here are only an aid to understanding, so you can see what each term refers to.</p>
+<p>两个变量身高和体重已经标准化（均值 0、方差 1），假设它们的相关系数是 0.8：高的人大多也重。</p>
+<p class="en">The two variables, height and weight, are already standardized (mean 0, variance 1), and suppose their correlation is 0.8: tall people are mostly heavy too.</p>
+<p>每个变量方差是 1，所以总信息量（总方差）= 1 + 1 = 2。</p>
+<p class="en">Each variable has variance 1, so the total information (total variance) = 1 + 1 = 2.</p>
+<h4>特征向量 = 新轴的「配方」= 载荷 <span class="en-h">Eigenvector = the "recipe" of a new axis = loadings</span></h4>
+<ul>
+<li>PC1 = 0.71 × 身高 + 0.71 × 体重：一半身高加一半体重，意思是「整体个子大小」。</li>
+<li class="en">PC1 = 0.71 × height + 0.71 × weight: half height plus half weight, meaning "overall body size".</li>
+<li>PC2 = 0.71 × 身高 − 0.71 × 体重：身高减体重，意思是「高而瘦」还是「矮而壮」。</li>
+<li class="en">PC2 = 0.71 × height − 0.71 × weight: height minus weight, meaning "tall and slim" versus "short and stocky".</li>
+</ul>
+<p>这一组系数（0.71、0.71）就是特征向量，也叫载荷（loadings）；系数越大（不管正负），这个变量对这根轴越重要。</p>
+<p class="en">This set of coefficients (0.71, 0.71) is the eigenvector, also called the loadings; the larger a coefficient (positive or negative), the more that variable matters for the axis.</p>
+<p>看配方还能看出垂直：PC1 是「加」，PC2 是「减」，两者不重复信息。</p>
+<p class="en">The recipes also show the perpendicularity: PC1 "adds" and PC2 "subtracts", so they do not repeat information.</p>
+<h4>特征值 = 这根轴装了多少信息 <span class="en-h">Eigenvalue = how much information the axis holds</span></h4>
+<div class="tw"><table>
+<thead><tr><th>主成分<br><span class="en">Component</span></th><th>特征值<br><span class="en">Eigenvalue</span></th><th>占总信息<br><span class="en">Share of the total</span></th></tr></thead>
+<tbody>
+<tr><td>PC1</td><td>1.8</td><td>1.8 ÷ 2 = <strong>90%</strong></td></tr>
+<tr><td>PC2</td><td>0.2</td><td>0.2 ÷ 2 = <strong>10%</strong></td></tr>
+</tbody>
+</table></div>
+<p>1.8 + 0.2 正好等于总方差 2：旋转不会丢信息，只是重新分配。</p>
+<p class="en">1.8 + 0.2 equals exactly the total variance of 2: rotation loses no information, it only redistributes it.</p>
+<p>得分图坐标轴上写的百分比就是「特征值 ÷ 总和」，HER 的 PC1 45.6%、PC2 19.0% 就是这么来的。</p>
+<p class="en">The percentage written on a score-plot axis is "eigenvalue ÷ total", and that is where HER's PC1 45.6% and PC2 19.0% come from.</p>
+<h4>得分 = 每个人在新轴上的坐标 <span class="en-h">Scores = each person's coordinates on the new axes</span></h4>
+<div class="tw"><table>
+<thead><tr><th>人<br><span class="en">Person</span></th><th>标准化后的数据<br><span class="en">Standardized data</span></th><th>PC1 得分<br><span class="en">PC1 score</span></th><th>PC2 得分<br><span class="en">PC2 score</span></th><th>读法<br><span class="en">Reading</span></th></tr></thead>
+<tbody>
+<tr><td>小明<br><span class="en">Ming</span></td><td>身高 +1，体重 +1<br><span class="en">height +1, weight +1</span></td><td>1.41</td><td>0</td><td>又高又重：个子大<br><span class="en">Tall and heavy: big build</span></td></tr>
+<tr><td>小红<br><span class="en">Hong</span></td><td>身高 +1，体重 −1<br><span class="en">height +1, weight −1</span></td><td>0</td><td>1.41</td><td>高而瘦<br><span class="en">Tall and slim</span></td></tr>
+</tbody>
+</table></div>
+<p>把一个人的数据代进「配方」，算出来的就是他的得分，比如小明的 PC1 = 0.71 × 1 + 0.71 × 1 ≈ 1.41。</p>
+<p class="en">Plugging a person's data into the recipe gives their score; for example Ming's PC1 = 0.71 × 1 + 0.71 × 1 ≈ 1.41.</p>
+<p>这就是 C = X · P：原始数据 X 乘以载荷 P，得到得分 C。</p>
+<p class="en">This is C = X · P: the original data X times the loadings P gives the scores C.</p>
+<p>主成分最多有几个：变量数和样品数里较小的那个；这个例子 2 个变量，最多 2 个；HER 是 14 个变量，最多 14 个。</p>
+<p class="en">At most how many components: the smaller of the number of variables and samples; this example has 2 variables, so at most 2; HER has 14 variables, so at most 14.</p>
+<div class="box key"><div class="box-t">记住这句 <span class="en-h">Remember this</span></div>
+<p>特征向量是新轴的「配方」（载荷，告诉你哪些变量重要）；特征值是新轴装的信息量（除以总和就是百分比）；把人代进配方得到得分。</p>
+<p class="en">The eigenvector is a new axis's recipe (the loadings, which tell you which variables matter); the eigenvalue is the information the axis holds (divided by the total, it is the percentage); plugging a person into the recipe gives their score.</p>
+</div>
+<h3 id="s5.10">5.10 PCA 的四个步骤 <span class="star">★★★</span> <span class="en-h">5.10 The four steps of PCA</span></h3>
+<p>课件的总结页：</p>
+<p class="en">The slides' summary page:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>步骤<br><span class="en">Step</span></th>
+<th>做什么<br><span class="en">What is done</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 采集（collection）<br><span class="en">1. Collection</span></td>
+<td>得到原始数据矩阵 X<br><span class="en">Obtain the raw data matrix X</span></td>
+</tr>
+<tr>
+<td>2. 预处理（pretreatments）<br><span class="en">2. Pretreatments</span></td>
+<td>中心化、标准化，得到相关矩阵<br><span class="en">Centering and standardization, giving the correlation matrix</span></td>
+</tr>
+<tr>
+<td>3. 矩阵计算（matrix calculation）<br><span class="en">3. Matrix calculation</span></td>
+<td>分解，得到特征值和特征向量<br><span class="en">Decomposition, giving eigenvalues and eigenvectors</span></td>
+</tr>
+<tr>
+<td>4. 解释（interpretation）<br><span class="en">4. Interpretation</span></td>
+<td>得分图、载荷图、双标图<br><span class="en">Score plot, loading plot, biplot</span></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="s5.11">5.11 PCA 的五种图 <span class="star">★★★</span> <span class="en-h">5.11 The five PCA plots</span></h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>图<br><span class="en">Plot</span></th>
+<th>课件的定义<br><span class="en">Definition in the slides</span></th>
+<th>HER 例子怎么读<br><span class="en">How to read the HER example</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>碎石图（scree plot）<br><span class="en">Scree plot</span></td>
+<td>每个主成分解释的总方差（惯量，inertia）比例，从大到小排列；用来决定保留几个主成分<br><span class="en">The fraction of the total variance (inertia) explained by each component, from largest to smallest; used to decide how many components to keep</span></td>
+<td>保留 PC1–PC4，约 80.5% 的信息<br><span class="en">Keep PC1–PC4, about 80.5% of the information</span></td>
+</tr>
+<tr>
+<td>得分图（score plot）<br><span class="en">Score plot</span></td>
+<td>个体在主成分空间里的位置（得分，即个体的因子坐标）<br><span class="en">The positions of the individuals in principal-component space (scores, the factorial coordinates of the individuals)</span></td>
+<td>PC1 = 45.6%，PC2 = 19.0%，PC3 = 8.8%；靠得近的人相似，远离人群的是离群点<br><span class="en">PC1 = 45.6%, PC2 = 19.0%, PC3 = 8.8%; people close together are similar, and someone far from the crowd is an outlier</span></td>
+</tr>
+<tr>
+<td>载荷图（loading plot）<br><span class="en">Loading plot</span></td>
+<td>每个变量对构建某个主成分的因子贡献<br><span class="en">The factorial contribution of each variable to building a given component</span></td>
+<td>离原点越远的变量对这两个主成分越重要<br><span class="en">The further a variable is from the origin, the more it matters for these two components</span></td>
+</tr>
+<tr>
+<td>相关圆（correlation circle）<br><span class="en">Correlation circle</span></td>
+<td>变量画成从原点出发的箭头，都在半径为 1 的圆里<br><span class="en">Variables drawn as arrows from the origin, inside a circle of radius 1</span></td>
+<td>见下面三条规则<br><span class="en">See the three rules below</span></td>
+</tr>
+<tr>
+<td>双标图（biplot）<br><span class="en">Biplot</span></td>
+<td>得分和载荷画在同一张图上<br><span class="en">Scores and loadings on the same plot</span></td>
+<td>个体落在某个变量箭头所指的一侧，说明他在这个变量上偏高<br><span class="en">An individual on the side a variable's arrow points to is relatively high in that variable</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>相关圆三条规则</strong>：</p>
+<p class="en"><strong>Three rules for the correlation circle</strong>:</p>
+<ol>
+<li value="1">看夹角：夹角小是正相关，约 180° 是负相关，约 90° 是不相关。</li>
+<li class="en">Look at the angle: a small angle means positive correlation, about 180° means negative correlation, and about 90° means no correlation.</li>
+<li value="2">看长度：箭头越靠近圆边，这个变量在这张图上表示得越好；箭头很短，说明它的信息主要在后面的主成分里。</li>
+<li class="en">Look at the length: the closer an arrow reaches the circle, the better the variable is represented on this plot; a very short arrow means its information lies mainly in later components.</li>
+<li value="3">看方向：箭头指向哪边，那边的个体在这个变量上取值高。</li>
+<li class="en">Look at the direction: individuals on the side an arrow points to are high in that variable.</li>
+</ol>
+<p>HER 的相关圆：体型和血压类变量（体重、臂围、腰围、BMI、收缩压、舒张压、年龄）聚在一侧，骨骼尺寸类变量（身高、腿长、肘宽、腕宽）聚在另一侧，性别和脉搏又在另一个方向；胆固醇的箭头很短，这张图解释不了它。</p>
+<p class="en">The HER correlation circle: body-size and blood-pressure variables (weight, arm, waist, BMI, systolic, diastolic, age) cluster on one side, skeletal-size variables (height, leg, elbow, wrist) cluster on another, and sex and pulse point in yet another direction; the cholesterol arrow is short, so this plot cannot explain it.</p>
+<div class="box deep"><div class="box-t">用小例子读五种图 <span class="en-h">Going deeper: reading the five plots with the small example</span></div>
+<p>还是用 5.9 的身高-体重例子：每张图就是把 5.7 里得到的某样东西画出来。</p>
+<p class="en">Using the height–weight example of 5.9 again: each plot simply draws one of the things obtained in 5.7.</p>
+<div class="tw"><table>
+<thead><tr><th>图<br><span class="en">Plot</span></th><th>画的是什么<br><span class="en">What it draws</span></th><th>在例子里看到什么<br><span class="en">What the example shows</span></th></tr></thead>
+<tbody>
+<tr><td>碎石图<br><span class="en">Scree plot</span></td><td>特征值（百分比）<br><span class="en">Eigenvalues (percentages)</span></td><td>两根柱子 90% 和 10%；柱子突然变矮的地方后面就可以不要<br><span class="en">Two bars, 90% and 10%; where the bars suddenly drop, the rest can be dropped</span></td></tr>
+<tr><td>得分图<br><span class="en">Score plot</span></td><td>得分（每个人）<br><span class="en">Scores (each person)</span></td><td>小明 (1.41, 0) 在右边：个子大；小红 (0, 1.41) 在上面：高而瘦<br><span class="en">Ming (1.41, 0) is on the right: big build; Hong (0, 1.41) is at the top: tall and slim</span></td></tr>
+<tr><td>载荷图<br><span class="en">Loading plot</span></td><td>载荷（每个变量）<br><span class="en">Loadings (each variable)</span></td><td>身高在 (0.71, 0.71)，体重在 (0.71, −0.71)；两个都在右边，都给 PC1「加分」<br><span class="en">Height at (0.71, 0.71), weight at (0.71, −0.71); both on the right, so both "add" to PC1</span></td></tr>
+<tr><td>相关圆<br><span class="en">Correlation circle</span></td><td>变量和主成分的相关<br><span class="en">Correlation of variables with the components</span></td><td>两根箭头夹角约 37°，正相关（相关系数正是 0.8）<br><span class="en">The two arrows are about 37° apart: positive correlation (the correlation is indeed 0.8)</span></td></tr>
+<tr><td>双标图<br><span class="en">Biplot</span></td><td>得分 + 载荷<br><span class="en">Scores + loadings</span></td><td>小红落在身高箭头那一侧，说明她身高偏高<br><span class="en">Hong lies on the side of the height arrow, so her height is relatively high</span></td></tr>
+</tbody>
+</table></div>
+<figure class="fig"><div class="fig-scroll"><svg viewBox="0 0 330 300" width="330" height="300" role="img" aria-label="相关圆：身高和体重两根箭头夹角约 37 度 / Correlation circle: the height and weight arrows are about 37 degrees apart">
+<circle cx="150" cy="150" r="110" class="ring"/>
+<line x1="28" y1="150" x2="272" y2="150" class="ax"/><line x1="150" y1="272" x2="150" y2="28" class="ax"/>
+<text x="274" y="154" class="lab">PC1 90%</text>
+<text x="156" y="24" class="lab">PC2 10%</text>
+<path d="M198.0,150 A48,48 0 0 0 195.6,134.8" class="arc"/>
+<path d="M198.0,150 A48,48 0 0 1 195.6,165.2" class="arc"/>
+<text x="204" y="154" class="lab small">≈37°</text>
+<line x1="150" y1="150" x2="254.4" y2="115.2" class="arrow"/><polygon points="254.4,115.2 244.4,114.2 247.4,122.2" class="head"/>
+<line x1="150" y1="150" x2="254.4" y2="184.8" class="arrow"/><polygon points="254.4,184.8 244.4,185.8 247.4,177.8" class="head"/>
+<text x="184.4" y="105.2" class="lab">身高 height</text>
+<text x="184.4" y="204.8" class="lab">体重 weight</text>
+</svg></div>
+<figcaption>两根箭头都碰到圆边（两根轴装了 100% 的信息），夹角小说明正相关。<span class="en">Both arrows reach the edge of the circle (the two axes hold 100% of the information), and the small angle means positive correlation.</span></figcaption></figure>
+<p>读得分图时先看轴上的百分比：沿 PC1（90%）分开，比沿 PC2（10%）分开重要得多。</p>
+<p class="en">When reading a score plot, look at the axis percentages first: a separation along PC1 (90%) matters far more than one along PC2 (10%).</p>
+<p>HER 有 14 个变量，PC1 + PC2 只装了约 65%，所以箭头会短一些；胆固醇的箭头特别短，说明这张图解释不了它。</p>
+<p class="en">HER has 14 variables and PC1 + PC2 hold only about 65%, so the arrows are shorter; the cholesterol arrow is especially short, meaning this plot cannot explain it.</p>
+<p>双标图只看「在哪一侧」，不要去量点到箭头的距离。</p>
+<p class="en">In a biplot only look at "which side"; do not measure the distance from a point to an arrow.</p>
+</div>
+<p><strong>课件外补充</strong>：碎石图之外还有一个常见判据「凯泽准则」（保留特征值大于 1 的主成分），课件没有讲，知道名字就行。</p>
+<p class="en"><strong>Not in the slides</strong>: besides the scree plot, a common rule is the Kaiser criterion (keep components with an eigenvalue above 1); the slides do not cover it, so just know the name.</p>
+<h3 id="s5.12">5.12 怎么描述一张 PCA 图 <span class="star">★★★</span> <span class="en-h">5.12 How to describe a PCA plot</span></h3>
+<p>按这四步来描述，就不会漏掉要点：</p>
+<p class="en">Follow these four steps and nothing important gets left out:</p>
+<ol>
+<li value="1">报坐标轴：「PC1 解释了 45.6% 的总方差，PC2 解释了 19.0%。」</li>
+<li class="en">Report the axes: "PC1 explains 45.6% of the total variance and PC2 explains 19.0%."</li>
+<li value="2">说个体：哪些个体聚在一起，谁是离群点，几组沿哪个方向分开。</li>
+<li class="en">Describe the individuals: which cluster together, which are outliers, and along which direction the groups separate.</li>
+<li value="3">说变量：哪些变量同向（正相关），哪些反向（负相关），哪个箭头短。</li>
+<li class="en">Describe the variables: which point the same way (positively correlated), which point opposite ways (negatively correlated), and which arrow is short.</li>
+<li value="4">把两张图对起来：「A 组位于变量 v 箭头所指的一侧，所以 A 组在 v 上取值偏高。」</li>
+<li class="en">Link the two plots: "Group A lies on the side that the arrow of variable v points to, so group A has relatively high values of v."</li>
+</ol>
+<h3 id="s5.13">5.13 常见误解 <span class="star">★★</span> <span class="en-h">5.13 Common misunderstandings</span></h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>误解<br><span class="en">Misunderstanding</span></th>
+<th>正确理解<br><span class="en">Correct understanding</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCA 需要知道样品的分组<br><span class="en">PCA needs to know the sample groups</span></td>
+<td>PCA 是无监督的，只用 X；分组是从图上「看出来」的<br><span class="en">PCA is unsupervised and uses only X; groups are seen on the plot afterwards</span></td>
+</tr>
+<tr>
+<td>不缩放也没关系<br><span class="en">Scaling does not matter</span></td>
+<td>不缩放的话，数值范围大的变量（如胆固醇）会主导 PCA<br><span class="en">Without scaling, variables with large ranges (such as cholesterol) dominate the PCA</span></td>
+</tr>
+<tr>
+<td>主成分可以想要几个就有几个<br><span class="en">You can have as many components as you like</span></td>
+<td>最多等于变量数和个体数中较小的那个<br><span class="en">At most the smaller of the number of variables and the number of individuals</span></td>
+</tr>
+<tr>
+<td>两个个体在得分图上靠得近，就完全相似<br><span class="en">Two individuals close on the score plot are completely similar</span></td>
+<td>只说明它们在这两个主成分上相似，在没画出来的主成分上可能不同<br><span class="en">It only means they are similar on these two components; they may differ on the components not shown</span></td>
+</tr>
+<tr>
+<td>PC1 一定对应一个真实的化学因素<br><span class="en">PC1 must correspond to a real chemical factor</span></td>
+<td>PC1 只是一个数学方向，它的含义要靠专业知识判断<br><span class="en">PC1 is just a mathematical direction; its meaning has to be judged with subject knowledge</span></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote class="sum">
+<p><strong>一句话总结</strong>：变量太多画不出来，所以用 PCA 降维：先缩放再中心化，分解相关矩阵得到特征向量（方向，载荷）和特征值（重要性），再用碎石图选主成分、用得分图看个体、用载荷图和相关圆看变量。</p>
+<p class="en"><strong>One-sentence summary</strong>: With too many variables to plot, PCA reduces the dimensions: scale then centre, decompose the correlation matrix to get eigenvectors (directions, loadings) and eigenvalues (importance), then use the scree plot to choose components, the score plot for individuals and the loading plot and correlation circle for variables.</p>
+</blockquote>
+<h2 id="s6">6. Part 3：数据库与数据管理 <span class="en-h">6. Part 3: databases and data management</span></h2>
+<h3 id="s6.1">6.1 数据库和科学数据库 <span class="star">★★★</span> <span class="en-h">6.1 Databases and scientific databases</span></h3>
+<p><strong>数据库（database）</strong>：为了方便访问、管理和更新而组织起来的信息，可以看成一个有组织的信息集合。</p>
+<p class="en"><strong>A database</strong> is information set up for easy access, management and updating; it can be thought of as an organized collection of information.</p>
+<p>数据库用来存储、维护和访问各种数据，把关于人、地点或事物的信息集中在一处，方便观察和分析。</p>
+<p class="en">Databases are used to store, maintain and access any sort of data, gathering information on people, places or things in one place so it can be observed and analysed.</p>
+<p><strong>数据库的类型</strong>：按内容可以分为文献型（bibliographic）、全文型（full text）、数值型（numeric）和图像型（images）；在计算机领域，常按组织方式来分类。</p>
+<p class="en"><strong>Types of databases</strong>: by content they can be bibliographic, full text, numeric or images; in computing they are often classified by their organizational approach.</p>
+<p><strong>科学数据库（scientific database）</strong>：一个计算机化的、有组织的相关数据集合，可以用于科学研究和长期保管（long-term stewardship）。</p>
+<p class="en"><strong>A scientific database</strong> is a computerized, organized collection of related data that can be accessed for scientific inquiry and long-term stewardship.</p>
+<p>它的价值在于整合：把不同来源、不同类型的数据集结合起来，用新的方式、常常是跨学科地分析，让新的科学问题成为可能。</p>
+<p class="en">Its value lies in integration: combining dissimilar datasets and analysing them in new ways, often across disciplines, which makes new kinds of scientific inquiry possible.</p>
+<h3 id="s6.2">6.2 数据管理 <span class="star">★★</span> <span class="en-h">6.2 Data management</span></h3>
+<p><strong>数据管理（data management）</strong>：接收（ingesting）、存储、组织和维护一个机构所产生和收集的数据的过程。</p>
+<p class="en"><strong>Data management</strong> is the process of ingesting, storing, organizing and maintaining the data created and collected by an organization.</p>
+<p>它由多种功能组成，共同目的是保证数据准确（accurate）、可用（available）、可访问（accessible）。</p>
+<p class="en">It combines several functions whose common aim is to make sure the data are accurate, available and accessible.</p>
+<p><strong>课件外补充</strong>：常听到的 FAIR 原则（可发现、可访问、可互操作、可复用）是同一个思路，课件没有讲，知道名字就行。</p>
+<p class="en"><strong>Not in the slides</strong>: the often-cited FAIR principles (Findable, Accessible, Interoperable, Reusable) follow the same idea; the slides do not cover them, so just know the name.</p>
+<h3 id="s6.3">6.3 VRE：虚拟研究环境 <span class="star">★★★</span> <span class="en-h">6.3 VRE: virtual research environment</span></h3>
+<p>课件的目标：建立一个 VRE（Virtual Research Environment，虚拟研究环境），把这些东西连起来：</p>
+<p class="en">The goal in the slides: create a VRE (Virtual Research Environment) that links the following:</p>
+<ul>
+<li>实验记录本（laboratory notebook）</li>
+<li class="en">The laboratory notebook</li>
+<li>数据记录工具（data recording tool）</li>
+<li class="en">The data recording tool</li>
+<li>原始数据，包括元数据（raw data including metadata）</li>
+<li class="en">The raw data, including metadata</li>
+<li>数据处理脚本（data processing scripts）</li>
+<li class="en">The data processing scripts</li>
+<li>在线发表（online publication）</li>
+<li class="en">The online publication</li>
+</ul>
+<p>好处：通过查询（queries），既能找到自己的数据，也能找到其他团队产生的、和我们项目有关的共享数据。</p>
+<p class="en">The benefit: through queries, you can find your own data and also shared data generated by other teams in connection with your projects.</p>
+<p><strong>元数据（metadata）</strong> 是「关于数据的数据」：一条光谱本身是数据，它是什么样品、哪台仪器、什么时间、什么条件测的，就是元数据。</p>
+<p class="en"><strong>Metadata</strong> are "data about data": a spectrum itself is data, while what the sample was, which instrument, when and under which conditions it was measured are the metadata.</p>
+<h3 id="s6.4">6.4 DAAP：分析平台的数据采集 <span class="star">★★★</span> <span class="en-h">6.4 DAAP: data acquisition for analytical platform</span></h3>
+<p><strong>DAAP = Data Acquisition for Analytical Platform（分析平台的数据采集）</strong>，是课件里实际搭建的 VRE，网址在巴黎萨克雷大学（daap.dsi.universite-paris-saclay.fr）。</p>
+<p class="en"><strong>DAAP = Data Acquisition for Analytical Platform</strong> is the VRE actually built in the slides, hosted at Université Paris-Saclay (daap.dsi.universite-paris-saclay.fr).</p>
+<p>它的技术基础是关联开放数据（Linked Open Data）和 RDF 图（Resource Description Framework graphs）。</p>
+<p class="en">It is based on Linked Open Data technologies and RDF (Resource Description Framework) graphs.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>DAAP 的组成（课件结构图）<br><span class="en">Parts of DAAP (slides' diagram)</span></th>
+<th>作用<br><span class="en">Role</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MediaWiki 仓库<br><span class="en">MediaWiki repository</span></td>
+<td>存本体（ontology）和项目的详细描述；分为公开 wiki、私有 wiki、实验室私有 wiki（每个项目一个）<br><span class="en">Holds the ontology and detailed project descriptions; split into a public wiki, a private wiki and a laboratory private wiki (one per project)</span></td>
+</tr>
+<tr>
+<td>数据采集<br><span class="en">Data acquisition</span></td>
+<td>用 Lip(Sys)² 实验室的各种分析仪器采集；研究者登记的实验数据事先已在 DAAP 上描述过<br><span class="en">Done with the various analytical instruments of the Lip(Sys)² lab; the experimental data a researcher registers have already been described on DAAP</span></td>
+</tr>
+<tr>
+<td>VRAC 软件<br><span class="en">VRAC software</span></td>
+<td>读取公开和私有 wiki 里的信息，帮助把一次实验「campaign」的文件备份到 NAS<br><span class="en">Reads the information in the public and private wikis and helps back up the files of a campaign to the NAS</span></td>
+</tr>
+<tr>
+<td>NAS（网络存储）<br><span class="en">NAS (network storage)</span></td>
+<td>存实验数据、数据格式转换插件和衍生数据（artefact data）<br><span class="en">Stores the experimental data, data-conversion plugins and artefact data</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>课件的例子</strong>：DAAP 首页列出项目（如「巨噬细胞分析」），本体页列出定义好的类（class，如 Spectrum 光谱、Slide 载玻片、Medium 培养基、J774）和属性（property，如 hasMeasure、hasPicture）。</p>
+<p class="en"><strong>The slides' example</strong>: the DAAP home page lists the projects (such as "macrophage analysis"), and the ontology page lists the defined classes (such as Spectrum, Slide, Medium, J774) and properties (such as hasMeasure, hasPicture).</p>
+<p>首页还显示公开图里有 2135 个三元组，私有图里有 8609 个三元组。</p>
+<p class="en">The home page also shows 2135 triples in the public graph and 8609 triples in the private graph.</p>
+<p>课件对这个例子的总结：数字化的实验记录本，和数据连在一起，整合进 RDF 数据库，并且可以查询。</p>
+<p class="en">The slides sum up this example as: a digital lab notebook, linked to the data, integrated into an RDF database, with the ability to run queries.</p>
+<h3 id="s6.5">6.5 RDF 和 SPARQL <span class="star">★★★</span> <span class="en-h">6.5 RDF and SPARQL</span></h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>缩写<br><span class="en">Abbreviation</span></th>
+<th>全称<br><span class="en">Full name</span></th>
+<th>是什么<br><span class="en">What it is</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RDF</td>
+<td>Resource Description Framework</td>
+<td>用「主语－谓语－宾语」三元组（triple）描述数据的格式，很多三元组连起来就是一张图<br><span class="en">A format that describes data as subject–predicate–object triples; many linked triples form a graph</span></td>
+</tr>
+<tr>
+<td>SPARQL</td>
+<td>SPARQL Protocol and RDF Query Language</td>
+<td>课件定义：在 RDF 数据库里搜索用的查询语言<br><span class="en">The slides' definition: the query language used to search in an RDF database</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>课件里的三元组就是 DAAP 本体里的关系，比如：某次实验 — hasSlide（有载玻片）— 某张载玻片；某个细胞 — hasMeasure（有测量）— 某条光谱。</p>
+<p class="en">The triples in the slides are the relations of the DAAP ontology, for example: a campaign — hasSlide — a slide; a cell — hasMeasure — a spectrum.</p>
+<p><strong>课件的 SPARQL 例子：找出培养基 M1 C1 下所有细胞的光谱</strong>。</p>
+<p class="en"><strong>The slides' SPARQL example: find all cell spectra for the M1 C1 culture medium</strong>.</p>
+<p>查询的思路是顺着三元组一步步走：实验 → 它的载玻片 → 载玻片的培养基是 STD、载玻片上的细胞 → 细胞的测量（光谱）。</p>
+<p class="en">The query works by following the triples step by step: campaign → its slides → slides whose medium is STD and the cells on them → the cells' measurements (spectra).</p>
+<pre><code>select distinct ?campaign ?spc
+where {
+  ?campaign project:hasSlide ?slide .
+  ?slide project:medium project:STD ;
+         project:hasCell ?cell .
+  ?cell project:hasMeasure ?spc .
+}
+</code></pre>
+<p>不用会写代码，只要能看懂：带问号的是要找的未知量，每一行是一个三元组条件。</p>
+<p class="en">You do not need to be able to write it, only to understand it: the terms with a question mark are the unknowns to find, and each line is a triple condition.</p>
+<p>一句话：RDF 负责「怎么存」，SPARQL 负责「怎么问」。</p>
+<p class="en">In one sentence: RDF handles "how to store", and SPARQL handles "how to ask".</p>
+<h3 id="s6.6">6.6 J774 巨噬细胞案例：两个好处 <span class="star">★★★</span> <span class="en-h">6.6 The J774 macrophage case: two benefits</span></h3>
+<p>课件用「J774 巨噬细胞的 Raman 和红外光谱分析」这个研究来说明 VRE 的好处。</p>
+<p class="en">The slides use the study "analysis of J774 macrophages by Raman and infrared spectroscopy" to show the benefits of the VRE.</p>
+<p><strong>好处一：能比较两种技术</strong>。</p>
+<p class="en"><strong>Benefit 1: the two techniques can be compared</strong>.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>红外成像（IR imaging）<br><span class="en">IR imaging</span></th>
+<th>拉曼显微光谱（Raman microspectroscopy）<br><span class="en">Raman microspectroscopy</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一个像素有多大<br><span class="en">Size of one pixel</span></td>
+<td>几乎覆盖一整个细胞<br><span class="en">Covers almost a whole cell</span></td>
+<td>更小，可以落在细胞内部的不同区域<br><span class="en">Smaller, so it can fall on different regions inside a cell</span></td>
+</tr>
+<tr>
+<td>后果<br><span class="en">Consequence</span></td>
+<td>一个像素里不只是细胞核或细胞质的光谱，而是混在一起<br><span class="en">A pixel does not contain only the nucleus or only the cytoplasm signature; they are mixed</span></td>
+<td>空间分辨率更好，能分开细胞核和细胞质<br><span class="en">Better spatial resolution, so the nucleus and cytoplasm can be told apart</span></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>好处二：云计算能处理完整数据</strong>。</p>
+<p class="en"><strong>Benefit 2: cloud computing can process the complete data</strong>.</p>
+<p>同样的红外光谱、同样的预处理方法、同样的处理脚本、同样的计算时间：</p>
+<p class="en">Same IR spectra, same preprocessing method, same processing script, same calculation time:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>实验室电脑<br><span class="en">Laboratory computer</span></th>
+<th>巴黎萨克雷云（虚拟机）<br><span class="en">Cloud Paris-Saclay (virtual machine)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>能处理的数据矩阵<br><span class="en">Data matrix it can handle</span></td>
+<td>300 行 × 1630 列，缩减过的矩阵<br><span class="en">300 rows × 1630 columns, a reduced matrix</span></td>
+<td>73549 行 × 1630 列，完整矩阵<br><span class="en">73549 rows × 1630 columns, the complete matrix</span></td>
+</tr>
+<tr>
+<td>结果<br><span class="en">Result</span></td>
+<td>只能在部分数据上做 PCA<br><span class="en">PCA only on part of the data</span></td>
+<td>在全部数据上做 PCA，得到完整的 PC1 载荷<br><span class="en">PCA on all the data, giving the full PC1 loading</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>这里的行是光谱（每个像素一条），1630 列是波数（变量），正好是 5.2 讲的「又短又宽」的超多变量数据。</p>
+<p class="en">Here the rows are spectra (one per pixel) and the 1630 columns are wavenumbers (variables), exactly the "short and wide" megavariate data described in 5.2.</p>
+<blockquote class="sum">
+<p><strong>一句话总结</strong>：数据库把数据有组织地存起来，数据管理保证数据准确、可用、可访问；VRE（课件里的 DAAP）用 RDF 把实验记录、原始数据、元数据和脚本连起来，用 SPARQL 查询；J774 案例说明它能比较 Raman 和 IR，并借助云计算处理完整数据。</p>
+<p class="en"><strong>One-sentence summary</strong>: Databases store data in an organized way and data management keeps data accurate, available and accessible; a VRE (DAAP in the slides) uses RDF to link lab notebooks, raw data, metadata and scripts, queried with SPARQL; the J774 case shows it can compare Raman and IR and use cloud computing to process the complete data.</p>
+</blockquote>
+<h2 id="s7">7. 全课一页总结 <span class="en-h">7. The whole course on one page</span></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>主题<br><span class="en">Topic</span></th>
+<th>核心的那句话<br><span class="en">The key sentence</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>化学计量学<br><span class="en">Chemometrics</span></td>
+<td>用数学和统计设计实验并从化学数据里提取最多信息；分析化学的分支，70 年代初出现<br><span class="en">Using maths and statistics to design experiments and extract maximum information from chemical data; a branch of analytical chemistry that appeared in the early 1970s</span></td>
+</tr>
+<tr>
+<td>四个目标<br><span class="en">Four goals</span></td>
+<td>优化、分类、校准预测、数据提取<br><span class="en">Optimisation, classification, calibration and prediction, data extraction</span></td>
+</tr>
+<tr>
+<td>经典对化学计量学<br><span class="en">Classical vs chemometric</span></td>
+<td>经典：理解、还原论、模型来自理论；化学计量学：放弃理解换预测分类、多变量、模型只拟合数据<br><span class="en">Classical: understanding, reductionist, models from theory; chemometric: gives up understanding for prediction and classification, multivariate, models only fit the data</span></td>
+</tr>
+<tr>
+<td>实验设计<br><span class="en">Experimental design</span></td>
+<td>OFAT 有多米诺效应、看不到交互作用；全因子设计（2³ 加中心点 = 9 次）能得到主效应和交互作用<br><span class="en">OFAT has a domino effect and misses interactions; a full factorial design (2³ plus a centre point = 9 runs) gives main effects and interactions</span></td>
+</tr>
+<tr>
+<td>癌细胞<br><span class="en">Cancer cells</span></td>
+<td>10 个变量单独看都显著，PCA 却显示 9 个高度相关、mitoses 独占第二轴<br><span class="en">All 10 variables are significant on their own, yet PCA shows 9 are highly correlated and mitoses alone drives the second axis</span></td>
+</tr>
+<tr>
+<td>PLS<br><span class="en">PLS</span></td>
+<td>用降维后的整条光谱、最大化 X 和 y 的协方差；更稳健，能发现异物，能同时预测多个性质<br><span class="en">Uses the whole spectrum after reduction and maximises the covariance of X and y; more robust, detects foreign substances, predicts several properties at once</span></td>
+</tr>
+<tr>
+<td>过拟合<br><span class="en">Overfitting</span></td>
+<td>校准误差一直降，验证误差先降后升；用留一交叉验证选成分数（例子选 3 个）<br><span class="en">Calibration error keeps falling, validation error falls then rises; choose the number of components by leave-one-out cross-validation (3 in the example)</span></td>
+</tr>
+<tr>
+<td>Part 1：Python<br><span class="en">Part 1: Python</span></td>
+<td>从 0 开始数；<code>=</code> 赋值、<code>==</code> 比较；<code>*</code> 逐元素、<code>.dot()</code> 矩阵乘法<br><span class="en">Counting starts at 0; <code>=</code> assigns, <code>==</code> compares; <code>*</code> is element-wise, <code>.dot()</code> is the matrix product</span></td>
+</tr>
+<tr>
+<td>Part 1：矩阵<br><span class="en">Part 1: matrices</span></td>
+<td>转置是 Dᵀ（不是 D⁻¹）；A 的列数 = B 的行数才能相乘；矩阵乘自己的转置是对称矩阵<br><span class="en">The transpose is Dᵀ (not D⁻¹); A times B needs columns of A = rows of B; a matrix times its own transpose is symmetric</span></td>
+</tr>
+<tr>
+<td>研究流程<br><span class="en">Research workflow</span></td>
+<td>准备 → 测量 → 观察数据 → 统计分析 → 结论和假设 → 报告<br><span class="en">Prepare → measure → observe the data → statistical analysis → conclusion and hypothesis → report</span></td>
+</tr>
+<tr>
+<td>回归<br><span class="en">Regression</span></td>
+<td>斜率 ≠ 0，看 R 和 R²；Fisher 检验 F = S²reg / S²res，H1 是回归方差显著大于残差方差<br><span class="en">Slope ≠ 0, check R and R²; Fisher test F = S²reg / S²res, with H1 that the regression variance is significantly greater than the residual variance</span></td>
+</tr>
+<tr>
+<td>PCA 是什么<br><span class="en">What PCA is</span></td>
+<td>无监督、描述性的降维方法，把变量变成互不相关的主成分；行是个体，列是变量<br><span class="en">An unsupervised, descriptive reduction method that turns the variables into uncorrelated components; rows are individuals, columns are variables</span></td>
+</tr>
+<tr>
+<td>预处理<br><span class="en">Pretreatment</span></td>
+<td>先 UV 缩放（胆固醇 2–1252 对年龄 12–73），再中心化<br><span class="en">First UV scaling (cholesterol 2–1252 vs age 12–73), then centering</span></td>
+</tr>
+<tr>
+<td>分解<br><span class="en">Decomposition</span></td>
+<td>一次旋转；特征向量 = 方向（载荷），特征值 = 重要性；C = X·P，C 是得分，P 是载荷<br><span class="en">A rotation; eigenvectors = directions (loadings), eigenvalues = importance; C = X·P, C are the scores, P the loadings</span></td>
+</tr>
+<tr>
+<td>看图<br><span class="en">Reading the plots</span></td>
+<td>碎石图选几个（HER 留 4 个约 80.5%）；得分图看个体；载荷图和相关圆看变量；双标图两个一起看<br><span class="en">Scree plot to choose how many (HER keeps 4, about 80.5%); score plot for individuals; loading plot and correlation circle for variables; biplot for both</span></td>
+</tr>
+<tr>
+<td>数据库<br><span class="en">Databases</span></td>
+<td>有组织的信息集合；科学数据库用于科研和长期保管，价值在于整合<br><span class="en">An organized collection of information; a scientific database serves research and long-term stewardship, and its value is integration</span></td>
+</tr>
+<tr>
+<td>VRE / DAAP</td>
+<td>把实验记录本、原始数据和元数据、脚本、发表连起来；DAAP 基于关联开放数据和 RDF<br><span class="en">Links the lab notebook, raw data with metadata, scripts and publication; DAAP is based on Linked Open Data and RDF</span></td>
+</tr>
+<tr>
+<td>RDF / SPARQL</td>
+<td>RDF 用三元组存，SPARQL 在 RDF 数据库里查询<br><span class="en">RDF stores data as triples, SPARQL queries an RDF database</span></td>
+</tr>
+<tr>
+<td>J774 案例<br><span class="en">J774 case</span></td>
+<td>红外一个像素约等于一个细胞，拉曼空间分辨率更好；云上能处理 73549 × 1630 的完整矩阵<br><span class="en">An IR pixel is about one cell, Raman has better spatial resolution; the cloud can process the complete 73549 × 1630 matrix</span></td>
+</tr>
+</tbody>
+</table></div>
+  <h2 id="s8">8. 中英术语表 <span class="en-h">8. Chinese–English glossary</span></h2>
+<p>按章节排列，方便和课件（英文 / 法文）对照着看。</p>
+<p class="en">Arranged by chapter, so it is easy to read alongside the slides (in English and French).</p>
+<h3 id="g-Introduction">导论 <span class="en-h">Introduction</span></h3>
+<dl class="gloss"><div><dt>化学计量学</dt><dd>chemometrics</dd></div><div><dt>实验设计</dt><dd>experimental design (DoE)</dd></div><div><dt>单因子轮换</dt><dd>one factor at a time (OFAT)</dd></div><div><dt>全因子设计</dt><dd>full factorial design</dd></div><div><dt>主效应</dt><dd>main effect</dd></div><div><dt>交互作用</dt><dd>interaction</dd></div><div><dt>帕累托图</dt><dd>Pareto chart</dd></div><div><dt>等值线图</dt><dd>contour plot</dd></div><div><dt>分类 / 模式识别</dt><dd>classification / pattern recognition</dd></div><div><dt>校准 / 预测</dt><dd>calibration / prediction</dd></div><div><dt>偏最小二乘</dt><dd>partial least squares (PLS)</dd></div><div><dt>隐变量</dt><dd>latent variable</dd></div><div><dt>过拟合</dt><dd>overfitting</dd></div><div><dt>交叉验证</dt><dd>cross-validation</dd></div><div><dt>留一法</dt><dd>leave-one-out</dd></div><div><dt>均方根误差</dt><dd>root mean square error (RMSE)</dd></div><div><dt>共线性</dt><dd>collinearity</dd></div><div><dt>代谢组学</dt><dd>metabolomics</dd></div><div><dt>树状图</dt><dd>dendrogram</dd></div></dl>
+<h3 id="g-Part1">Part 1</h3>
+<dl class="gloss"><div><dt>模块 / 包</dt><dd>module / package</dd></div><div><dt>变量</dt><dd>variable</dd></div><div><dt>字符串</dt><dd>string</dd></div><div><dt>列表</dt><dd>list</dd></div><div><dt>赋值</dt><dd>assignment</dd></div><div><dt>矩阵</dt><dd>matrix</dd></div><div><dt>元素</dt><dd>element</dd></div><div><dt>维度</dt><dd>dimension</dd></div><div><dt>方阵</dt><dd>square matrix</dd></div><div><dt>对角矩阵</dt><dd>diagonal matrix</dd></div><div><dt>单位矩阵</dt><dd>identity matrix</dd></div><div><dt>逆矩阵</dt><dd>inverse matrix</dd></div><div><dt>对称矩阵</dt><dd>symmetric matrix</dd></div><div><dt>转置</dt><dd>transpose</dd></div><div><dt>逐元素运算</dt><dd>element-by-element operation</dd></div><div><dt>矩阵乘法</dt><dd>matrix product</dd></div><div><dt>循环</dt><dd>loop</dd></div><div><dt>函数</dt><dd>function</dd></div></dl>
+<h3 id="g-Part2">Part 2</h3>
+<dl class="gloss"><div><dt>回归</dt><dd>regression</dd></div><div><dt>最小二乘</dt><dd>least squares</dd></div><div><dt>校准曲线</dt><dd>calibration curve</dd></div><div><dt>残差</dt><dd>residual</dd></div><div><dt>斜率</dt><dd>slope</dd></div><div><dt>相关系数</dt><dd>correlation coefficient r</dd></div><div><dt>决定系数</dt><dd>coefficient of determination R²</dd></div><div><dt>原假设 / 备择假设</dt><dd>null / alternative hypothesis (H0 / H1)</dd></div><div><dt>显著性水平</dt><dd>significance level α</dd></div><div><dt>p 值</dt><dd>p-value</dd></div><div><dt>自由度</dt><dd>degrees of freedom</dd></div><div><dt>平方和</dt><dd>sum of squares</dd></div><div><dt>外推</dt><dd>extrapolation</dd></div><div><dt>方差 / 标准差</dt><dd>variance / standard deviation</dd></div><div><dt>协方差矩阵</dt><dd>covariance matrix</dd></div><div><dt>相关矩阵</dt><dd>correlation matrix</dd></div><div><dt>主成分分析</dt><dd>principal component analysis (PCA)</dd></div><div><dt>主成分</dt><dd>principal component (PC)</dd></div><div><dt>降维</dt><dd>dimension reduction</dd></div><div><dt>无监督</dt><dd>unsupervised</dd></div><div><dt>描述性 / 解释性</dt><dd>descriptive / explanatory</dd></div><div><dt>中心化</dt><dd>centering</dd></div><div><dt>缩放 / 单位方差缩放</dt><dd>scaling / unit variance (UV) scaling</dd></div><div><dt>标准化</dt><dd>standardization / autoscaling</dd></div><div><dt>特征值</dt><dd>eigenvalue</dd></div><div><dt>特征向量</dt><dd>eigenvector</dd></div><div><dt>正交（垂直）</dt><dd>orthogonal</dd></div><div><dt>得分 / 得分图</dt><dd>scores / score plot</dd></div><div><dt>载荷 / 载荷图</dt><dd>loadings / loading plot</dd></div><div><dt>碎石图</dt><dd>scree plot</dd></div><div><dt>相关圆</dt><dd>correlation circle</dd></div><div><dt>双标图</dt><dd>biplot</dd></div><div><dt>离群值</dt><dd>outlier</dd></div><div><dt>凯泽准则</dt><dd>Kaiser criterion</dd></div></dl>
+<h3 id="g-Part3">Part 3</h3>
+<dl class="gloss"><div><dt>数据库</dt><dd>database</dd></div><div><dt>科学数据库</dt><dd>scientific database</dd></div><div><dt>数据管理</dt><dd>data management</dd></div><div><dt>元数据</dt><dd>metadata</dd></div><div><dt>虚拟研究环境</dt><dd>virtual research environment (VRE)</dd></div><div><dt>分析平台的数据采集</dt><dd>Data Acquisition for Analytical Platform (DAAP)</dd></div><div><dt>关联开放数据</dt><dd>Linked Open Data</dd></div><div><dt>本体</dt><dd>ontology</dd></div><div><dt>三元组</dt><dd>triple</dd></div><div><dt>资源描述框架</dt><dd>Resource Description Framework (RDF)</dd></div><div><dt>查询语言</dt><dd>query language (SPARQL)</dd></div><div><dt>拉曼 / 红外</dt><dd>Raman / infrared (IR)</dd></div><div><dt>空间分辨率</dt><dd>spatial resolution</dd></div></dl>
+
+<footer class="foot"><p>根据 TU23「化学计量学导论」课件整理的学习笔记（导论：P. Chaminade；Part 1–3：S. Tfaili）。标「课件外补充」的内容不在课件里。</p>
+<p class="en">Study notes based on the TU23 Introduction to Chemometrics slides (introduction by P. Chaminade; Parts 1–3 by S. Tfaili). Content marked "not in the slides" (课件外补充) is not in the slides.</p></footer>
+</main></div>
+<script>
+(function(){
+  var K='tu23-notes-lang';
+  function set(l){
+    document.body.setAttribute('data-lang',l);
+    var bs=document.querySelectorAll('.langbar button');
+    for(var i=0;i<bs.length;i++){bs[i].classList.toggle('on',bs[i].getAttribute('data-l')===l);bs[i].setAttribute('aria-pressed',bs[i].getAttribute('data-l')===l?'true':'false');}
+    try{localStorage.setItem(K,l);}catch(e){}
+  }
+  var bs=document.querySelectorAll('.langbar button');
+  for(var i=0;i<bs.length;i++){bs[i].addEventListener('click',function(){set(this.getAttribute('data-l'));});}
+  var s=null; try{s=localStorage.getItem(K);}catch(e){}
+  set(s==='zh'?'zh':'both');
+})();
+</script>
+
+</body></html>

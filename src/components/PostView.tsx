@@ -13,7 +13,7 @@ import {
 } from '@/lib/blog';
 import { getColumn, columnPath, stageName, stagePath } from '@/lib/columns';
 import { categoryName, categoryPath, getCategory, tagPath } from '@/lib/categories';
-import { Embed, MusicList } from '@/components/embeds';
+import { Embed, MusicList, NoteFrame } from '@/components/embeds';
 
 const mdxOptions = {
   mdxOptions: {
@@ -101,7 +101,7 @@ export default function PostView({ lang, post }: { lang: Locale; post: BlogPost 
       {post.music && <MusicList tracks={post.music} lang={lang} />}
 
       <div className="blog-article">
-        <MDXRemote source={post.source} options={mdxOptions} components={{ Embed }} />
+        <MDXRemote source={post.source} options={mdxOptions} components={{ Embed, NoteFrame }} />
       </div>
 
       <footer className="blog-post-footer">

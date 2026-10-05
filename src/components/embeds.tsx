@@ -51,3 +51,20 @@ export function MusicList({ tracks, lang }: { tracks: MusicTrack[]; lang: string
     </section>
   );
 }
+
+/**
+ * Shows a self-contained HTML note from /public (e.g. /notes/tu23.html) as a
+ * full-width reading frame, with a link to open it on its own page.
+ * Use inside MDX: <NoteFrame src="/notes/tu23.html" title="TU23" lang="zh" />
+ */
+export function NoteFrame({ src, title, lang = 'zh' }: { src?: string; title?: string; lang?: string }) {
+  if (!src) return null;
+  return (
+    <div className="note-frame">
+      <iframe src={src} title={title ?? 'Note'} loading="lazy" />
+      <a className="note-frame-open" href={src} target="_blank" rel="noreferrer">
+        {lang === 'zh' ? '在新窗口中打开 ↗' : 'Open in a new tab ↗'}
+      </a>
+    </div>
+  );
+}
