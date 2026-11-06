@@ -1,0 +1,109 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>大二上 · 药学通识英语</title><style>
+:root{color-scheme:light;
+ --bg:#f6f8f8;--surface:#fff;--ink:#17222a;--ink2:#36454d;--mut:#65747b;--line:#d9e1e3;--line2:#eef2f3;
+ --teal:#0f5c6b;--teal-ink:#fff;--wine:#86224d;--star:#b45309;--ok:#1d7a46;
+ --deep-bg:#eef6f7;--key-bg:#fbf0f5;--warn-bg:#fff6e5;--th-bg:#f0f4f5;--zebra:#fafcfc;--chip:#e7f0f2;
+ --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+ --f-head:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,serif}
+@media (prefers-color-scheme: dark){:root{color-scheme:dark;
+ --bg:#11171a;--surface:#182126;--ink:#e2eaec;--ink2:#c2ced2;--mut:#8c9ca3;--line:#2b383d;--line2:#202b30;
+ --teal:#5db5c5;--teal-ink:#0c1b1f;--wine:#e889b2;--star:#f0b35a;--ok:#6fd39a;
+ --deep-bg:#15282c;--key-bg:#2a1a22;--warn-bg:#2a2315;--th-bg:#1f2b30;--zebra:#1b252a;--chip:#1e3036}}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.78 var(--f-body);-webkit-text-size-adjust:100%}
+a{color:var(--teal)}
+a:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
+
+.top{background:var(--teal);color:var(--teal-ink);padding:36px 16px 30px}
+.top-in{max-width:1180px;margin:0 auto}
+.eyebrow{margin:0 0 6px;font-size:12.5px;letter-spacing:.14em;opacity:.85}
+.top h1{font-family:var(--f-head);font-weight:700;font-size:clamp(26px,5vw,38px);line-height:1.25;margin:0;text-wrap:balance}
+.top .sub{margin:6px 0 0;font-size:16px;opacity:.9}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.stats li{font-size:13px;padding:3px 12px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28)}
+@media (prefers-color-scheme: dark){.stats li{background:rgba(0,0,0,.12);border-color:rgba(0,0,0,.2)}}
+
+.layout{max-width:1180px;margin:0 auto;padding:8px 16px 80px;display:grid;grid-template-columns:minmax(0,1fr);gap:0 40px}
+.doc{min-width:0;max-width:800px}
+.side-in{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-top:22px}
+.side-t{font-family:var(--f-head);font-weight:700;font-size:15px;margin-bottom:6px}
+.toc,.toc ol{list-style:none;margin:0;padding:0}
+.toc a{color:var(--ink2);text-decoration:none;display:block;padding:3px 0}
+.toc a:hover{color:var(--teal);text-decoration:underline}
+.toc .t2>a{font-weight:600;color:var(--teal)}
+.toc .t3{display:none}
+@media (min-width:1000px){
+ .layout{grid-template-columns:250px minmax(0,1fr)}
+ .side-in{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;margin-top:30px;font-size:13.5px;line-height:1.45}
+ .toc .t3{display:block}
+ .toc .t3 a{padding:2px 0 2px 12px;color:var(--mut);font-size:13px}
+ .toc .t2{margin-bottom:6px}
+}
+
+h2{font-family:var(--f-head);font-size:clamp(21px,3.6vw,25px);line-height:1.35;margin:52px 0 10px;padding-bottom:10px;border-bottom:2px solid var(--teal);scroll-margin-top:16px}
+h2 .n{display:inline-block;min-width:1.7em;color:var(--teal)}
+h3{font-family:var(--f-head);font-size:18px;line-height:1.45;margin:32px 0 10px;color:var(--wine);scroll-margin-top:16px}
+h4{font-size:15.5px;margin:20px 0 6px}
+p{margin:8px 0}
+ul,ol{margin:8px 0 8px 22px;padding:0} li{margin:4px 0}
+strong{font-weight:650}
+.star{color:var(--star);font-weight:650}
+
+.tw{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:var(--surface)}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th-bg);font-weight:600}
+tbody tr:nth-child(even){background:var(--zebra)}
+
+/* numbered points */
+.pt{display:flex;gap:10px;margin:8px 0}
+.pt .no{flex:none;min-width:26px;height:26px;padding:0 6px;border-radius:13px;background:var(--chip);color:var(--teal);font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+.pt .tx{min-width:0}
+.sub-pt{margin:4px 0 4px 36px;padding-left:12px;border-left:2px solid var(--line);color:var(--ink2)}
+
+/* definitions */
+.defs{margin:10px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.def{display:grid;grid-template-columns:minmax(90px,180px) minmax(0,1fr);gap:4px 16px;padding:10px 16px;border-top:1px solid var(--line2)}
+.def:first-child{border-top:0}
+.def dt{font-weight:700;color:var(--wine)}
+.def dd{margin:0;color:var(--ink2)}
+@media (max-width:600px){.def{grid-template-columns:1fr}}
+
+/* questions */
+.qa{margin:14px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.qa .q{display:flex;gap:10px;padding:11px 16px;background:var(--deep-bg);font-weight:600}
+.qa .a{padding:10px 16px 12px}
+.qa .a p{margin:6px 0}
+.tag{flex:none;display:inline-flex;align-items:center;justify-content:center;height:22px;min-width:22px;padding:0 6px;border-radius:5px;font-size:12px;font-weight:700;margin-top:2px}
+.tag.qt{background:var(--teal);color:var(--teal-ink)}
+.tag.at{background:var(--wine);color:#fff}
+.a-row{display:flex;gap:10px}
+
+.mcq{margin:12px 0;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.mcq .stem{display:flex;gap:10px;font-weight:600}
+.mcq .stem .no{flex:none;color:var(--teal)}
+.opts{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px}
+.opts li{margin:0;padding:5px 10px;border-radius:7px;background:var(--line2);font-size:14.5px}
+.opts li b{color:var(--mut);margin-right:6px}
+.opts li.right{background:var(--key-bg);outline:1.5px solid var(--wine)}
+.opts li.right b{color:var(--wine)}
+.ans{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--wine);background:var(--key-bg);border-radius:999px;padding:2px 12px}
+.blank{display:inline-block;min-width:2.4em;border-bottom:1.5px solid var(--mut);margin:0 3px;text-align:center}
+
+.callout{margin:14px 0;padding:10px 16px;background:var(--warn-bg);border-left:4px solid var(--star);border-radius:0 8px 8px 0}
+
+/* images */
+.pages{display:grid;gap:18px;margin:14px 0}
+.page{margin:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.page a{display:block;background:#fff}
+.page img{display:block;width:100%;height:auto}
+.page figcaption{display:flex;justify-content:space-between;gap:10px;padding:8px 14px;font-size:13.5px;color:var(--mut);border-top:1px solid var(--line)}
+.page figcaption span:first-child{color:var(--ink2);font-weight:600}
+.note{color:var(--mut);font-size:14px}
+
+.foot{margin-top:60px;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mut)}
+@media (max-width:600px){body{font-size:15.5px}h2{margin-top:40px}.qa .q,.qa .a,.mcq{padding-left:13px;padding-right:13px}}
+@media print{.side{display:none}.layout{display:block}.top{background:#fff;color:#000}}
+</style></head><body><header class="top"><div class="top-in"><p class="eyebrow">本科学习笔记 · UNDERGRADUATE NOTES</p><h1>大二上 · 药学通识英语</h1><p class="sub">考试重点词汇与表达</p><ul class="stats"><li>6 条名词与要点</li></ul></div></header><div class="layout"><nav class="side" aria-label="目录"><div class="side-in"><div class="side-t">目录</div><ol class="toc"><li class="t2"><a href="#s1">考试重点</a><ol><li class=t3><a href=#s1-h1>U2</a></li><li class=t3><a href=#s1-h2>U3</a></li><li class=t3><a href=#s1-h3>U4</a></li><li class=t3><a href=#s1-h4>U5</a></li><li class=t3><a href=#s1-h5>U7</a></li><li class=t3><a href=#s1-h6>U2</a></li><li class=t3><a href=#s1-h7>U3</a></li><li class=t3><a href=#s1-h8>U4</a></li><li class=t3><a href=#s1-h9>U5</a></li><li class=t3><a href=#s1-h10>U7</a></li></ol></li></ol></div></nav><main class="doc"><section id="s1"><h2><span class="n">01</span>考试重点</h2><h3 id="s1-h1"><strong><em>U2</em></strong></h3><p>Crystalline solid 结晶固体</p><p>Sterile injection 无菌注射</p><p>Organic solvent 有机溶剂</p><p>MF 分子式</p><p>MW 分子量</p><p>Physicochemical properties理化性质</p><p>Solubility 溶解度</p><p>Freeze-dried powder 冻干粉末</p><p>Vial 西林瓶</p><p>Inorganic chemistry 无机化学</p><p>Off-white plain tablet 类白色素片</p><p>Hepatitis 肝炎</p><p>Pyrogen 热原</p><h3 id="s1-h2"><strong><em>U3</em></strong></h3><p>CNS 中枢神经系统</p><p>Half-life 半衰期</p><p>Plasma concentration 血浆浓度</p><p>LD50 半数致死量</p><p>Tolerance 耐受性</p><p>Clinical pharmacology 临床药理</p><p>EEG 脑电图</p><p>Infection 感染</p><p>Potent short-acting agent 强力速效</p><p>ia. 动脉给药</p><p>sc. 皮下给药</p><p>iv. 静脉给药</p><p>Ab. 抗体</p><p>im. 肌肉给药</p><p>Ag. 抗原</p><p>Drug plasma concentration 血药浓度</p><p>Serum concentration 血清浓度</p><p>Resistance 耐药性</p><p>Bio-activity 生物活性</p><p>Clearance 廓清率</p><p>Striated muscle 横纹肌</p><h3 id="s1-h3"><strong><em>U4</em></strong></h3><p>Prinzmetal’s angina 变异性心绞痛</p><p>Cardiac （renal） insufficiency 心(</p><p>肾)功能不全</p><p>Hypertension 低血压</p><p>Hepatitis 肝炎</p><p>Pulmonary tuberculosis 肺结核</p><p>Spasm 痉挛</p><p>Arthritis 关节炎</p><p>Ulcer of the gastrointestinal tract 胃溃疡</p><p>Liver damage 肝损伤</p><p>Pneumonedema化学性肺水肿</p><p>Pregnancy 妊娠期</p><p>G+ bacteria 革兰氏阳性菌</p><p>E. Coli大肠杆菌</p><p>Hypersensitivity 过敏反应</p><p>Chemotherapy 化疗</p><p>Striated muscle 横纹肌</p><p>Antagonists 拮抗剂</p><p>Type II diabetes 2型糖尿病</p><p>Convulsions 癫痫</p><p>Gout 痛风</p><p>Cataract 白内障</p><p>Anemia 贫血</p><p>Heart failure 心衰</p><p>Constipation 便秘</p><p>G- bacteria 革兰阴性菌</p><p>Radiotherapy 放疗</p><p>Agonist 激动剂</p><p>Lactation 哺乳期</p><p>Placental barrier 胎盘屏障</p><p>G-I tract 肠胃道</p><p>Mal 发作</p><h3 id="s1-h4"><strong><em>U5</em></strong></h3><p>Drug fever 药物热</p><p>Indisposed gastrointestinal tract 肠胃道不适</p><p>Nausea 恶心</p><p>Diarrhea 腹泻</p><p>Pruritus 瘙痒</p><p>Restless 不安</p><p>Flush 潮红</p><p>Dizziness 眩晕</p><p>Anorexia 厌食</p><p>Bellyache 腹痛</p><p>Vomit 呕吐</p><p>Rash 皮疹</p><p>Shock 休克</p><p>ileus 肠梗阻</p><p>Adverse reaction 不良反应</p><p>Complicating disease 并发症</p><p>Tolerance 耐受性</p><p>Toxicity 毒性</p><p>Side effec。443ts 副作用</p><p>Activity 活性</p><p>By the sublingual administration 舌下含服</p><p>Posology 剂量学</p><p>os 口服</p><p>iu 国际单位</p><h3 id="s1-h5"><strong><em>U7</em></strong></h3><p>Blister pack 铝塑包装</p><p>Storage 储存</p><p>Dosage form 剂型</p><p>Preparation 制剂</p><p>Ampoule 安瓿</p><p>Potency 药效</p><p>Clarity 澄明度</p><p>Airtight-container 密闭容器</p><h3 id="s1-h6"><strong><em>U2</em></strong></h3><div class="pt"><span class="no">1</span><div class="tx">本品为白色至类白色结晶固体，难溶于水、乙醇，易溶于氯仿和丙酮中。</div></div><p>It occurs as a white to off-white, crystalline solid, poorly soluble in water or ethanol, easily soluble in chloroform and acetone.</p><div class="pt"><span class="no">1</span><div class="tx">本品时一种很稳定的抗生素。其粉末至于密封容器中，在室温下保存两年以上，活性不减。</div></div><p>It is a very stable antibiotic, and its activity does not decrease when the powder is places in an airtight container and kept at room temperature for more than 2 years.</p><h3 id="s1-h7"><strong><em>U3</em></strong></h3><div class="pt"><span class="no">1</span><div class="tx">已证明青霉素具有消炎作用，是疗效很好的抗生素。</div></div><p>Penicillin has been found to be a good therapeutic antibiotic and has highly effective against inflammation.</p><div class="pt"><span class="no">1</span><div class="tx">本品具有杀菌作用，能耐酸，且口服或肌注吸收良好。</div></div><p>It’s bactericidal, acid-stable and well absorbed by either the oral or the intramuscular route.</p><div class="pt"><span class="no">1</span><div class="tx">静脉注射后约30~60分钟之间环丙沙星的平均血药浓度达到高峰。</div></div><p>Mean peak serum concentrations of ciprofloxacin occur between 30 and about 60 minutes after intravenous administration.</p><div class="pt"><span class="no">1</span><div class="tx">在临床试验中该药显示其对于改善和恢复已改变了的高血压非常有效。</div></div><p>In clinical trials the drug was shown to be highly effective in improving and normalizing the alternated hypertension.</p><h3 id="s1-h8"><strong><em>U4</em></strong></h3><div class="pt"><span class="no">1</span><div class="tx">环丙沙星适用于治疗下列由敏感微生物引起的感染。</div></div><p>Ciprofloxacin is indicated for the treatment in the following infections caused by susceptible microorganisms.</p><div class="pt"><span class="no">1</span><div class="tx">已证实本品对SARS引起的病症有预防和治疗作用。</div></div><p>It has proved effective in the prophylaxis and therapy of SARS,</p><div class="pt"><span class="no">1</span><div class="tx">头孢拉定禁用于已知对投保菌素类抗生素过敏的患者。</div></div><p>Cephradine is contraindicated in patients with known hypersensitivity to cephalosporin group of antibiotics.</p><div class="pt"><span class="no">1</span><div class="tx"> 5岁以下的儿童不应当使用诺氟沙星治疗。</div></div><p>Children under 5 years of age shouldn’t be treated with Norfloxacin.</p><div class="pt"><span class="no">1</span><div class="tx">有高血压病史的患者服用本品请遵医嘱。</div></div><p>The patients in hypertension should use the drug under the direction of physician.</p><div class="pt"><span class="no">1</span><div class="tx">除非医生认为只有本品的治疗才有效之外，妊娠最初三个月以及哺乳期的妇女慎用本品。</div></div><p>During the first three month of pregnancy and lactation the drug should not be used unless the physicion think it is irreplaceably effective in therapy.</p><h3 id="s1-h9"><strong><em>U5</em></strong></h3><dl class="defs"><div class="def"><dt>成年人</dt><dd>静脉注射，每日10~20mg/kg体重，分2次注射。</dd></div><div class="def"><dt>For adult</dt><dd>the usual dose is 10 to 20 mg/kg/day total, given in two equally divided and spaced doses by intravenous infection.</dd></div><div class="def"><dt>儿童</dt><dd>平均日剂量是每日2次，每次一片，等时间间隔给药。</dd></div><div class="def"><dt>For children</dt><dd>the average daily dose is 2 tablets, given in 2 equally divided and spaced doses.</dd></div><div class="def"><dt>老年人</dt><dd>建议开始剂量为每日3次，每次半片，饭前服用。</dd></div><div class="def"><dt>For older</dt><dd>the suggested dose is a half tablet; 3 times daily, taken before a meal.</dd></div></dl><h3 id="s1-h10"><strong><em>U7</em></strong></h3><div class="pt"><span class="no">1</span><div class="tx">铝塑包装，每板12粒，每盒2板。</div></div><p>Blister pack, 12 capsules each plate, two plates each box.</p><div class="pt"><span class="no">1</span><div class="tx">勿使儿童接触本品。</div></div><p>Keep out of the reach of children.</p><div class="pt"><span class="no">1</span><div class="tx">本品应于阴凉干燥处避光保存。</div></div><p>The product should be kept in a cool and dry place, protected from light.</p><div class="pt"><span class="no">1</span><div class="tx">本化学品粉末应于密闭容器中室温保存。</div></div><p>The chemical powder should be stored in the airtight container at room temperature.</p><div class="pt"><span class="no">1</span><div class="tx">本生物制剂应于5°C以下冷藏保存。</div></div><p>The biological preparation should be stored under 5°C in the refrigerator.</p></section><p class="foot">本科期末复习资料整理 · 已去除个人信息</p></main></div></body></html>
