@@ -1,0 +1,111 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>大三上 · 食疗加工学</title><style>
+:root{color-scheme:light;
+ --bg:#f6f8f8;--surface:#fff;--ink:#17222a;--ink2:#36454d;--mut:#65747b;--line:#d9e1e3;--line2:#eef2f3;
+ --teal:#0f5c6b;--teal-ink:#fff;--wine:#86224d;--star:#b45309;--ok:#1d7a46;
+ --deep-bg:#eef6f7;--key-bg:#fbf0f5;--warn-bg:#fff6e5;--th-bg:#f0f4f5;--zebra:#fafcfc;--chip:#e7f0f2;
+ --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+ --f-head:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,serif}
+@media (prefers-color-scheme: dark){:root{color-scheme:dark;
+ --bg:#11171a;--surface:#182126;--ink:#e2eaec;--ink2:#c2ced2;--mut:#8c9ca3;--line:#2b383d;--line2:#202b30;
+ --teal:#5db5c5;--teal-ink:#0c1b1f;--wine:#e889b2;--star:#f0b35a;--ok:#6fd39a;
+ --deep-bg:#15282c;--key-bg:#2a1a22;--warn-bg:#2a2315;--th-bg:#1f2b30;--zebra:#1b252a;--chip:#1e3036}}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.78 var(--f-body);-webkit-text-size-adjust:100%}
+a{color:var(--teal)}
+a:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
+
+.top{background:var(--teal);color:var(--teal-ink);padding:36px 16px 30px}
+.top-in{max-width:1180px;margin:0 auto}
+.eyebrow{margin:0 0 6px;font-size:12.5px;letter-spacing:.14em;opacity:.85}
+.top h1{font-family:var(--f-head);font-weight:700;font-size:clamp(26px,5vw,38px);line-height:1.25;margin:0;text-wrap:balance}
+.top .sub{margin:6px 0 0;font-size:16px;opacity:.9}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.stats li{font-size:13px;padding:3px 12px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28)}
+@media (prefers-color-scheme: dark){.stats li{background:rgba(0,0,0,.12);border-color:rgba(0,0,0,.2)}}
+
+.layout{max-width:1180px;margin:0 auto;padding:8px 16px 80px;display:grid;grid-template-columns:minmax(0,1fr);gap:0 40px}
+.doc{min-width:0;max-width:800px}
+.side-in{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-top:22px}
+.side-t{font-family:var(--f-head);font-weight:700;font-size:15px;margin-bottom:6px}
+.toc,.toc ol{list-style:none;margin:0;padding:0}
+.toc a{color:var(--ink2);text-decoration:none;display:block;padding:3px 0}
+.toc a:hover{color:var(--teal);text-decoration:underline}
+.toc .t2>a{font-weight:600;color:var(--teal)}
+.toc .t3{display:none}
+@media (min-width:1000px){
+ .layout{grid-template-columns:250px minmax(0,1fr)}
+ .side-in{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;margin-top:30px;font-size:13.5px;line-height:1.45}
+ .toc .t3{display:block}
+ .toc .t3 a{padding:2px 0 2px 12px;color:var(--mut);font-size:13px}
+ .toc .t2{margin-bottom:6px}
+}
+
+h2{font-family:var(--f-head);font-size:clamp(21px,3.6vw,25px);line-height:1.35;margin:52px 0 10px;padding-bottom:10px;border-bottom:2px solid var(--teal);scroll-margin-top:16px}
+h2 .n{display:inline-block;min-width:1.7em;color:var(--teal)}
+h3{font-family:var(--f-head);font-size:18px;line-height:1.45;margin:32px 0 10px;color:var(--wine);scroll-margin-top:16px}
+h4{font-size:15.5px;margin:20px 0 6px}
+p{margin:8px 0}
+ul,ol{margin:8px 0 8px 22px;padding:0} li{margin:4px 0}
+strong{font-weight:650}
+.star{color:var(--star);font-weight:650}
+
+.tw{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:var(--surface)}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th-bg);font-weight:600}
+tbody tr:nth-child(even){background:var(--zebra)}
+
+/* numbered points */
+.pt{display:flex;gap:10px;margin:8px 0}
+.pt .no{flex:none;min-width:26px;height:26px;padding:0 6px;border-radius:13px;background:var(--chip);color:var(--teal);font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+.pt .tx{min-width:0}
+.sub-pt{margin:4px 0 4px 36px;padding-left:12px;border-left:2px solid var(--line);color:var(--ink2)}
+
+/* definitions */
+.defs{margin:10px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.def{display:grid;grid-template-columns:minmax(90px,180px) minmax(0,1fr);gap:4px 16px;padding:10px 16px;border-top:1px solid var(--line2)}
+.def:first-child{border-top:0}
+.def dt{font-weight:700;color:var(--wine)}
+.def dd{margin:0;color:var(--ink2)}
+@media (max-width:600px){.def{grid-template-columns:1fr}}
+
+/* questions */
+.qa{margin:14px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.qa .q{display:flex;gap:10px;padding:11px 16px;background:var(--deep-bg);font-weight:600}
+.qa .a{padding:10px 16px 12px}
+.qa .a p{margin:6px 0}
+.tag{flex:none;display:inline-flex;align-items:center;justify-content:center;height:22px;min-width:22px;padding:0 6px;border-radius:5px;font-size:12px;font-weight:700;margin-top:2px}
+.tag.qt{background:var(--teal);color:var(--teal-ink)}
+.tag.at{background:var(--wine);color:#fff}
+.a-row{display:flex;gap:10px}
+
+.mcq{margin:12px 0;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.mcq .stem{display:flex;gap:10px;font-weight:600}
+.mcq .stem .no{flex:none;color:var(--teal)}
+.opts{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px}
+.opts li{margin:0;padding:5px 10px;border-radius:7px;background:var(--line2);font-size:14.5px}
+.opts li b{color:var(--mut);margin-right:6px}
+.opts li.right{background:var(--key-bg);outline:1.5px solid var(--wine)}
+.opts li.right b{color:var(--wine)}
+.ans{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--wine);background:var(--key-bg);border-radius:999px;padding:2px 12px}
+.blank{display:inline-block;min-width:2.4em;border-bottom:1.5px solid var(--mut);margin:0 3px;text-align:center}
+
+.callout{margin:14px 0;padding:10px 16px;background:var(--warn-bg);border-left:4px solid var(--star);border-radius:0 8px 8px 0}
+
+/* images */
+.pages{display:grid;gap:18px;margin:14px 0}
+.page{margin:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.page a{display:block;background:#fff}
+.page img{display:block;width:100%;height:auto}
+.page figcaption{display:flex;justify-content:space-between;gap:10px;padding:8px 14px;font-size:13.5px;color:var(--mut);border-top:1px solid var(--line)}
+.page figcaption span:first-child{color:var(--ink2);font-weight:600}
+.note{color:var(--mut);font-size:14px}
+img.doc-img{display:block;max-width:100%;height:auto;margin:10px auto;padding:6px;background:#fff;border:1px solid var(--line);border-radius:8px}
+p img.doc-img,.tx img.doc-img,dd img.doc-img{display:inline-block;vertical-align:middle;margin:4px 6px}
+
+.foot{margin-top:60px;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mut)}
+@media (max-width:600px){body{font-size:15.5px}h2{margin-top:40px}.qa .q,.qa .a,.mcq{padding-left:13px;padding-right:13px}}
+@media print{.side{display:none}.layout{display:block}.top{background:#fff;color:#000}}
+</style></head><body><header class="top"><div class="top-in"><p class="eyebrow">本科学习笔记 · UNDERGRADUATE NOTES</p><h1>大三上 · 食疗加工学</h1><p class="sub">课程论文：绿茶的食疗探析</p><ul class="stats"><li>1 条名词与要点</li></ul></div></header><div class="layout"><nav class="side" aria-label="目录"><div class="side-in"><div class="side-t">目录</div><ol class="toc"><li class="t2"><a href="#s1">绿茶的食疗探析</a><ol><li class=t3><a href=#s1-h1>摘要</a></li><li class=t3><a href=#s1-h2>一、绿茶的临床应用</a></li><li class=t3><a href=#s1-h3>二、绿茶食疗作用的中医解释</a></li><li class=t3><a href=#s1-h4>二、绿茶的不良反应</a></li><li class=t3><a href=#s1-h5>三、绿茶的药物相互作用</a></li><li class=t3><a href=#s1-h6>四、小结</a></li></ol></li></ol></div></nav><main class="doc"><section id="s1"><h2><span class="n">01</span>绿茶的食疗探析</h2><p><strong>绿茶的食疗探析</strong></p><h3 id="s1-h1"><strong>摘要</strong></h3><p>绿茶与传统茶（茶树）来自同一植物，传统茶是由原产于亚洲的常绿灌木的干燥叶子制成。然而，传统茶叶是发酵的，绿茶叶是蒸汽处理的。绿茶可以冲泡和饮用，也可以纯化后制成片剂或胶囊服用。它含有多种可能具有抗氧化和抗癌作用的成分。绿茶含有茶多酚、儿茶酚和咖啡因。在中医理论中茶也具有独特的作用，从南北朝时代开始，绿茶逐渐作为一种有治疗作用的饮料和药材进入了人们的生活。</p><p>绿茶被认为具有许多有益的健康功效。可用于治疗尖锐湿疣、增强精神兴奋（因其含有咖啡因）、预防癌症、减肥、降低血脂、预防冠心病、增强记忆力、减轻关节炎疼痛、治疗更年期综合症和延长寿命。</p><p>【关键词】绿茶；食疗；HPV；肥胖症；心血管</p><h3 id="s1-h2">一、绿茶的临床应用</h3><p>绿茶作为市场上研究最广泛的补充剂之一，无论是饮料还是提取物，都备受关注。尽管如此，关于该饮料的益处，其临床证据却相对有限。其中的活性成分，如儿茶素（商标名 POLYPHENON E），已获批用于治疗由人乳头瘤病毒（HPV）感染引起的尖锐湿疣。研究表明，透明提取物（含55%儿茶素）对治疗生殖器疣和肛周疣是一种有效而安全的方法<sup>0</sup>。系统回顾和荟萃分析证实，10%和15%的多酚E可有效治疗肛门生殖器疣<sup>[2]</sup>。此外，使用绿茶提取物进行类似治疗相较于传统药物更具经济性<sup>[3]</sup>。</p><p>大量可用的临床试验荟萃分析支持定期少量饮用绿茶是安全的。此外，虽然喝绿茶对减肥[4]和预防心血管疾病有已证实的好处，但关于其是否可以预防癌症的证据尚不足<sup>[5]</sup>。然而，有研究将每天喝7杯绿茶与减少前列腺癌的联系相联结<sup>[6]</sup>，而另一项综合分析则报告了良好的心血管结果<sup>[7]</sup>。尽管大多数研究存在方法学上的局限性，主要在人群中进行，限制了对其他群体的泛化，因此更为严格设计的大规模临床试验仍然需要来进一步阐明绿茶的功效。同时，混合的人口研究证据表明，在绿茶消费较高的国家，可能存在其他文化、行为或遗传因素对身体健康的积极贡献。</p><h3 id="s1-h3">二、绿茶食疗作用的中医解释</h3><p>唐代苏敬主编的官修《新修本草》之中，采取兼容包并的态度，在菜部收录了“苦菜”词条，在木部收录了“茗、苦荼”的词条。而茶的疗身功效也被界定得更加丰富，从原本的“令人不眠”，不仅拓展到分开介绍茗与苦荼的性味及功效还附加了饮用方法，如茗“主瘘疮，利小便，去淡（痰）、热渴，令人少睡”；苦荼“主下气，消宿食，作饮加茱萸、葱、姜等，良。”从茗与苦荼的记载可知，茗更适合入药，而苦荼则可以作饮，加入热辛之物饮用效果更好。无论是入药还是为饮，茶均具有药效。</p><p>同时代的《本草拾遗》和《食疗本草》又将其疗身功效拓展到“破热气、除瘴气、利大小肠、去人脂”等，三部本草著作基本构建了茶疗身功效的主要框架。同时期唐•孙思邈的《备急千金要方》与《千金翼方》中首次出现的两个茶单方，分别主治“厥头痛”和“石痢方”，则是以茶入药的范例。</p><p>首次明确记载茶的《新修本草》中未将茶的疗神功效记录其中，但唐代孙思邈的医方书《备急千金要方》中有“悦志”的记载。当然“悦志”只是疗神的一个方面，安神也是其中重要内容，而除烦、涤烦是实现安神的基础。中医理论认为，心主神明，由于心火旺盛或心气亏虚则“阳浮于外”，遂会出现烦、闷等症状；严重者，惊、厥、癫、痫等症也会随之发生。</p><p>宋•周守忠《养生类纂》在茶效内容中多收录了撰写疗神功效的文献及记载，除了有此前《茶经》记载的相关内容外，还记载了同朝宋•苏轼《仇池笔记》中所言茶具有“除烦去腻”的身神同疗之功。<sup>[8]</sup></p><h3 id="s1-h4">二、绿茶的不良反应</h3><p>不良反应主要与咖啡因的作用相关，表现为失眠、焦虑、心动过速和轻度震颤。特别是孕妇应谨慎摄入过多的咖啡因以避免潜在的不良影响。</p><p>有关肝毒性方面，极少数报道了与绿茶干预相关的不良肝脏事件。一项2016年对肝毒性进行的随机对照试验回顾发现，绿茶干预组中的部分受试者经历了肝酶自限性增加<sup>[8]</sup>。然而，美国药典 (USP) 的审查报告指出，禁食状态明显增加了儿茶素的生物利用度，可能是通过饱和肝脏首过消除<sup>[10]</sup>。由于存在潜在的肝损伤风险，具有美国药典验证印章的绿茶建议不要在空腹时饮用。在出现任何肝脏问题的症状时，建议及时咨询医疗机构。值得注意的是，关于空腹饮用冲泡绿茶对肝脏损害风险的研究尚未充分展开。</p><h3 id="s1-h5">三、绿茶的药物相互作用</h3><p>绿茶中的维生素 K 可能会拮抗华法林的抗凝作用。</p><p>绿茶可能会降低纳多洛尔（一种β受体阻滞剂）以及降血脂药物阿托伐他汀和瑞舒伐他汀的血液水平。<sup>[11]</sup></p><p>如果突然停止喝绿茶，锂的血清浓度可能会增加，并且可能会出现锂的不良反应。<sup>[12]</sup></p><p>绿茶还可能减少铁和叶酸的吸收。<sup>[13]</sup></p><h3 id="s1-h6">四、小结</h3><p>绿茶在临床应用方面备受研究，尤其儿茶素已被批准治疗HPV引起的湿疣。研究表明，透明提取物对治疗生殖器疣和肛周疣有效且安全。虽然绿茶有益于减肥和心血管健康，但对癌症预防的证据有限。部分研究指出绿茶可能与前列腺癌减少有关，但仍需更多大规模临床试验。中医角度解释绿茶作为食疗的功效，认为茶具有疗身作用，包括安神、除烦等。然而，绿茶也存在不良反应，与咖啡因相关，包括失眠、焦虑等。肝毒性风险有报道，尤其是在空腹时饮用，但研究尚不充分。此外，绿茶可能影响华法林、纳多洛尔、阿托伐他汀等药物的作用，并降低铁和叶酸的吸收。在使用绿茶时，需注意潜在的药物相互作用和不良反应。</p><p><strong>参考文献</strong></p><div class="pt"><span class="no">1</span><div class="tx">Stockfleth E, Beti H, Orasan R, et al: Topical Polyphenon E in the treatment of external genital and perianal warts: a randomized controlled trial.Br J Dermatol 158(6):1329-1338, 2008.doi: 10.1111/j.1365-2133.2008.08520.x.</div></div><div class="pt"><span class="no">2</span><div class="tx">Tzellos TG, Sardeli C, Lallas A, et al: Efficacy, safety and tolerability of green tea catechins in the treatment of external anogenital warts: a systematic review and meta-analysis.J Eur Acad Dermatol Venereol 25(3):345-353, 2011.doi: 10.1111/j.1468-3083.2010.03796.x.</div></div><dl class="defs"><div class="def"><dt>Langley PC</dt><dd>A cost-effectiveness analysis of sinecatechins in the treatment of external genital warts.J Med Econ 13(1):1-7, 2010.doi: 10.3111/13696990903451461.</dd></div></dl><div class="pt"><span class="no">4</span><div class="tx">Jurgens TM, Whelan AM, Killian L, et al: Green tea for weight loss and weight maintenance in overweight or obese adults.Cochrane Database Syst Rev 12: CD008650, 2012.doi: 10.1002/14651858.CD008650.pub2.</div></div><div class="pt"><span class="no">5</span><div class="tx">Filippini T, Malavolti M, Borrelli F, et al: Green tea (Camellia sinensis) for the prevention of cancer.Cochrane Database Syst Rev 3(3):CD005004. doi: 10.1002/14651858.CD005004.pub3.</div></div><div class="pt"><span class="no">6</span><div class="tx">Guo Y, Zhi F, Chen P, et al: Green tea and the risk of prostate cancer: a systematic review and meta-analysis.Medicine (Baltimore) 96(13):e6426, 2017.doi: 10.1097/MD.0000000000006426.</div></div><div class="pt"><span class="no">7</span><div class="tx">Pang J, Zhang Z, Zheng TZ, et al: Green tea consumption and risk of cardiovascular and ischemic related diseases: a meta-analysis.Int J Cardiol 202:967-974, 2016.doi: 10.1016/j.ijcard.2014.12.176.</div></div><div class="pt"><span class="no">8</span><div class="tx">许佳. 茶与中国医药文化[D].黑龙江中医药大学,2022.DOI:10.27127/d.cnki.ghlzu.2021.000007.</div></div><div class="pt"><span class="no">9</span><div class="tx">Isomura T, Suzuki S, Origasa H, et al: Liver-related safety assessment of green tea extracts in humans: a systematic review of randomized controlled trials.Eur J Clin Nutr 70(11):1221-1229, 2016.doi: 10.1038/ejcn.2016.78.</div></div><div class="pt"><span class="no">10</span><div class="tx">Oketch-Rabah HA, Roe AL, Rider CV, et al: United States Pharmacopeia (USP) comprehensive review of the hepatotoxicity of green tea extracts. Toxicol Rep 7:386-402, 2020.doi:10.1016/j.toxrep.2020.02.008.</div></div><div class="pt"><span class="no">11</span><div class="tx">Werba JP, Misaka S, Giroli MG, Shimomura K, Amato M, Simonelli N, Vigo L, Tremoli E. Update of green tea interactions with cardiovascular drugs and putative mechanisms. J Food Drug Anal. 2018 Apr;26(2S):S72-S77. doi: 10.1016/j.jfda.2018.01.008. Epub 2018 Feb 14. PMID: 29703388; PMCID: PMC9326886.</div></div><div class="pt"><span class="no">12</span><div class="tx">Melissa A. Burmeister, Kristin Kellett, Nicole Lounsbury, Joseph Nosser, Abby J. Weldon, Christopher Wilkerson. The Dangers of Loaded-Tea Use by Children and Adolescents. U.S. Pharmacist. 2022;47(8):5-12.</div></div><div class="pt"><span class="no">13</span><div class="tx">Fan FS. Iron deficiency anemia due to excessive green tea drinking. Clin Case Rep. 2016 Oct 5;4(11):1053-1056. doi: 10.1002/ccr3.707. PMID: 27830072; PMCID: PMC5093162.</div></div></section><p class="foot">本科期末复习资料整理 · 已去除个人信息</p></main></div></body></html>
