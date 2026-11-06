@@ -1,0 +1,985 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TU17 制药工程 II · 学习笔记</title><style>
+:root{--burg:#7a1f4d;--burg2:#a83268;--gold:#c9973f;--bg:#faf8f7;--ink:#222;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+     font-family:"Segoe UI","Microsoft YaHei","微软雅黑",system-ui,sans-serif;
+     line-height:1.75;font-size:15.5px;}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px 80px;}
+header{background:linear-gradient(135deg,#5e1639,#7a1f4d 55%,#a83268);color:#fff;
+       padding:44px 24px 36px;margin-bottom:28px;}
+header .inner{max-width:980px;margin:0 auto;}
+header h1{margin:0 0 6px;font-size:28px;letter-spacing:.5px;}
+header .en{font-size:15px;opacity:.85;font-style:italic;font-weight:400;margin-bottom:16px;}
+header .meta{font-size:13.5px;opacity:.9;line-height:1.9;}
+header .meta b{color:#f0d9a8;font-weight:600;}
+h2{color:var(--burg);font-size:22px;margin:52px 0 4px;padding-bottom:8px;border-bottom:2px solid #e6d6dd;}
+h2 .en{display:block;font-size:13.5px;color:#8a6b78;font-weight:400;font-style:italic;margin-top:3px;}
+h3{color:var(--burg2);font-size:18px;margin:30px 0 6px;}
+h3 .en{margin-left:8px;font-size:12.5px;color:#96707f;font-weight:400;font-style:italic;}
+h4{color:var(--burg);font-size:15px;margin:18px 0 4px;}
+p{margin:8px 0;}
+ul,ol{margin:8px 0 8px 4px;padding-left:22px;}
+li{margin:4px 0;}
+.term{color:var(--burg);font-weight:700;}
+.card{background:#fff;border:1px solid #e8dfe2;border-left:4px solid var(--burg2);
+      border-radius:8px;padding:14px 18px;margin:16px 0;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+.card.gold{border-left-color:var(--gold);}
+.card h4{margin:0 0 8px;font-size:15px;color:var(--burg);}
+.card.warn{border-left-color:#b23a3a;}
+.card.warn h4{color:#8f2626;}
+.card.link{border-left-color:#3d6f8f;}
+.card.link h4{color:#2e5a75;}
+.formula{background:#f4f1f2;border-radius:8px;padding:12px 16px;margin:14px 0;text-align:center;
+         font-family:"Cambria Math","Latin Modern Math",Cambria,Georgia,serif;font-size:16.5px;color:#3b1f2b;overflow-x:auto;}
+.formula .sub{font-size:12.5px;color:#7a6a70;font-style:italic;margin-top:6px;font-family:"Segoe UI","Microsoft YaHei",sans-serif;}
+figure{margin:20px 0;background:#fff;border:1px solid #e8dfe2;border-radius:8px;padding:12px;}
+figure img{width:100%;display:block;border-radius:5px;}
+figure.half{max-width:620px;margin-left:auto;margin-right:auto;}
+figcaption{font-size:13px;color:#6f6266;font-style:italic;margin-top:9px;line-height:1.65;text-align:center;}
+figcaption b{font-style:normal;color:var(--burg);}
+.tw{overflow-x:auto;margin:16px 0;}
+table{border-collapse:collapse;width:100%;font-size:14px;background:#fff;}
+th,td{border:1px solid #e0d5d9;padding:7px 10px;text-align:left;vertical-align:top;}
+th{background:#f4e9ee;color:var(--burg);font-weight:600;}
+tr:nth-child(even) td{background:#fcfafb;}
+.toc{background:#fff;border:1px solid #e8dfe2;border-radius:8px;padding:16px 22px;margin:26px 0;}
+.toc h4{margin:0 0 8px;}
+.toc ol{columns:2;column-gap:34px;margin:0;padding-left:20px;}
+.toc a{color:var(--burg2);text-decoration:none;}
+.toc a:hover{text-decoration:underline;}
+.tag{display:inline-block;font-size:11.5px;font-weight:600;padding:0 7px;border-radius:10px;margin:0 2px;vertical-align:1px;white-space:nowrap;}
+.t-pl{background:#efe3ea;color:#7a1f4d;} .t-ms{background:#e7eef5;color:#2e5a75;} .t-cd{background:#eaf2e6;color:#3d6b2f;}
+.t-db{background:#f6eedd;color:#8a5d14;} .t-lc{background:#f3e4e4;color:#8f2626;} .t-nm{background:#e8e6f4;color:#4a3f8a;}
+.t-3d{background:#e4f1f1;color:#226b6b;}
+.exam{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--gold);padding:0 6px;border-radius:3px;margin-left:4px;vertical-align:1px;}
+.oral{font-size:12px;color:#8a7a7f;font-style:italic;}
+.course-head{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:#6f6266;margin:2px 0 10px;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}.toc ol{columns:1;}header h1{font-size:23px;}}
+details{background:#fff;border:1px solid #e8dfe2;border-radius:8px;padding:10px 14px;margin:10px 0;}
+details summary{cursor:pointer;font-weight:600;color:var(--burg);}
+details .ans{margin-top:8px;padding-top:8px;border-top:1px dashed #e0d5d9;}
+.q{background:#fff;border:1px solid #e8dfe2;border-radius:8px;padding:12px 16px;margin:12px 0;}
+.q .stem{font-weight:600;}
+.q ol{list-style:upper-alpha;margin:6px 0 4px;}
+.q details{border:none;padding:4px 0 0;margin:4px 0 0;background:transparent;}
+.plan{width:100%;}
+.plan td:first-child{white-space:nowrap;font-weight:600;color:var(--burg);}
+.plan input{transform:scale(1.15);margin-right:6px;}
+.btnrow{margin:10px 0;}
+.btnrow button{background:var(--burg);color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:13.5px;cursor:pointer;margin-right:8px;}
+.btnrow button.alt{background:#fff;color:var(--burg);border:1px solid var(--burg);}
+.cheat{columns:2;column-gap:28px;font-size:14px;}
+.cheat .item{break-inside:avoid;margin:0 0 10px;}
+@media (max-width:720px){.cheat{columns:1;}}
+footer{margin-top:46px;padding-top:18px;border-top:2px solid #e6d6dd;font-size:13px;color:#6f6266;}
+@media print{details{display:block}details>*{display:block}.btnrow{display:none}header{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+.why{background:#fbf6ee;border:1px dashed #d9b97a;border-radius:8px;padding:10px 14px;margin:12px 0;font-size:14.8px;}
+.why b.lab{color:#8a5d14;}
+.line{font-size:15px;background:#fff;border-left:4px solid var(--gold);padding:8px 14px;margin:8px 0 14px;border-radius:0 6px 6px 0;}
+.how{font-size:14px;color:#5a4a50;background:#f4f1f2;border-radius:6px;padding:8px 12px;margin:10px 0;}
+.how b{color:var(--burg);}
+.en-s{color:#7a6a70;font-style:italic;font-size:.93em;}
+.plan td.fixed{background:#f1eef0;color:#5a4a50;font-size:13.5px;}
+.plan td{font-size:14px;}
+.recall{background:#fff;border:1px solid #e8dfe2;border-top:4px solid var(--burg);border-radius:8px;padding:12px 18px;margin:12px 0 18px;}
+.recall h4{margin:0 0 6px;color:var(--burg);font-size:15px;}
+.recall ol{margin:4px 0;padding-left:22px;font-size:14.5px;}
+.selfq{background:#f8f3f5;border:1px solid #e8dfe2;border-radius:8px;padding:12px 16px;margin:26px 0 8px;}
+.selfq h4{margin:0 0 6px;color:var(--burg);}
+.selfq details{background:#fff;margin:6px 0;}
+.selfq summary{font-weight:500;color:#3b1f2b;}
+@media print{.plan input{display:none}}
+
+.src{display:inline-block;font-size:11px;font-weight:600;color:#6f6266;background:#efeaec;padding:0 6px;border-radius:3px;vertical-align:1px;}
+.pts{display:inline-block;font-size:11.5px;font-weight:700;color:#fff;background:var(--burg2);padding:0 7px;border-radius:10px;margin-left:4px;}
+.model{font-family:Georgia,"Times New Roman",serif;font-size:15px;line-height:1.7;background:#fbf9fa;border-left:3px solid var(--burg2);padding:8px 12px;}
+.answersheet{columns:3;font-size:14px;}
+@media (max-width:720px){.answersheet{columns:2;}}
+.figgone{margin:16px 0;padding:10px 14px;border-left:3px dashed #c9b3bd;color:#6b5560;background:#fff;border-radius:4px;font-size:14px;}
+</style></head><body>
+<header><div class="inner"><h1>TU17 制药工程 II · 学习笔记</h1><div class="en">TU17 · Pharmaceutical Engineering II — key points, explanations and glossary</div>
+<div class="meta"><b>内容</b>：第 1–7 章按题型讲解 · 附录 A 公式 · B 陷阱 · C 词表 · D 讲解合集 · E 扩展词表 · F 英文句型 · 中英对照</div></div></header>
+<div class="wrap"><div class="toc"><h4>目录（Contents）</h4><ol><li><a href="#ch1">第 1 章　脂质体大题（Legrand）</a></li><li><a href="#ch2">第 2 章　纳米医学大题（Hillaireau）</a></li><li><a href="#ch3">第 3 章　A1 极性脂质（选择题补充）</a></li><li><a href="#ch4">第 4 章　A2 胶束增溶</a></li><li><a href="#ch5">第 5 章　A3 环糊精</a></li><li><a href="#ch6">第 6 章　B1 药物递送与生物屏障（Ponchel）</a></li><li><a href="#ch7">第 7 章　C 药物 3D 打印（Annereau）</a></li><li><a href="#app1">附录 A　所有公式（会怎么考）</a></li><li><a href="#app2">附录 B　最常见的 20 个陷阱</a></li><li><a href="#app3">附录 C　单词表（中英对照）</a></li><li><a href="#appd">附录 D　讲解合集：难点用大白话讲透</a></li><li><a href="#appf">附录 E　扩展词表（约 440 个术语）</a></li><li><a href="#appg">附录 F　简答题英文句型</a></li></ol></div>
+<div class="card gold"><h4>先看这页：考什么、按什么顺序学</h4>
+<p><b>所有讲座都考</b>（all lectures are included）。</p>
+<div class="tw"><table>
+<tr><th>部分</th><th>题型</th><th>出题老师 / 内容</th><th>本文件对应</th></tr>
+<tr><td><b>第二部分</b>（分值最集中）</td><td>两道练习题（exercises），各约 30 分钟</td><td>① Legrand：脂质体（liposomes）；② Hillaireau：纳米医学（nanomedicine）与基因递送（gene delivery）</td><td>第 1、2 章</td></tr>
+<tr><td><b>第一部分</b></td><td>单选（single-choice）、多选（multiple-choice）、简答（short-answer）</td><td>Legrand（极性脂质、胶束、环糊精、脂质胶体）、Ponchel（生物屏障）、Annereau（3D 打印）；Hillaireau 也有帮助</td><td>第 3–7 章</td></tr>
+</table></div>
+<p><b>为什么先学大题</b>：两道大题分值集中，而且第一部分里 Legrand 的很多选择题（脂质体组成、相变、PEG、AmB、Doxil®）和大题是同一批知识。把第 1 章学透，第一部分的 B2 选择题也基本会了。</p>
+<p><b>每章的结构</b>：<span class="tag t-lc">先懂这个</span>（基础概念，用最直白的话讲）→ 正文要点（带「为什么」）→ <b>常见问法</b>（老师会怎么问、答什么）→ 英文句子（简答直接用）。</p>
+<p class="how">标记：<span class="exam">高频</span> = 老师反复强调、最可能考；<span class="oral">（口述）</span> = 课上口头说的数值；<span class="tag t-db">补充</span> = 课件外背景，可加分但不是核心。</p>
+</div>
+
+<h2 id="ch1">第 1 章　脂质体大题（Legrand）<span class="en">Part 2 · Exercise on liposomes · F.-X. Legrand（LC + PL 两讲）</span></h2>
+<div class="line">一句话主线：<b>脂质体（liposome）是磷脂（phospholipid）在水中自己卷成的封闭双层小球</b>。考试会顺着这条链问：用什么脂质做（组成）→ 怎么做（制备）→ 药放在哪里、怎么装进去（载药）→ 怎么检测（表征）→ 打进静脉后去了哪里（体内命运）→ 怎么改造它（PEG、触发释放）→ 有什么风险（毒性）。</div>
+
+<h3 id="c1-1">1.1 先懂这个：为什么磷脂会自己形成双层<span class="en">Why phospholipids form bilayers</span></h3>
+<div class="why"><b class="lab">先懂这个</b>
+<ul>
+<li><b>两亲分子（amphiphile）</b>：一个分子同时有「喜欢水」的头（亲水头 hydrophilic head）和「怕水」的尾（疏水尾 hydrophobic tail）。磷脂就是这样：一个带磷酸的头 + 两条脂肪酸长链。</li>
+<li><b>疏水效应（hydrophobic effect）</b>：长链放在水里会打乱水分子的排列，代价很高。所以体系会自发把尾巴藏起来、尾对尾靠在一起，只让头接触水。这是所有「自组装（self-assembly）」的驱动力。</li>
+<li><b>藏尾巴的方式取决于分子形状</b>。头大尾小，就围成小球（胶束 micelle）；头尾差不多粗（像圆柱），就平铺成两层，尾巴在中间——这就是双层（bilayer）。平的双层边缘会露出尾巴，所以它会弯起来闭合成空心球，里面包着一团水：这就是脂质体。</li>
+</ul></div>
+<p><b>Small 分类（Small classification）</b><span class="exam">高频</span>：Legrand 用两个问题给脂质分类：① 在空气–水界面（air–water interface）能不能形成稳定的单分子层（monolayer）？② 在水里能不能吸水溶胀（水合 hydration / swelling）？</p>
+<div class="tw"><table>
+<tr><th>类别</th><th>界面单分子层</th><th>在水中</th><th>代表</th></tr>
+<tr><td>非极性脂质（non-polar lipids）</td><td>不形成</td><td>与水不混溶</td><td>烃（hydrocarbons）、石蜡、蜡</td></tr>
+<tr><td>I 类（Class I）</td><td>稳定</td><td>不溶，也不水合</td><td>甘油三酯（triglycerides）、胆固醇（cholesterol）</td></tr>
+<tr><td><b>II 类（Class II）</b></td><td>稳定</td><td><b>不溶，但能水合</b> → 溶致液晶（lyotropic liquid crystals）= 介晶相（mesophases）</td><td><b>磷脂（phospholipids）</b>、单甘酯（monoglycerides）、糖脂</td></tr>
+<tr><td>IIIA 类</td><td>不稳定</td><td>可溶，低浓度成胶束，高浓度成液晶</td><td>皂（soaps）、去污剂（detergents）、溶血卵磷脂（lysolecithin）</td></tr>
+<tr><td>IIIB 类</td><td>不稳定</td><td>可溶，低浓度成胶束，高浓度结晶</td><td>胆盐（bile salts）、皂苷（saponins）</td></tr>
+</table></div>
+<p class="how"><b>常见问法</b>：「为什么磷脂能形成脂质体？」→ 答：磷脂属于 Small II 类，在界面形成稳定单分子层，在水中不溶但能水合，形成层状介晶相（lamellar mesophase），这些双层卷起来闭合就是脂质体。</p>
+
+<p><b>堆积参数（packing parameter）</b><span class="exam">高频</span>：用一个数把「分子形状」量化。</p>
+<div class="formula">P = v / (a<sub>0</sub> · L)<div class="sub">v = 疏水链体积（chain volume）；a<sub>0</sub> = 头基最优面积（optimal head-group area）；L = 伸直链长（chain length）</div></div>
+<div class="why"><b class="lab">怎么理解</b>：v/L 是「尾巴的平均截面积」，a<sub>0</sub> 是「头的截面积」。所以 P 就是 <b>尾巴截面 ÷ 头截面</b>。P 小 = 头大尾小 = 圆锥（cone）→ 只能围成弯得很厉害的小球；P ≈ 1 = 圆柱（cylinder）→ 平铺成双层；P &gt; 1 = 尾大头小 = 倒锥（inverted cone）→ 向反方向弯，水被包在里面（反相）。</div>
+<div class="tw"><table>
+<tr><th>P</th><th>形状</th><th>结构</th><th>典型分子</th></tr>
+<tr><td>&lt; 1/3</td><td>圆锥（cone）</td><td>球形正胶束（micelles, L<sub>1</sub>）</td><td>溶血 PC（lyso-PC，只有一条链）、十二烷基硫酸钠（SDS）</td></tr>
+<tr><td>1/3–1/2</td><td>截锥（truncated cone）</td><td>圆柱胶束 = 正六方相（hexagonal, H<sub>I</sub>）</td><td>—</td></tr>
+<tr><td>1/2–1</td><td>近圆柱</td><td>囊泡（vesicles）、双层（bilayer）</td><td>磷脂酰胆碱（PC）</td></tr>
+<tr><td>≈ 1</td><td>圆柱（cylinder）</td><td>平的层状相（lamellar, L<sub>α</sub>）</td><td>DPPC</td></tr>
+<tr><td>&gt; 1</td><td>倒锥（inverted cone）</td><td>反六方相（inverted hexagonal, H<sub>II</sub>）、反胶束</td><td>DOPE、单油酸甘油酯（monoolein）</td></tr>
+</table></div>
+<p class="figgone"><b>［课件图略］</b>图 1-1　堆积参数与组装结构（PL 课件第 16 张）。会画这张图，大部分「形状 → 结构」题都能答。</p>
+<p><b>P 可以被改变</b>（这一条连接了三讲，很爱考）：升高温度、加盐（离子强度 ionic strength↑）、降低 pH，都会让头基「变小」（脱水 dehydration 或电荷被屏蔽），a<sub>0</sub>↓ → P↑ → 向反相方向走。它解释了：A2 的浊点（cloud point，非离子表面活性剂升温变浑）和本章的 pH 敏感脂质体（pH-sensitive liposome，在酸性内体里变成 H<sub>II</sub>）。</p>
+
+<h3 id="c1-2">1.2 组成：每种脂质干什么用<span class="en">Composition: role of each lipid</span></h3>
+<div class="tw"><table>
+<tr><th>成分</th><th>作用</th><th>为什么</th></tr>
+<tr><td>磷脂酰胆碱（phosphatidylcholine, PC），如 HSPC、DSPC、蛋黄 PC（EPC）</td><td>主要的成双层脂质</td><td>头大、近圆柱形（P 在 1/2–1），自然形成双层</td></tr>
+<tr><td>胆固醇（cholesterol）</td><td>让双层更致密、更稳定，降低通透性（permeability）</td><td>插在磷脂之间：凝胶相不那么硬，流体相不那么乱；也让高密度脂蛋白（HDL）更难从膜上「拔走」磷脂</td></tr>
+<tr><td>磷脂酰乙醇胺（PE）</td><td>用来连接其他分子（偶联 conjugation），如接 PEG（DSPE-PEG）</td><td>头上有一个游离氨基（–NH<sub>2</sub>）可以做化学反应</td></tr>
+<tr><td>阴离子磷脂（PG、PS、PA），如 DSPG</td><td>让颗粒带负电</td><td>静电排斥防聚集；AmBisome® 用 DSPG 与 AmB 结合</td></tr>
+<tr><td>阳离子脂质（cationic lipid），如 DOTAP</td><td>结合核酸（带负电）</td><td>正负电荷相吸，形成脂质复合物（lipoplex）</td></tr>
+<tr><td>可电离脂质（ionisable lipid），如 ALC-0315、SM-102</td><td>mRNA / siRNA 的 LNP 核心</td><td>血液 pH 7.4 下接近中性（毒性低），在酸性内体里带正电（帮助逃逸）</td></tr>
+<tr><td>DSPE-PEG<sub>2000</sub>（约 5 mol%）</td><td>隐形（stealth），长循环</td><td>PEG 水化层挡住血浆蛋白，见 1.9</td></tr>
+<tr><td>DOPE</td><td>pH 敏感 / 促融合（fusogenic）</td><td>倒锥形，自己倾向形成 H<sub>II</sub>，能让膜失稳</td></tr>
+</table></div>
+
+<div class="why"><b class="lab">先懂这个：相变温度 T<sub>m</sub> 是什么</b>　磷脂的两条链在低温时排得很整齐、很硬，像固体（凝胶相 gel phase, L<sub>β'</sub>）；升温到某个温度，链突然「熔化」变得松散、可流动（流体相 fluid phase, L<sub>α</sub>）。这个温度就是<b>主相变温度（main transition temperature, T<sub>m</sub>）</b>。链越长、越饱和，链之间吸引越强，T<sub>m</sub> 越高；不饱和链有顺式双键（cis double bond）会弯折，排不紧，T<sub>m</sub> 低。</div>
+<p><b>DPPC（模型磷脂）的相变</b><span class="exam">高频</span>：25 °C 凝胶相 L<sub>β'</sub> →（约 35 °C 预转变 pre-transition，小峰）→ 40 °C 波纹相（ripple phase）P<sub>β'</sub> →（约 41 °C 主转变 main transition，尖峰）→ 50 °C 流体相 L<sub>α</sub>。用差示扫描量热法（differential scanning calorimetry, DSC）看到这两个吸热峰。</p>
+<p class="figgone"><b>［课件图略］</b>图 1-2　DPPC/水相图与 DSC 热谱（PL 课件第 22 张）。</p>
+<p><b>胆固醇加多少有什么变化</b>：5–6 mol% 时预转变就消失；加到约 50 mol%，主转变峰变宽、变小直到消失。这就是为什么 Doxil®、AmBisome® 都加胆固醇。</p>
+<p><b>选 HSPC 还是蛋黄 PC（EPC）</b>（大题常问）：氢化大豆 PC（HSPC）是饱和链，T<sub>m</sub> &gt; 50 °C，体温 37 °C 时仍是凝胶相 → 双层硬、漏得少、更稳定，也更不容易被 HDL 破坏 → 循环更久。EPC 链不饱和，T<sub>m</sub> 远低于 0 °C，37 °C 时是流体相 → 漏得多；不饱和链还容易氧化（oxidation），磷脂水解（hydrolysis）后产生溶血 PC（圆锥形，会破坏双层）→ 储存时聚集、粒径变大。</p>
+
+<h3 id="c1-3">1.3 制备：MLV、SUV、LUV<span class="en">Preparation</span></h3>
+<ol>
+<li>脂质溶于有机溶剂（氯仿 / 甲醇）→ 旋转蒸发得到<b>干脂膜（dry lipid film）</b>。</li>
+<li>加水（或缓冲液）在 T<sub>m</sub> 以上水化溶胀（hydration / swelling）→ <b>多层囊泡（multilamellar vesicles, MLV）</b>，像洋葱一层套一层，几百 nm 到几 µm，大小不均。</li>
+<li>减小粒径（particle size）：
+ <ul><li>超声（sonication）→ <b>小单层囊泡（small unilamellar vesicles, SUV）</b>，25–50 nm，内水相很小；缺点是可能让脂质降解。</li>
+ <li>反复挤过聚碳酸酯膜（extrusion through polycarbonate membranes）→ <b>大单层囊泡（large unilamellar vesicles, LUV）</b>，约 100 nm–1 µm，内水相大，粒径分布窄。</li></ul></li>
+</ol>
+<p><b>为什么挤出必须在 T<sub>m</sub> 以上</b><span class="exam">高频</span>：T<sub>m</sub> 以上双层是流体相，柔软、容易变形穿过膜孔；T<sub>m</sub> 以下是凝胶相，很硬，需要极大压力，膜也可能破。</p>
+<p><b>纳米沉淀法（nanoprecipitation / solvent displacement）</b>的四个要求：① 有机溶剂必须能和水互溶；② 成粒材料在最终的水混合物里不溶；③ 快速的溶剂置换引发成粒；④ 之后除去有机溶剂。</p>
+
+<h3 id="c1-4">1.4 载药：药放在哪里、怎么装进去<span class="en">Drug loading</span></h3>
+<div class="tw"><table>
+<tr><th>药物性质</th><th>在脂质体中的位置</th><th>怎么装</th><th>例子</th></tr>
+<tr><td>亲水（hydrophilic）</td><td>内水相（aqueous core）</td><td>被动载药（passive loading）：水化时把药溶在水里，顺便包进去</td><td>吉西他滨（gemcitabine）</td></tr>
+<tr><td>亲脂 / 疏水（lipophilic）</td><td>脂质双层（bilayer）内部</td><td>被动载药：和脂质一起溶在有机溶剂里</td><td>紫杉醇（paclitaxel）、AmB</td></tr>
+<tr><td>两亲（amphiphilic）</td><td>界面附近</td><td>被动载药</td><td>—</td></tr>
+<tr><td><b>可电离的弱碱（weak base）</b></td><td>内水相，形成沉淀</td><td><b>远程 / 主动载药（remote / active loading）</b></td><td>多柔比星（doxorubicin）→ Doxil®</td></tr>
+</table></div>
+<p><b>被动载药为什么对亲水药效率低</b>：亲水药只能装进「成膜时恰好被包住的那一小部分水」，内水相只占总体积很小比例，所以包封率（encapsulation efficiency, EE%）很低（例题里只有 8%），而且没有东西把药留住，容易漏。</p>
+<p><b>远程载药的机制</b><span class="exam">高频</span>（一步一步）：</p>
+<ol>
+<li>先做好内部装着硫酸铵（ammonium sulfate）的脂质体，再把外面的硫酸铵换掉。</li>
+<li>内部 NH<sub>4</sub><sup>+</sup> ⇌ NH<sub>3</sub> + H<sup>+</sup>；中性的 NH<sub>3</sub> 能穿膜跑出去，H<sup>+</sup> 留在里面 → <b>内部变酸</b>，形成跨膜 pH 梯度（transmembrane pH gradient）。</li>
+<li>外面的多柔比星是弱碱。<b>不带电的形式 B 能穿过双层</b>（不带电才能溶进脂质层）。</li>
+<li>进入酸性内腔后被质子化（protonation）成 BH<sup>+</sup>，<b>带电就出不去了</b> → 被「捕获」，越积越多。</li>
+<li>BH<sup>+</sup> 与硫酸根形成多柔比星-硫酸盐沉淀（cryo-TEM 里看到的棒状结晶）→ 锁得更牢，EE% 可 &gt; 90%。</li>
+</ol>
+<div class="formula">EE% = 包封的药量 / 加入的总药量 × 100　　药脂比 = 包封药量 / 脂质量　　载药量（drug loading）= 药 / (药 + 脂质)<div class="sub">EE% 回答「加进去的药有多少被包住」，载药量回答「颗粒里有多少是药」，两者不要混用</div></div>
+<p class="how"><b>算一遍</b>：加药 2.0 mg/mL，分离后脂质体里含 1.9 mg/mL，总脂质 16 mg/mL。EE% = 1.9/2.0 = 95%；药脂比 = 1.9/16 ≈ 0.12 w/w。</p>
+
+<h3 id="c1-5">1.5 表征：怎么检测一个脂质体<span class="en">Characterisation</span></h3>
+<div class="tw"><table>
+<tr><th>测什么</th><th>方法</th><th>读数怎么理解</th></tr>
+<tr><td>粒径与分布</td><td>动态光散射（dynamic light scattering, DLS）</td><td>给出流体力学直径（hydrodynamic diameter）和多分散指数（polydispersity index, PDI）。PDI &lt; 0.1 很均一，&gt; 0.3 分布宽。DLS 粒径通常大于电镜，因为它包括 PEG 水化层和溶剂层，而且大颗粒贡献大</td></tr>
+<tr><td>形态、层数</td><td>冷冻透射电镜（cryo-TEM）</td><td>看到单层 / 多层、内部结晶（Doxil®）</td></tr>
+<tr><td>表面电荷</td><td>Zeta 电位（zeta potential）</td><td>接近 0 说明表面接近中性（PEG 会屏蔽电荷）；绝对值大，静电排斥防聚集</td></tr>
+<tr><td>包封</td><td>先分离游离药（free drug）：超滤（ultrafiltration）、透析（dialysis）、尺寸排阻色谱（SEC）；再用 UV 或 HPLC 定量</td><td>算 EE% 和载药量</td></tr>
+<tr><td>释放（release）</td><td>在<b>生物相关条件</b>下测（稀释、含血清蛋白）</td><td>只在缓冲液里测会低估体内泄漏，因为血里的 HDL 会拔走磷脂、蛋白会「吸走」亲脂药</td></tr>
+<tr><td>稳定性（stability）</td><td>储存后再测 DLS、EE%</td><td>粒径和 PDI 变大 = 聚集或融合</td></tr>
+</table></div>
+
+<h3 id="c1-6">1.6 怎样证明药物插进了双层<span class="en">Is the drug inserted in the bilayer? DSC + SAXS</span></h3>
+<p><b>思路</b>：如果药物插进双层，会打乱链的排列，所以<b>相变会变（DSC）</b>，<b>层间距也会变（SAXS）</b>；如果药只待在水里，两者都不变。</p>
+<div class="tw"><table>
+<tr><th>课上的例子</th><th>DSC</th><th>SAXS 层间距 d</th><th>结论</th></tr>
+<tr><td>RU 58668（亲脂甾体）+ DMPC</td><td>预转变消失，T<sub>m</sub> 和焓变 ΔH 下降，峰变宽</td><td>改变</td><td>插入双层</td></tr>
+<tr><td>吉西他滨（亲水）+ DPPC</td><td>基本不变</td><td>几乎不变</td><td>不插入，只在内水相</td></tr>
+</table></div>
+<div class="formula">Bragg 定律：2d sin θ = nλ　　q = 4π sin θ / λ　　<b>d = 2π / q</b><div class="sub">小角 X 射线散射（SAXS）的峰位 q 越小，层间距 d 越大。例：q = 0.100 Å⁻¹ → d = 62.8 Å（接近 DPPC 凝胶相的 62.7 Å）。峰位比 1:2:3 → 层状相；1:√3:2 → 六方相</div></div>
+
+<h3 id="c1-7">1.7 打进静脉以后：三道屏障与调理作用<span class="en">Fate after IV injection</span><span class="exam">高频</span></h3>
+<div class="why"><b class="lab">先懂这个</b>　身体会把进入血液的颗粒当作「外来物（non-self）」处理，像对待细菌一样：先给它贴上「吃掉我」的标签（调理作用 opsonisation），再让专门吃东西的细胞（巨噬细胞 macrophage）把它吃掉（吞噬 phagocytosis）。这些巨噬细胞主要住在肝、脾、骨髓，合称<b>单核吞噬细胞系统（mononuclear phagocyte system, MPS）</b>，旧称网状内皮系统（RES）。肝里的那种叫 <b>Kupffer 细胞（Kupffer cells）</b>，是主力。</div>
+<p><b>三类屏障</b>：</p>
+<ul>
+<li><b>生化屏障（biochemical）</b>：血浆蛋白吸附到颗粒表面，形成蛋白冠（protein corona）；调理素（opsonins）结合；HDL 从脂质体上拔走磷脂、插进载脂蛋白（apolipoproteins）→ 药物泄漏。</li>
+<li><b>机械屏障（mechanical）</b>：颗粒能不能钻出血管（外渗 extravasation），取决于粒径和血管内皮（endothelium）的类型。</li>
+<li><b>免疫屏障（immunological）</b>：吞噬细胞识别、补体激活（complement activation）、吞噬。</li>
+</ul>
+<p><b>调理到降解的完整链条</b>（按顺序背）：血浆蛋白吸附形成蛋白冠 → 调理素结合：免疫球蛋白 G（IgG）被巨噬细胞的 Fc 受体（Fc receptor）识别，补体片段 C3b / iC3b 被补体受体（CR1、CR3）识别 → 吞噬 → 吞噬体（phagosome）与溶酶体（lysosome）融合成吞噬溶酶体（phagolysosome），pH 4.5–5 加水解酶 → 载体被降解。补体的三条途径（经典 classical、凝集素 lectin、替代 alternative）都汇聚到 C3。</p>
+<p><b>Kupffer 细胞会「吃饱」（饱和 saturation）</b>：剂量很高时摄取饱和，所以常规载体的药动学是剂量依赖的（dose-dependent）；PEG 隐形载体这个现象较轻。</p>
+<p class="figgone"><b>［课件图略］</b>图 1-3　三类毛细血管内皮（LC 课件第 24 张）：连续无孔（皮肤、脑、肺、心、肌肉）；连续有孔（胃肠、肾小球、脉络丛）；不连续 / 窦状（肝、脾、骨髓）。颗粒最容易在第三类漏出去，那里也正好住着巨噬细胞。</p>
+<p class="how"><b>常见问法</b>：「为什么常规纳米粒静注后主要去了肝、脾？」→ 调理 + MPS 吞噬（肝 Kupffer 细胞）+ 这些器官的内皮是不连续 / 窦状的。「怎么改变？」→ 表面接 PEG（隐形），再加配体（主动靶向）。</p>
+
+<h3 id="c1-8">1.8 利用 MPS：两性霉素 B（AmB）的脂质制剂<span class="en">Amphotericin B lipid formulations</span><span class="exam">高频</span></h3>
+<p><b>AmB 是什么</b>：广谱抗真菌药（antifungal），也治利什曼病（leishmaniasis）；难溶，口服不吸收。老制剂 Fungizone® 用脱氧胆酸盐（deoxycholate）做成混合胶束，<b>肾毒性（nephrotoxicity）</b>很大，限制了剂量。</p>
+<p><b>作用机制与毒性来源</b>：AmB 结合真菌细胞膜上的麦角固醇（ergosterol），形成膜孔，离子漏出，真菌死亡。但它对人体细胞膜上的胆固醇也有一定亲和力 → 这就是毒性的来源。</p>
+<div class="tw"><table>
+<tr><th>制剂</th><th>结构 / 粒径</th><th>IC<sub>50</sub>（对巨噬细胞，µg/mL，越大越不毒）</th><th>LD<sub>50</sub>（小鼠，mg/kg）</th></tr>
+<tr><td>Fungizone®</td><td>脱氧胆酸盐混合胶束，0.03 µm</td><td>4.5</td><td>3.5</td></tr>
+<tr><td><b>AmBisome®</b></td><td><b>真正的脂质体</b>：SUV，约 80 nm；HSPC / 胆固醇 / DSPG / AmB = 2 : 1 : 0.8 : 0.4</td><td>256</td><td>&gt; 175</td></tr>
+<tr><td>Amphotec®</td><td>与胆固醇硫酸酯的盘状复合物（disc），0.12 µm</td><td>91</td><td>&gt; 100</td></tr>
+<tr><td>Abelcet®</td><td><b>带状脂质复合物（ribbon-like），不是脂质体</b>，1–5 µm</td><td>84</td><td>45</td></tr>
+</table></div>
+<p><b>最关键的一句</b>：脂质制剂<b>没有提高</b> AmB 对真菌的内在活性；<b>获益来自毒性大幅下降</b> → 可以给更大剂量 → 总体疗效提高。临床肾毒性：AmBisome® 约 14%，Abelcet® 42.3%。</p>
+<p><b>为什么治利什曼病特别好</b>：利什曼原虫就住在巨噬细胞的吞噬溶酶体里，而巨噬细胞天然会吞脂质体 → MPS 摄取从缺点变成了优点。</p>
+<p class="how">粒径提示：课件把 AmBisome® 归为 SUV，但它约 80 nm，比 SUV 定义的 25–50 nm 大。照课件写「SUV，约 80 nm」即可。</p>
+
+<h3 id="c1-9">1.9 逃避 MPS：PEG 隐形、Doxil® 和 ABC 现象<span class="en">Stealth liposomes</span><span class="exam">高频</span></h3>
+<p><b>PEG 为什么能「隐形」</b>：聚乙二醇（polyethylene glycol, PEG）是高度水合、很柔软的亲水链。接在颗粒表面后形成一层「水化的刷子」，靠空间位阻（steric hindrance）挡住调理素靠近 → 调理减少 → MPS 摄取减少 → 在血里循环更久（长循环 long circulation）→ 有更多机会在血管渗漏的地方（肿瘤、炎症）钻出去。典型做法：DSPE-PEG<sub>2000</sub> 约占 5 mol%，共价连接，不会掉；单纯吸附的（如泊洛沙姆 poloxamer）可能在体液里脱落。</p>
+<p><b>注意</b>：PEG 化不是「零蛋白吸附」，只是改变了蛋白冠的组成（Hillaireau 课的说法）。</p>
+<div class="tw"><table>
+<tr><th></th><th>Doxil® / Caelyx®（PEG 化）</th><th>Myocet®（非 PEG 化）</th></tr>
+<tr><td>组成（摩尔比）</td><td>HSPC / 胆固醇 / DSPE-PEG<sub>2000</sub> = 56 : 39 : 5</td><td>蛋黄 PC / 胆固醇 = 55 : 45</td></tr>
+<tr><td>粒径</td><td>cryo-TEM 约 60 nm；DLS 80–85 nm</td><td>约 100–230 nm</td></tr>
+<tr><td>载药</td><td>硫酸铵梯度远程载药，内部结晶</td><td>—</td></tr>
+<tr><td>血浆浓度</td><td>最高、维持最久（清除率 clearance 0.1 vs 游离药 45 L/h）</td><td>居中</td></tr>
+</table></div>
+<p><b>Doxil® 改变了毒性谱（toxicity profile）</b>：</p>
+<ul><li><b>下降</b>：心脏毒性（cardiotoxicity，心脏事件 6.6% vs 25.7%）、脱发、恶心、骨髓抑制；没有发疱作用（vesicant effect）；累积剂量可超过 900 mg/m²。原因：药物被锁在脂质体里，心肌接触到的游离药峰浓度低。</li>
+<li><b>增加</b>：手足综合征（palmar-plantar erythrodysesthesia, PPE）和口腔炎（stomatitis）。原因：长循环让脂质体在手掌、足底皮肤和黏膜蓄积。</li></ul>
+<p><b>加速血液清除现象（accelerated blood clearance, ABC）</b>：重复注射某些 PEG 化载体时，第一剂刺激脾脏 B 细胞产生抗 PEG IgM；第二剂一进血就被 IgM 结合、激活补体、被 Kupffer 细胞快速清除。大鼠：第一剂 24 h 血中还有约 50%，第二剂几分钟内几乎清空。强度取决于制剂、剂量、给药间隔和 PEG 性质。</p>
+<p class="figgone"><b>［课件图略］</b>图 1-4　ABC 现象机制与两次注射的血药曲线（LC 课件第 58 张）。</p>
+<p class="how"><b>AmBisome® 和 Doxil® 方向相反</b>：AmBisome® 利用 MPS（送进巨噬细胞治利什曼病）；Doxil® 用 PEG 逃避 MPS（长循环、经 EPR 到肿瘤）。大题让你「为利什曼病和实体瘤各选一个处方」时，就是考这个对比。</p>
+<p><b>增强渗透与滞留效应（enhanced permeability and retention, EPR）</b>：部分实体瘤血管渗漏、淋巴引流差，纳米颗粒容易钻出去并留下来。但<b>只在某些肿瘤（some tumours）</b>存在，不同肿瘤、不同患者差异很大。看到「所有肿瘤（all tumours）」就要警惕。</p>
+
+<h3 id="c1-10">1.10 进入胞质：内体逃逸与 mRNA-LNP<span class="en">Endosomal escape and LNP</span></h3>
+<div class="why"><b class="lab">先懂这个</b>　颗粒被细胞「吞」进去（内吞 endocytosis）时，是被一小块细胞膜包着进去的，这个小泡叫<b>内体（endosome）</b>。内体会逐渐酸化（pH 从 7 降到 5 左右），最后和溶酶体（lysosome）融合，里面的东西被消化掉。核酸药（siRNA、mRNA）必须在<b>胞质（cytosol）</b>里才能起作用，所以「进了细胞」还不够，必须在被消化之前<b>从内体里逃出来（内体逃逸 endosomal escape）</b>。</div>
+<div class="tw"><table>
+<tr><th>类型</th><th>怎么逃</th><th>缺点</th></tr>
+<tr><td>融合脂质体（fusogenic liposomes）</td><td>含促融合脂质或肽，与内体膜融合</td><td>—</td></tr>
+<tr><td>阳离子脂质体（cationic liposomes）</td><td>阳离子脂质与内体膜上的阴离子脂质形成离子对，引起「翻转（flip-flop）」，内体膜失稳</td><td>在血里也会结合血浆蛋白 → 聚集、快速清除、毒性</td></tr>
+<tr><td>pH 敏感脂质体（pH-sensitive liposomes）</td><td>内体酸化 → 某些成分质子化 → 脂质重排成非层状相，如反六方相 H<sub>II</sub> → 内体膜失稳</td><td>—</td></tr>
+</table></div>
+<p class="figgone"><b>［课件图略］</b>图 1-5　pH 敏感脂质体（LC 课件第 62 张）。这里的 H<sub>II</sub> 就是 1.1 中 P &gt; 1 的结构：酸化改变了头基，分子变成倒锥。DOPE 自己就是倒锥，需要一个「大头」稳定剂才能成双层；稳定剂在酸性内体里失效后，DOPE 回到 H<sub>II</sub>。</p>
+<p><b>mRNA 脂质纳米粒（lipid nanoparticle, LNP）的四种组分</b>：可电离阳离子脂质（ionisable cationic lipid）+ 辅助脂质 DSPC + 胆固醇 + PEG-脂质（PEG-lipid）。内部结构和普通脂质体完全不同（核心是核酸与可电离脂质的致密结构）。</p>
+<div class="tw"><table>
+<tr><th>疫苗</th><th>可电离脂质</th><th>PEG-脂质</th><th>摩尔比（可电离 : DSPC : 胆固醇 : PEG）</th></tr>
+<tr><td>Comirnaty®（Pfizer-BioNTech）</td><td>ALC-0315</td><td>ALC-0159</td><td>46.3 : 9.4 : 42.7 : 1.6</td></tr>
+<tr><td>Spikevax®（Moderna）</td><td>SM-102</td><td>PEG-DMG</td><td>50 : 10 : 38.5 : 1.5</td></tr>
+</table></div>
+<p><b>为什么用「可电离」而不是永久阳离子</b>：在血液 pH 7.4 下接近中性，少结合血浆蛋白、少聚集、毒性低；进入内体 pH≈5 后带正电，和内体膜作用，把核酸放进胞质。</p>
+
+<h3 id="c1-11">1.11 纳米系统的毒性（纳米毒理学）<span class="en">Nanotoxicology · LC 课件第 28–35 张</span></h3>
+<p><b>为什么「本体材料生物相容（biocompatible）」不等于「做成纳米粒也安全」</b>（四点）：① 降解产物（degradation products）的毒性要单独评估；② 阳离子材料（如聚乙烯亚胺 PEI、阳离子脂质）会造成膜损伤、氧化应激（oxidative stress）、凋亡或坏死；③ 纳米尺度的生物效应可能和同一种块状材料不同；④ 细胞内化（cellular internalisation）：做成植入物时细胞只是贴在表面，做成纳米粒会被吞进细胞内部。</p>
+<p><b>其他要点</b>：生物分布（biodistribution）决定毒性部位（多数蓄积在肝脾，可能出现新的毒性部位）；Kupffer 细胞饱和，吞噬功能暂时下降；巨噬细胞被激活，产生活性氧（ROS）和促炎细胞因子（TNF-α、IL-1、IL-6）；可作疫苗佐剂（adjuvant）、激活补体、诱导抗 PEG 抗体；生产上要无菌、控制内毒素（endotoxin）、除去残留有机溶剂（residual solvents）。</p>
+<p><b>为什么体外毒性不能预测体内</b>：① 纳米材料会干扰比色法和分光光度法（colorimetric assays）；② 选哪种细胞很难（体内是多种细胞相互作用）；③ 剂量难估，体外是静态的，体内有分布、代谢、消除。结论：体外暴露不等于体内暴露（in-vitro exposure does not necessarily reproduce in-vivo exposure）。</p>
+<p>体外检测与指标：MTT → 代谢活性；LDH 释放 / 台盼蓝（trypan blue）→ 膜完整性；中性红（neutral red）→ 溶酶体功能；ROS → 氧化应激；细胞因子 → 炎症。</p>
+
+<h3 id="c1-12">1.12 脂质体大题：答题框架与常见问法<span class="en">Answer framework</span></h3>
+<div class="card"><h4>答题框架（考场上先在草稿纸写这 8 个词，逐个检查有没有漏）</h4>
+<ol>
+<li><b>组成</b>：成双层磷脂（PC，T<sub>m</sub> 决定硬度）+ 胆固醇（稳定、降通透）+ 功能脂质（DSPE-PEG 隐形 / DSPG 负电 / 阳离子或可电离脂质 / DOPE 触发）。</li>
+<li><b>制备</b>：脂膜水化 → MLV → 超声（SUV）或挤出（LUV，T<sub>m</sub> 以上）。</li>
+<li><b>载药</b>：被动（亲水 → 内水相，亲脂 → 双层）vs 远程 pH 梯度（弱碱，Doxil®）。</li>
+<li><b>表征</b>：DLS（粒径、PDI）、cryo-TEM、Zeta、EE% 与载药量、生物相关条件下的释放、稳定性。</li>
+<li><b>体内命运</b>：蛋白冠 / 调理 → MPS（Kupffer）；HDL 致泄漏；内皮类型决定外渗；PEG → 长循环 → EPR；ABC；Kupffer 饱和。</li>
+<li><b>细胞内</b>：内吞 → 内体 → 溶酶体；逃逸策略。</li>
+<li><b>案例</b>：AmBisome®（利用 MPS，降肾毒）、Doxil®（逃避 MPS，降心毒、PPE↑）、mRNA-LNP。</li>
+<li><b>安全</b>：载体本身、阳离子脂质、免疫（补体、抗 PEG）、生产（无菌、内毒素、残留溶剂）。</li>
+</ol></div>
+<div class="tw"><table>
+<tr><th>老师可能这样问</th><th>答题要点</th></tr>
+<tr><td>某处方储存后粒径和 PDI 变大，为什么？</td><td>流体双层（EPC，低 T<sub>m</sub>）→ 易漏、易氧化水解产生溶血 PC → 聚集、融合。对策：饱和高 T<sub>m</sub> 磷脂 + 胆固醇 + PEG</td></tr>
+<tr><td>为什么血清中释放远高于缓冲液？</td><td>HDL 拔走磷脂；蛋白、脂蛋白「吸走」亲脂药（漏槽 sink）；体外释放要在生物相关条件下测</td></tr>
+<tr><td>给出静注 4 h 血中 / 肝脾分布，解释</td><td>血中低、肝脾高 → 调理 + MPS 摄取（常规）；血中高、肝脾低 → PEG 隐形长循环</td></tr>
+<tr><td>第二次给药后血中浓度掉得很快？</td><td>ABC 现象：抗 PEG IgM + 补体 + Kupffer</td></tr>
+<tr><td>治利什曼病和实体瘤各选哪个处方？</td><td>利什曼病选常规刚性脂质体（被巨噬细胞吞，AmBisome® 策略）；实体瘤选 PEG 化（长循环 + EPR，Doxil® 策略）</td></tr>
+<tr><td>某药是在双层里还是水里？怎么证明？</td><td>DSC + SAXS（见 1.6）</td></tr>
+<tr><td>算 EE%、药脂比</td><td>见 1.4 公式；先减去游离药</td></tr>
+<tr><td>DLS 粒径为什么大于 cryo-TEM？</td><td>DLS 测流体力学直径，含 PEG 水化层和溶剂层，且大颗粒权重大</td></tr>
+</table></div>
+<div class="card link"><h4>英文句子（简答和大题都能直接用）</h4>
+<ul class="en-s">
+<li>Phospholipids are Class II polar lipids: insoluble but swelling in water, they form lamellar mesophases that close into liposomes.</li>
+<li>Cholesterol rigidifies the fluid bilayer and fluidises the gel bilayer, which reduces permeability and drug leakage.</li>
+<li>Extrusion must be performed above the T<sub>m</sub>, because the fluid bilayer is flexible enough to pass through the pores.</li>
+<li>Remote loading uses a transmembrane pH gradient: the neutral form of the weak base crosses the bilayer, is protonated in the acidic core and is trapped.</li>
+<li>After IV injection, plasma proteins adsorb onto the liposomes (opsonisation) and they are captured by macrophages of the mononuclear phagocyte system, mainly Kupffer cells in the liver.</li>
+<li>PEG forms a hydrated steric barrier that reduces opsonisation, prolongs circulation and allows accumulation in some tumours through the EPR effect.</li>
+<li>Lipid formulations of amphotericin B do not increase its intrinsic antifungal activity; they reduce its toxicity, so higher doses can be given.</li>
+</ul></div>
+<h2 id="ch2">第 2 章　纳米医学大题（Hillaireau）<span class="en">Part 2 · Exercise on nanomedicine, cellular delivery and gene therapy · H. Hillaireau</span></h2>
+<div class="line">一句话主线：纳米载体（nanocarrier）在两处帮药物：<b>改善吸收（absorption）</b>和<b>控制分布（distribution）</b>。控制分布经历了三代（MPS → PEG 被动靶向 → 配体主动靶向）；进入细胞靠内吞（endocytosis）；核酸药物还必须逃出内体（endosome），才能在胞质（cytosol）里起作用。</div>
+<p class="how"><b>大题会是什么样</b>：Hillaireau 的课件以文献图为主（PHDCA / PEG-PHDCA 生物分布、叶酸纳米粒摄取、Davis 2010、patisiran），所以大题很可能给一张图或表，让你：① 判断属于哪一代载体；② 解释为什么血中、肝里、肿瘤里的量不同；③ 说出进入细胞和逃出内体的机制；④ 设计对照实验。</p>
+
+<h3 id="c2-1">2.1 为什么要纳米载体<span class="en">Why nano-carriers</span></h3>
+<p>保罗·埃尔利希（Paul Ehrlich）1906 年提出「魔弹（magic bullet）」：只命中病灶的理想药物。纳米医学（nanomedicine）就是用纳米载体把活性药物成分（active pharmaceutical ingredient, API）送到病变组织或细胞。</p>
+<div class="why"><b class="lab">先懂这个：LADME</b>　药物在体内的一生分五步：释放（liberation）→ 吸收（absorption）→ 分布（distribution）→ 代谢（metabolism）→ 消除（elimination）。纳米载体主要作用于其中两处：<b>吸收之前</b>（提高稳定性 stability、溶解度 solubility、溶出 dissolution），以及<b>分布</b>（把药带到组织 → 细胞 → 亚细胞区室）。</div>
+<p><b>尺度</b>：葡萄糖约 1 nm，蛋白约 10 nm，病毒约 100 nm，细菌约 1 µm，红细胞 7–8 µm。纳米载体（10 nm–1 µm）正好在药物分子和细胞之间。</p>
+
+<h3 id="c2-2">2.2 纳米药物有哪些<span class="en">Types of nano-drugs</span></h3>
+<div class="tw"><table>
+<tr><th>类型</th><th>结构要点</th></tr>
+<tr><td>环糊精（cyclodextrins）</td><td>约 1 nm，最小的纳米药物（见第 5 章）</td></tr>
+<tr><td>树枝状大分子（dendrimers）</td><td>高度支化的单个大分子，如 PAMAM</td></tr>
+<tr><td>胶束（micelles）</td><td>表面活性剂胶束，或两亲嵌段共聚物胶束（如 PEG–聚天冬氨酸–多柔比星）</td></tr>
+<tr><td>脂质体（liposomes）</td><td>亲水药在内水相，疏水药在双层</td></tr>
+<tr><td>脂质纳米囊（lipid nanocapsules）/ 脂质前药（lipid prodrugs）</td><td>油核 + 表面活性剂壳；或药物与脂质共价连接后自组装（如角鲨烯前药 squalene prodrugs）</td></tr>
+<tr><td>纳米凝胶（nanogels）</td><td>交联的亲水网络，如壳聚糖（chitosan）+ 三聚磷酸盐（TPP）</td></tr>
+<tr><td>纳米球（nanospheres）/ 纳米囊（nanocapsules）</td><td>基质型（PLGA、聚氰基丙烯酸烷基酯 PACA、白蛋白）/ 核–壳型</td></tr>
+<tr><td>纳米晶（nanocrystals）</td><td>几乎全是药物 + 稳定剂（stabiliser）；湿法研磨（wet milling）、高压均质</td></tr>
+</table></div>
+
+<h3 id="c2-3">2.3 改善吸收：BCS 和长效纳米晶<span class="en">Improving absorption</span></h3>
+<div class="why"><b class="lab">先懂这个：生物药剂学分类系统（Biopharmaceutics Classification System, BCS）</b>　口服药要被吸收，得先溶在肠液里（溶解度），再穿过肠壁（渗透性 permeability）。BCS 按这两个性质分四类：I 类高溶解高渗透；II 类低溶解高渗透；III 类高溶解低渗透；IV 类两者都低。「高溶解」= 最高剂量在 ≤ 250 mL 水里能溶完。纳米载体主要帮 <b>II 类和 IV 类</b>（溶不出来的药）。</div>
+<p><b>长效抗 HIV 纳米晶</b>：卡博特韦（cabotegravir）+ 利匹韦林（rilpivirine）纳米晶混悬液（Vocabria® / Rekambys®），肌注后在肌肉里形成储库慢慢释放，几周到几个月打一次，解决「服药疲劳（pill fatigue）」。只适合部分 API（看溶解度、半衰期、IC<sub>90</sub>）。</p>
+
+<h3 id="c2-4">2.4 控制分布：三代纳米载体<span class="en">Three generations of nanocarriers</span><span class="exam">高频</span></h3>
+<div class="tw"><table>
+<tr><th>代</th><th>去哪里</th><th>表面</th><th>原理</th><th>产品</th></tr>
+<tr><td>第一代</td><td>MPS 器官（肝、脾、骨髓）</td><td>裸表面</td><td>被调理 → Kupffer 细胞吞噬</td><td>Livatag®：多柔比星 PACA 纳米粒（200–300 nm），肝细胞癌；III 期 ReLive 试验耐受性好，但疗效只与现有最佳治疗相当</td></tr>
+<tr><td>第二代</td><td>肿瘤（被动靶向 passive targeting，靠 EPR）</td><td>PEG 化，「隐形」</td><td>调理减少 → 长循环 → 在渗漏血管处外渗</td><td>Doxil®（清除率 0.1 vs 游离药 45 L/h）；Abraxane®（白蛋白结合紫杉醇，130 nm）</td></tr>
+<tr><td>第三代</td><td>表达特定受体的细胞（主动靶向 active targeting）</td><td>PEG + 配体（ligand）</td><td>配体与受体特异识别</td><td>叶酸、转铁蛋白、RGD 肽等修饰的载体</td></tr>
+</table></div>
+<p><b>容易答浅的点</b>：</p>
+<ul>
+<li>PEG 化<b>不是「零吸附」</b>，而是改变了蛋白冠组成（如富集簇集蛋白 clusterin）。经典实验：未 PEG 化的 PHDCA 纳米粒几分钟内从血中消失、主要进肝；PEG-PHDCA 6 h 后血中仍有约 20%。</li>
+<li>EPR 只存在于<b>某些肿瘤</b>。</li>
+<li>Livatag® 除了在肝蓄积，还能让外排泵（efflux pump）饱和，帮助克服多药耐药（multidrug resistance）。</li>
+<li>Abraxane® 去掉了 Taxol® 里的聚氧乙烯蓖麻油（Cremophor EL）溶剂，耐受性更好，剂量可提高约 1.5 倍。</li>
+<li>角鲨烯前药：药物连上角鲨烯 → 自组装成约 100 nm 纳米粒 → 静注后被低密度脂蛋白（LDL）携带 → 经 LDL 受体进入高表达它的癌细胞（「内源性」靶向）。</li>
+</ul>
+<p class="how"><b>和 Legrand 的「五策略」怎么对应</b>：被动 / 常规 ↔ 第一代；隐形（stealth）↔ 第二代；靶向（targeted）↔ 第三代；触发（triggered，如 pH 敏感脂质体）和外部引导（externally guided，如磁性纳米粒）是 Legrand 额外加的两类。</p>
+
+<h3 id="c2-5">2.5 配体与受体，以及怎么证明是主动靶向<span class="en">Ligands and the control experiment</span></h3>
+<div class="tw"><table>
+<tr><th>配体（ligand）</th><th>受体 / 靶点（receptor）</th><th>靶细胞</th></tr>
+<tr><td>叶酸（folic acid）</td><td>叶酸受体（folate receptor）</td><td>癌细胞</td></tr>
+<tr><td>转铁蛋白、抗体 OX26 / 8D3</td><td>转铁蛋白受体（transferrin receptor, TfR）</td><td>脑内皮、癌细胞</td></tr>
+<tr><td>曲妥珠单抗（trastuzumab）</td><td>HER2</td><td>乳腺癌细胞</td></tr>
+<tr><td>EGF、西妥昔单抗（cetuximab）</td><td>表皮生长因子受体（EGFR）</td><td>癌细胞</td></tr>
+<tr><td>透明质酸（hyaluronic acid）</td><td>CD44</td><td>癌细胞</td></tr>
+<tr><td>RGD 肽</td><td>整合素（integrins）</td><td>肿瘤新生血管</td></tr>
+<tr><td>半乳糖（galactose）/ GalNAc</td><td>去唾液酸糖蛋白受体（ASGPR）</td><td>肝细胞</td></tr>
+<tr><td>A10 适配体（aptamer）</td><td>前列腺特异性膜抗原（PSMA）</td><td>前列腺癌细胞</td></tr>
+</table></div>
+<p><b>经典实验</b>：叶酸受体高表达的 KB 3-1 细胞对叶酸纳米粒摄取强；几乎不表达受体的 MCF-7 细胞摄取弱；没有叶酸的对照纳米粒在两种细胞里都弱 → 说明摄取依赖受体。</p>
+<div class="card"><h4>设计「证明受体介导」的实验：对照组清单（大题必考思路）</h4>
+<ul>
+<li>受体<b>阳性</b>细胞 vs 受体<b>阴性</b>细胞（KB 3-1 vs MCF-7）。</li>
+<li>有配体的纳米粒 vs <b>没有配体</b>的纳米粒。</li>
+<li>加大量<b>游离配体竞争</b>（free folate）：摄取应该下降。</li>
+<li><b>4 °C</b> 孵育：内吞需要能量，低温下摄取应该大幅下降。</li>
+<li>加<b>内吞抑制剂</b>（inhibitors）判断走哪条途径 <span class="tag t-db">补充</span>。</li>
+<li>核酸药物再加<b>乱序序列（scrambled siRNA）</b>对照，证明效果来自序列本身。</li>
+</ul></div>
+
+<h3 id="c2-6">2.6 进入细胞<span class="en">Mechanisms of cellular uptake</span><span class="exam">高频</span></h3>
+<div class="tw"><table>
+<tr><th></th><th>简单扩散（simple diffusion）</th><th>主动转运（active transport）</th></tr>
+<tr><td>谁走</td><td>小分子、亲脂</td><td>小分子，需要转运体（transporter）</td></tr>
+<tr><td>方向</td><td>顺浓度梯度</td><td>可以逆梯度，耗能</td></tr>
+<tr><td>能否饱和</td><td><b>不可饱和</b>，速率与浓度成正比（Fick 定律）</td><td><b>可饱和</b>（V<sub>max</sub>、K<sub>m</sub>）</td></tr>
+<tr><td>特异性</td><td>无</td><td>有；可被抑制；会竞争 → 药物相互作用</td></tr>
+</table></div>
+<p><b>纳米载体太大，不能扩散，主要靠内吞（endocytosis）</b>：</p>
+<div class="tw"><table>
+<tr><th>途径</th><th>关键分子</th><th>要点</th></tr>
+<tr><td>吞噬（phagocytosis）</td><td>肌动蛋白（actin）</td><td>只在专职吞噬细胞（巨噬细胞）；颗粒较大；依赖调理</td></tr>
+<tr><td>网格蛋白介导内吞（clathrin-mediated）</td><td>网格蛋白（clathrin）、发动蛋白（dynamin）</td><td>受体介导内吞的主途径：LDL、转铁蛋白、EGF</td></tr>
+<tr><td>小窝介导内吞（caveolae-mediated）</td><td>小窝蛋白（caveolin）、发动蛋白</td><td>内皮细胞丰富；叶酸、白蛋白、胆固醇；<b>非降解途径</b></td></tr>
+<tr><td>巨胞饮（macropinocytosis）</td><td>肌动蛋白</td><td>膜皱褶包裹大量胞外液</td></tr>
+</table></div>
+<p class="figgone"><b>［课件图略］</b>图 2-1　主要内吞途径（NM 课件第 51 张）。</p>
+<p><b>内吞之后去哪里</b>（决定药会不会被消化）：</p>
+<ul>
+<li><b>降解途径（degradative pathway）</b>：网格蛋白小泡、巨胞饮体 → 早期内体 → 晚期内体（酸化）→ 溶酶体（lysosome）。</li>
+<li><b>非降解途径（non-degradative pathway）</b>：小窝小泡 → 小窝体（caveosome）→ 高尔基体 / 内质网，可以避开溶酶体。</li>
+</ul>
+<p><b>表面性质的影响</b>：带电表面（经清道夫受体 scavenger receptors）或疏水表面 → 摄取↑、调理↑；亲水 PEG 表面且粒径 &lt; 100 nm → 调理↓；接抗体、甘露糖（mannose）→ 受体识别、摄取↑。</p>
+<div class="card warn"><h4>最容易丢分的一句：进入细胞 ≠ 进入胞质</h4>纳米载体靠内吞进来，先待在内体里；内体酸化、变成溶酶体后，核酸就被降解了。只有完成<b>内体逃逸（endosomal escape）</b>，药物才到达胞质。逃逸方法：pH 敏感脂质体（与内体膜融合）、阳离子聚合物纳米粒（破坏内体膜，常用「质子海绵效应 proton sponge effect」解释 <span class="tag t-db">补充</span>）、可电离脂质 LNP。</div>
+
+<h3 id="c2-7">2.7 基因递送<span class="en">Gene delivery</span><span class="exam">高频</span></h3>
+<div class="why"><b class="lab">先懂这个：几种核酸药</b>
+<ul>
+<li><b>阻断表达</b>：反义寡核苷酸（antisense oligonucleotides）；小干扰 RNA（small interfering RNA, siRNA）——在胞质里装进 RNA 诱导沉默复合物（RNA-induced silencing complex, RISC），切掉互补的 mRNA，这叫 RNA 干扰（RNA interference）。</li>
+<li><b>产生蛋白</b>：信使 RNA（messenger RNA, mRNA）——在胞质里被核糖体（ribosome）直接翻译，<b>不需要进细胞核</b>。需要进核的是 DNA（质粒、AAV 基因）。</li>
+</ul></div>
+<p><b>为什么核酸不能直接打</b>：分子大、带大量负电、亲水 → 过不了细胞膜；血里被核酸酶（nucleases）很快降解；被肾快速清除。所以需要纳米载体保护和递送：核酸 + 阳离子聚合物（如 PEI）→ 多聚复合物（polyplexes）；核酸 + 阳离子或可电离脂质 → 脂质复合物（lipoplexes）/ LNP。</p>
+<p><b>Davis 等（Nature 2010）</b>：含环糊精聚合物（cyclodextrin-containing polymer）的纳米粒，表面用金刚烷-PEG（隐形）和金刚烷-PEG-转铁蛋白（靶向），首次证明全身给药的靶向 siRNA 纳米粒在人体内产生 RNA 干扰（黑色素瘤里 RRM2 下降）。</p>
+<p><b>Patisiran（Onpattro®，2018）：第一个 siRNA 药</b>，治遗传性转甲状腺素蛋白淀粉样变性（hATTR）多发性神经病。机制七步（背下来）：</p>
+<ol>
+<li>LNP 入血后吸附载脂蛋白 E（apolipoprotein E, ApoE）。</li>
+<li>穿过肝窦（liver sinusoid）内皮的窗孔（fenestrations），进入 Disse 间隙。</li>
+<li>肝细胞上的 LDL 受体（LDLR）识别 ApoE，受体介导内吞。</li>
+<li>进入内体，pH 降到约 5。</li>
+<li>可电离脂质带正电，与内体膜作用，膜失稳。</li>
+<li>siRNA 释放到胞质，装进 RISC。</li>
+<li>转甲状腺素蛋白（TTR）mRNA 被降解 → TTR 蛋白减少。</li>
+</ol>
+<p class="figgone"><b>［课件图略］</b>图 2-2　Patisiran 的作用机制与 APOLLO 试验结果（NM 课件第 65 张）。</p>
+<p><b>mRNA-LNP</b>：PEG-脂质 + 胆固醇 + DSPC + 可电离脂质；每粒含 1–10 个 mRNA，在中央核心；mRNA 比 siRNA 更长、更容易降解。新冠 mRNA 疫苗从基因组公布（2020 年 1 月）到英国药品与保健品监管局（MHRA）批准（2020-12-02）不到一年。</p>
+<p>结论：约 80 个纳米药物已上市；纳米载体主要提高现有药物的耐受性（tolerance），并让核酸给药成为可能。</p>
+
+<h3 id="c2-8">2.8 读图的方法<span class="en">How to read a biodistribution figure</span></h3>
+<ol>
+<li><b>血中曲线</b>：下降很快（几分钟）= 被快速调理和清除（第一代，裸表面）；下降很慢 = PEG 隐形长循环（第二代）。</li>
+<li><b>肝、脾蓄积</b>：高 = MPS 摄取。</li>
+<li><b>肿瘤蓄积</b>：PEG 化后升高 = EPR（只在某些肿瘤）。</li>
+<li><b>配体的作用</b>：只有在受体阳性的肿瘤里，带配体的纳米粒才比不带的更多；受体阴性肿瘤里两者差不多。配体主要增加<b>细胞内化</b>，对肿瘤总蓄积的帮助有限。</li>
+<li><b>长循环 ≠ 效果好</b>：PEG 太多（如 5 mol%、长锚 C18）会挡住 ApoE 吸附和受体结合，也妨碍内体逃逸 → 沉默效果反而差（模拟卷 A 练习 1 的考点，课外称「PEG 困境 PEG dilemma」<span class="tag t-db">补充</span>）。</li>
+</ol>
+
+<h3 id="c2-9">2.9 纳米医学大题：答题框架与常见问法<span class="en">Answer framework</span></h3>
+<div class="card"><h4>答题框架</h4>
+<ol>
+<li><b>为什么要载体</b>：吸收（溶解度、稳定性）和分布（组织 → 细胞 → 亚细胞）。</li>
+<li><b>归代</b>：第一代 MPS / 第二代 PEG + EPR / 第三代配体，并举产品。</li>
+<li><b>读分布图</b>：血中 → 肝脾（MPS）→ 肿瘤（EPR，只在某些肿瘤）→ 配体只在受体阳性时加分。</li>
+<li><b>读摄取实验</b>：受体阴性细胞、游离配体竞争、4 °C、内吞抑制剂、乱序 siRNA。</li>
+<li><b>进入细胞</b>：扩散 / 转运体（小分子）vs 内吞（纳米），四条途径，小窝非降解。</li>
+<li><b>胞内</b>：进入细胞 ≠ 进入胞质；内体逃逸机制。</li>
+<li><b>核酸</b>：siRNA → RISC；mRNA → 核糖体，不入核；patisiran 七步。</li>
+</ol></div>
+<div class="tw"><table>
+<tr><th>老师可能这样问</th><th>答题要点</th></tr>
+<tr><td>这三种纳米粒分别属于哪一代？</td><td>裸表面 = 第一代；PEG = 第二代；PEG + 配体 = 第三代</td></tr>
+<tr><td>为什么 NP-A 几分钟内从血中消失？</td><td>调理 → Kupffer 细胞吞噬 → 肝蓄积</td></tr>
+<tr><td>配体修饰后肿瘤里只多了一点点，为什么？</td><td>到达肿瘤主要靠 EPR（被动）；配体主要提高进入细胞的量，且只在受体阳性肿瘤有效</td></tr>
+<tr><td>为什么 siRNA 要用纳米载体？</td><td>大、负电、亲水不能穿膜；核酸酶降解；肾清除</td></tr>
+<tr><td>ApoE 敲除小鼠里 LNP 失效，补回 ApoE 又恢复，说明什么？</td><td>摄取依赖 ApoE–LDLR（patisiran 机制）</td></tr>
+<tr><td>为什么希望可电离脂质在 pH 7.4 接近中性？</td><td>减少与血浆蛋白结合、聚集和毒性；在内体酸性下才带正电帮助逃逸</td></tr>
+<tr><td>把 siRNA 换成 mRNA 有什么不同？</td><td>mRNA 由核糖体翻译，不入核；更长、更易降解；目标是表达蛋白（评估表达量和持续时间）</td></tr>
+<tr><td>想不依赖 ApoE 直接靶向肝细胞？</td><td>接半乳糖 / GalNAc → ASGPR（第三代主动靶向）</td></tr>
+</table></div>
+<div class="card link"><h4>英文句子</h4>
+<ul class="en-s">
+<li>Nanocarriers act at two levels: they improve absorption (solubility, stability) and they control distribution to tissues, cells and subcellular compartments.</li>
+<li>First-generation nanocarriers are opsonised and taken up by the MPS; second-generation PEGylated carriers circulate longer and accumulate in some tumours by the EPR effect; third-generation carriers add a ligand for active targeting.</li>
+<li>Nanocarriers enter cells by endocytosis, not by diffusion; caveolae-mediated endocytosis is a non-degradative pathway.</li>
+<li>Cellular uptake is not cytosolic delivery: the nucleic acid must escape from the endosome before it is degraded in the lysosome.</li>
+<li>siRNA acts in the cytosol through RISC; mRNA is translated in the cytosol by ribosomes and does not need to enter the nucleus.</li>
+<li>Patisiran LNPs adsorb ApoE, cross the fenestrated sinusoidal endothelium and are taken up by hepatocytes through the LDL receptor.</li>
+</ul></div>
+<h2 id="ch3">第 3 章　A1 极性脂质（选择题补充）<span class="en">Part 1 · Physico-chemistry of polar lipids · F.-X. Legrand</span></h2>
+<p class="how">Small 分类、堆积参数、DPPC 相变、胆固醇、DSC/SAXS 已在第 1 章 1.1、1.2、1.6 讲过，那些是 A1 的核心考点。这里只补选择题里还会出现的几点。</p>
+<p><b>热致性 vs 溶致性（thermotropic vs lyotropic）</b>：</p>
+<ul>
+<li><b>热致性</b>作用于<b>疏水链</b>：链与链之间靠伦敦色散力（London dispersion forces）吸在一起；温度变化时链会「熔化」（固–液转变）或改变排列（同质多晶 polymorphism）。</li>
+<li><b>溶致性</b>作用于<b>极性头</b>：头基之间是排斥力（空间排斥、静电排斥、水合力 hydration force）；加水后头基水合，形成各种介晶相：层状相（lamellar, L<sub>α</sub>）、六方相（hexagonal, H）、海绵相（sponge, L<sub>3</sub>）、双连续立方相（bicontinuous cubic）。</li>
+</ul>
+<p><b>为什么不饱和脂肪酸熔点低</b>：顺式双键让链弯折，链与链排不紧，色散力变弱。同为 C18：硬脂酸（stearic, 18:0）69.6 °C &gt; 反油酸（elaidic, 18:1 trans）43.7 °C &gt; 油酸（oleic, 18:1 cis）16.3 °C &gt; 亚油酸（linoleic, 18:2）−5 °C &gt; 亚麻酸（linolenic, 18:3）−15 °C。反式双键的链仍接近伸直，所以熔点居中。</p>
+<p><b>WAXS（广角 X 射线散射）看链的排列</b>：凝胶相在 4.25 + 4.16 Å 有两个尖峰（链有序）；流体相变成约 4.4 Å 的一个宽峰（链无序）。SAXS 看层间距：DPPC 凝胶相 d = 62.7 Å，流体相 65.2 Å。</p>
+<p><b>几种重要脂质的形状 → 相</b>：PC 头大近圆柱 → 层状、脂质体；DOPE 头小 + 两条顺式不饱和链 → 倒锥 → 常温即 H<sub>II</sub>；单油酸甘油酯（monoolein）→ 双连续立方相、H<sub>II</sub>；溶血 PC 单链大头 → 圆锥 → 胶束。DOPE 与等量 PC 混合后，平均头基变大，P 降到双层范围 → 成双层。</p>
+<p><b>P 与 HLB 的对应</b>（Griffin 亲水亲油平衡值 hydrophilic–lipophilic balance）：P = 1/3 ↔ HLB 40；1/2 ↔ 20；1 ↔ 10；2 ↔ 2。P 越小越亲水。</p>
+<div class="card link"><h4>常见选择题陷阱</h4><ul>
+<li>主转变是 P<sub>β'</sub> → L<sub>α</sub>（约 41 °C）；L<sub>β'</sub> → P<sub>β'</sub> 是预转变（约 35 °C）。</li>
+<li>q 越大，d 越小（d = 2π/q）。</li>
+<li>胆固醇最先抹掉的是<b>预转变</b>，不是主转变。</li>
+<li>胆盐是 IIIB（高浓度结晶），皂和去污剂是 IIIA（高浓度液晶）。</li>
+</ul></div>
+
+<h2 id="ch4">第 4 章　A2 胶束增溶<span class="en">Part 1 · Micellar solubilisation · F.-X. Legrand</span></h2>
+<div class="line">一句话主线：表面活性剂（surfactant）超过临界胶束浓度（CMC）后形成胶束（micelle），胶束的疏水核能「装下」难溶药；增溶量与胶束量成正比（R<sub>mic</sub>）；但稀释到 CMC 以下就会失效，表面活性剂本身也有毒性风险。</div>
+
+<h3 id="c4-1">4.1 表面活性剂与 CMC<span class="en">Surfactants and the CMC</span><span class="exam">高频</span></h3>
+<p>这是课程官方给出的示例简答题，<b>一定要能用英文写出来</b>：</p>
+<div class="card link"><h4>What is a surfactant? What is the CMC?</h4>
+<p class="en-s">A surfactant is an amphiphilic molecule with a hydrophilic head and a hydrophobic tail. It adsorbs at interfaces and lowers the surface tension. Above the critical micelle concentration (CMC), the interface is saturated and the molecules self-assemble into micelles in the bulk, hiding their hydrophobic tails from water (hydrophobic effect). The CMC depends on temperature, electrolytes and co-solvents.</p></div>
+<div class="why"><b class="lab">为什么会有 CMC</b>　浓度很低时，表面活性剂优先跑到空气–水界面上站着（头朝水、尾朝空气），表面张力（surface tension, γ）因此下降。界面站满以后，再加进来的分子没地方站，只能在水里互相抱团，把尾巴藏起来——这就开始形成胶束。这个转折浓度就是 CMC。</div>
+<p><b>怎么测 CMC</b>：首选表面张力法（tensiometry）。以 γ 对 log C 作图：低浓度段 γ 不断下降，高浓度段 γ 不再变，两段直线的交点就是 CMC。恒温测；纯水 γ ≈ 73 mN/m，可以用来检查器皿是否被污染。</p>
+<p><b>胶束的性质</b>：动态的（单个分子只停留约 10<sup>−8</sup>–10<sup>−3</sup> 秒，不断与单体交换）；球形约 10–100 Å，伸长的约 100–1000 Å。</p>
+
+<h3 id="c4-2">4.2 三个特征点和温度效应<span class="en">CMC, Krafft point, cloud point</span><span class="exam">高频</span></h3>
+<div class="tw"><table>
+<tr><th>特征点</th><th>属于哪类</th><th>是什么</th><th>使用规则</th></tr>
+<tr><td>CMC</td><td>所有表面活性剂</td><td>开始形成胶束的浓度</td><td>用量必须 &gt; CMC</td></tr>
+<tr><td>Krafft 点（Krafft point）</td><td><b>离子型（ionic）</b></td><td>固体、单体、胶束三相共存的温度。低于它，单体溶解度太低，达不到 CMC，形不成胶束</td><td>在 Krafft 点<b>以上</b>用</td></tr>
+<tr><td>浊点（cloud point）</td><td><b>非离子型（non-ionic，PEG 头）</b></td><td>升温到某温度溶液变浑、分成两相</td><td>在浊点<b>以下</b>用</td></tr>
+</table></div>
+<p><b>为什么温度对两类的 CMC 作用相反</b>：</p>
+<ul>
+<li><b>离子型：升温 → CMC 升高</b>。升温让离子头基解离和水合增强，单体更容易溶在水里，不急着抱团。</li>
+<li><b>非离子型：升温 → CMC 降低</b>。升温让 PEG 头基脱水（dehydration），头变「小」、变疏水，更容易抱团。继续升温，a<sub>0</sub> 变小 → P 变大（联系第 1 章）→ 球形胶束伸长成巨型圆柱胶束 → 相分离变浑 = 浊点。降温可逆。</li>
+</ul>
+<p><b>非离子型命名 C<sub>i</sub>E<sub>j</sub></b>：i = 疏水链碳数，j = 环氧乙烷（ethylene oxide）单元数。j 越大（头越亲水）浊点越高；i 越大（尾越疏水）浊点越低。例：C<sub>8</sub>E<sub>4</sub> 浊点 42 °C。</p>
+<p><b>其他影响 CMC 的因素</b>：电解质（electrolyte）<b>降低</b>离子型的 CMC（盐屏蔽头基间的静电排斥，log CMC = a − b·C；敏感度：阴离子 ≈ 阳离子 &gt; 两性离子 &gt; 非离子）；共溶剂（co-solvent，乙醇、丙二醇）一般<b>升高</b> CMC（溶剂对尾巴更友好，抱团的动力变弱）。</p>
+
+<h3 id="c4-3">4.3 增溶的位置和体系辨析<span class="en">Where the solute goes; micelle vs microemulsion vs emulsion</span></h3>
+<p>溶质在胶束中的位置取决于极性：非极性 → 疏水核；两亲性 → 栅栏层（palisade layer，链与头交界处）；极性 → 表面吸附，或嵌在非离子型的 PEG 冠层。</p>
+<div class="tw"><table>
+<tr><th>体系</th><th>组分与相数</th><th>热力学稳定吗</th></tr>
+<tr><td>胶束溶液（micellar solution）</td><td>二元（表面活性剂 + 水），单相</td><td>稳定</td></tr>
+<tr><td>微乳（microemulsion）</td><td>三元（水 + 表面活性剂 + 油），单相，可双连续</td><td><b>稳定</b>，常可自发形成</td></tr>
+<tr><td>普通乳剂（macroemulsion）</td><td>两相</td><td>不稳定，需要输入能量，会聚并（coalescence）分层</td></tr>
+<tr><td>纳米乳（nanoemulsion）</td><td>高压均质得到纳米级液滴</td><td><b>通常不稳定</b>。纳米乳 ≠ 微乳</td></tr>
+</table></div>
+
+<h3 id="c4-4">4.4 溶解度曲线：R<sub>mic</sub> 的计算<span class="en">The solubility curve</span><span class="exam">高频</span></h3>
+<div class="formula">[TA]<sub>tot</sub> &lt; CMC：[S]<sub>sol</sub> = [S]<sub>aq</sub>　　[TA]<sub>tot</sub> &gt; CMC：[S]<sub>sol</sub> = [S]<sub>aq</sub> + R<sub>mic</sub> · ([TA]<sub>tot</sub> − CMC)<div class="sub">[S]<sub>aq</sub> = 药物本身的水溶解度；R<sub>mic</sub> = 摩尔增溶比（molar solubilisation ratio）= 胶束中溶质分子数 / 表面活性剂分子数 = 直线斜率</div></div>
+<div class="why"><b class="lab">怎么理解</b>　CMC 以下没有胶束，溶解度就是药物自己的水溶解度（平的一段）。CMC 以上，每多加一个表面活性剂分子都进入胶束，每个能「带」R<sub>mic</sub> 个药物分子，所以溶解度直线上升。拐点是有药物存在时的 CMC（CMC<sub>mixed</sub>）。<b>1/R<sub>mic</sub></b> = 增溶 1 个药物分子需要多少个表面活性剂分子。</div>
+<p class="figgone"><b>［课件图略］</b>图 4-1　溶解度曲线（MS 课件第 30 张）。</p>
+<p class="how"><b>课上的例题</b>：两性霉素 B（AmB）/ 米替福新（miltefosine, HePC）：CMC 约 11 µM，R<sub>mic</sub> = 0.0259 → 1/R<sub>mic</sub> = 1/0.0259 ≈ <b>39</b>，即约 39 个米替福新分子增溶 1 个 AmB 分子。<br><b>自己算一遍</b>：[S]<sub>aq</sub> = 0.01 mM，CMC = 1 mM，R<sub>mic</sub> = 0.05，[TA] = 21 mM → [S]<sub>sol</sub> = 0.01 + 0.05 × (21 − 1) = 1.01 mM。</p>
+<p>模型局限：完全不溶的溶质（如 1-辛醇）只在低浓度符合；本身有一定水溶性、会和单体作用的溶质（如苯）只在 CMC 以上才线性。</p>
+
+<h3 id="c4-5">4.5 药用表面活性剂与风险<span class="en">Pharmaceutical surfactants and their limits</span></h3>
+<div class="tw"><table>
+<tr><th>名称</th><th>要点</th></tr>
+<tr><td>脱氧胆酸钠（sodium deoxycholate）</td><td>胆盐，少数可药用的离子型；Fungizone® 用它分散 AmB</td></tr>
+<tr><td>聚山梨酯 20 / 80（polysorbate, Tween）</td><td>实为不同脂肪酸酯和不同 PEG 链长的混合物</td></tr>
+<tr><td>聚氧乙烯蓖麻油（Cremophor EL / RH40）</td><td>会萃取聚氯乙烯（PVC）输液袋里的增塑剂（plasticiser）：Sandimmun® IV、Taxol® → 改用玻璃或聚丙烯容器；有过敏风险</td></tr>
+<tr><td>维生素 E 聚乙二醇琥珀酸酯（TPGS）</td><td>「1000」指 PEG 分子量；既是表面活性剂又有维生素 E 活性</td></tr>
+</table></div>
+<p><b>多分散性（polydispersity）</b>：PEG 链长是一个分布，质谱相邻峰相差 44 Da（一个环氧乙烷单元）→ 批间差异。<b>安全风险</b>：注射部位刺激 / 坏死；抗 PEG 抗体（再次给药加速清除甚至过敏，与 ABC 同源）；容器–内容物不相容。</p>
+<div class="card"><h4>案例：Cordarone®（胺碘酮 amiodarone 注射液）<span class="exam">高频</span></h4>
+<p>每支：盐酸胺碘酮 150 mg + 聚山梨酯 80 300 mg + 苄醇 66.6 mg。说明书：500 mL 5% 葡萄糖里<b>少于 2 支</b>就不稳定，不得使用。</p>
+<p><b>为什么</b>：胺碘酮靠聚山梨酯 80 的胶束增溶。稀释太多，表面活性剂浓度可能掉到 CMC 以下，胶束解体，难溶的胺碘酮析出（precipitation）。这个例子同时说明：表面活性剂必须足量，但太多又增加毒性，要权衡。</p></div>
+
+<h2 id="ch5">第 5 章　A3 环糊精<span class="en">Part 1 · Cyclodextrins in pharmacy · F.-X. Legrand</span></h2>
+<div class="line">一句话主线：环糊精（cyclodextrin, CD）外面亲水、空腔相对疏水，能可逆地把药物装进空腔形成包合物（inclusion complex），从而增溶；但只有游离药（free drug）能被吸收，CD 过量反而降低疗效；不同 CD 能用的给药途径受监管限制；CD 本身也能当药。</div>
+
+<h3 id="c5-1">5.1 结构<span class="en">Structure</span><span class="exam">高频</span></h3>
+<p>淀粉经酶（CGTase）环化得到的环状低聚糖（cyclic oligosaccharide），由 α-1,4 连接的葡萄糖组成，形状像一个<b>截锥（truncated cone）</b>：外表面全是羟基 → 亲水；空腔内壁是 C–H 和糖苷氧 → 相对疏水。</p>
+<div class="tw"><table>
+<tr><th></th><th>α-CD</th><th>β-CD</th><th>γ-CD</th></tr>
+<tr><td>葡萄糖单元数</td><td>6</td><td>7</td><td>8</td></tr>
+<tr><td>25 °C 水溶解度（g/L）</td><td>145</td><td><b>18.5（最低）</b></td><td>232</td></tr>
+<tr><td>空腔直径（Å）</td><td>4.7–5.3</td><td>6.0–6.5</td><td>7.5–8.3</td></tr>
+<tr><td>空腔高度（Å）</td><td colspan="3">7.8（三者相同）</td></tr>
+</table></div>
+<p><b>为什么 β-CD 最难溶</b>（常考，原因不是分子量）：β-CD 结构刚性，C2、C3 位的仲羟基（secondary hydroxyl groups）之间形成一圈完整的分子内氢键网络（intramolecular hydrogen-bond network），水分子插不进去。<b>解决</b>：化学修饰打断氢键网络——羟丙基-β-CD（HP-β-CD）、磺丁基醚-β-CD（SBE-β-CD，Captisol®）、随机甲基化-β-CD（RM-β-CD）。取代度（degree of substitution, DS）= 每个葡萄糖单元平均被取代的羟基数。</p>
+
+<h3 id="c5-2">5.2 包合物<span class="en">Inclusion complex</span></h3>
+<ul>
+<li>CD 是主体（host），药物是客体（guest）；化学计量写作 <b>主:客（host:guest）</b>，如 1:1、2:1。</li>
+<li><b>驱动力</b>：① 空腔里的「高能水」被挤出来（release of high-energy water，最主要）；② 疏水相互作用和范德华力；③ 可能有氢键。</li>
+<li><b>没有共价键</b>：可逆的动态平衡，药物以原形存在，从空腔「滑出」就释放——这是它和前药（prodrug）的本质区别。</li>
+<li>好处：溶解度↑、挥发性↓、保护易氧化 / 水解 / 光解的药。但「包合一定更稳定」是错的，有的体系降解反而更快。</li>
+</ul>
+
+<h3 id="c5-3">5.3 相溶解度图与 K、CE 的计算<span class="en">Phase-solubility diagram (Higuchi–Connors)</span><span class="exam">高频</span></h3>
+<p><b>做法</b>：配约 5 个浓度的 CD 溶液，每个加过量药物，平衡至少 24 h，过滤后用 HPLC 测药物总溶解度，对 CD 浓度作图。</p>
+<div class="tw"><table>
+<tr><th>类型</th><th>曲线形状</th><th>含义</th></tr>
+<tr><td>A<sub>L</sub>（linear）</td><td>直线</td><td>形成可溶的 1:1 包合物，最理想</td></tr>
+<tr><td>A<sub>P</sub>（positive）</td><td>向上弯</td><td>形成对 CD 高阶的包合物（一个药结合两个 CD，2:1）</td></tr>
+<tr><td>A<sub>N</sub>（negative）</td><td>向下弯</td><td>CD 自缔合（self-association）或溶液性质变化，增溶效率下降</td></tr>
+<tr><td>B<sub>S</sub> / B<sub>I</sub></td><td>出现平台或下降 / 一开始就不升</td><td>包合物本身溶解度有限而沉淀 / 包合物不溶，应避免</td></tr>
+</table></div>
+<p class="figgone"><b>［课件图略］</b>图 5-1　相溶解度图与 K<sub>1:1</sub>、CE 公式（CD 课件第 22 张）。</p>
+<div class="formula">K<sub>1:1</sub> = slope / [S<sub>0</sub> · (1 − slope)]　　CE = slope / (1 − slope) = S<sub>0</sub> · K<sub>1:1</sub><div class="sub">S<sub>0</sub> = 药物固有溶解度（intrinsic solubility）；只用 A<sub>L</sub> 的直线段，slope &lt; 1。K 的单位是 M<sup>−1</sup>，<b>S<sub>0</sub> 必须先换成 M</b>；CE（络合效率 complexation efficiency）没有单位</div></div>
+<p class="how"><b>一步步算</b>：S<sub>0</sub> = 0.5 mM = 0.0005 M，slope = 0.20。<br>K = 0.20 / (0.0005 × 0.80) = 0.20 / 0.0004 = <b>500 M<sup>−1</sup></b>。<br>CE = 0.20 / 0.80 = <b>0.25</b>（也等于 0.0005 × 500）。如果你算出 250，就是忘了把 mM 换成 M。<br>CE = 0.25 的意思：已包合 CD : 游离 CD = 1 : 4，也就是每 5 个 CD 里约有 1 个装着药。</p>
+<p><b>为什么开发中常用 CE 而不是 K</b>：难溶药的 S<sub>0</sub> 很小，测不准，算出来的 K 可能离谱甚至为负；CE 只用斜率，不依赖 S<sub>0</sub>，更可靠，方便比较不同 CD。</p>
+<p><b>斜率 &gt; 1 的直线</b>：提示一个 CD 结合不止一个药物分子（不能用 1:1 公式）。</p>
+
+<h3 id="c5-4">5.4 本讲最重要的反直觉点：CD 不是越多越好<span class="en">Solubility–permeability trade-off</span><span class="exam">高频</span></h3>
+<div class="formula">C<sub>total</sub> = C<sub>free</sub> + C<sub>complexed</sub><div class="sub">CD 提高的是总表观溶解度（total apparent solubility）；能穿过生物膜的只有游离药 C<sub>free</sub></div></div>
+<ul>
+<li>CD 太少 → 增溶不够；</li>
+<li>CD 适量 → 溶解度和游离药浓度都提高，吸收改善；</li>
+<li><b>CD 太多 → 药物被「锁」在空腔里（过度包合 excessive complexation），游离浓度反而下降，吸收和疗效降低</b>。K 越大越容易锁死，越要控制用量。</li>
+</ul>
+<p>辅料功能四项：① 提高表观溶解度；② 提高溶出速率（主要用于 BCS II、IV 类）；③ 保护药物；④ 减少局部或全身副作用（如吡罗昔康 piroxicam 包合后减轻胃刺激）。</p>
+
+<h3 id="c5-5">5.5 监管与 CD 当药<span class="en">Regulation; CDs as active ingredients</span></h3>
+<ul>
+<li>欧洲药品管理局（EMA）：不是所有 CD 都能用于所有途径。<b>β-CD 不能注射（肾毒性 nephrotoxicity）</b>；注射只用 α-CD、HP-β-CD、SBE-β-CD；口服最宽松（CD 几乎不被吸收）；RM-β-CD 用于鼻用、眼用。</li>
+<li>美国 FDA 辅料数据库按途径列出最大日暴露量：注射用量（SBE-β-CD 静注最高 19 200 mg）远大于口服（β-CD 片剂 133 mg）。</li>
+<li><b>舒更葡糖钠（sugammadex, Bridion®）</b>：第一个作为活性药物的 CD（修饰的 γ-CD）。在血里以 1:1 包合罗库溴铵（rocuronium）、维库溴铵（vecuronium）等肌松药，让它们无法作用于受体，从而逆转麻醉中的肌松。<b>纯超分子机制，不作用于任何受体</b>。</li>
+<li>Adrabetadex（HP-β-CD）：C 型尼曼-匹克病，动员胆固醇；尚未获批。Spexotras®：曲美替尼（trametinib）口服液，用 SBE-β-CD 增溶。</li>
+</ul>
+<div class="card link"><h4>胶束 vs 环糊精（简答题常问比较）</h4>
+<div class="tw"><table><tr><th></th><th>胶束（micelle）</th><th>环糊精（CD）</th></tr>
+<tr><td>结构</td><td>表面活性剂自组装的动态聚集体，疏水核</td><td>单个环状分子，空腔</td></tr>
+<tr><td>机制</td><td>药物进入核心或栅栏层，浓度必须 &gt; CMC</td><td>1:1 主客体包合，可逆，无共价键</td></tr>
+<tr><td>定量参数</td><td>CMC、R<sub>mic</sub></td><td>K<sub>1:1</sub>、CE</td></tr>
+<tr><td>主要风险</td><td>稀释到 CMC 以下析出（Cordarone®）；表面活性剂毒性</td><td>过量包合降低游离药；给药途径受限（β-CD 不注射）</td></tr>
+</table></div></div>
+<h2 id="ch6">第 6 章　B1 药物递送与生物屏障（Ponchel）<span class="en">Part 1 · Drug delivery &amp; biological barriers · G. Ponchel</span></h2>
+<div class="line">一句话主线：药物必须结合受体（receptor）才起效，但从给药部位到受体要跨过一连串屏障，每一步都有损失。化学家改分子，制剂学家改递送方式，两者都要先找到<b>限速步骤（rate-limiting step）</b>。</div>
+
+<h3 id="c6-1">6.1 起点：受体结合与「跨栏赛」<span class="en">Receptor binding and the five processes</span></h3>
+<p>Ehrlich：「Corpora non agunt nisi fixata」——药物不与受体结合就不起作用。可逆结合 D + R ⇌ DR，<b>解离常数 K<sub>D</sub> = k<sub>off</sub> / k<sub>on</sub></b>，K<sub>D</sub> 越低亲和力（affinity）越高。例：伊马替尼（imatinib）K<sub>D</sub> = 1 nM。K<sub>D</sub> 从 100 nM 降到 1 nM = 亲和力提高 100 倍。</p>
+<p><b>药物在体内要经历五个连续过程</b>：① 给药部位的理化过程（崩解 disintegration、溶出 dissolution，必须先溶解才能跨膜）；② 跨越生物屏障（上皮、血管内皮、靶细胞膜、细胞器膜）；③ 在血液和淋巴中分布；④ 被体液稀释；⑤ 与生物组分相互作用（血浆蛋白结合、代谢酶、非靶受体）。<b>限速步骤</b> = 整条链中最慢、最限制总效率的那一步（瓶颈 bottleneck），制剂策略要针对它。</p>
+<p><b>口服药的路径与三处损失</b><span class="exam">高频</span>：胃肠道腔（GI lumen）→ 肠上皮（intestinal epithelium）→ 门静脉（portal vein）→ 肝 → 体循环（systemic circulation）。损失在：① 吸收不完全（溶不出、透不过）；② 肠道代谢与外排（CYP3A4、P-gp）；③ 肝首过代谢（hepatic first-pass metabolism）。<span class="tag t-db">补充</span> 常写成 F = F<sub>abs</sub> × F<sub>gut</sub> × F<sub>hep</sub>。</p>
+
+<h3 id="c6-2">6.2 跨膜转运<span class="en">Transmembrane transport</span><span class="exam">高频</span></h3>
+<ul>
+<li><b>细胞旁路（paracellular route）</b>：从细胞之间的紧密连接（tight junctions）走，孔径只有约 3–5 Å、面积不到 0.1%，效率极低。</li>
+<li><b>跨细胞途径（transcellular route）</b>：穿过细胞本身，是多数口服药的主要途径。</li>
+<li><b>被动扩散（passive diffusion）</b>：服从 Fick 定律，由浓度差驱动，不耗能。体内血流不断把吸收的药带走，接收侧浓度一直很低（漏槽条件 sink condition），所以吸收能持续。</li>
+<li><b>主动转运（active transport）</b>：耗能，可逆梯度。ATP 结合盒（ABC）转运体如 <b>P-糖蛋白（P-glycoprotein, P-gp）</b>、BCRP、MRP 是<b>外排泵（efflux pumps）</b>：把已经进入肠上皮的药物泵回肠腔，是口服生物利用度低的重要原因。</li>
+</ul>
+<div class="formula">dC/dt = K · S · (C<sub>1</sub> − C<sub>2</sub>)<div class="sub">Fick 定律：K 表观渗透常数，S 膜面积，C<sub>1</sub> − C<sub>2</sub> 膜两侧浓度差</div></div>
+<div class="why"><b class="lab">先懂这个：pH-分配假说（pH-partition hypothesis）</b>　只有<b>不带电（非解离型 unionised）</b>的分子才能溶进细胞膜的脂质层、被动穿过去。弱酸（weak acid）在酸性环境里不容易解离（保持中性），所以在胃（pH 1–2）里非解离比例高；弱碱（weak base）在偏碱的环境里保持中性，所以在小肠（pH 6–7.5）里非解离比例高。<b>但实际吸收大多仍在小肠</b>，因为小肠面积和停留时间大得多。</div>
+<p><b>影响通透性的四个分子性质</b>：分子量（MW &gt; 500–1000 Da 时口服 F 迅速降到 5% 以下）；解离度（见上）；脂溶性 log P（与吸收呈 S 形关系：太低进不了膜，太高又溶不出来）；氢键供体 / 受体数（氢键越多越难脱掉水进入膜）。</p>
+<div class="card"><h4>Lipinski 五规则（Rule of Five, 1997）</h4>
+MW ≤ 500；log P ≤ 5；氢键供体（H-bond donors）≤ 5；氢键受体（acceptors）≤ 10。<br><b>局限</b>：只适用于靠被动扩散吸收的小分子；依赖主动转运的抗菌药（氨基糖苷、大环内酯、β-内酰胺）常违反它，却口服有效。</div>
+<p><b>体外模型</b>：Caco-2 细胞（人结肠腺癌细胞）在 Transwell 膜上形成极化单层，是口服吸收的标准模型；与分泌黏液的 HT29 共培养可模拟黏液层；Ussing 室（Ussing chamber）用离体肠黏膜测通量和跨上皮电阻（TEER）。</p>
+<p><b>经典案例</b>：沙奎那韦（saquinavir）口服 F 只有 4–8%，三个原因叠加：水溶性极低 + P-gp 底物（Caco-2 外排比 = 4）+ CYP3A4 首过代谢 → 说明瓶颈可能不止一个。紫杉醇：P-gp 敲除小鼠口服 AUC 和 C<sub>max</sub> 增加几十倍 → 证明 P-gp 是主要障碍。</p>
+
+<h3 id="c6-3">6.3 血管内皮与血脑屏障<span class="en">Endothelium and the BBB</span></h3>
+<p>血管内皮三型（与 LC 同一主题）：连续型（continuous，脑、肺，最严密）→ 有孔型（fenestrated）→ 不连续型（discontinuous，最通透）。</p>
+<p><b>血脑屏障（blood–brain barrier, BBB）</b>：超致密紧密连接、几乎没有胞饮小泡，外面有周细胞（pericytes）和星形胶质细胞终足（astrocyte end-feet）；挡住 98% 以上的小分子和几乎全部生物大分子。</p>
+<ul>
+<li><b>经验规则</b>：<b>小、亲脂、不带电</b>（small, lipophilic, unionised）的分子较容易被动通过；还要看它是不是外排泵的底物。</li>
+<li>其他入脑途径：载体转运（GLUT1、LAT1）；<b>受体介导跨胞吞（receptor-mediated transcytosis, RMT）</b>——接上抗转铁蛋白受体抗体等配体「搭便车」；吸附介导跨胞吞（AMT，阳离子分子）。P-gp、BCRP 外排是入脑最大障碍之一。</li>
+<li>物理方法：聚焦超声（focused ultrasound）+ 微泡（microbubbles）可以暂时、可逆地打开 BBB。</li>
+<li>细胞药：间充质干细胞（MSC，15–30 µm）静注后大部分被肺毛细血管截留（肺首过）。</li>
+</ul>
+
+<h3 id="c6-4">6.4 药动学曲线：F 和 k<sub>a</sub> 怎么改变曲线<span class="en">Pharmacokinetics</span><span class="exam">高频</span></h3>
+<div class="why"><b class="lab">先懂这几个词</b>
+<ul>
+<li><b>生物利用度（bioavailability, F）</b>：给的药里，最终有多少比例进入体循环。静注 F = 100%。</li>
+<li><b>C<sub>max</sub></b>：血药浓度最高值；<b>t<sub>max</sub></b>：到达最高值的时间；<b>AUC</b>（曲线下面积 area under the curve）：总暴露量，和进入体内的总药量成正比。</li>
+<li><b>k<sub>a</sub></b>（吸收速率常数）：吸收有多快；<b>k<sub>e</sub></b>（消除速率常数）：清除有多快；<b>V</b>（分布容积）。</li>
+</ul></div>
+<div class="formula">C(t) = F·D·k<sub>a</sub> / [V(k<sub>a</sub> − k<sub>e</sub>)] · (e<sup>−k<sub>e</sub>t</sup> − e<sup>−k<sub>a</sub>t</sup>)<div class="sub">一室模型、口服（one-compartment, extravascular）</div></div>
+<div class="tw"><table>
+<tr><th>改变</th><th>C<sub>max</sub></th><th>t<sub>max</sub></th><th>AUC</th><th>曲线看起来</th></tr>
+<tr><td><b>F 下降</b></td><td>同比例下降</td><td><b>不变</b></td><td>同比例下降</td><td>只变矮，峰位不动</td></tr>
+<tr><td><b>k<sub>a</sub> 下降</b>（吸收变慢）</td><td>下降</td><td><b>推迟</b></td><td>不变（F 不变时）</td><td>变矮又右移、变平</td></tr>
+<tr><td>k<sub>a</sub> 增大</td><td>升高（可能超过中毒浓度）</td><td>提前</td><td>不变</td><td>变高又左移</td></tr>
+</table></div>
+<p><b>剂型能改什么</b>：剂型（dosage form）能改 <b>F 和 k<sub>a</sub></b>；V 和 k<sub>e</sub> 由药物和患者决定，剂型改不了。</p>
+<div class="formula">F = (AUC<sub>po</sub> / D<sub>po</sub>) / (AUC<sub>iv</sub> / D<sub>iv</sub>)　　t<sub>1/2</sub> = ln2 / k<sub>e</sub> = 0.693 / k<sub>e</sub><div class="sub">例：口服 50 mg，AUC 30；静注 10 mg，AUC 15 → F = (30/50) / (15/10) = 0.6 / 1.5 = 40%</div></div>
+<p><b>PPT 模拟曲线（第 49–52 张）</b>：t<sub>1/2</sub> = 12 h 不变，图里画了最低有效浓度和最低中毒浓度两条线。① 只改 k<sub>a</sub>（吸收半衰期 1、4、8 h）：越慢越矮越晚，太慢可能达不到有效浓度；② 只改 F（33%、66%、100%）：C<sub>max</sub> 与 F 成正比，t<sub>max</sub> 不变。</p>
+<p><b>血浆蛋白结合</b>（白蛋白 albumin、α1-酸性糖蛋白）：降低游离药浓度，也像血管内的储库；两药竞争同一位点可发生置换型相互作用，游离浓度骤升可能中毒。器官血流：肝约占心输出量 25%、肾约 20%、脑约 15%。</p>
+
+<h3 id="c6-5">6.5 两大策略与控释系统<span class="en">Chemist vs formulator; controlled release</span></h3>
+<p><b>化学家策略</b>：改分子（虚拟筛选、Ro5 过滤、调 log P、成盐 salt formation、前药 prodrug）。<b>制剂学家策略</b>：不改结构，改物理形式和辅料：溶出障碍 → 晶型、微粉化 / 纳米化、自微乳（SMEDDS）、无定形固体分散体（ASD）；外排障碍 → 抑制 P-gp 的辅料、吸收促进剂；靶向障碍 → PEG 脂质体（EPR）、配体（RMT）。</p>
+<div class="tw"><table>
+<tr><th>控释类型（controlled release）</th><th>机制</th><th>要点</th></tr>
+<tr><td>扩散控制：储库型（reservoir）/ 骨架型（matrix）</td><td>聚合物膜包药芯 / 药分散在聚合物骨架里</td><td>储库型理论上可零级释放</td></tr>
+<tr><td>溶剂控制：渗透泵（osmotic pump）/ 溶胀型</td><td>半透膜内外渗透压差推药出来 / 聚合物溶胀成凝胶层</td><td>渗透泵释放速率与药物性质无关 → <b>零级释放（zero-order）</b></td></tr>
+<tr><td>化学控制：生物可降解 / 侧链型</td><td>聚合物链断裂（如 PLGA 水解）/ 药–聚合物共价键被酶切</td><td>后者就是靶向前药的思路</td></tr>
+</table></div>
+<p><b>经皮贴剂（transdermal patch）</b>：角质层（stratum corneum）当限速膜 → 近零级释放、绕开肝首过、峰谷波动小。例：炔雌醇贴剂 Ortho Evra® 一贴约 7 天，血药浓度是平台；口服片每天一个尖峰，呈锯齿状。</p>
+
+<h3 id="c6-6">6.6 黏膜黏附与纳米递送<span class="en">Mucoadhesion and nanodelivery</span></h3>
+<div class="formula">稳态通量（flux）= P<sub>app</sub> × C × S<div class="sub">P<sub>app</sub> 表观渗透系数；C 膜表面的游离溶解药物浓度；S 有效接触面积</div></div>
+<p><b>黏膜黏附（mucoadhesion）为什么能提高吸收</b>：卡波姆（carbomer）、壳聚糖（chitosan）等聚合物链与黏蛋白（mucin）缠在一起，抵抗肠蠕动冲刷，在膜旁形成局部药库 → 同时提高 C、增大 S、延长停留时间。例：紫杉醇环糊精黏附纳米粒使口服 F 从约 0–5% 提到 80%（CD 还抑制 P-gp）。</p>
+<p><b>肠道微贴片（Teutonico &amp; Ponchel）</b>：3D 打印的三层小贴片：背衬层（backing）+ 黏附载药层 + 可去除的 pH 敏感保护层。单向贴在肠黏膜上，局部浓度高、不被肠液稀释。大鼠体内亮丙瑞林（leuprolide）贴片组更长时间维持在治疗窗内。</p>
+<p><b>口服胰岛素纳米粒</b>：口服纳米粒组血清胰岛素峰较低、较晚，但持续更久。<b>双重药动学（dual PK）</b>：PK1 = 游离药自己的动力学；PK2 = 载体的动力学（取决于粒径、电荷、调理）；药物从 PK2 释放后转入 PK1。</p>
+<div class="card link"><h4>英文句子</h4><ul class="en-s">
+<li>The rate-limiting step is the slowest step of the delivery chain; the formulation strategy must target it.</li>
+<li>According to the pH-partition hypothesis, only the unionised form is lipophilic enough to cross membranes by passive diffusion.</li>
+<li>A dosage form can change F and k<sub>a</sub>, but not V and k<sub>e</sub>, which depend on the drug and the patient.</li>
+<li>P-glycoprotein is an efflux pump that sends absorbed drug back into the intestinal lumen and lowers oral bioavailability.</li>
+</ul></div>
+
+<h2 id="ch7">第 7 章　C 药物 3D 打印（Annereau）<span class="en">Part 1 · 3D printing of medicines · M. Annereau (Gustave Roussy)</span></h2>
+<div class="line">一句话主线：工业制剂是为「平均患者」大批量设计的；3D 打印（three-dimensional printing, 3DP）让我们为<b>这一个患者</b>设计剂量（dose）、形状和释放（release）。考试主要考三件事：三个核心思想、各技术的区别、医院半固体挤出（SSE）案例。</div>
+
+<h3 id="c7-1">7.1 为什么要打印、三个核心思想<span class="en">Why print medicines</span><span class="exam">高频</span></h3>
+<p>依从性（adherence）差代价巨大：法国 2015 年 325 亿欧元药品消费中约 90 亿为额外成本。优先人群：儿科、老年人（多重用药 polypharmacy、吞咽困难 dysphagia）、窄治疗指数药物、罕见病。</p>
+<div class="card gold"><h4>三个核心思想（必背）</h4><ol>
+<li><b>一批可以只有一个单位（batch of one, n = 1）</b>：压片（tableting）要几千片才划算，打印机一次只做一片也合理。</li>
+<li><b>文件取代模具（the file replaces the mould）</b>：改剂量只需改数字文件，不需要新的冲头和模具。</li>
+<li><b>几何即辅料（geometry is an excipient）</b>：同一种墨水（ink），打印成不同形状、不同填充密度（infill density），就得到不同的释放速率。</li>
+</ol></div>
+<p>由此得到四个制剂杠杆：按需剂量（dose on demand）、形状驱动释放（shape-driven release）、定制复方（polypill，一片含多个 API）、可接受性（acceptability：口味、形状、颜色）。</p>
+
+<h3 id="c7-2">7.2 数字链与切片参数<span class="en">Digital chain and slicing parameters</span></h3>
+<p><b>数字链（digital chain）</b>：墨水配制（ink formulation）→ 计算机辅助设计（CAD）→ STL 文件 → 切片软件（slicer）→ G-code（机器指令）→ 打印。</p>
+<div class="formula">剂量（dose）= 墨水浓度（ink concentration）× 打印质量（printed mass）<div class="sub">例：墨水 20 mg/g，要 5 mg → 打印 5 ÷ 20 = 0.25 g。SSE 中打印质量与体积呈线性，所以「改体积 = 改剂量」</div></div>
+<div class="tw"><table>
+<tr><th>切片参数</th><th>作用</th></tr>
+<tr><td>层高（layer height）</td><td>分辨率与打印时间的折中</td></tr>
+<tr><td><b>填充密度 / 图案（infill density / pattern）</b></td><td>决定孔隙率，是<b>控制崩解和溶出的主要杠杆</b>：填充越高越致密，释放越慢</td></tr>
+<tr><td>周边 / 外壳（perimeters / shells）</td><td>外层越厚，扩散屏障越厚，滞后时间越长</td></tr>
+<tr><td>挤出宽度与流量（extrusion width, flow）</td><td>决定实际沉积质量 → 决定剂量</td></tr>
+<tr><td>速度（speed）</td><td>影响剪切和材料在喷嘴中的停留时间</td></tr>
+<tr><td>温度（temperature）</td><td>API 热降解的头号嫌疑</td></tr>
+</table></div>
+
+<h3 id="c7-3">7.3 技术家族<span class="en">Technology families</span><span class="exam">高频</span></h3>
+<div class="tw"><table>
+<tr><th>技术</th><th>原料 / 能量</th><th>要点</th></tr>
+<tr><td>熔融沉积成型（fused deposition modelling, FDM）</td><td>载药丝材（filament）/ 加热喷嘴 150–220 °C</td><td><b>两步</b>：先热熔挤出（hot-melt extrusion, HME）制丝，再打印 → API 经受<b>两次热应力</b>。丝材有机械窗口（太脆会断、太软会弯）；增塑剂 PEG、柠檬酸三乙酯。发表最多，临床极少</td></tr>
+<tr><td>直接粉末挤出（direct powder extrusion, DPE）</td><td>粉末 / 加热螺杆</td><td>省去制丝；含量均匀度取决于粉末混合</td></tr>
+<tr><td><b>半固体挤出（semi-solid extrusion, SSE）</b></td><td>膏体 / 凝胶，加压，少热或无热</td><td><b>医院首选</b>：适合热敏 API、高载药量；一次性墨盒无交叉污染；剂量由体积决定。局限：分辨率低、需干燥、水分和微生物风险</td></tr>
+<tr><td>熔融挤出沉积（melt extrusion deposition, MED）</td><td>连续熔体，工业计量</td><td>Triastek 公司（多次获 FDA IND）；尚无上市；卖点是几何控制释放时间和部位</td></tr>
+<tr><td>光聚合（SLA / DLP / CLIP）</td><td>光固化树脂</td><td>分辨率极高（微针）；问题是<b>残留单体和光引发剂（photoinitiator）的毒性</b></td></tr>
+<tr><td>选择性激光烧结（SLS）</td><td>激光烧结粉末（需加吸收剂如 Candurin®）</td><td>无溶剂、多孔，可做口崩片；局部热应力，设备贵</td></tr>
+<tr><td><b>粘合剂喷射（binder jetting）</b></td><td>液体粘合剂喷到粉床上，冷工艺</td><td><b>Spritam®</b>（左乙拉西坦 levetiracetam，Aprecia ZipDose®，2015/16 获 FDA 批准，治癫痫）：<b>第一个也是唯一上市的 3D 打印药</b>；孔隙极高，一口水几秒崩解；脆碎度高</td></tr>
+<tr><td>喷墨打印（inkjet）</td><td>皮升液滴</td><td>剂量 = 液滴数，微克级精度</td></tr>
+</table></div>
+<p class="figgone"><b>［课件图略］</b>图 7-1　挤出类：一个原理四种变体（3D 课件第 29 页）。目前真正用于治疗患者的是挤出类。</p>
+<p><b>为什么医院选 SSE 而不选 FDM</b>（简答高频）：FDM 要高温两次（HME 制丝 + 喷嘴），热敏药物会降解，丝材的机械性能也难调；SSE 在室温或略高温度下挤出膏体，载药量高，墨盒一次性不会交叉污染，改剂量只要改打印体积，正好符合「快速为个体做剂量」的医院需求。</p>
+
+<h3 id="c7-4">7.4 SSE：流变学就是处方<span class="en">Rheology is the formulation</span><span class="exam">高频</span></h3>
+<div class="why"><b class="lab">先懂这个</b>　SSE 墨水像牙膏：挤的时候要能流出来，挤出来后要能站住、一层层叠上去。这三件事对应三个流变性质。<b>牛顿流体（Newtonian fluid）</b>（如水、蜂蜜）黏度不随受力改变，做不到「挤时稀、停下稠」，所以不能用。</div>
+<div class="tw"><table>
+<tr><th>可打印性要求</th><th>为什么需要</th><th>怎么测</th></tr>
+<tr><td>剪切变稀（shear-thinning）</td><td>在针头里受剪切时变稀、能流出；沉积后又变稠</td><td>流动曲线（flow curve：黏度 vs 剪切速率）</td></tr>
+<tr><td>屈服应力（yield stress）</td><td>在自重和上层重量下保持形状。太低会塌、滴漏；太高会堵针</td><td>振幅扫描（amplitude sweep），看 G′ 与 G″ 的交点</td></tr>
+<tr><td>结构恢复（structural recovery，触变性 thixotropy）</td><td>出针后要很快重新变稠，才能叠层</td><td>三段触变测试（3ITT）</td></tr>
+</table></div>
+<div class="formula">η = K · γ̇<sup>n−1</sup>（幂律模型 power-law）<div class="sub">n &lt; 1 剪切变稀；n = 1 牛顿流体。静止时 G′（储能模量）&gt; G″（损耗模量）表示以弹性为主，层能自支撑</div></div>
+<p class="figgone"><b>［课件图略］</b>图 7-2　半固体挤出（SSE）原理（3D 课件）。</p>
+<p>质量源于设计（Quality by Design, QbD）：目标产品质量概况（QTPP）→ 关键质量属性（CQA）、关键物料属性（CMA）、关键工艺参数（CPP）→ 用实验设计（DoE）确定设计空间（design space）。</p>
+
+<h3 id="c7-5">7.5 Gustave Roussy 的两个医院案例<span class="en">Two hospital cases</span><span class="exam">高频</span></h3>
+<div class="grid2">
+<div class="card"><h4>复方新诺明软糖（SMX + TMP）</h4>
+<p><b>问题</b>：儿童吞不下片剂，又拒绝混悬液的味道。</p>
+<p><b>打印</b>：40 °C、18 G 针头、20 mm/s、椭圆形、20% 填充；墨水室温变硬、冷藏稳定；软糖 15 min 内释放 &gt; 75%。第一版 200 mg SMX + 40 mg TMP，治疗 20 名患者。</p>
+<p><b>改进</b>：两个 API 激活同一个苦味受体 <span class="oral">（口述）</span> → 用双打印头分开打印，做成 400 mg 双层「马卡龙」；2025 年 4 月起已治疗 60 余名患者。</p></div>
+<div class="card"><h4>环磷酰胺（cyclophosphamide）打印片</h4>
+<p><b>药物特点</b>：烷化剂、BCS 1 类、味苦、怕水解和热、职业暴露等级 OEB 4。</p>
+<p><b>需求</b>：WHO 要求 5 mg 间隔的小剂量、1 年稳定；市售只有 50 mg 片，口服液只稳定 30 天。</p>
+<p><b>打印</b>：27 °C、18 G、10% 填充；片重 50–400 mg，含 10% CPA（→ 5–40 mg）。质量标准：含量均匀度 AV ≤ 15；10 min 溶出 ≥ 90%。</p>
+<p><b>改进</b>：安慰剂–药–安慰剂三明治结构掩盖苦味。</p></div>
+</div>
+<p><b>两个案例的共同逻辑</b>：找到市售剂型解决不了的临床问题（吞咽、口味、剂量太粗、稳定性太短）→ 用 SSE 调剂量和形状 → 用质量标准证明合格 → 再用几何（双层、三明治）解决口味问题。这正是「几何即辅料」。</p>
+
+<h3 id="c7-6">7.6 法规与局限<span class="en">Regulation and limits</span></h3>
+<ul>
+<li><b>英国</b>：2025 年 7 月首个床旁制造（point-of-care, POC）法规框架；中心–辐射模式（hub-and-spoke）：<b>hub 承担法规责任</b>，spoke 负责生产并回传质控数据。</li>
+<li><b>法国</b>：没有专门的法律地位，归入医院制剂 / 处方制剂（préparations hospitalières / magistrales，良好配制规范 BPP 2023），且只在没有合适市售药时使用。</li>
+<li><b>欧盟</b>：含活细胞的生物打印（bioprinting）归入先进治疗药品（ATMP）。</li>
+<li>2019：第一个儿科打印临床（异亮氨酸，SSE，枫糖尿症 MSUD）。</li>
+</ul>
+<p><b>为什么 3D 打印不能取代工业生产</b>：替代不了 ① 压片的产能；② 药师的处方审核；③ <b>批放行（batch release）</b>：一人一剂不能抽样做破坏性检测，只能靠在线无损检测；④ 临床证据。老师结论：「3D 打印不是个体化医疗的未来，它已经在发生。」</p>
+<div class="card link"><h4>英文句子</h4><ul class="en-s">
+<li>3D printing rests on three ideas: a batch can be a single unit, the digital file replaces the mould, and geometry acts as an excipient.</li>
+<li>Hospitals prefer semi-solid extrusion because it works at low temperature, allows high drug loading, uses single-use cartridges and sets the dose by the printed volume.</li>
+<li>A printable SSE ink must be shear-thinning, have a yield stress and recover its structure quickly after extrusion; a Newtonian fluid cannot do this.</li>
+</ul></div>
+<h2 id="app1">附录 A　所有公式（会怎么考）<span class="en">All formulas</span></h2>
+<div class="tw"><table>
+<tr><th>公式</th><th>怎么用</th><th>讲</th></tr>
+<tr><td>P = v / (a<sub>0</sub>L)</td><td>&lt; 1/3 胶束；1/3–1/2 H<sub>I</sub>；1/2–1 囊泡；≈ 1 层状；&gt; 1 H<sub>II</sub></td><td>PL</td></tr>
+<tr><td>d = 2π / q（2d sin θ = nλ）</td><td>SAXS 层间距；q 小 d 大；峰比 1:2:3 层状，1:√3:2 六方</td><td>PL</td></tr>
+<tr><td>[S]<sub>sol</sub> = [S]<sub>aq</sub> + R<sub>mic</sub>([TA] − CMC)</td><td>斜率 = R<sub>mic</sub>；1/R<sub>mic</sub> = 增溶 1 个药物需要的表面活性剂分子数（AmB/HePC ≈ 39）</td><td>MS</td></tr>
+<tr><td>log CMC = a − b·C</td><td>加盐使离子型 CMC 降低</td><td>MS</td></tr>
+<tr><td>K<sub>1:1</sub> = slope / [S<sub>0</sub>(1 − slope)]</td><td>S<sub>0</sub> 用 M；单位 M<sup>−1</sup></td><td>CD</td></tr>
+<tr><td>CE = slope / (1 − slope) = S<sub>0</sub>·K</td><td>无单位；不依赖 S<sub>0</sub> 的测量</td><td>CD</td></tr>
+<tr><td>C<sub>total</sub> = C<sub>free</sub> + C<sub>complexed</sub></td><td>只有游离药能跨膜</td><td>CD</td></tr>
+<tr><td>EE% = 包封药 / 总药 × 100；药脂比 = 包封药 / 脂质</td><td>先减去游离药</td><td>LC</td></tr>
+<tr><td>K<sub>D</sub> = k<sub>off</sub> / k<sub>on</sub></td><td>越低亲和力越高</td><td>DB</td></tr>
+<tr><td>dC/dt = K·S·(C<sub>1</sub> − C<sub>2</sub>)</td><td>Fick 定律，被动扩散</td><td>DB</td></tr>
+<tr><td>Flux = P<sub>app</sub>·C·S</td><td>黏膜黏附提高 C 和 S</td><td>DB</td></tr>
+<tr><td>F = (AUC<sub>po</sub>/D<sub>po</sub>) / (AUC<sub>iv</sub>/D<sub>iv</sub>)；t<sub>1/2</sub> = 0.693 / k<sub>e</sub></td><td>F 改 C<sub>max</sub>、AUC，不改 t<sub>max</sub>；k<sub>a</sub> 改 t<sub>max</sub>、C<sub>max</sub></td><td>DB</td></tr>
+<tr><td>剂量 = 墨水浓度 × 打印质量</td><td>SSE 改体积 = 改剂量</td><td>3D</td></tr>
+<tr><td>η = K·γ̇<sup>n−1</sup></td><td>n &lt; 1 剪切变稀；G′ &gt; G″ 能自支撑</td><td>3D</td></tr>
+</table></div>
+
+<h2 id="app2">附录 B　最常见的 20 个陷阱<span class="en">Top 20 traps</span></h2>
+<ol>
+<li>离子型升温 CMC↑；非离子型升温 CMC↓。Krafft 点属离子型，浊点属非离子型。</li>
+<li>微乳热力学稳定；纳米乳不稳定。纳米乳 ≠ 微乳。</li>
+<li>β-CD 最难溶是因为分子内氢键网络，不是分子量。</li>
+<li>包合物写作 主:客（CD 在前）；没有共价键。</li>
+<li>CD 不是越多越好：过量包合让游离药下降。</li>
+<li>β-CD 不能注射；注射用 α-CD、HP-β-CD、SBE-β-CD。</li>
+<li>CE 单位陷阱：S<sub>0</sub> 先换成 M，CE = 0.25 不是 250。</li>
+<li>DPPC 主转变是 P<sub>β'</sub> → L<sub>α</sub>（约 41 °C）；胆固醇先抹掉预转变。</li>
+<li>挤出要在 T<sub>m</sub> 以上。</li>
+<li>AmB 脂质制剂没有提高内在活性，获益来自毒性下降。</li>
+<li>Abelcet® 不是脂质体（带状复合物）；Amphotec® 是盘状；只有 AmBisome® 是真正的脂质体。</li>
+<li>Doxil® 心毒性↓，但手足综合征和口腔炎↑。</li>
+<li>PEG 化不是零蛋白吸附，只是改变蛋白冠；重复给药可能出现 ABC。</li>
+<li>EPR 只存在于某些肿瘤；看到 all / always 要警惕。</li>
+<li>控释制剂改吸收；药物载体改分布。</li>
+<li>进入细胞 ≠ 进入胞质；mRNA 不需要入核，DNA 才要。</li>
+<li>小窝途径是非降解途径；网格蛋白途径和巨胞饮最终进溶酶体。</li>
+<li>F 改 C<sub>max</sub> 和 AUC，不改 t<sub>max</sub>；剂型改不了 V 和 k<sub>e</sub>。</li>
+<li>Spritam® 是粘合剂喷射，不是 FDM；它是唯一上市的 3D 打印药。</li>
+<li>FDM 两次热应力；医院选 SSE。牛顿流体不适合 SSE。</li>
+</ol>
+
+<h2 id="app3">附录 C　单词表（中英对照）<span class="en">Glossary</span></h2>
+<div class="tw"><table>
+<tr><th>中文</th><th>English</th><th>中文</th><th>English</th></tr>
+<tr><td>两亲分子</td><td>amphiphile</td><td>疏水效应</td><td>hydrophobic effect</td></tr>
+<tr><td>自组装</td><td>self-assembly</td><td>堆积参数</td><td>packing parameter</td></tr>
+<tr><td>单分子层</td><td>monolayer</td><td>双层</td><td>bilayer</td></tr>
+<tr><td>介晶相 / 溶致液晶</td><td>mesophase / lyotropic liquid crystal</td><td>层状相</td><td>lamellar phase</td></tr>
+<tr><td>反六方相</td><td>inverted hexagonal phase (H<sub>II</sub>)</td><td>相变温度</td><td>phase transition temperature (T<sub>m</sub>)</td></tr>
+<tr><td>凝胶相 / 流体相</td><td>gel phase / fluid phase</td><td>预转变 / 主转变</td><td>pre-transition / main transition</td></tr>
+<tr><td>差示扫描量热法</td><td>differential scanning calorimetry (DSC)</td><td>小角 X 射线散射</td><td>small-angle X-ray scattering (SAXS)</td></tr>
+<tr><td>层间距</td><td>d-spacing</td><td>胆固醇</td><td>cholesterol</td></tr>
+<tr><td>表面活性剂</td><td>surfactant</td><td>表面张力</td><td>surface tension</td></tr>
+<tr><td>临界胶束浓度</td><td>critical micelle concentration (CMC)</td><td>胶束</td><td>micelle</td></tr>
+<tr><td>浊点</td><td>cloud point</td><td>Krafft 点</td><td>Krafft point</td></tr>
+<tr><td>增溶</td><td>solubilisation</td><td>摩尔增溶比</td><td>molar solubilisation ratio (R<sub>mic</sub>)</td></tr>
+<tr><td>微乳 / 纳米乳</td><td>microemulsion / nanoemulsion</td><td>析出</td><td>precipitation</td></tr>
+<tr><td>环糊精</td><td>cyclodextrin (CD)</td><td>包合物</td><td>inclusion complex</td></tr>
+<tr><td>主体 / 客体</td><td>host / guest</td><td>相溶解度图</td><td>phase-solubility diagram</td></tr>
+<tr><td>结合常数</td><td>binding constant (K<sub>1:1</sub>)</td><td>络合效率</td><td>complexation efficiency (CE)</td></tr>
+<tr><td>固有溶解度</td><td>intrinsic solubility (S<sub>0</sub>)</td><td>游离药</td><td>free drug</td></tr>
+<tr><td>肾毒性 / 心脏毒性</td><td>nephrotoxicity / cardiotoxicity</td><td>受体</td><td>receptor</td></tr>
+<tr><td>限速步骤</td><td>rate-limiting step</td><td>生物利用度</td><td>bioavailability (F)</td></tr>
+<tr><td>首过代谢</td><td>first-pass metabolism</td><td>外排泵</td><td>efflux pump</td></tr>
+<tr><td>P-糖蛋白</td><td>P-glycoprotein (P-gp)</td><td>紧密连接</td><td>tight junction</td></tr>
+<tr><td>细胞旁路 / 跨细胞途径</td><td>paracellular / transcellular route</td><td>被动扩散 / 主动转运</td><td>passive diffusion / active transport</td></tr>
+<tr><td>pH-分配假说</td><td>pH-partition hypothesis</td><td>非解离型</td><td>unionised form</td></tr>
+<tr><td>血脑屏障</td><td>blood–brain barrier (BBB)</td><td>受体介导跨胞吞</td><td>receptor-mediated transcytosis (RMT)</td></tr>
+<tr><td>分布容积</td><td>volume of distribution (V)</td><td>曲线下面积</td><td>area under the curve (AUC)</td></tr>
+<tr><td>吸收 / 消除速率常数</td><td>absorption / elimination rate constant (k<sub>a</sub> / k<sub>e</sub>)</td><td>控释系统</td><td>controlled-release system</td></tr>
+<tr><td>渗透泵</td><td>osmotic pump</td><td>零级释放</td><td>zero-order release</td></tr>
+<tr><td>经皮贴剂</td><td>transdermal patch</td><td>黏膜黏附</td><td>mucoadhesion</td></tr>
+<tr><td>脂质体</td><td>liposome</td><td>多层 / 小单层 / 大单层囊泡</td><td>MLV / SUV / LUV</td></tr>
+<tr><td>挤出</td><td>extrusion</td><td>内水相</td><td>aqueous core</td></tr>
+<tr><td>被动 / 远程载药</td><td>passive / remote loading</td><td>包封率</td><td>encapsulation efficiency (EE%)</td></tr>
+<tr><td>载药量</td><td>drug loading</td><td>动态光散射</td><td>dynamic light scattering (DLS)</td></tr>
+<tr><td>多分散指数</td><td>polydispersity index (PDI)</td><td>流体力学直径</td><td>hydrodynamic diameter</td></tr>
+<tr><td>Zeta 电位</td><td>zeta potential</td><td>蛋白冠</td><td>protein corona</td></tr>
+<tr><td>调理作用 / 调理素</td><td>opsonisation / opsonins</td><td>吞噬</td><td>phagocytosis</td></tr>
+<tr><td>单核吞噬细胞系统</td><td>mononuclear phagocyte system (MPS)</td><td>巨噬细胞</td><td>macrophage</td></tr>
+<tr><td>补体</td><td>complement</td><td>外渗</td><td>extravasation</td></tr>
+<tr><td>内皮（连续 / 有孔 / 不连续）</td><td>endothelium (continuous / fenestrated / discontinuous)</td><td>长循环</td><td>long circulation</td></tr>
+<tr><td>隐形</td><td>stealth</td><td>空间位阻</td><td>steric hindrance</td></tr>
+<tr><td>增强渗透与滞留效应</td><td>enhanced permeability and retention (EPR)</td><td>加速血液清除</td><td>accelerated blood clearance (ABC)</td></tr>
+<tr><td>手足综合征</td><td>palmar-plantar erythrodysesthesia (PPE)</td><td>两性霉素 B</td><td>amphotericin B (AmB)</td></tr>
+<tr><td>多柔比星</td><td>doxorubicin</td><td>利什曼病</td><td>leishmaniasis</td></tr>
+<tr><td>纳米载体</td><td>nanocarrier</td><td>被动 / 主动靶向</td><td>passive / active targeting</td></tr>
+<tr><td>配体</td><td>ligand</td><td>内吞</td><td>endocytosis</td></tr>
+<tr><td>网格蛋白 / 小窝</td><td>clathrin / caveolae</td><td>巨胞饮</td><td>macropinocytosis</td></tr>
+<tr><td>内体 / 溶酶体</td><td>endosome / lysosome</td><td>胞质</td><td>cytosol</td></tr>
+<tr><td>内体逃逸</td><td>endosomal escape</td><td>基因递送</td><td>gene delivery</td></tr>
+<tr><td>小干扰 RNA</td><td>small interfering RNA (siRNA)</td><td>信使 RNA</td><td>messenger RNA (mRNA)</td></tr>
+<tr><td>RNA 诱导沉默复合物</td><td>RNA-induced silencing complex (RISC)</td><td>脂质纳米粒</td><td>lipid nanoparticle (LNP)</td></tr>
+<tr><td>可电离脂质 / 阳离子脂质</td><td>ionisable lipid / cationic lipid</td><td>载脂蛋白 E</td><td>apolipoprotein E (ApoE)</td></tr>
+<tr><td>多聚复合物 / 脂质复合物</td><td>polyplex / lipoplex</td><td>纳米毒理学</td><td>nanotoxicology</td></tr>
+<tr><td>生物相容</td><td>biocompatible</td><td>生物分布</td><td>biodistribution</td></tr>
+<tr><td>3D 打印</td><td>three-dimensional printing (3DP)</td><td>墨水</td><td>ink</td></tr>
+<tr><td>熔融沉积成型</td><td>fused deposition modelling (FDM)</td><td>热熔挤出</td><td>hot-melt extrusion (HME)</td></tr>
+<tr><td>半固体挤出</td><td>semi-solid extrusion (SSE)</td><td>粘合剂喷射</td><td>binder jetting</td></tr>
+<tr><td>填充密度</td><td>infill density</td><td>切片软件</td><td>slicer</td></tr>
+<tr><td>剪切变稀</td><td>shear-thinning</td><td>屈服应力</td><td>yield stress</td></tr>
+<tr><td>触变性 / 结构恢复</td><td>thixotropy / structural recovery</td><td>批放行</td><td>batch release</td></tr>
+<tr><td>床旁制造</td><td>point-of-care manufacturing (POC)</td><td>依从性</td><td>adherence</td></tr>
+</table></div>
+
+<h2 id="appd">附录 D　讲解合集：难点用大白话讲透<span class="en">Plain-language explanations of the hardest points</span></h2>
+<p class="how">这一节是最容易卡住的点。每条按「是什么 → 为什么 → 考试怎么写」讲，最后一行是可以直接照写的英文。</p>
+
+<h3>D1　调理作用：标签和锁<span class="en">Opsonisation: tags and locks</span></h3>
+<p>纳米粒进入血液后，血浆蛋白会粘到它表面，像贴上「吃掉我」的标签，这个过程叫<b>调理作用（opsonisation）</b>，这些蛋白叫<b>调理素（opsonins）</b>。巨噬细胞（macrophage）手上有对应的「锁」，一对上就认出这是外来物，并把它吞掉（吞噬，phagocytosis）。最重要的两对：</p>
+<div class="tw"><table>
+<tr><th>标签（调理素）</th><th>巨噬细胞的锁（受体）</th><th>怎么理解</th></tr>
+<tr><td>抗体 IgG（immunoglobulin G）</td><td>Fc 受体（Fc receptor）</td><td>IgG 像一个 Y：两只「手臂」抓住颗粒，露在外面的「尾巴」叫 Fc 段（Fc fragment），巨噬细胞专门抓这条尾巴</td></tr>
+<tr><td>补体 C3b（complement C3b）</td><td>补体受体（complement receptor）</td><td>血里的补体系统（complement system）被颗粒激活后产生 C3b，C3b 粘在颗粒上，巨噬细胞用补体受体抓住它</td></tr>
+</table></div>
+<p><b>为什么主要去肝和脾：</b>肝、脾、骨髓的血管内皮（endothelium）是窦状、不连续的（sinusoidal, discontinuous），颗粒容易漏出去，而且那里驻留着大量巨噬细胞（肝里叫 Kupffer 细胞）。这些细胞构成单核吞噬细胞系统（mononuclear phagocyte system, MPS）。<b>PEG 的作用</b>就是挡住这些标签，贴不上就认不出来。</p>
+<p class="en-s">Opsonins (IgG, C3b) adsorb on the particle; macrophages recognise them through Fc receptors and complement receptors, then phagocytose the particle. PEG reduces opsonisation by steric hindrance.</p>
+
+<h3>D2　证明「靠受体进细胞」：4 个对照各回答什么<span class="en">The four controls of a targeting experiment</span></h3>
+<p>看到「接了叶酸的纳米粒进细胞更多」，不能直接说是叶酸受体的功劳，要排除别的可能。每个对照只回答一个问题：</p>
+<div class="tw"><table>
+<tr><th>对照</th><th>回答的问题</th><th>结果与结论</th></tr>
+<tr><td>1 受体阴性细胞（receptor-negative cells，如 MCF-7）</td><td>增加的摄取需要这个受体吗？</td><td>没有受体的细胞里摄取不增加 → 摄取<b>依赖受体</b>（receptor-dependent）</td></tr>
+<tr><td>2 不带配体的纳米粒（non-targeted nanoparticle）</td><td>是不是配体带来的？</td><td>不带叶酸的纳米粒进得少 → 增加来自<b>配体</b>（ligand）</td></tr>
+<tr><td>3 先加大量游离叶酸（free folate）</td><td>是特异的受体—配体结合吗？</td><td>游离叶酸先占了受体，摄取掉回低水平 → <b>特异、受体介导</b>（specific, receptor-mediated），能被竞争掉（competition）</td></tr>
+<tr><td>4 放到 4 °C</td><td>是主动内吞，还是只粘在表面？</td><td>4 °C 时摄取很低 → <b>耗能的内吞</b>（energy-dependent endocytosis），因为细胞在低温下几乎不干活</td></tr>
+</table></div>
+<p><b>连起来：</b>1 和 2 说明「要锁也要钥匙」；3 说明「钥匙是对准这把锁的」；4 说明「门开了以后是细胞主动吞进去的」。</p>
+<p class="en-s">Free folate competes with the nanoparticle for the same receptor, so the drop in uptake shows that uptake is receptor-mediated; uptake is blocked at 4 °C, so it is energy-dependent endocytosis.</p>
+
+<h3>D3　东西怎么进细胞<span class="en">How things enter cells</span></h3>
+<ul>
+<li><b>小分子（small molecule）直接穿膜：</b>简单扩散（simple diffusion）顺着浓度梯度走、不耗能、<b>不可饱和</b>（non-saturable，外面药越多进得越多）；主动转运（active transport）靠膜上的转运体（transporter）、耗能、<b>可饱和</b>（saturable，转运体数量有限）。「扩散可饱和」是错的。</li>
+<li><b>纳米粒太大，只能被「吞」进去 = 内吞（endocytosis）：</b>细胞膜往里凹，把颗粒包成小泡。四条路：吞噬（phagocytosis，巨噬细胞吞大颗粒，依赖调理）、网格蛋白介导（clathrin-mediated，受体介导内吞的主途径）、小窝介导（caveolae-mediated）、巨胞饮（macropinocytosis，膜皱褶大口「喝」液体）。</li>
+<li><b>为什么小窝特别：</b>吞进去的东西大多被送到溶酶体（lysosome，又酸又有酶的「粉碎站」），脆弱的药（siRNA、蛋白）会被分解。只有小窝途径不去溶酶体，而是去高尔基体（Golgi apparatus）和内质网（endoplasmic reticulum），所以叫<b>非降解途径（non-degradative pathway）</b>。</li>
+<li><b>进细胞 ≠ 进胞质：</b>内吞后药在内体（endosome）里，还要逃出来到胞质（cytosol）才起作用。</li>
+</ul>
+<p class="en-s">Caveolae-mediated endocytosis is a non-degradative pathway: it avoids the lysosome. Simple diffusion is not saturable; active transport is.</p>
+
+<h3>D4　温度对表面活性剂的影响：Krafft 点与浊点<span class="en">Krafft point and cloud point</span></h3>
+<ul>
+<li><b>离子型（ionic）：</b>升温 CMC 升高。<b>Krafft 点是最低工作温度</b>：低于它，表面活性剂还没到 CMC 就结晶析出，形成不了胶束；所以要在 Krafft 点<b>以上</b>用。</li>
+<li><b>非离子型（non-ionic）：</b>升温 CMC 下降。亲水头是一串 PEG，靠和水形成氢键（hydrogen bond）才溶。加热把水赶走（脱水，dehydration），头变小、没那么亲水，胶束越长越大，最后从水里分出来（相分离，phase separation），溶液由透明变浑。开始变浑的温度是<b>浊点（cloud point）</b>；所以要在浊点<b>以下</b>用。乙氧基数 j 越多，头越亲水，浊点越高。</li>
+<li><b>一句话：</b>离子型怕冷（Krafft 点以上用），非离子型怕热（浊点以下用）。</li>
+</ul>
+<p class="en-s">On heating, the PEG head groups dehydrate, micelles grow and the solution phase-separates, so it turns cloudy: this temperature is the cloud point.</p>
+
+<h3>D5　微乳和纳米乳<span class="en">Microemulsion vs nanoemulsion</span></h3>
+<p><b>微乳（microemulsion）：</b>水 + 油 + 表面活性剂混在一起会<b>自己形成</b>，放多久都不分层，叫热力学稳定（thermodynamically stable）。<b>纳米乳（nanoemulsion）：</b>液滴（droplet）也很小，但要靠高压均质（high-pressure homogenisation）这类外力「打」出来，只是分层很慢，最终还是会分开，叫动力学稳定（kinetically stable）。「纳米乳就是液滴更小的微乳」是错的。</p>
+
+<h3>D6　舒更葡糖与环糊精的安全性<span class="en">Sugammadex and CD safety</span></h3>
+<ul>
+<li><b>β-CD 不能注射：</b>普通 β-CD 经肾排出，溶解度低，会在肾小管析出结晶、伤肾（肾毒性，nephrotoxicity）。注射只用 α-CD、HP-β-CD（羟丙基-β-环糊精）、SBE-β-CD（磺丁基醚-β-环糊精），后两个是改造过的，溶解度大得多。口服最宽松，因为 CD 在肠道几乎不被吸收。</li>
+<li><b>舒更葡糖（sugammadex）本身就是药：</b>手术麻醉时用肌松药（muscle relaxant）罗库溴铵（rocuronium）。舒更葡糖是改造过的 γ-CD，在血里把罗库溴铵 1:1 整个包住（包合物，inclusion complex），罗库溴铵碰不到它原本作用的受体，肌松被逆转。它自己<b>不作用于任何受体</b>。</li>
+</ul>
+<p class="en-s">Sugammadex is a modified γ-cyclodextrin that encapsulates rocuronium 1:1 in the blood, so rocuronium can no longer act on its receptor and the neuromuscular block is reversed.</p>
+
+<h3>D7　药动学曲线：F 与 k<sub>a</sub> 怎么改变曲线<span class="en">How F and ka change the curve</span></h3>
+<p>口服药后，血药浓度先升（吸收）再降（消除）。曲线上三个量：<b>C<sub>max</sub></b>（峰浓度，最高点多高）、<b>t<sub>max</sub></b>（达峰时间，最高点在什么时候）、<b>AUC</b>（曲线下面积，身体总共接触到多少药）。两个参数：<b>F</b>（生物利用度，吃进去的药有百分之几真正进血）、<b>k<sub>a</sub></b>（吸收速率常数，药进血的快慢）。</p>
+<div class="tw"><table>
+<tr><th>变化</th><th>C<sub>max</sub></th><th>t<sub>max</sub></th><th>AUC</th><th>原因</th></tr>
+<tr><td>F 下降</td><td>降</td><td>不变</td><td>降（同比例）</td><td>每个时间点进血的药都按比例变少，吸收快慢没变，整条曲线「压扁」</td></tr>
+<tr><td>k<sub>a</sub> 下降</td><td>降</td><td>推迟（右移）</td><td>不变</td><td>药总量没少，只是进得慢；身体边进边消除，峰冲不高；总量一样，所以 AUC 不变</td></tr>
+</table></div>
+<p><b>剂型（dosage form）能改什么：</b>只能改药怎么进血（F 和 k<sub>a</sub>）；进血后的分布容积（V）和消除速率常数（k<sub>e</sub>）由药和身体决定，剂型改不了。AUC = F·D/CL，式子里没有 k<sub>a</sub>。</p>
+<p class="en-s">A lower F lowers C<sub>max</sub> and AUC proportionally while t<sub>max</sub> is unchanged. A lower k<sub>a</sub> lowers C<sub>max</sub> and delays t<sub>max</sub> while AUC is unchanged.</p>
+
+<h3>D8　F 的计算，一步一步<span class="en">Calculating F step by step</span></h3>
+<p><b>例：</b>口服 50 mg，AUC = 30；静注 10 mg，AUC = 15。求 F。静注直接打进血里，100% 进血，所以拿它当「满分标准」。两次剂量不一样，不能直接比 AUC，要先算「每 1 mg 药产生多少 AUC」：</p>
+<ol>
+<li>口服每 1 mg：30 ÷ 50 = 0.6</li>
+<li>静注每 1 mg：15 ÷ 10 = 1.5</li>
+<li>口服是静注的几分之几：0.6 ÷ 1.5 = 0.4 = <b>40%</b></li>
+</ol>
+<p>公式：F = (AUC<sub>口服</sub> ÷ 剂量<sub>口服</sub>) ÷ (AUC<sub>静注</sub> ÷ 剂量<sub>静注</sub>)。<b>常见错误：</b>直接算 30 ÷ 15 = 200%。F 不可能超过 100%，大于 1 就是忘了除以剂量。</p>
+
+<h3>D9　环糊精计算：K 与 CE<span class="en">K and CE calculation</span></h3>
+<p><b>例：</b>S<sub>0</sub> = 0.5 mM，相溶解度图（A<sub>L</sub> 型）斜率 s = 0.20。</p>
+<ol>
+<li>先把 S<sub>0</sub> 换成 M：0.5 mM = 0.0005 M（<b>最常见的错误就是忘了换单位</b>）</li>
+<li>K = s ÷ [S<sub>0</sub>(1 − s)] = 0.20 ÷ (0.0005 × 0.80) = 0.20 ÷ 0.0004 = <b>500 M<sup>−1</sup></b></li>
+<li>CE = s ÷ (1 − s) = 0.20 ÷ 0.80 = <b>0.25</b>（没有单位；也等于 S<sub>0</sub>·K = 0.0005 × 500）</li>
+</ol>
+<p>CE = 0.25 的意思：已包合的 CD : 游离 CD = 1 : 4，约每 5 个 CD 分子中有 1 个装着药。</p>
+
+<h3>D10　R<sub>mic</sub> 计算<span class="en">R<sub>mic</sub> calculation</span></h3>
+<p>[S]<sub>sol</sub> = [S]<sub>aq</sub> + R<sub>mic</sub> × ([表面活性剂] − CMC)。<b>例：</b>[S]<sub>aq</sub> = 0.01 mM，CMC = 1 mM，R<sub>mic</sub> = 0.05，表面活性剂总浓度 21 mM：先算能形成胶束的那部分 21 − 1 = 20 mM，再乘 R<sub>mic</sub>：0.05 × 20 = 1.0，加上水里本来溶的 0.01，得 <b>1.01 mM</b>。1/R<sub>mic</sub> = 20，就是约 20 个表面活性剂分子增溶 1 个药物分子。</p>
+
+<h3>D11　脂质体大题里最常被问的几个「为什么」<span class="en">Frequent why-questions in the liposome exercise</span></h3>
+<ul>
+<li><b>为什么挤出要在 T<sub>m</sub> 以上：</b>T<sub>m</sub> 以上双层是软的流体相，容易变形穿过膜孔；以下是硬的凝胶相，要很大压力，膜也可能破。</li>
+<li><b>为什么多柔比星进去就出不来（远程载药）：</b>内部是硫酸铵，NH<sub>3</sub> 扩散出去、H<sup>+</sup> 留下，内部变酸。多柔比星是弱碱，不带电的形式能穿膜进去，到酸性内腔被质子化带正电，带电就穿不回来；还和硫酸根形成沉淀（棒状结晶），进一步锁住。</li>
+<li><b>为什么被动载药包封率低：</b>亲水药只能「顺便」被包进形成时的那点内水相，而且没有梯度把药留住。</li>
+<li><b>为什么 DLS 粒径大于 cryo-TEM：</b>DLS 测的是流体力学直径（含 PEG 水化层、光强加权）；cryo-TEM 看的是「干核」。</li>
+<li><b>为什么释放实验要在血清里做：</b>血清里的脂蛋白（HDL）会夺取磷脂、使双层失稳；只在缓冲液里测会低估体内泄漏。</li>
+<li><b>为什么 Doxil® 心毒性低但手足综合征更多：</b>药被锁在长循环脂质体里，心肌接触的游离药峰值低；但长循环脂质体会在手脚的皮肤毛细血管蓄积。</li>
+<li><b>为什么第二针被清除得快（ABC）：</b>第一针诱导脾产生抗 PEG IgM，第二针被它结合、激活补体，被 Kupffer 细胞快速清除。</li>
+</ul>
+
+<h3>D12　纳米医学大题里最常被问的几个「为什么」<span class="en">Frequent why-questions in the nanomedicine exercise</span></h3>
+<ul>
+<li><b>NP-A（无修饰）为什么几分钟就进肝：</b>被调理、被 Kupffer 细胞吞；这是第一代载体（靶向 MPS）。</li>
+<li><b>NP-B（PEG 化）为什么循环久：</b>PEG 水化层空间位阻挡住调理素，MPS 认不出；但「PEG 化 = 不吸附任何蛋白」是错的，PEG 只是改变了蛋白冠（protein corona）的组成。</li>
+<li><b>为什么 NP-B 在肿瘤里比 NP-A 多：</b>循环久，有时间经过肿瘤渗漏的血管外渗，又因为淋巴引流差而滞留，叫 EPR 效应（被动靶向）；EPR 只在某些肿瘤中存在。</li>
+<li><b>NP-C 比 NP-B 多出来的部分：</b>只在受体阳性的肿瘤里更高 → 靠配体—受体识别，是在被动靶向之上的「第二步」（主动靶向，第三代）。</li>
+<li><b>LNP 为什么用可电离脂质：</b>血里 pH 7.4 接近中性（毒性低、不乱粘蛋白）；进入酸性内体才带正电，和内体膜上的阴离子脂质相互作用，帮助核酸逃出内体。</li>
+<li><b>Patisiran 的路线：</b>吸附载脂蛋白 E（ApoE）→ 穿过肝窦窗孔 → 肝细胞的 LDL 受体识别 ApoE、内吞 → 内体变酸 → 可电离脂质带正电、破膜 → siRNA 进 RISC → TTR mRNA 被降解。ApoE 敲除的小鼠里 LNP 失效，补回 ApoE 后恢复，证明依赖 ApoE—LDL 受体。</li>
+</ul>
+<h2 id="appf">附录 E　扩展词表（约 440 个术语）<span class="en">Extended glossary used in these notes</span></h2><p class="how">笔记和讲解里用到的全部中英术语，按主题大致排序。附录 C 是核心词表，这里是补充。</p><div class="tw"><table><tr><th>中文</th><th>English</th><th>中文</th><th>English</th></tr><tr><td>磷脂</td><td>phospholipid</td><td>双层</td><td>bilayer</td></tr><tr><td>脂质双层</td><td>lipid bilayer</td><td>胶束</td><td>micelle</td></tr><tr><td>脂质体</td><td>liposome</td><td>圆柱</td><td>cylinder</td></tr><tr><td>吸水溶胀</td><td>swelling</td><td>反六方相</td><td>inverted hexagonal phase</td></tr><tr><td>反六角相</td><td>inverted hexagonal phase</td><td>正六角相</td><td>hexagonal phase</td></tr><tr><td>层状相</td><td>lamellar phase</td><td>层状</td><td>lamellar</td></tr><tr><td>磷脂酰胆碱</td><td>phosphatidylcholine</td><td>胆固醇</td><td>cholesterol</td></tr><tr><td>蛋黄 PC</td><td>egg PC</td><td>饱和</td><td>saturated</td></tr><tr><td>不饱和</td><td>unsaturated</td><td>相变温度</td><td>phase transition temperature</td></tr><tr><td>凝胶相</td><td>gel phase</td><td>流体相</td><td>fluid phase</td></tr><tr><td>液晶相</td><td>liquid-crystalline phase</td><td>波纹凝胶相</td><td>ripple phase</td></tr><tr><td>预转变</td><td>pre-transition</td><td>主转变</td><td>main transition</td></tr><tr><td>挤出</td><td>extrusion</td><td>制备</td><td>preparation</td></tr><tr><td>载药</td><td>drug loading</td><td>亲水药</td><td>hydrophilic drug</td></tr><tr><td>亲脂药</td><td>lipophilic drug</td><td>亲水</td><td>hydrophilic</td></tr><tr><td>亲脂</td><td>lipophilic</td><td>疏水</td><td>hydrophobic</td></tr><tr><td>内水相</td><td>aqueous core</td><td>弱碱</td><td>weak base</td></tr><tr><td>弱酸</td><td>weak acid</td><td>梯度</td><td>gradient</td></tr><tr><td>跨膜梯度</td><td>transmembrane gradient</td><td>跨膜 pH 梯度</td><td>transmembrane pH gradient</td></tr><tr><td>干脂膜</td><td>dry lipid film</td><td>多层囊泡</td><td>multilamellar vesicle</td></tr><tr><td>囊泡</td><td>vesicle</td><td>超声</td><td>sonication</td></tr><tr><td>被动载药</td><td>passive loading</td><td>远程载药</td><td>remote loading</td></tr><tr><td>主动载药</td><td>active loading</td><td>包封率</td><td>encapsulation efficiency</td></tr><tr><td>多柔比星</td><td>doxorubicin</td><td>质子化</td><td>protonation</td></tr><tr><td>表征</td><td>characterisation</td><td>粒径</td><td>particle size</td></tr><tr><td>电荷</td><td>charge</td><td>动态光散射</td><td>dynamic light scattering</td></tr><tr><td>多分散指数</td><td>polydispersity index</td><td>Zeta 电位</td><td>zeta potential</td></tr><tr><td>释放</td><td>release</td><td>血清</td><td>serum</td></tr><tr><td>泄漏</td><td>leakage</td><td>静脉</td><td>vein</td></tr><tr><td>巨噬细胞</td><td>macrophage</td><td>调理作用</td><td>opsonisation</td></tr><tr><td>调理素</td><td>opsonins</td><td>调理</td><td>opsonisation</td></tr><tr><td>血浆蛋白</td><td>plasma proteins</td><td>抗体</td><td>antibody</td></tr><tr><td>补体</td><td>complement</td><td>补体受体</td><td>complement receptor</td></tr><tr><td>受体</td><td>receptor</td><td>吞噬</td><td>phagocytosis</td></tr><tr><td>溶酶体</td><td>lysosome</td><td>单核吞噬细胞系统</td><td>mononuclear phagocyte system</td></tr><tr><td>纳米粒</td><td>nanoparticle</td><td>血管内皮</td><td>vascular endothelium</td></tr><tr><td>内皮</td><td>endothelium</td><td>不连续</td><td>discontinuous</td></tr><tr><td>水化层</td><td>hydration layer</td><td>空间位阻</td><td>steric hindrance</td></tr><tr><td>长循环</td><td>long circulation</td><td>增强渗透与滞留效应</td><td>enhanced permeability and retention effect</td></tr><tr><td>肿瘤</td><td>tumour</td><td>加速血液清除</td><td>accelerated blood clearance</td></tr><tr><td>脾</td><td>spleen</td><td>肝</td><td>liver</td></tr><tr><td>两性霉素 B</td><td>amphotericin B</td><td>肾毒性</td><td>nephrotoxicity</td></tr><tr><td>心脏毒性</td><td>cardiotoxicity</td><td>心毒性</td><td>cardiotoxicity</td></tr><tr><td>手足综合征</td><td>hand-foot syndrome</td><td>带状复合物</td><td>ribbon-like complex</td></tr><tr><td>带状脂质复合物</td><td>ribbon-like lipid complex</td><td>盘状复合物</td><td>disc-like complex</td></tr><tr><td>利什曼病</td><td>leishmaniasis</td><td>内脏利什曼病</td><td>visceral leishmaniasis</td></tr><tr><td>利什曼原虫</td><td>Leishmania parasite</td><td>实体瘤</td><td>solid tumour</td></tr><tr><td>内体</td><td>endosome</td><td>内吞</td><td>endocytosis</td></tr><tr><td>pH 敏感脂质体</td><td>pH-sensitive liposome</td><td>脂质纳米粒</td><td>lipid nanoparticle</td></tr><tr><td>可电离脂质</td><td>ionisable lipid</td><td>核酸</td><td>nucleic acid</td></tr><tr><td>有机溶剂</td><td>organic solvent</td><td>硫酸铵</td><td>ammonium sulfate</td></tr><tr><td>水化</td><td>hydration</td><td>聚碳酸酯膜</td><td>polycarbonate membrane</td></tr><tr><td>透析</td><td>dialysis</td><td>孵育</td><td>incubation</td></tr><tr><td>游离药</td><td>free drug</td><td>无菌过滤</td><td>sterile filtration</td></tr><tr><td>通透性</td><td>permeability</td><td>刚性</td><td>rigidity</td></tr><tr><td>共价</td><td>covalent</td><td>锚定</td><td>anchoring</td></tr><tr><td>泊洛沙姆</td><td>poloxamer</td><td>棒状结晶</td><td>rod-shaped crystals</td></tr><tr><td>沉淀</td><td>precipitate</td><td>药脂比</td><td>drug-to-lipid ratio</td></tr><tr><td>超滤</td><td>ultrafiltration</td><td>离心</td><td>centrifugation</td></tr><tr><td>流体力学直径</td><td>hydrodynamic diameter</td><td>光强加权</td><td>intensity-weighted</td></tr><tr><td>单分散</td><td>monodisperse</td><td>两性离子</td><td>zwitterion</td></tr><tr><td>剪切面</td><td>shear plane</td><td>静电排斥</td><td>electrostatic repulsion</td></tr><tr><td>体外释放</td><td>in vitro release</td><td>稀释</td><td>dilution</td></tr><tr><td>脂蛋白</td><td>lipoprotein</td><td>缓冲液</td><td>buffer</td></tr><tr><td>假象</td><td>artefact</td><td>截锥</td><td>truncated cone</td></tr><tr><td>两亲分子</td><td>amphiphile</td><td>头基</td><td>head group</td></tr><tr><td>溶血磷脂</td><td>lysophospholipid</td><td>溶血 PC</td><td>lyso-PC</td></tr><tr><td>全反式</td><td>all-trans</td><td>哺乳动物细胞</td><td>mammalian cells</td></tr><tr><td>半数致死量</td><td>median lethal dose</td><td>念珠菌</td><td>Candida</td></tr><tr><td>内在活性</td><td>intrinsic activity</td><td>口腔炎</td><td>stomatitis</td></tr><tr><td>骨髓抑制</td><td>myelosuppression</td><td>脱发</td><td>alopecia</td></tr><tr><td>发疱作用</td><td>vesicant effect</td><td>清除率</td><td>clearance</td></tr><tr><td>非己</td><td>non-self</td><td>骨髓</td><td>bone marrow</td></tr><tr><td>窦状</td><td>sinusoidal</td><td>驻留巨噬细胞</td><td>resident macrophages</td></tr><tr><td>聚合物</td><td>polymer</td><td>配体</td><td>ligand</td></tr><tr><td>主动靶向</td><td>active targeting</td><td>被动靶向</td><td>passive targeting</td></tr><tr><td>外渗</td><td>extravasation</td><td>炎症</td><td>inflammation</td></tr><tr><td>胞内感染</td><td>intracellular infection</td><td>分布</td><td>distribution</td></tr><tr><td>心肌</td><td>myocardium</td><td>累积剂量</td><td>cumulative dose</td></tr><tr><td>剂量</td><td>dose</td><td>层间距</td><td>d-spacing</td></tr><tr><td>蛋白冠</td><td>protein corona</td><td>叶酸</td><td>folate</td></tr><tr><td>叶酸受体</td><td>folate receptor</td><td>转铁蛋白</td><td>transferrin</td></tr><tr><td>半乳糖</td><td>galactose</td><td>肝细胞</td><td>hepatocyte</td></tr><tr><td>对照</td><td>control</td><td>摄取</td><td>uptake</td></tr><tr><td>受体介导</td><td>receptor-mediated</td><td>简单扩散</td><td>simple diffusion</td></tr><tr><td>主动转运</td><td>active transport</td><td>扩散</td><td>diffusion</td></tr><tr><td>可饱和</td><td>saturable</td><td>不可饱和</td><td>non-saturable</td></tr><tr><td>网格蛋白</td><td>clathrin</td><td>小窝</td><td>caveolae</td></tr><tr><td>小窝体</td><td>caveosome</td><td>巨胞饮</td><td>macropinocytosis</td></tr><tr><td>非降解途径</td><td>non-degradative pathway</td><td>降解途径</td><td>degradative pathway</td></tr><tr><td>高尔基体</td><td>Golgi apparatus</td><td>内质网</td><td>endoplasmic reticulum</td></tr><tr><td>胞质</td><td>cytosol</td><td>核糖体</td><td>ribosome</td></tr><tr><td>翻译</td><td>translation</td><td>细胞核</td><td>nucleus</td></tr><tr><td>疫苗</td><td>vaccine</td><td>载脂蛋白 E</td><td>apolipoprotein E</td></tr><tr><td>肝窦</td><td>liver sinusoid</td><td>窗孔</td><td>fenestrations</td></tr><tr><td>敲除</td><td>knockout</td><td>基因沉默</td><td>gene silencing</td></tr><tr><td>沉默</td><td>silencing</td><td>血药曲线</td><td>blood concentration curve</td></tr><tr><td>渗漏血管</td><td>leaky vessels</td><td>淋巴引流</td><td>lymphatic drainage</td></tr><tr><td>簇集蛋白</td><td>clusterin</td><td>肝细胞癌</td><td>hepatocellular carcinoma</td></tr><tr><td>适配体</td><td>aptamer</td><td>吞噬溶酶体</td><td>phagolysosome</td></tr><tr><td>无鞭毛体</td><td>amastigote</td><td>表面活性剂</td><td>surfactant</td></tr><tr><td>表面张力</td><td>surface tension</td><td>临界胶束浓度</td><td>critical micelle concentration</td></tr><tr><td>界面</td><td>interface</td><td>离子型</td><td>ionic</td></tr><tr><td>非离子型</td><td>non-ionic</td><td>非离子表面活性剂</td><td>non-ionic surfactant</td></tr><tr><td>浊点</td><td>cloud point</td><td>微乳</td><td>microemulsion</td></tr><tr><td>纳米乳</td><td>nanoemulsion</td><td>热力学稳定</td><td>thermodynamically stable</td></tr><tr><td>动力学稳定</td><td>kinetically stable</td><td>相分离</td><td>phase separation</td></tr><tr><td>脱水</td><td>dehydration</td><td>溶解度</td><td>solubility</td></tr><tr><td>水溶解度</td><td>aqueous solubility</td><td>固有溶解度</td><td>intrinsic solubility</td></tr><tr><td>斜率</td><td>slope</td><td>胺碘酮</td><td>amiodarone</td></tr><tr><td>米替福新</td><td>miltefosine</td><td>增溶</td><td>solubilisation</td></tr><tr><td>摩尔增溶比</td><td>molar solubilisation ratio</td><td>环糊精</td><td>cyclodextrin</td></tr><tr><td>葡萄糖</td><td>glucose</td><td>分子内氢键</td><td>intramolecular hydrogen bond</td></tr><tr><td>氢键</td><td>hydrogen bond</td><td>分子量</td><td>molecular weight</td></tr><tr><td>包合物</td><td>inclusion complex</td><td>包合</td><td>inclusion complexation</td></tr><tr><td>共价键</td><td>covalent bond</td><td>仲羟基</td><td>secondary hydroxyl groups</td></tr><tr><td>相溶解度图</td><td>phase-solubility diagram</td><td>络合效率</td><td>complexation efficiency</td></tr><tr><td>包合效率</td><td>complexation efficiency</td><td>结合常数</td><td>binding constant</td></tr><tr><td>舒更葡糖</td><td>sugammadex</td><td>肌松药</td><td>muscle relaxant</td></tr><tr><td>罗库溴铵</td><td>rocuronium</td><td>空腔</td><td>cavity</td></tr><tr><td>客体</td><td>guest</td><td>疏水作用</td><td>hydrophobic interaction</td></tr><tr><td>范德华力</td><td>van der Waals forces</td><td>驱动力</td><td>driving force</td></tr><tr><td>静电吸引</td><td>electrostatic attraction</td><td>三元单相</td><td>ternary single-phase system</td></tr><tr><td>二元单相体系</td><td>binary single-phase system</td><td>乳剂</td><td>emulsion</td></tr><tr><td>混悬液</td><td>suspension</td><td>聚并</td><td>coalescence</td></tr><tr><td>高压均质</td><td>high-pressure homogenisation</td><td>单体</td><td>monomers</td></tr><tr><td>疏水效应</td><td>hydrophobic effect</td><td>电解质</td><td>electrolyte</td></tr><tr><td>共溶剂</td><td>co-solvent</td><td>乙氧基</td><td>ethylene oxide units</td></tr><tr><td>动态储库</td><td>dynamic reservoir</td><td>吸收</td><td>absorption</td></tr><tr><td>疗效</td><td>efficacy</td><td>渗透性</td><td>permeability</td></tr><tr><td>肠腔</td><td>gut lumen</td><td>肠上皮</td><td>intestinal epithelium</td></tr><tr><td>门静脉</td><td>portal vein</td><td>外排泵</td><td>efflux pump</td></tr><tr><td>外排</td><td>efflux</td><td>代谢</td><td>metabolism</td></tr><tr><td>首过</td><td>first-pass</td><td>首过代谢</td><td>first-pass metabolism</td></tr><tr><td>P-糖蛋白</td><td>P-glycoprotein</td><td>pH-分配假说</td><td>pH-partition hypothesis</td></tr><tr><td>血脑屏障</td><td>blood–brain barrier</td><td>生物利用度</td><td>bioavailability</td></tr><tr><td>药动学</td><td>pharmacokinetics</td><td>吸收速率</td><td>absorption rate</td></tr><tr><td>吸收速率常数</td><td>absorption rate constant</td><td>剂型</td><td>dosage form</td></tr><tr><td>控释</td><td>controlled release</td><td>黏膜黏附</td><td>mucoadhesion</td></tr><tr><td>渗透泵</td><td>osmotic pump</td><td>零级释放</td><td>zero-order release</td></tr><tr><td>经皮贴剂</td><td>transdermal patch</td><td>通量</td><td>flux</td></tr><tr><td>半透膜</td><td>semi-permeable membrane</td><td>渗透压</td><td>osmotic pressure</td></tr><tr><td>角质层</td><td>stratum corneum</td><td>沙奎那韦</td><td>saquinavir</td></tr><tr><td>黏液</td><td>mucus</td><td>消除半衰期</td><td>elimination half-life</td></tr><tr><td>一室口服模型</td><td>one-compartment oral model</td><td>最低中毒浓度</td><td>minimum toxic concentration</td></tr><tr><td>非解离型</td><td>unionised form</td><td>填充密度</td><td>infill density</td></tr><tr><td>辅料</td><td>excipient</td><td>墨水</td><td>ink</td></tr><tr><td>熔融沉积成型</td><td>fused deposition modelling</td><td>半固体挤出</td><td>semi-solid extrusion</td></tr><tr><td>粘合剂喷射</td><td>binder jetting</td><td>光固化</td><td>stereolithography</td></tr><tr><td>立体光刻</td><td>stereolithography</td><td>选择性激光烧结</td><td>selective laser sintering</td></tr><tr><td>熔融挤出沉积</td><td>melt extrusion deposition</td><td>左乙拉西坦</td><td>levetiracetam</td></tr><tr><td>热敏药</td><td>thermolabile drug</td><td>热敏药物</td><td>thermolabile drug</td></tr><tr><td>热敏</td><td>thermolabile</td><td>一次性墨盒</td><td>single-use cartridge</td></tr><tr><td>单次性墨盒</td><td>single-use cartridge</td><td>交叉污染</td><td>cross-contamination</td></tr><tr><td>剪切变稀</td><td>shear-thinning</td><td>屈服应力</td><td>yield stress</td></tr><tr><td>结构恢复</td><td>structural recovery</td><td>牛顿流体</td><td>Newtonian fluid</td></tr><tr><td>复方新诺明</td><td>co-trimoxazole</td><td>环磷酰胺</td><td>cyclophosphamide</td></tr><tr><td>批放行</td><td>batch release</td><td>分辨率</td><td>resolution</td></tr><tr><td>可打印性</td><td>printability</td><td>热塑性丝材</td><td>thermoplastic filament</td></tr><tr><td>热应力</td><td>thermal stress</td><td>载药量</td><td>drug loading</td></tr><tr><td>水分活度</td><td>water activity</td><td>稳定性</td><td>stability</td></tr><tr><td>双重药代动力学</td><td>dual pharmacokinetics</td><td>分布容积</td><td>volume of distribution</td></tr><tr><td>纳米载体</td><td>nanocarrier</td><td>药物载体</td><td>drug carrier</td></tr><tr><td>小分子</td><td>small molecule</td><td>转运体</td><td>transporter</td></tr><tr><td>竞争抑制</td><td>competitive inhibition</td><td>菲律宾菌素</td><td>filipin</td></tr><tr><td>氯丙嗪</td><td>chlorpromazine</td><td>阿米洛利</td><td>amiloride</td></tr><tr><td>肌动蛋白</td><td>actin</td><td>发动蛋白</td><td>dynamin</td></tr><tr><td>流式细胞术</td><td>flow cytometry</td><td>荧光</td><td>fluorescence</td></tr><tr><td>核酸酶</td><td>nucleases</td><td>内体逃逸</td><td>endosomal escape</td></tr><tr><td>阳离子脂质</td><td>cationic lipid</td><td>阳离子聚合物</td><td>cationic polymer</td></tr><tr><td>阴离子磷脂</td><td>anionic phospholipid</td><td>聚集</td><td>aggregation</td></tr><tr><td>蛋白替代治疗</td><td>protein replacement therapy</td><td>去唾液酸糖蛋白受体</td><td>asialoglycoprotein receptor</td></tr><tr><td>内源性</td><td>endogenous</td><td>氧化</td><td>oxidation</td></tr><tr><td>水解</td><td>hydrolysis</td><td>融合</td><td>fusion</td></tr><tr><td>储存</td><td>storage</td><td>空间位阻稳定</td><td>steric stabilisation</td></tr><tr><td>漏槽</td><td>sink</td><td>白蛋白</td><td>albumin</td></tr><tr><td>给药间隔</td><td>dosing interval</td><td>相互作用</td><td>interaction</td></tr><tr><td>耐受性</td><td>tolerability</td><td>尺寸排阻色谱</td><td>size-exclusion chromatography</td></tr><tr><td>氢化大豆磷脂酰胆碱</td><td>hydrogenated soy phosphatidylcholine</td><td>摩尔比</td><td>molar ratio</td></tr><tr><td>聚氰基丙烯酸十六烷酯</td><td>poly(hexadecyl cyanoacrylate)</td><td>移植瘤</td><td>xenograft</td></tr><tr><td>胶体分散</td><td>colloidal dispersion</td><td>混合胶束</td><td>mixed micelles</td></tr><tr><td>小单层脂质体</td><td>small unilamellar vesicle</td><td>胆固醇硫酸酯</td><td>cholesteryl sulfate</td></tr><tr><td>腹腔巨噬细胞</td><td>peritoneal macrophages</td><td>薄膜水化</td><td>thin-film hydration</td></tr><tr><td>热谱</td><td>thermogram</td><td>模型膜</td><td>model membrane</td></tr><tr><td>隐形</td><td>stealth</td><td>隐身</td><td>stealth</td></tr><tr><td>外来物</td><td>foreign body</td><td>治疗</td><td>therapy</td></tr><tr><td>毒性</td><td>toxicity</td><td>单油酸甘油酯</td><td>monoolein</td></tr><tr><td>聚山梨酯 80</td><td>polysorbate 80</td><td>易错</td><td>common trap</td></tr><tr><td>公式</td><td>formula</td><td>清除</td><td>clearance</td></tr><tr><td>颗粒</td><td>particle</td><td>中性</td><td>neutral</td></tr><tr><td>接近中性</td><td>near-neutral</td><td>单层</td><td>unilamellar</td></tr><tr><td>溶剂</td><td>solvent</td><td>蓄积</td><td>accumulation</td></tr><tr><td>识别</td><td>recognition</td><td>吸附</td><td>adsorption</td></tr><tr><td>机制</td><td>mechanism</td><td>表面电荷</td><td>surface charge</td></tr><tr><td>体内命运</td><td>in vivo fate</td><td>三代载体</td><td>three generations of carriers</td></tr><tr><td>细胞摄取</td><td>cellular uptake</td><td>修饰</td><td>modification</td></tr><tr><td>脂质制剂</td><td>lipid formulation</td><td>酸性</td><td>acidic</td></tr><tr><td>内腔</td><td>inner lumen</td><td>膜孔</td><td>membrane pores</td></tr><tr><td>曲线</td><td>curve</td><td>浓度</td><td>concentration</td></tr><tr><td>打印质量</td><td>printed mass</td><td>膏体</td><td>paste</td></tr><tr><td>干燥</td><td>drying</td><td>静注</td><td>IV injection</td></tr><tr><td>口服</td><td>oral</td><td>结合</td><td>binding</td></tr><tr><td>游离</td><td>free</td><td>堆积</td><td>packing</td></tr><tr><td>激活</td><td>activation</td><td>第一代</td><td>first generation</td></tr><tr><td>第二代</td><td>second generation</td><td>第三代</td><td>third generation</td></tr><tr><td>皮肤</td><td>skin</td><td>小鼠</td><td>mice</td></tr><tr><td>仿真数据</td><td>simulated data</td><td>标签</td><td>tag</td></tr><tr><td>带正电</td><td>positively charged</td><td>带负电</td><td>negatively charged</td></tr><tr><td>带电</td><td>charged</td><td>副作用</td><td>side effects</td></tr><tr><td>细胞膜</td><td>cell membrane</td><td>生物膜</td><td>biological membrane</td></tr><tr><td>靶细胞</td><td>target cell</td><td>疏水链</td><td>hydrophobic chain</td></tr><tr><td>体相</td><td>bulk phase</td><td>滞留</td><td>retention</td></tr><tr><td>渗透</td><td>permeation</td><td>片芯</td><td>tablet core</td></tr><tr><td>孔隙</td><td>porosity</td><td>崩解</td><td>disintegration</td></tr><tr><td>粉床</td><td>powder bed</td><td>混合</td><td>mixing</td></tr><tr><td>液滴</td><td>droplet</td><td>模具</td><td>mould</td></tr><tr><td>文件</td><td>file</td><td>一批一个</td><td>batch of one</td></tr><tr><td>几何即辅料</td><td>geometry is an excipient</td><td>双层刚性</td><td>bilayer rigidity</td></tr><tr><td>稳定</td><td>stable</td><td>不稳定</td><td>unstable</td></tr><tr><td>组成</td><td>composition</td><td>链</td><td>chain</td></tr></table></div><h2 id="appg">附录 F　简答题英文句型<span class="en">Ready-to-use English sentences</span></h2><p class="how">简答和大题用英文写：定义 → 机制（讲为什么）→ 课上的例子。下面这些句子可以直接套用。</p><ul class="en">
+<li>X is defined as … This happens because … For example, in the course, …</li>
+<li>Phospholipids are Class II polar lipids: insoluble but swelling in water, they form lamellar mesophases that close into liposomes.</li>
+<li>Remote loading uses a transmembrane pH gradient: the neutral weak base crosses the bilayer, is protonated in the acidic core and is trapped.</li>
+<li>After IV injection, liposomes are opsonised and captured by the mononuclear phagocyte system, mainly Kupffer cells.</li>
+<li>PEG forms a hydrated steric barrier that reduces opsonisation, prolongs circulation and allows accumulation in some tumours by the EPR effect.</li>
+<li>Lipid formulations of amphotericin B reduce its toxicity, not its intrinsic activity, so higher doses can be given.</li>
+<li>Cellular uptake is not cytosolic delivery: the nucleic acid must escape from the endosome.</li>
+<li>A dosage form can change F and k<sub>a</sub>, but not V and k<sub>e</sub>.</li>
+<li>Only the free drug crosses membranes; excess cyclodextrin lowers the free fraction and absorption.</li>
+<li>Hospitals prefer semi-solid extrusion: low temperature, high drug loading, single-use cartridges and dose set by printed volume.</li>
+</ul>
+<footer>内容依据 TU17 课件整理；数值沿用课件；口述数值已标注；<span class="tag t-db">补充</span> 为课件外背景知识。</footer>
+</div></body></html>
