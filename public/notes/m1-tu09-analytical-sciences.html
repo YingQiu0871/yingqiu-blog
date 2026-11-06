@@ -1,0 +1,111 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>TU09 分析科学 · Analytical Sciences</title><style>
+:root{color-scheme:light;
+ --bg:#f6f8f8;--surface:#fff;--ink:#17222a;--ink2:#36454d;--mut:#65747b;--line:#d9e1e3;--line2:#eef2f3;
+ --teal:#0f5c6b;--teal-ink:#fff;--wine:#86224d;--star:#b45309;--ok:#1d7a46;
+ --deep-bg:#eef6f7;--key-bg:#fbf0f5;--warn-bg:#fff6e5;--th-bg:#f0f4f5;--zebra:#fafcfc;--chip:#e7f0f2;
+ --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+ --f-head:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,serif}
+@media (prefers-color-scheme: dark){:root{color-scheme:dark;
+ --bg:#11171a;--surface:#182126;--ink:#e2eaec;--ink2:#c2ced2;--mut:#8c9ca3;--line:#2b383d;--line2:#202b30;
+ --teal:#5db5c5;--teal-ink:#0c1b1f;--wine:#e889b2;--star:#f0b35a;--ok:#6fd39a;
+ --deep-bg:#15282c;--key-bg:#2a1a22;--warn-bg:#2a2315;--th-bg:#1f2b30;--zebra:#1b252a;--chip:#1e3036}}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.78 var(--f-body);-webkit-text-size-adjust:100%}
+a{color:var(--teal)}
+a:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
+
+.top{background:var(--teal);color:var(--teal-ink);padding:36px 16px 30px}
+.top-in{max-width:1180px;margin:0 auto}
+.eyebrow{margin:0 0 6px;font-size:12.5px;letter-spacing:.14em;opacity:.85}
+.top h1{font-family:var(--f-head);font-weight:700;font-size:clamp(26px,5vw,38px);line-height:1.25;margin:0;text-wrap:balance}
+.top .sub{margin:6px 0 0;font-size:16px;opacity:.9}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.stats li{font-size:13px;padding:3px 12px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28)}
+@media (prefers-color-scheme: dark){.stats li{background:rgba(0,0,0,.12);border-color:rgba(0,0,0,.2)}}
+
+.layout{max-width:1180px;margin:0 auto;padding:8px 16px 80px;display:grid;grid-template-columns:minmax(0,1fr);gap:0 40px}
+.doc{min-width:0;max-width:800px}
+.side-in{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-top:22px}
+.side-t{font-family:var(--f-head);font-weight:700;font-size:15px;margin-bottom:6px}
+.toc,.toc ol{list-style:none;margin:0;padding:0}
+.toc a{color:var(--ink2);text-decoration:none;display:block;padding:3px 0}
+.toc a:hover{color:var(--teal);text-decoration:underline}
+.toc .t2>a{font-weight:600;color:var(--teal)}
+.toc .t3{display:none}
+@media (min-width:1000px){
+ .layout{grid-template-columns:250px minmax(0,1fr)}
+ .side-in{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;margin-top:30px;font-size:13.5px;line-height:1.45}
+ .toc .t3{display:block}
+ .toc .t3 a{padding:2px 0 2px 12px;color:var(--mut);font-size:13px}
+ .toc .t2{margin-bottom:6px}
+}
+
+h2{font-family:var(--f-head);font-size:clamp(21px,3.6vw,25px);line-height:1.35;margin:52px 0 10px;padding-bottom:10px;border-bottom:2px solid var(--teal);scroll-margin-top:16px}
+h2 .n{display:inline-block;min-width:1.7em;color:var(--teal)}
+h3{font-family:var(--f-head);font-size:18px;line-height:1.45;margin:32px 0 10px;color:var(--wine);scroll-margin-top:16px}
+h4{font-size:15.5px;margin:20px 0 6px}
+p{margin:8px 0}
+ul,ol{margin:8px 0 8px 22px;padding:0} li{margin:4px 0}
+strong{font-weight:650}
+.star{color:var(--star);font-weight:650}
+
+.tw{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:var(--surface)}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th-bg);font-weight:600}
+tbody tr:nth-child(even){background:var(--zebra)}
+
+/* numbered points */
+.pt{display:flex;gap:10px;margin:8px 0}
+.pt .no{flex:none;min-width:26px;height:26px;padding:0 6px;border-radius:13px;background:var(--chip);color:var(--teal);font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+.pt .tx{min-width:0}
+.sub-pt{margin:4px 0 4px 36px;padding-left:12px;border-left:2px solid var(--line);color:var(--ink2)}
+
+/* definitions */
+.defs{margin:10px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.def{display:grid;grid-template-columns:minmax(90px,180px) minmax(0,1fr);gap:4px 16px;padding:10px 16px;border-top:1px solid var(--line2)}
+.def:first-child{border-top:0}
+.def dt{font-weight:700;color:var(--wine)}
+.def dd{margin:0;color:var(--ink2)}
+@media (max-width:600px){.def{grid-template-columns:1fr}}
+
+/* questions */
+.qa{margin:14px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.qa .q{display:flex;gap:10px;padding:11px 16px;background:var(--deep-bg);font-weight:600}
+.qa .a{padding:10px 16px 12px}
+.qa .a p{margin:6px 0}
+.tag{flex:none;display:inline-flex;align-items:center;justify-content:center;height:22px;min-width:22px;padding:0 6px;border-radius:5px;font-size:12px;font-weight:700;margin-top:2px}
+.tag.qt{background:var(--teal);color:var(--teal-ink)}
+.tag.at{background:var(--wine);color:#fff}
+.a-row{display:flex;gap:10px}
+
+.mcq{margin:12px 0;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.mcq .stem{display:flex;gap:10px;font-weight:600}
+.mcq .stem .no{flex:none;color:var(--teal)}
+.opts{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px}
+.opts li{margin:0;padding:5px 10px;border-radius:7px;background:var(--line2);font-size:14.5px}
+.opts li b{color:var(--mut);margin-right:6px}
+.opts li.right{background:var(--key-bg);outline:1.5px solid var(--wine)}
+.opts li.right b{color:var(--wine)}
+.ans{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--wine);background:var(--key-bg);border-radius:999px;padding:2px 12px}
+.blank{display:inline-block;min-width:2.4em;border-bottom:1.5px solid var(--mut);margin:0 3px;text-align:center}
+
+.callout{margin:14px 0;padding:10px 16px;background:var(--warn-bg);border-left:4px solid var(--star);border-radius:0 8px 8px 0}
+
+/* images */
+.pages{display:grid;gap:18px;margin:14px 0}
+.page{margin:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.page a{display:block;background:#fff}
+.page img{display:block;width:100%;height:auto}
+.page figcaption{display:flex;justify-content:space-between;gap:10px;padding:8px 14px;font-size:13.5px;color:var(--mut);border-top:1px solid var(--line)}
+.page figcaption span:first-child{color:var(--ink2);font-weight:600}
+.note{color:var(--mut);font-size:14px}
+img.doc-img{display:block;max-width:100%;height:auto;margin:10px auto;padding:6px;background:#fff;border:1px solid var(--line);border-radius:8px}
+p img.doc-img,.tx img.doc-img,dd img.doc-img{display:inline-block;vertical-align:middle;margin:4px 6px}
+
+.foot{margin-top:60px;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mut)}
+@media (max-width:600px){body{font-size:15.5px}h2{margin-top:40px}.qa .q,.qa .a,.mcq{padding-left:13px;padding-right:13px}}
+@media print{.side{display:none}.layout{display:block}.top{background:#fff;color:#000}}
+</style></head><body><header class="top"><div class="top-in"><p class="eyebrow">硕士一年级学习笔记 · M1 D2HP NOTES</p><h1>TU09 分析科学 · Analytical Sciences</h1><p class="sub">IR 解谱套路 · NMR 笔记</p><ul class="stats"><li>7 条名词与要点</li><li>4 道问答题</li></ul></div></header><div class="layout"><nav class="side" aria-label="目录"><div class="side-in"><div class="side-t">目录</div><ol class="toc"><li class="t2"><a href="#s1">IR 解谱速通（3 步 + 10 个锚点）</a></li><li class="t2"><a href="#s2">NMR 课堂笔记</a><ol><li class=t3><a href=#s2-h1>一、 NMR 的基本原理 (The Principle)</a></li></ol></li></ol></div></nav><main class="doc"><section id="s1"><h2><span class="n">01</span>IR 解谱速通（3 步 + 10 个锚点）</h2><dl class="defs"><div class="def"><dt>Step 0</dt><dd>先认题型（你们最常见的）</dd></div><div class="def"><dt>连线题</dt><dd>几张谱 ↔ 几个分子（先抓“独一无二峰”秒配对）</dd></div><div class="def"><dt>Band assignment</dt><dd>Band1–Band6 选项（只要把每个 band 归到官能团区间）</dd></div><div class="def"><dt>判断题</dt><dd>OH/NH、C=O、是否共轭/氢键、是否有芳环</dd></div><div class="def"><dt>Step 1</dt><dd>先扫一眼“独一无二峰”（10 秒定大类）</dd></div></dl><div class="qa"><div class="q"><span class="tag qt">问</span><span><strong>① 有无 超宽带？</strong></span></div><div class="a"><div class="a-row"><span class="tag at">答</span><div><p><strong>3200–3600 宽峰（像一坨云）</strong> → <strong>醇/酚 O–H stretch</strong></p><p><strong>2500–3300 更宽更拖尾（像一整片雾）</strong> → <strong>羧酸 O–H</strong>（强特征）</p></div></div></div></div><div class="qa"><div class="q"><span class="tag qt">问</span><span><strong>② 有无 1700 左右的大刀峰？</strong></span></div><div class="a"><div class="a-row"><span class="tag at">答</span><div><ul><li><strong>1650–1750 强尖峰</strong> → <strong>C=O（羰基）</strong><ul><li>~1740 常见酯</li><li>~1715 常见酮</li><li>~1700 左右可能共轭/酸/醛（要结合其他峰）</li></ul></div></div></div></div><div class="qa"><div class="q"><span class="tag qt">问</span><span><strong>③ 有无 2250 左右的尖峰？</strong></span></div><div class="a"><div class="a-row"><span class="tag at">答</span><div><p><strong>~2250</strong> → <strong>C≡N（腈）</strong></p><p><strong>~2100–2260</strong> → <strong>C≡C（炔）</strong>（通常弱一点）</p><div class="callout"><strong>口诀：宽云=OH；1700大刀=C=O；2250尖钉=C≡N。</strong></div><p><strong>Step 2：再看“背景区”（确认烃骨架类型）</strong></p><p class="sub-pt"><strong>④ C–H stretching（2800–3100）</strong></p><p><strong>2850–2960</strong>：sp³ C–H（CH₂/CH₃）→ 饱和烷基</p><p><strong>~3030</strong>：sp² C–H → 芳香/烯烃</p><p><strong>~3300 细尖</strong>：sp C–H（末端炔）→ 终端炔加分点</p><p class="sub-pt"><strong>⑤ 芳香环“铁证区”（1500–1600 + 700–900）</strong></p><p><strong>~1600 &amp; ~1500</strong>：芳香 C=C 骨架</p><p><strong>700–900</strong>：芳香 C–H 面外弯曲（还能看取代型，考试一般只要写“aromatic”）</p><p><strong>Step 3：最后用“指纹区”做“排除/确认”（不求背全表）</strong></p><p>指纹区（1500–600）你不用背细节，只要会抓 2–3 个<strong>常见确认峰</strong>：</p><p><strong>C–O（醇/醚/酯）</strong>：<strong>1000–1300</strong>（常强）</p><p><strong>C–N（胺）</strong>：<strong>1020–1250</strong>（中等）</p><p><strong>NO₂</strong>：两个强峰 <strong>~1550 + ~1350</strong></p><p><strong>CH₂ rocking（长直链）</strong>：<strong>~720</strong>（超好用！直链烷基“指纹”）</p><p><strong>你必须背的“10个锚点”（背完就能做你们90%的IR题）</strong></p><div class="pt"><span class="no">1</span><div class="tx"><strong>O–H（醇）</strong>：3200–3600，宽</div></div><div class="pt"><span class="no">2</span><div class="tx"><strong>O–H（羧酸）</strong>：2500–3300，超宽拖尾</div></div><div class="pt"><span class="no">3</span><div class="tx"><strong>N–H（胺）</strong>：3300–3500（伯胺常“双峰”，仲胺常“单峰”）</div></div><div class="pt"><span class="no">4</span><div class="tx"><strong>C=O</strong>：1650–1750 强</div></div><div class="pt"><span class="no">5</span><div class="tx"><strong>C≡N</strong>：~2250</div></div><div class="pt"><span class="no">6</span><div class="tx"><strong>sp³ C–H</strong>：2850–2960</div></div><div class="pt"><span class="no">7</span><div class="tx"><strong>sp² C–H</strong>：~3030</div></div><div class="pt"><span class="no">8</span><div class="tx"><strong>芳香 C=C</strong>：~1600 &amp; ~1500</div></div><div class="pt"><span class="no">9</span><div class="tx"><strong>C–O</strong>：1000–1300（常强）</div></div><div class="pt"><span class="no">10</span><div class="tx"><strong>直链 CH₂ rocking</strong>：~720</div></div><p><strong>考场写答案模板（照抄就像标准答案）</strong></p><p>**CN：**谱图出现（特征峰1）→ 推断官能团；出现（特征峰2）→ 进一步确认；缺少（特征峰3）→ 排除某类结构；因此最可能为……</p><p>**EN：**Presence of (feature 1) indicates …; (feature 2) supports …; absence of (feature 3) rules out …; therefore the compound is most consistent with …</p><p><strong>最后给你一个“连线题秒杀策略”</strong></p><p>当有 3–4 张谱要配 3–4 个分子时：</p><div class="pt"><span class="no">1</span><div class="tx">先找<strong>唯一峰</strong>（羧酸OH/羰基/腈）直接锁一张谱</div></div><div class="pt"><span class="no">2</span><div class="tx">剩下的再用 **OH vs NH（宽 vs 窄、单峰 vs 双峰）**区分</div></div><div class="pt"><span class="no">3</span><div class="tx">最后用 **芳香环区（3030 + 1600 + 700–900）**收尾</div></div></div></div></div></div></section><section id="s2"><h2><span class="n">02</span>NMR 课堂笔记</h2><p>NMR Spectroscopy</p><p>Nuclear spin translation</p><p>nuclear spin:</p><p>NMR spectroscopy</p><div class="qa"><div class="q"><span class="tag qt">问</span><span>*nuclear spin transhhons??</span></div><div class="a"><div class="a-row"><span class="tag at">答</span><div><p>*intereacher?? between light and nuclei</p><p>For a fiven?? X isolope, of I spm?? number value, energy levels,identified by ...</p><p>*degewaraoss?? (equal energy) in absence of magnetic field</p><p>*non-degenaratea (=/= energier??) submitted to B0 magnetic?? field</p></div></div></div></div><h3 id="s2-h1">一、 NMR 的基本原理 (The Principle)</h3><p>NMR 的核心原理基于原子核的自旋 (Spin) 及其在磁场中的行为。</p><div class="pt"><span class="no">1</span><div class="tx">原子核的磁性 (Magnetic Properties of Nuclei)</div></div><p>并不是所有的原子核都能进行 NMR 分析。只有自旋量子数 (Spin Quantum Number, I) 不为零的原子核才具有磁性。</p><dl class="defs"><div class="def"><dt>最常用的原子核</dt><dd>1H (氢谱) 和 13C (碳谱)。</dd></div></dl><p>这些原子核就像微小的“磁铁”。</p><div class="pt"><span class="no">2</span><div class="tx">外加磁场的作用 (External Magnetic Field - B0​)</div></div><dl class="defs"><div class="def"><dt>无磁场时</dt><dd>原子核的朝向是随机杂乱的。</dd></div></dl><p>放入强磁场 (B0​) 后： 原子核会根据磁场方向进行取向。对于 1H，主要有两种状态：</p><p>低能态 (α态): 与磁场方向一致（顺磁），能量较低。</p><p>高能态 (β态): 与磁场方向相反（逆磁），能量较高。</p><p>这两种状态之间产生了一个能级差 (ΔE)。</p><div class="pt"><span class="no">3</span><div class="tx">共振 (Resonance)</div></div><p>我们向样品发射特定频率的射频脉冲 (Radio Frequency, RF)。</p><p>当射频能量等于能级差 (ΔE) 时，处于低能态的原子核吸收能量，跃迁到高能态。这种现象就叫**“共振”**。</p><div class="pt"><span class="no">4</span><div class="tx">信号检测 (Signal Detection)停止射频脉冲后，原子核会从高能态回到低能态（这个过程叫弛豫, Relaxation）。</div></div><p>在此过程中，它们会释放出能量信号（自由感应衰减信号, FID）。</p><p>通过傅里叶变换 (Fourier Transform)，计算机将这个时间信号转换为我们看到的频率图谱（NMR 谱图）。</p><div class="pt"><span class="no">5</span><div class="tx">为什么能区分不同的原子？(Chemical Shift)</div></div><p>如果所有氢原子的共振频率都一样，NMR 就没用了。实际上，原子核外部的电子云会屏蔽一部分磁场。</p><p>电子云密度不同 → 感受到的实际磁场不同 → 共振频率不同。</p><p>这种频率的差异被称为化学位移 (Chemical Shift, δ)，单位是 ppm。它告诉我们该原子处于什么样的化学环境中（例如：是在苯环上，还是在甲基上）。</p></section><p class="foot">M1 D2HP 复习笔记整理 · 已去除个人信息</p></main></div></body></html>

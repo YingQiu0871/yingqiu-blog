@@ -1,0 +1,111 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>OTU3 基因克隆实验 · Gene Cloning Practical</title><style>
+:root{color-scheme:light;
+ --bg:#f6f8f8;--surface:#fff;--ink:#17222a;--ink2:#36454d;--mut:#65747b;--line:#d9e1e3;--line2:#eef2f3;
+ --teal:#0f5c6b;--teal-ink:#fff;--wine:#86224d;--star:#b45309;--ok:#1d7a46;
+ --deep-bg:#eef6f7;--key-bg:#fbf0f5;--warn-bg:#fff6e5;--th-bg:#f0f4f5;--zebra:#fafcfc;--chip:#e7f0f2;
+ --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+ --f-head:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,serif}
+@media (prefers-color-scheme: dark){:root{color-scheme:dark;
+ --bg:#11171a;--surface:#182126;--ink:#e2eaec;--ink2:#c2ced2;--mut:#8c9ca3;--line:#2b383d;--line2:#202b30;
+ --teal:#5db5c5;--teal-ink:#0c1b1f;--wine:#e889b2;--star:#f0b35a;--ok:#6fd39a;
+ --deep-bg:#15282c;--key-bg:#2a1a22;--warn-bg:#2a2315;--th-bg:#1f2b30;--zebra:#1b252a;--chip:#1e3036}}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.78 var(--f-body);-webkit-text-size-adjust:100%}
+a{color:var(--teal)}
+a:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
+
+.top{background:var(--teal);color:var(--teal-ink);padding:36px 16px 30px}
+.top-in{max-width:1180px;margin:0 auto}
+.eyebrow{margin:0 0 6px;font-size:12.5px;letter-spacing:.14em;opacity:.85}
+.top h1{font-family:var(--f-head);font-weight:700;font-size:clamp(26px,5vw,38px);line-height:1.25;margin:0;text-wrap:balance}
+.top .sub{margin:6px 0 0;font-size:16px;opacity:.9}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.stats li{font-size:13px;padding:3px 12px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28)}
+@media (prefers-color-scheme: dark){.stats li{background:rgba(0,0,0,.12);border-color:rgba(0,0,0,.2)}}
+
+.layout{max-width:1180px;margin:0 auto;padding:8px 16px 80px;display:grid;grid-template-columns:minmax(0,1fr);gap:0 40px}
+.doc{min-width:0;max-width:800px}
+.side-in{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-top:22px}
+.side-t{font-family:var(--f-head);font-weight:700;font-size:15px;margin-bottom:6px}
+.toc,.toc ol{list-style:none;margin:0;padding:0}
+.toc a{color:var(--ink2);text-decoration:none;display:block;padding:3px 0}
+.toc a:hover{color:var(--teal);text-decoration:underline}
+.toc .t2>a{font-weight:600;color:var(--teal)}
+.toc .t3{display:none}
+@media (min-width:1000px){
+ .layout{grid-template-columns:250px minmax(0,1fr)}
+ .side-in{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;margin-top:30px;font-size:13.5px;line-height:1.45}
+ .toc .t3{display:block}
+ .toc .t3 a{padding:2px 0 2px 12px;color:var(--mut);font-size:13px}
+ .toc .t2{margin-bottom:6px}
+}
+
+h2{font-family:var(--f-head);font-size:clamp(21px,3.6vw,25px);line-height:1.35;margin:52px 0 10px;padding-bottom:10px;border-bottom:2px solid var(--teal);scroll-margin-top:16px}
+h2 .n{display:inline-block;min-width:1.7em;color:var(--teal)}
+h3{font-family:var(--f-head);font-size:18px;line-height:1.45;margin:32px 0 10px;color:var(--wine);scroll-margin-top:16px}
+h4{font-size:15.5px;margin:20px 0 6px}
+p{margin:8px 0}
+ul,ol{margin:8px 0 8px 22px;padding:0} li{margin:4px 0}
+strong{font-weight:650}
+.star{color:var(--star);font-weight:650}
+
+.tw{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:var(--surface)}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th-bg);font-weight:600}
+tbody tr:nth-child(even){background:var(--zebra)}
+
+/* numbered points */
+.pt{display:flex;gap:10px;margin:8px 0}
+.pt .no{flex:none;min-width:26px;height:26px;padding:0 6px;border-radius:13px;background:var(--chip);color:var(--teal);font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+.pt .tx{min-width:0}
+.sub-pt{margin:4px 0 4px 36px;padding-left:12px;border-left:2px solid var(--line);color:var(--ink2)}
+
+/* definitions */
+.defs{margin:10px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.def{display:grid;grid-template-columns:minmax(90px,180px) minmax(0,1fr);gap:4px 16px;padding:10px 16px;border-top:1px solid var(--line2)}
+.def:first-child{border-top:0}
+.def dt{font-weight:700;color:var(--wine)}
+.def dd{margin:0;color:var(--ink2)}
+@media (max-width:600px){.def{grid-template-columns:1fr}}
+
+/* questions */
+.qa{margin:14px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.qa .q{display:flex;gap:10px;padding:11px 16px;background:var(--deep-bg);font-weight:600}
+.qa .a{padding:10px 16px 12px}
+.qa .a p{margin:6px 0}
+.tag{flex:none;display:inline-flex;align-items:center;justify-content:center;height:22px;min-width:22px;padding:0 6px;border-radius:5px;font-size:12px;font-weight:700;margin-top:2px}
+.tag.qt{background:var(--teal);color:var(--teal-ink)}
+.tag.at{background:var(--wine);color:#fff}
+.a-row{display:flex;gap:10px}
+
+.mcq{margin:12px 0;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.mcq .stem{display:flex;gap:10px;font-weight:600}
+.mcq .stem .no{flex:none;color:var(--teal)}
+.opts{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px}
+.opts li{margin:0;padding:5px 10px;border-radius:7px;background:var(--line2);font-size:14.5px}
+.opts li b{color:var(--mut);margin-right:6px}
+.opts li.right{background:var(--key-bg);outline:1.5px solid var(--wine)}
+.opts li.right b{color:var(--wine)}
+.ans{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--wine);background:var(--key-bg);border-radius:999px;padding:2px 12px}
+.blank{display:inline-block;min-width:2.4em;border-bottom:1.5px solid var(--mut);margin:0 3px;text-align:center}
+
+.callout{margin:14px 0;padding:10px 16px;background:var(--warn-bg);border-left:4px solid var(--star);border-radius:0 8px 8px 0}
+
+/* images */
+.pages{display:grid;gap:18px;margin:14px 0}
+.page{margin:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.page a{display:block;background:#fff}
+.page img{display:block;width:100%;height:auto}
+.page figcaption{display:flex;justify-content:space-between;gap:10px;padding:8px 14px;font-size:13.5px;color:var(--mut);border-top:1px solid var(--line)}
+.page figcaption span:first-child{color:var(--ink2);font-weight:600}
+.note{color:var(--mut);font-size:14px}
+img.doc-img{display:block;max-width:100%;height:auto;margin:10px auto;padding:6px;background:#fff;border:1px solid var(--line);border-radius:8px}
+p img.doc-img,.tx img.doc-img,dd img.doc-img{display:inline-block;vertical-align:middle;margin:4px 6px}
+
+.foot{margin-top:60px;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mut)}
+@media (max-width:600px){body{font-size:15.5px}h2{margin-top:40px}.qa .q,.qa .a,.mcq{padding-left:13px;padding-right:13px}}
+@media print{.side{display:none}.layout{display:block}.top{background:#fff;color:#000}}
+</style></head><body><header class="top"><div class="top-in"><p class="eyebrow">硕士一年级学习笔记 · M1 D2HP NOTES</p><h1>OTU3 基因克隆实验 · Gene Cloning Practical</h1><p class="sub">质粒提取与诊断性酶切（Day 3）</p><ul class="stats"><li>11 条名词与要点</li></ul></div></header><div class="layout"><nav class="side" aria-label="目录"><div class="side-in"><div class="side-t">目录</div><ol class="toc"><li class="t2"><a href="#s1">质粒提取与诊断性酶切</a><ol><li class=t3><a href=#s1-h1>一、 核心基础知识 (The &quot;Why&quot;)</a></li><li class=t3><a href=#s1-h2>二、 详细湿实验操作手册与预计时间</a></li><li class=t3><a href=#s1-h3>三、 实验避坑指南 (Troubleshooting)</a></li></ol></li></ol></div></nav><main class="doc"><section id="s1"><h2><span class="n">01</span>质粒提取与诊断性酶切</h2><dl class="defs"><div class="def"><dt>基因克隆实验手册</dt><dd>质粒提取与诊断性酶切 (Day 3)</dd></div></dl><h3 id="s1-h1"><strong>一、 核心基础知识 (The &quot;Why&quot;)</strong></h3><dl class="defs"><div class="def"><dt>质粒提取</dt><dd>碱裂解法 (Alkaline Lysis)</dd></div></dl><p>这是分子生物学的基石技术，利用质粒 DNA 与基因组 DNA 在<strong>变性与复性</strong>过程中的性质差异进行分离：</p><p><strong>Buffer 1 (B1 - 重悬)</strong>：含 Tris（缓冲 pH）和 EDTA（螯合二价离子以抑制核酸酶） 。</p><p><strong>Buffer 2 (B2 - 裂解)</strong>：含 NaOH 和 SDS 。SDS 破坏细胞膜并变性蛋白；NaOH 将环境调节至强碱性，使所有 DNA 双链解开变性 。</p><p><strong>Buffer 3 (B3 - 中和)</strong>：含高盐浓度的醋酸钾（pH 5.5）和 RNase A 。酸性环境使质粒 DNA 迅速准确复性，而巨大的基因组 DNA 无法及时复性，与蛋白沉淀在一起 。</p><p><strong>Buffer 4 (Washing)</strong>：含 75% 乙醇，用于在不溶解 DNA 的情况下洗去膜上的残留盐分和杂质 。</p><dl class="defs"><div class="def"><dt>验证策略</dt><dd>SphI 酶切验证</dd></div></dl><p>利用限制性内切酶在重组前后的切点数量差异：</p><p><strong>空质粒 (pG11)</strong>：仅 1 个位点 $\rightarrow$ 切开后呈 1 条带（约 5371 bp）。</p><dl class="defs"><div class="def"><dt>重组质粒</dt><dd>由于插入了 GFP，多出 1 个位点 $\rightarrow$ 切开后呈 2 条带（4612 bp + 767 bp）。</dd></div></dl><h3 id="s1-h2"><strong>二、 详细湿实验操作手册与预计时间</strong></h3><dl class="defs"><div class="def"><dt>第一阶段</dt><dd>质粒微量提取 (Plasmid Miniprep)</dd></div><div class="def"><dt>总预计时间</dt><dd>35 - 45 分钟</dd></div></dl><div class="tw"><table><thead><tr><th><p><strong>步骤</strong></p></th><th><p><strong>操作细节</strong></p></th><th><p><strong>预计时间</strong></p></th><th><p><strong>关键注意点</strong></p></th></tr></thead><tbody><tr><td><p><strong>1. 收集菌体</strong></p></td><td><p>取 1.5 - 3 mL 过夜培养物至 1.5 mL 管中，13,000 rpm 离心 30 秒 。弃尽上清液 。</p></td><td><p>3 min</p></td><td><p>若菌液稀，可重复离心一次以增加收率 。</p></td></tr><tr><td><p><strong>2. 重悬 (B1)</strong></p></td><td><p>加入 <strong>200 µL B1</strong>，通过 Vortex 或吹吸直至菌块完全消失 。</p></td><td><p>2 min</p></td><td><p><strong>必须</strong>彻底打散，否则后续裂解不完全 。</p></td></tr><tr><td><p><strong>3. 裂解 (B2)</strong></p></td><td><p>加入 <strong>200 µL B2</strong>，立即温和上下颠倒 5-6 次 。</p></td><td><p>1.5 min</p></td><td><p><strong>禁止 Vortex</strong> 。时间严禁超过 1 分钟，否则质粒受损 。</p></td></tr><tr><td><p><strong>4. 中和 (B3)</strong></p></td><td><p>加入 <strong>400 µL B3</strong>，温和颠倒直至颜色彻底变黄并出现大量沉淀 。</p></td><td><p>3 min</p></td><td><p>沉淀形成后静置 2 分钟以充分中和 。</p></td></tr><tr><td><p><strong>5. 离心澄清</strong></p></td><td><p>13,000 rpm 离心 <strong>5 分钟</strong> 。</p></td><td><p>6 min</p></td><td><p>确保沉淀紧实，上清液清澈 。</p></td></tr><tr><td><p><strong>6. 上柱绑定</strong></p></td><td><p>将上清液吸入 Spin Column，13,000 rpm 离心 1 分钟，弃流出液 。</p></td><td><p>2 min</p></td><td><p>不要吸入底部的白色碎片 。</p></td></tr><tr><td><p><strong>7. 洗涤 (Wash)</strong></p></td><td><p>加入 200 µL Wash Buffer 1 离心 1 min ；加入 400 µL Wash Buffer 2 (Buffer 4) 离心 1 min 。</p></td><td><p>5 min</p></td><td><p>所有的洗涤步骤都是必须的 。</p></td></tr><tr><td><p><strong>8. 彻底去醇</strong></p></td><td><p>弃流出液，将空柱再次 <strong>13,000 rpm 离心 1 分钟</strong> 。</p></td><td><p>2 min</p></td><td><p><strong>关键步骤</strong>：残留乙醇会使样从胶孔飘出 。</p></td></tr><tr><td><p><strong>9. 洗脱 (Elution)</strong></p></td><td><p>柱子移入干净管，中央加 <strong>30 - 50 µL Elution Buffer</strong>，静置 1 分钟后离心 1 分钟 。</p></td><td><p>5 min</p></td><td><p>滴在膜中央以保证效率 。</p></td></tr></tbody></table></div><dl class="defs"><div class="def"><dt>第二阶段</dt><dd>诊断性酶切验证 (Diagnostic Digest)</dd></div><div class="def"><dt>总预计时间</dt><dd>1 小时 15 分钟（不含电泳跑胶时间）</dd></div></dl><ol><li><strong>配制体系 (预计 5 min)</strong>：<ul><li>在冰上依次加入：超纯水（补至 20 µL）、10X Buffer (2 µL)、提取的质粒 (5 - 10 µL)、<strong>SphI 酶 (1 µL)</strong>。</li></ul></li><li><strong>反应孵育 (预计 60 min)</strong>：<ul><li>37°C 恒温水浴或金属浴 1 小时。</li></ul></li><li><strong>准备电泳 (预计 10 min)</strong>：<ul><li>加入 6X Loading Buffer。</li></ul></li></ol><h3 id="s1-h3"><strong>三、 实验避坑指南 (Troubleshooting)</strong></h3><dl class="defs"><div class="def"><dt>质粒变性</dt><dd>如果 Lysis 步（加 B2）超过 2 分钟，跑胶会看到比预期更前方的模糊带 。</dd></div><div class="def"><dt>基因组污染</dt><dd>加 B2 和 B3 后的操作必须温和，剧烈震荡会剪切基因组 DNA 使其混入质粒 。</dd></div><div class="def"><dt>酶切不出条带</dt><dd>通常是因为洗脱前的“彻底去醇”离心没做干净，导致残留乙醇抑制了限制酶活性 。</dd></div></dl></section><p class="foot">M1 D2HP 复习笔记整理 · 已去除个人信息</p></main></div></body></html>
