@@ -1,8 +1,8 @@
 import type { Locale } from '@/lib/i18n/config';
-import { getPosts } from '@/lib/blog';
+import { getColumnPosts, getPosts } from '@/lib/blog';
 import { categoryName, type Category } from '@/lib/categories';
 import Link from 'next/link';
-import { COLUMNS, columnPath } from '@/lib/columns';
+import { COLUMNS, columnPath, stagePath } from '@/lib/columns';
 import PostCard from '@/components/PostCard';
 import PlaylistIndex from '@/components/PlaylistIndex';
 
@@ -13,7 +13,10 @@ export default function CategoryIndex({
   lang: Locale;
   category: Category;
 }) {
-  const posts = getPosts(lang, { category: category.id });
+  const columns = COLUMNS.filter((column) => column.category === category.id);
+  // Posts that belong to a column are reached through that column's card, so
+  // the section list only shows the remaining posts.
+  const posts = getPosts(lang, { category: category.id }).filter((post) => !post.column);
   const copy = lang === 'zh' ? category.zh : category.en;
 
   return (
@@ -24,21 +27,56 @@ export default function CategoryIndex({
         <p>{copy.description}</p>
       </header>
 
-      {COLUMNS.filter((column) => column.category === category.id).map((column) => {
+      {columns.map((column) => {
         const colCopy = lang === 'zh' ? column.zh : column.en;
+        const colPosts = getColumnPosts(lang, column.id);
+        const total = colPosts.length;
         return (
-          <Link key={column.id} className="column-card" href={columnPath(lang, column.id)}>
-            <span className="column-card-label">{lang === 'zh' ? '专栏' : 'Column'}</span>
-            <strong>{colCopy.name}</strong>
-            <span>{colCopy.description}</span>
-            <span className="column-card-stages">
-              {column.stages.map((stage) => (lang === 'zh' ? stage.zh.name : stage.en.name)).join(' · ')}
-            </span>
-          </Link>
+          <section key={column.id} className="column-feature" aria-labelledby={`column-${column.id}`}>
+            <div className="column-feature-head">
+              <div className="column-feature-text">
+                <span className="column-feature-label">{lang === 'zh' ? '专栏' : 'Column'}</span>
+                <h2 id={`column-${column.id}`}>
+                  <Link href={columnPath(lang, column.id)}>{colCopy.name}</Link>
+                </h2>
+                <p>{colCopy.description}</p>
+                <p className="column-feature-meta">
+                  {lang === 'zh'
+                    ? `${total} 篇笔记 · ${column.stages.length} 个阶段`
+                    : `${total} ${total === 1 ? 'note' : 'notes'} · ${column.stages.length} stages`}
+                </p>
+              </div>
+              <Link className="column-feature-cta" href={columnPath(lang, column.id)}>
+                {lang === 'zh' ? '进入专栏' : 'Open column'}
+                <span aria-hidden="true"> →</span>
+              </Link>
+            </div>
+            <ul className="column-feature-stages">
+              {column.stages.map((stage) => {
+                const count = colPosts.filter((post) => post.stage === stage.id).length;
+                return (
+                  <li key={stage.id}>
+                    <Link href={stagePath(lang, column.id, stage.id)} data-empty={count === 0 || undefined}>
+                      <strong>{lang === 'zh' ? stage.zh.name : stage.en.name}</strong>
+                      <span>
+                        {count === 0
+                          ? lang === 'zh'
+                            ? '整理中'
+                            : 'Soon'
+                          : lang === 'zh'
+                            ? `${count} 篇`
+                            : `${count} ${count === 1 ? 'note' : 'notes'}`}
+                      </span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
         );
       })}
 
-      {posts.length === 0 ? (
+      {posts.length === 0 && columns.length > 0 ? null : posts.length === 0 ? (
         <div className="content-card empty-state">
           <p>
             {lang === 'zh'
