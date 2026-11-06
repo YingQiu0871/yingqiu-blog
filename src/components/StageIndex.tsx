@@ -15,7 +15,10 @@ export default function StageIndex({
   column: Column;
   stage: Stage;
 }) {
-  const posts = getColumnPosts(lang, column.id).filter((post) => post.stage === stage.id);
+  // Course notes read best in title order (e.g. 大一上 before 大一下, TU17 before TU23).
+  const posts = getColumnPosts(lang, column.id)
+    .filter((post) => post.stage === stage.id)
+    .sort((a, b) => (a.title < b.title ? -1 : a.title > b.title ? 1 : 0));
   const category = getCategory(column.category);
   const colName = lang === 'zh' ? column.zh.name : column.en.name;
   const sc = lang === 'zh' ? stage.zh : stage.en;
