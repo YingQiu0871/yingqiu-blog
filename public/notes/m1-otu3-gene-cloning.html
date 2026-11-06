@@ -111,6 +111,9 @@ p img.doc-img,.tx img.doc-img,dd img.doc-img{display:inline-block;vertical-align
 
 /* tables: never squeeze columns into a vertical strip on narrow screens - scroll sideways instead */
 .tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.doc{overflow-wrap:anywhere}
+.tw,.doc table{overflow-wrap:break-word}
+.doc :not(.tw)>table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .tw table{width:auto;min-width:100%}
 th,td{min-width:6.5em;max-width:28em}
 th{white-space:nowrap}
