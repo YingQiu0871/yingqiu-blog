@@ -1,0 +1,111 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>OTU06 天然与合成化合物结构解析 · 课堂笔记</title><style>
+:root{color-scheme:light;
+ --bg:#f6f8f8;--surface:#fff;--ink:#17222a;--ink2:#36454d;--mut:#65747b;--line:#d9e1e3;--line2:#eef2f3;
+ --teal:#0f5c6b;--teal-ink:#fff;--wine:#86224d;--star:#b45309;--ok:#1d7a46;
+ --deep-bg:#eef6f7;--key-bg:#fbf0f5;--warn-bg:#fff6e5;--th-bg:#f0f4f5;--zebra:#fafcfc;--chip:#e7f0f2;
+ --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+ --f-head:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,serif}
+@media (prefers-color-scheme: dark){:root{color-scheme:dark;
+ --bg:#11171a;--surface:#182126;--ink:#e2eaec;--ink2:#c2ced2;--mut:#8c9ca3;--line:#2b383d;--line2:#202b30;
+ --teal:#5db5c5;--teal-ink:#0c1b1f;--wine:#e889b2;--star:#f0b35a;--ok:#6fd39a;
+ --deep-bg:#15282c;--key-bg:#2a1a22;--warn-bg:#2a2315;--th-bg:#1f2b30;--zebra:#1b252a;--chip:#1e3036}}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.78 var(--f-body);-webkit-text-size-adjust:100%}
+a{color:var(--teal)}
+a:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
+
+.top{background:var(--teal);color:var(--teal-ink);padding:36px 16px 30px}
+.top-in{max-width:1180px;margin:0 auto}
+.eyebrow{margin:0 0 6px;font-size:12.5px;letter-spacing:.14em;opacity:.85}
+.top h1{font-family:var(--f-head);font-weight:700;font-size:clamp(26px,5vw,38px);line-height:1.25;margin:0;text-wrap:balance}
+.top .sub{margin:6px 0 0;font-size:16px;opacity:.9}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.stats li{font-size:13px;padding:3px 12px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28)}
+@media (prefers-color-scheme: dark){.stats li{background:rgba(0,0,0,.12);border-color:rgba(0,0,0,.2)}}
+
+.layout{max-width:1180px;margin:0 auto;padding:8px 16px 80px;display:grid;grid-template-columns:minmax(0,1fr);gap:0 40px}
+.doc{min-width:0;max-width:800px}
+.side-in{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-top:22px}
+.side-t{font-family:var(--f-head);font-weight:700;font-size:15px;margin-bottom:6px}
+.toc,.toc ol{list-style:none;margin:0;padding:0}
+.toc a{color:var(--ink2);text-decoration:none;display:block;padding:3px 0}
+.toc a:hover{color:var(--teal);text-decoration:underline}
+.toc .t2>a{font-weight:600;color:var(--teal)}
+.toc .t3{display:none}
+@media (min-width:1000px){
+ .layout{grid-template-columns:250px minmax(0,1fr)}
+ .side-in{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;margin-top:30px;font-size:13.5px;line-height:1.45}
+ .toc .t3{display:block}
+ .toc .t3 a{padding:2px 0 2px 12px;color:var(--mut);font-size:13px}
+ .toc .t2{margin-bottom:6px}
+}
+
+h2{font-family:var(--f-head);font-size:clamp(21px,3.6vw,25px);line-height:1.35;margin:52px 0 10px;padding-bottom:10px;border-bottom:2px solid var(--teal);scroll-margin-top:16px}
+h2 .n{display:inline-block;min-width:1.7em;color:var(--teal)}
+h3{font-family:var(--f-head);font-size:18px;line-height:1.45;margin:32px 0 10px;color:var(--wine);scroll-margin-top:16px}
+h4{font-size:15.5px;margin:20px 0 6px}
+p{margin:8px 0}
+ul,ol{margin:8px 0 8px 22px;padding:0} li{margin:4px 0}
+strong{font-weight:650}
+.star{color:var(--star);font-weight:650}
+
+.tw{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:var(--surface)}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th-bg);font-weight:600}
+tbody tr:nth-child(even){background:var(--zebra)}
+
+/* numbered points */
+.pt{display:flex;gap:10px;margin:8px 0}
+.pt .no{flex:none;min-width:26px;height:26px;padding:0 6px;border-radius:13px;background:var(--chip);color:var(--teal);font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+.pt .tx{min-width:0}
+.sub-pt{margin:4px 0 4px 36px;padding-left:12px;border-left:2px solid var(--line);color:var(--ink2)}
+
+/* definitions */
+.defs{margin:10px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.def{display:grid;grid-template-columns:minmax(90px,180px) minmax(0,1fr);gap:4px 16px;padding:10px 16px;border-top:1px solid var(--line2)}
+.def:first-child{border-top:0}
+.def dt{font-weight:700;color:var(--wine)}
+.def dd{margin:0;color:var(--ink2)}
+@media (max-width:600px){.def{grid-template-columns:1fr}}
+
+/* questions */
+.qa{margin:14px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.qa .q{display:flex;gap:10px;padding:11px 16px;background:var(--deep-bg);font-weight:600}
+.qa .a{padding:10px 16px 12px}
+.qa .a p{margin:6px 0}
+.tag{flex:none;display:inline-flex;align-items:center;justify-content:center;height:22px;min-width:22px;padding:0 6px;border-radius:5px;font-size:12px;font-weight:700;margin-top:2px}
+.tag.qt{background:var(--teal);color:var(--teal-ink)}
+.tag.at{background:var(--wine);color:#fff}
+.a-row{display:flex;gap:10px}
+
+.mcq{margin:12px 0;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.mcq .stem{display:flex;gap:10px;font-weight:600}
+.mcq .stem .no{flex:none;color:var(--teal)}
+.opts{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px}
+.opts li{margin:0;padding:5px 10px;border-radius:7px;background:var(--line2);font-size:14.5px}
+.opts li b{color:var(--mut);margin-right:6px}
+.opts li.right{background:var(--key-bg);outline:1.5px solid var(--wine)}
+.opts li.right b{color:var(--wine)}
+.ans{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--wine);background:var(--key-bg);border-radius:999px;padding:2px 12px}
+.blank{display:inline-block;min-width:2.4em;border-bottom:1.5px solid var(--mut);margin:0 3px;text-align:center}
+
+.callout{margin:14px 0;padding:10px 16px;background:var(--warn-bg);border-left:4px solid var(--star);border-radius:0 8px 8px 0}
+
+/* images */
+.pages{display:grid;gap:18px;margin:14px 0}
+.page{margin:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.page a{display:block;background:#fff}
+.page img{display:block;width:100%;height:auto}
+.page figcaption{display:flex;justify-content:space-between;gap:10px;padding:8px 14px;font-size:13.5px;color:var(--mut);border-top:1px solid var(--line)}
+.page figcaption span:first-child{color:var(--ink2);font-weight:600}
+.note{color:var(--mut);font-size:14px}
+img.doc-img{display:block;max-width:100%;height:auto;margin:10px auto;padding:6px;background:#fff;border:1px solid var(--line);border-radius:8px}
+p img.doc-img,.tx img.doc-img,dd img.doc-img{display:inline-block;vertical-align:middle;margin:4px 6px}
+
+.foot{margin-top:60px;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mut)}
+@media (max-width:600px){body{font-size:15.5px}h2{margin-top:40px}.qa .q,.qa .a,.mcq{padding-left:13px;padding-right:13px}}
+@media print{.side{display:none}.layout{display:block}.top{background:#fff;color:#000}}
+</style></head><body><header class="top"><div class="top-in"><p class="eyebrow">硕士一年级课堂笔记 · M1 D2HP LECTURE NOTES</p><h1>OTU06 天然与合成化合物结构解析 · 课堂笔记</h1><p class="sub">NMR 与 MS 结构解析实践 · 按上课日期整理的中英对照笔记</p><ul class="stats"><li>1 条名词与要点</li></ul></div></header><div class="layout"><nav class="side" aria-label="目录"><div class="side-in"><div class="side-t">目录</div><ol class="toc"><li class="t2"><a href="#s1">2026-01-30</a></li></ol></div></nav><main class="doc"><section id="s1"><h2><span class="n">01</span>2026-01-30</h2><p>**氢核NMR谱学特征与J耦合类型 Spectroscopic Features of 1H NMR and Types of J Coupling →**</p><p>---</p><p>- **NMR谱图主要轴与化学位移 Main Spectrum Axis and Chemical Shift →**</p><p>- NMR谱图的横轴代表化学位移（chemical shift），用ppm（δ）表示，常见范围为0~12。</p><p>The horizontal axis of the NMR spectrum represents chemical shift (δ), measured in ppm, typically ranging from 0 to 12.</p><p>- 这些化学位移区域反映了氢在不同分子结构环境中的电子云密度。</p><p>These chemical shift regions indicate electron density variations for hydrogens in different molecular environments.</p><p>- **谱峰的多重性及邻氢信息 Peak Multiplicity and Neighboring Protons →**</p><p>- 每一组信号对应于分子中一组等效氢核。</p><p>Each set of signals corresponds to a group of equivalent protons in the molecule.</p><p>- 多重性的本质是相邻氢核之间的自旋-自旋耦合作用。</p><p>The essence of multiplicity is spin-spin coupling between neighboring protons.</p><p>- 常见多重性包括：</p><p>Common multiplicities include:</p><p>- 单峰（singlet, s）：无邻氢。→ Singlet (s): no neighboring protons.</p><p>- 双峰（doublet, d）：1个邻氢。→ Doublet (d): one neighboring proton.</p><p>- 三重峰（triplet, t）：2个邻氢。→ Triplet (t): two neighboring protons.</p><p>- 四重峰（quartet, q）：3个邻氢。→ Quartet (q): three neighboring protons.</p><p>- 双双峰（doublet of doublets, dd）：分别与2个不同环境的邻氢耦合。→ Doublet of doublets (dd): coupled to two nonequivalent neighboring protons.</p><p>- 多重性说明了被观测氢核周围的邻氢数量和分布，帮助揭示分子结构片段。</p><p>The multiplicity reveals the number and distribution of neighboring protons, aiding structural fragment identification.</p><p>- **自旋-自旋耦合常数J（J Coupling Constants）→**</p><p>- J耦合由化学键连接的相邻氢核产生，导致谱图出现多重峰。</p><p>J coupling is generated by spin interactions of protons connected through chemical bonds, resulting in multiplet peaks.</p><p>- J耦合常数以Hz为单位，通过多重峰中相邻峰的距离测量。</p><p>The coupling constant (J) is measured in Hz, determined by the distance between neighboring peaks in a multiplet.</p><p>- J值大小与化学键的类型、电子环境及氢核空间关系有关。</p><p>J values depend on the type of chemical bond, electronic environment, and spatial relationship between protons.</p><p>- **J耦合类型及典型意义 Types of J Coupling and Typical Meanings →**</p><p>- J3耦合（三键耦合）：通过3个键相连的氢核常见于sp3碳链，是NMR中最典型的耦合类型。</p><p>J3 coupling (three-bond coupling): Protons coupled via three bonds (usually in sp3 chains), is the most typical NMR coupling.</p><p>- J2耦合（双键耦合）：通过2个键链接，常见于相邻sp2碳、或手性碳附近的sp3碳。</p><p>J2 coupling (two-bond coupling): Protons coupled via two bonds, commonly seen in adjacent sp2 carbons or sp3 carbons near chiral centers.</p><p>- J4耦合（四键耦合）：通过4个键间接耦合，芳香环中meta位氢核间常见。</p><p>J4 coupling (four-bond coupling): Coupling via four bonds, typically observed between meta protons on an aromatic ring.</p><p>- 在非芳香性环烃结构（sp3环状结构）内也可观测到J4耦合。</p><p>J4 coupling also occurs in non-aromatic cyclic (sp3) structures between distant hydrogens.</p><p>- **杂化类型和分子结构对耦合的影响 Influence of Hybridization and Structure →**</p><p>- sp3杂化碳链上的氢核可显示出J2、J3或J4耦合，具体取决于分子空间结构与对称性。</p><p>Hydrogens on sp3 carbon chains may display J2, J3 or J4 coupling, depending on spatial structure and symmetry.</p><p>- 如果sp3碳邻近手性中心，两氢核往往不等效，会显示J2或J3耦合；</p><p>If an sp3 carbon is adjacent to a chiral center, the two protons may be nonequivalent, resulting in J2 or J3 couplings.</p><p>- 芳香体系meta位氢核之间表现为J4耦合，para耦合通常极弱。</p><p>Meta hydrogens in aromatic systems exhibit J4 coupling, while para couplings are generally very weak.</p><p>- 烯烃等sp2结构也有典型J2和J3耦合类型。</p><p>Alkenes and other sp2 systems also exhibit characteristic J2 and J3 coupling.</p><p>- **J耦合常数大小与判别 J Coupling Constant Magnitude and Interpretation →**</p><p>- 结构不同对应的J常数值（Hz）有规律可循，可借助参考表判断结构片段类型。</p><p>The magnitude of J constants in Hz vary with structure and can be referenced to judge structural motifs.</p><p>- 按照化学位移区间及J耦合常数，进行综合分析，更精确推断分子结构。</p><p>Combining chemical shift regions with J coupling constants enables more accurate molecular structure identification.</p><p>- **谱峰积分（Integration）指示氢的数目 Peak Integration Indicates Proton Number →**</p><p>- 每个信号下的积分面积与贡献该信号的氢核数成正比。</p><p>The integration (area under a signal) is proportional to the number of protons producing that signal.</p><dl class="defs"><div class="def"><dt>- 例如出现面积比为3</dt><dd>2:1的峰，则分别代表3、2、1个氢。</dd></div></dl><p>For example, if the integration ratios are 3:2:1, they represent 3, 2, and 1 protons, respectively.</p><p>- 典型甲基（CH₃）无邻氢，表现为单峰且积分为3。</p><p>A typical methyl group (CH₃) with no neighboring protons shows a singlet peak with integration value of 3.</p><p>- **氢核NMR谱分析的综合思路 Comprehensive Approaches for 1H NMR Spectrum Analysis →**</p><p>- 明确信号的化学位移、积分、形状（多重性）及J耦合常数，结合结构和杂化类型，逐步推断结构信息。</p><p>Identify the chemical shift, integration, multiplicity, and J coupling constant for each signal and combine with knowledge of structure and hybridization type to infer the molecular architecture.</p><p>- 参考耦合常数与化学位移的典型值，验证推理是否合理。</p><p>Consult reference values for coupling constants and chemical shifts to cross-check the reasoning.</p></section><p class="foot">M1 D2HP 课堂笔记整理 · 课件截图未收录 · 已去除个人信息</p></main></div></body></html>
