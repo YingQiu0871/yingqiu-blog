@@ -1,0 +1,111 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>TU07 药物化学家的工具箱 · 课堂笔记</title><style>
+:root{color-scheme:light;
+ --bg:#f6f8f8;--surface:#fff;--ink:#17222a;--ink2:#36454d;--mut:#65747b;--line:#d9e1e3;--line2:#eef2f3;
+ --teal:#0f5c6b;--teal-ink:#fff;--wine:#86224d;--star:#b45309;--ok:#1d7a46;
+ --deep-bg:#eef6f7;--key-bg:#fbf0f5;--warn-bg:#fff6e5;--th-bg:#f0f4f5;--zebra:#fafcfc;--chip:#e7f0f2;
+ --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+ --f-head:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",Georgia,serif}
+@media (prefers-color-scheme: dark){:root{color-scheme:dark;
+ --bg:#11171a;--surface:#182126;--ink:#e2eaec;--ink2:#c2ced2;--mut:#8c9ca3;--line:#2b383d;--line2:#202b30;
+ --teal:#5db5c5;--teal-ink:#0c1b1f;--wine:#e889b2;--star:#f0b35a;--ok:#6fd39a;
+ --deep-bg:#15282c;--key-bg:#2a1a22;--warn-bg:#2a2315;--th-bg:#1f2b30;--zebra:#1b252a;--chip:#1e3036}}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.78 var(--f-body);-webkit-text-size-adjust:100%}
+a{color:var(--teal)}
+a:focus-visible{outline:2px solid var(--wine);outline-offset:2px}
+
+.top{background:var(--teal);color:var(--teal-ink);padding:36px 16px 30px}
+.top-in{max-width:1180px;margin:0 auto}
+.eyebrow{margin:0 0 6px;font-size:12.5px;letter-spacing:.14em;opacity:.85}
+.top h1{font-family:var(--f-head);font-weight:700;font-size:clamp(26px,5vw,38px);line-height:1.25;margin:0;text-wrap:balance}
+.top .sub{margin:6px 0 0;font-size:16px;opacity:.9}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.stats li{font-size:13px;padding:3px 12px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28)}
+@media (prefers-color-scheme: dark){.stats li{background:rgba(0,0,0,.12);border-color:rgba(0,0,0,.2)}}
+
+.layout{max-width:1180px;margin:0 auto;padding:8px 16px 80px;display:grid;grid-template-columns:minmax(0,1fr);gap:0 40px}
+.doc{min-width:0;max-width:800px}
+.side-in{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-top:22px}
+.side-t{font-family:var(--f-head);font-weight:700;font-size:15px;margin-bottom:6px}
+.toc,.toc ol{list-style:none;margin:0;padding:0}
+.toc a{color:var(--ink2);text-decoration:none;display:block;padding:3px 0}
+.toc a:hover{color:var(--teal);text-decoration:underline}
+.toc .t2>a{font-weight:600;color:var(--teal)}
+.toc .t3{display:none}
+@media (min-width:1000px){
+ .layout{grid-template-columns:250px minmax(0,1fr)}
+ .side-in{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow-y:auto;margin-top:30px;font-size:13.5px;line-height:1.45}
+ .toc .t3{display:block}
+ .toc .t3 a{padding:2px 0 2px 12px;color:var(--mut);font-size:13px}
+ .toc .t2{margin-bottom:6px}
+}
+
+h2{font-family:var(--f-head);font-size:clamp(21px,3.6vw,25px);line-height:1.35;margin:52px 0 10px;padding-bottom:10px;border-bottom:2px solid var(--teal);scroll-margin-top:16px}
+h2 .n{display:inline-block;min-width:1.7em;color:var(--teal)}
+h3{font-family:var(--f-head);font-size:18px;line-height:1.45;margin:32px 0 10px;color:var(--wine);scroll-margin-top:16px}
+h4{font-size:15.5px;margin:20px 0 6px}
+p{margin:8px 0}
+ul,ol{margin:8px 0 8px 22px;padding:0} li{margin:4px 0}
+strong{font-weight:650}
+.star{color:var(--star);font-weight:650}
+
+.tw{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:var(--surface)}
+th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+th{background:var(--th-bg);font-weight:600}
+tbody tr:nth-child(even){background:var(--zebra)}
+
+/* numbered points */
+.pt{display:flex;gap:10px;margin:8px 0}
+.pt .no{flex:none;min-width:26px;height:26px;padding:0 6px;border-radius:13px;background:var(--chip);color:var(--teal);font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;margin-top:1px}
+.pt .tx{min-width:0}
+.sub-pt{margin:4px 0 4px 36px;padding-left:12px;border-left:2px solid var(--line);color:var(--ink2)}
+
+/* definitions */
+.defs{margin:10px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.def{display:grid;grid-template-columns:minmax(90px,180px) minmax(0,1fr);gap:4px 16px;padding:10px 16px;border-top:1px solid var(--line2)}
+.def:first-child{border-top:0}
+.def dt{font-weight:700;color:var(--wine)}
+.def dd{margin:0;color:var(--ink2)}
+@media (max-width:600px){.def{grid-template-columns:1fr}}
+
+/* questions */
+.qa{margin:14px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.qa .q{display:flex;gap:10px;padding:11px 16px;background:var(--deep-bg);font-weight:600}
+.qa .a{padding:10px 16px 12px}
+.qa .a p{margin:6px 0}
+.tag{flex:none;display:inline-flex;align-items:center;justify-content:center;height:22px;min-width:22px;padding:0 6px;border-radius:5px;font-size:12px;font-weight:700;margin-top:2px}
+.tag.qt{background:var(--teal);color:var(--teal-ink)}
+.tag.at{background:var(--wine);color:#fff}
+.a-row{display:flex;gap:10px}
+
+.mcq{margin:12px 0;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.mcq .stem{display:flex;gap:10px;font-weight:600}
+.mcq .stem .no{flex:none;color:var(--teal)}
+.opts{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px}
+.opts li{margin:0;padding:5px 10px;border-radius:7px;background:var(--line2);font-size:14.5px}
+.opts li b{color:var(--mut);margin-right:6px}
+.opts li.right{background:var(--key-bg);outline:1.5px solid var(--wine)}
+.opts li.right b{color:var(--wine)}
+.ans{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--wine);background:var(--key-bg);border-radius:999px;padding:2px 12px}
+.blank{display:inline-block;min-width:2.4em;border-bottom:1.5px solid var(--mut);margin:0 3px;text-align:center}
+
+.callout{margin:14px 0;padding:10px 16px;background:var(--warn-bg);border-left:4px solid var(--star);border-radius:0 8px 8px 0}
+
+/* images */
+.pages{display:grid;gap:18px;margin:14px 0}
+.page{margin:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden}
+.page a{display:block;background:#fff}
+.page img{display:block;width:100%;height:auto}
+.page figcaption{display:flex;justify-content:space-between;gap:10px;padding:8px 14px;font-size:13.5px;color:var(--mut);border-top:1px solid var(--line)}
+.page figcaption span:first-child{color:var(--ink2);font-weight:600}
+.note{color:var(--mut);font-size:14px}
+img.doc-img{display:block;max-width:100%;height:auto;margin:10px auto;padding:6px;background:#fff;border:1px solid var(--line);border-radius:8px}
+p img.doc-img,.tx img.doc-img,dd img.doc-img{display:inline-block;vertical-align:middle;margin:4px 6px}
+
+.foot{margin-top:60px;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mut)}
+@media (max-width:600px){body{font-size:15.5px}h2{margin-top:40px}.qa .q,.qa .a,.mcq{padding-left:13px;padding-right:13px}}
+@media print{.side{display:none}.layout{display:block}.top{background:#fff;color:#000}}
+</style></head><body><header class="top"><div class="top-in"><p class="eyebrow">硕士一年级课堂笔记 · M1 D2HP LECTURE NOTES</p><h1>TU07 药物化学家的工具箱 · 课堂笔记</h1><p class="sub">药物化学导论 · 按上课日期整理的中英对照笔记</p><ul class="stats"><li>9 条名词与要点</li></ul></div></header><div class="layout"><nav class="side" aria-label="目录"><div class="side-in"><div class="side-t">目录</div><ol class="toc"><li class="t2"><a href="#s1">2026-01-19</a></li></ol></div></nav><main class="doc"><section id="s1"><h2><span class="n">01</span>2026-01-19</h2><p>药物发现主要策略——合成药物 Main Strategies of Drug Discovery – Synthetic Drugs</p><p>课程与本节概览 Section Overview 本节围绕药物化学的基础工具、药物发现流程和合成药策略展开，内容涵盖药物发现、开发的全流程框架与最新思路。 This section covers medicinal chemistry tools, the drug discovery process, and synthetic drug strategies, summarizing the main procedures and new approaches in drug development.</p><p>药物创新发展历程 Timeline of Drug Innovation 药物发现由偶然观察主导转向分子靶点设计，随着科学进步不断提高复杂度与精准性。 Drug discovery has evolved from serendipitous observations to targeted molecular design, growing in complexity and precision with scientific progress.</p><p>早年药物如阿司匹林、水杨酸等多基于巧合发现。 Early drugs like aspirin and salicylic acid were often discovered by chance.</p><p>随生物及分子机制认知加深，现代药物聚焦分子功能和精准靶向（如抗癌、自免疾病治疗）。 Modern drugs emphasize molecular function and precise targeting (e.g., anticancer and autoimmune disease treatments).</p><p>新药开发流程与难点 Drug Development Process and Challenges 新药开发流程包括早期探索、临床前研究、分期临床试验及审批，过程漫长、风险高且成本巨大。 The drug development process covers early exploratory work, preclinical research, staged clinical trials, and regulatory approval, demanding long timeframes, high costs, and high risk.</p><p>平均研发周期为10-15年，总投入高达15-20亿欧元。 Average development takes 10–15 years, with up to 1.5–2 billion euros invested.</p><p>成功率极低，仅1/5000~1/10000化合物可上市。 Very low success rate – only about 1 in 5000–10000 compounds reaches the market.</p><p>最常见失败原因是疗效不足（52%）和安全性问题（24%），其余因商业或操作决策导致。 Main causes of failure: 52% lack of efficacy, 24% safety issues, rest due to business or operational reasons.</p><p>药物发现工作流程 Drug Discovery Workflow 药物发现分阶段推进： Drug discovery follows stepwise stages:</p><dl class="defs"><div class="def"><dt>靶点识别与初筛</dt><dd>寻找有潜力的生物靶点，对大量化合物进行高通量筛选，获得初筛活性分子（hit）。 Target identification and hit screening: choosing potential biological targets, high-throughput screening (HTS) to identify hit molecules.</dd></div><div class="def"><dt>初筛到先导化合物</dt><dd>通过理化性质、活性和选择性等结构优化，筛选出结构-活性关系明确、可优化的“先导化合物”。 Hit-to-lead: optimize structure, activity, selectivity to identify lead compounds with clear structure–activity relationships.</dd></div><div class="def"><dt>先导优化</dt><dd>不断通过结构修饰提高药效、选择性和药物样性，并解决ADMET属性。 Lead optimization: structurally refine leads to improve efficacy, selectivity, and drug-likeness, while solving ADMET issues.</dd></div><div class="def"><dt>药物候选化合物</dt><dd>最终筛选具备理化、吸收分布、代谢、毒性均优、可用于临床前开发的化合物。 Candidate drug selection: identify molecules with suitable physicochemical, ADME, and toxicity profiles for preclinical development.</dd></div></dl><div class="pt"><span class="no">5</span><div class="tx">进入临床前到I、II、III期临床试验，不断验证安全性与疗效。 Enter preclinical and phase I/II/III trials to continuously evaluate safety and efficacy.</div></div><p>结构与活性关系（SAR） Structure–Activity Relationship (SAR) SAR研究通过系统修饰分子结构，考察结构变化对药物生物活性的影响，明确哪些官能团或片段属于药效团（pharmacophore），哪些属于药效团元件（pharmacophoric elements）。 SAR involves systematic modifications of molecular structure to study how changes affect biological activity, identifying pharmacophores and pharmacophoric elements.</p><p>药效团指分子中不可更改、决定活性的关键结构。 Pharmacophore: essential structure that must remain unchanged for activity.</p><p>药效团元件则可修饰改善活性、选择性或ADMET属性，如在苯并二氮卓类、香豆素等骨架上引入取代基用于调节疏水性、氢键能力等。 Pharmacophoric elements: modifiable fragments to tune activity, selectivity, or ADMET, e.g., in benzodiazepine or coumarin rings, substitutions adjust hydrophobicity, H-bonding, etc.</p><dl class="defs"><div class="def"><dt>录音补充</dt><dd>研究人员常根据靶点口袋的疏水或亲水性质、有无特定空间需求，在关键位置引入酰基、羟基、卤素 nhóm等官能团，再通过结构-活性关系测试，验证对活性的影响，逐步推导最优结构。 Audio addition: Researchers modify molecules based on the hydrophobic/hydrophilic or spatial properties of target site, introducing functional groups (acyl, hydroxyl, halogen, etc.), then test SAR to determine the best structure.</dd></div></dl><p>药物物化和ADMET属性及评价 Physicochemical/ADMET Properties and Evaluation 对候选化合物需系统评估其物化性质（如分子量、极性表面积、旋转键数、H受体/供体数、LogP等），以及ADMET表现（吸收分布代谢排泄与毒性），确保药代动力学表现优良且无明显毒性。 Comprehensive assessment of candidate compounds: physicochemical (weight, PSA, rotatable bonds, H-bond donors/acceptors, LogP, etc.) and ADMET (absorption, distribution, metabolism, excretion, toxicity) to ensure good pharmacokinetics and safety.</p><p>药物口服生物利用度常参考Lipinski“五原则”，如MW < 500, HBA < 10, HBD < 5, LogP < 5, PSA < 140 Å²，越接近这些标准则透膜与吸收性能越佳。 Oral bioavailability often follows Lipinski’s Rule of Five (MW < 500, HBA < 10, HBD < 5, LogP < 5, PSA < 140 Å²), better matching improves permeability/absorption.</p><p>QSAR/AI等虚拟筛选、ADMETlab等工具常被用于高通量预测药代毒性指标，如溶解度LogS, 分布系数LogD7.4, Caco-2通透性, 人肝毒性H-HT, Ames致突变、皮肤致敏性等，为分子设计阶段提供重要标准。 QSAR, AI-based tools (e.g., ADMETlab) enable high-throughput prediction of drug-likeness, solubility (LogS), distribution (LogD7.4), Caco-2 permeability, hepatotoxicity, Ames mutagenicity, skin sensitization, etc., informing early molecular design.</p><p>常见药物设计与发现策略 Drug Discovery & Design Strategies 合成化合物库筛选，天然产物活性筛选，碎片拼接策略、理性药物设计（基于靶点三维结构）、药物重定位、对专利药物的“me-too”仿制与副作用改良等，均是药物创新核心路径。 Typical strategies include synthetic library screening, natural product screening, fragment-based discovery, rational (structure-based) design, drug repositioning, “me-too” variants, and exploiting/optimizing side effects.</p><p>结构-活性关系（SAR）与药物理化性质 Structure-Activity Relationship (SAR) & Drug Physicochemical Properties</p><p>结构-活性关系（SAR）基本概念 Fundamentals of Structure-Activity Relationship (SAR) 结构-活性关系（SAR）研究药物化学结构与其生物活性或治疗效果之间的关系。 SAR explores the relationship between a drug’s chemical structure and its biological activity or therapeutic effect. 这是新药设计与优化的重要工具。 It is a key tool for new drug design and optimization.</p><p>SAR的两大组成 Two Core Parts of SAR SAR通常包括药效团和药效团元件两部分。 SAR usually contains two parts: pharmacophore and pharmacophoric elements.</p><p>药效团是分子中必须保持不变、决定药物能与靶点结合并产生生物效应的三维结构。 Pharmacophore refers to the rigid 3D structure/features essential for target binding and activity.</p><p>药效团元件则是在药效团骨架上可修饰的官能团，用于调节药效、选择性和理化性质。 Pharmacophoric elements are modifiable groups on the scaffold, tuning activity, selectivity, and physicochemical properties.</p><p>苯并二氮卓类SAR分析 SAR Example: Benzodiazepines 以苯并二氮卓为例，其骨架是不可改变的核心药效团，多个取代基则属于药效团元件。 For benzodiazepines, the ring system is the unchangeable pharmacophore, while various substituents are the pharmacophoric elements.</p><p>2位酮基（Keto group）对活性至关重要； The keto group at position 2 is crucial for activity;</p><p>7位卤素（如Cl）增强与靶点的结合； Halogen (e.g., Cl) at position 7 enhances binding;</p><p>5位苯基环增强疏水作用及与靶点的结合； The phenyl ring at position 5 strengthens hydrophobic and binding interactions;</p><p>如果某些位置引入羟基可提高分子的极性； Hydroxy group introduction at certain positions raises polarity;</p><p>7位的电子吸引基团帮助分子与靶点结合更牢固。 Electron-withdrawing groups at position 7 support stronger target engagement.</p><p>SAR分析中的关键考虑因素 Key SAR Analysis Factors SAR优化时，需综合考虑如下因素： Several factors must be weighed in SAR optimization:</p><dl class="defs"><div class="def"><dt>氢键能力</dt><dd>氢键能增强药物与靶点结合，为活性提供支持； Hydrogen bonding: strengthens binding to target and supports activity;</dd></div><div class="def"><dt>疏水性</dt><dd>分子的脂溶性影响其通过细胞膜的能力，也影响靶点结合； Lipophilicity: affects membrane permeability and target binding;</dd></div><div class="def"><dt>电荷状态</dt><dd>影响分子结合力及生物效应； Charge: modulates binding affinity and biological response;</dd></div><div class="def"><dt>立体化学</dt><dd>原子排列影响作用专一性和药效。 Stereochemistry: arrangement of atoms impacts specificity and efficacy.</dd></div></dl><p>库马林类分子案例补充 SAR Example: Coumarin Compounds 在库马林环等结构中，大量可变化的官能团位置用于调节结构-活性关系，从而优化药物性能。 In coumarin rings, many substituent positions are changeable for SAR, enabling drug performance optimization.</p><p>不同取代基影响分子与靶点疏水口袋、极性腔的作用，使化合物具有不同活性。 Different groups affect hydrophobic pockets and polar cavities in the target, yielding various activities.</p><p>合理引入取代基和官能团，是药物优化设计的常见策略。 Rational substitution and group introduction is a typical drug design approach.</p><p>从筛选到先导化合物的优化流程 Hit-to-Lead and Lead Optimization 药物研发分阶段推进： The drug research and development process is segmented:</p><div class="pt"><span class="no">1</span><div class="tx">发现和验证hits（初筛活性分子），耗时约6-9个月； Hit finding and validation takes approximately 6-9 months;</div></div><div class="pt"><span class="no">2</span><div class="tx">hit-to-lead（优化筛选出先导化合物），需6-9个月； Hit-to-lead optimization, also 6-9 months;</div></div><div class="pt"><span class="no">3</span><div class="tx">先导优化（lead optimization），需12-15个月，通过不断结构修饰提升药效、选择性和ADMET属性； Lead optimization spans 12-15 months, with structural changes to improve efficacy, selectivity, and ADMET;</div></div><div class="pt"><span class="no">4</span><div class="tx">形成可用于临床前研究的候选分子（preclinical candidate）； Producing preclinical candidates for further studies;</div></div><div class="pt"><span class="no">5</span><div class="tx">进入临床前审核与IND申报。 Entering preclinical regulatory review and IND application. 每一步都需综合评估结构变化对生物活性、选择性和药物性状（ADME、毒性等）的影响。 Each step entails evaluating how structural changes impact activity, selectivity, and drug-like properties (ADME, toxicity, etc.).</div></div><p>实际SAR优化策略与讲述补充 Practical SAR Strategies & Lecture Additions 老师补充讲解： Additional teacher comments:</p><p>研究人员通过结构修饰不断优化分子，首先了解靶点口袋的性质（如是否疏水），选择合适的取代基（如芳环提升疏水作用或插入氢键供体/受体）； Researchers optimize molecules structurally by assessing target site features (e.g., hydrophobicity), then introducing suitable substituents (e.g., phenyl ring for hydrophobic pocket, or introducing hydrogen bond donors/acceptors);</p><p>每次修饰后都需要重新测试活性，有利变化则继续优化，不利则调整设计方向。 After each modification, activity is re-tested; beneficial changes are pursued, while detrimental outcomes lead to directional adjustments;</p><p>优化过程循环且耗时，需要科学判断结构与活性的相关性，减少无效尝试。 Optimization is iterative and time-consuming, so scientific judgment of structure-activity correlations is essential to avoid inefficiency.</p><p>药物理化性质与五规则 Drug Physicochemical Properties & Rule of Five 药物的理化性质对活性和体内表现（如吸收、透膜等）至关重要。 Drug physicochemical properties critically affect bioactivity and in vivo performance (absorption, permeability, etc.).</p><p>“五规则（Rule of Five）”用于初步判断口服药物的理化可行性，包括分子量（MW）＜500，极性表面积（PSA）＜140 Å²，旋转键数（RB）＜10，氢键受体（HBA）＜10，氢键供体（HBD）＜5，LogP＜5。 Rule of Five (Lipinski’s) is used for early prediction of oral drug viability, including: MW<500, PSA<140 Å², RB<10, HBA<10, HBD<5, LogP<5.</p><p>PSA决定分子穿越细胞膜和血脑屏障能力，140 Å²以上一般不易透膜，90 Å²以下利于穿越血脑屏障。 PSA (polar surface area) affects cell membrane/BBB crossing; above 140 Å², permeability drops, under 90 Å², BBB penetration is easier.</p><p>ADMET及AI辅助预测 ADMET & AI-based Prediction ADMET涵盖吸收、分布、代谢、排泄及毒性，是药物能否开发上市的关键标准。 ADMET (absorption, distribution, metabolism, excretion, toxicity) is critical for drug development.</p><p>现代可利用QSAR和AI模型（如ADMETlab）在药物合成前预测分子的药代和毒性参数，提升研发效率。 Modern QSAR and AI models (e.g., ADMETlab) predict ADMET properties before synthesis, improving research efficiency.</p><p>分析结果帮助筛选更具药物潜力且安全的分子进入优化环节。 Such predictions filter drug-like, safer molecules for optimization.</p></section><p class="foot">M1 D2HP 课堂笔记整理 · 课件截图未收录 · 已去除个人信息</p></main></div></body></html>
