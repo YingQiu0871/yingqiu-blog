@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { COLUMNS, stagePath } from '@/lib/columns';
+import { getColumn, stagePath } from '@/lib/columns';
 import { createPageMetadata } from '@/lib/metadata';
 import StageIndex from '@/components/StageIndex';
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
 
-const column = COLUMNS[0];
+const column = getColumn('study-notes')!;
 
 export function generateStaticParams() {
   return column.stages.map((stage) => ({ stage: stage.id }));

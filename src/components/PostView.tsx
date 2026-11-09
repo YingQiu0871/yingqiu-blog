@@ -9,12 +9,14 @@ import {
   formatPostDate,
   originalYearLabel,
   hasReadingTime,
+  postPath,
   readingTimeLabel,
   type BlogPost,
 } from '@/lib/blog';
-import { getColumn, columnPath, stageName, stagePath } from '@/lib/columns';
+import { getColumn, columnName, columnPath, stageName, stagePath } from '@/lib/columns';
 import { categoryName, categoryPath, getCategory, tagPath } from '@/lib/categories';
 import { Embed, MusicList, NoteFrame } from '@/components/embeds';
+import { flatColumnPosts } from '@/components/ColumnIndex';
 
 const mdxOptions = {
   mdxOptions: {
@@ -31,6 +33,18 @@ export default function PostView({ lang, post }: { lang: Locale; post: BlogPost 
   const stage = column?.stages.find((item) => item.id === post.stage);
   const homeHref = lang === 'zh' ? '/' : '/en/';
 
+  // In a flat column (chapters read in order) offer previous / next links.
+  let previous: BlogPost | undefined;
+  let next: BlogPost | undefined;
+  if (column && column.stages.length === 0) {
+    const siblings = flatColumnPosts(lang, column);
+    const index = siblings.findIndex((item) => item.slug === post.slug);
+    if (index >= 0) {
+      previous = siblings[index - 1];
+      next = siblings[index + 1];
+    }
+  }
+
   return (
     <article>
       <header className="blog-post-header">
@@ -40,9 +54,7 @@ export default function PostView({ lang, post }: { lang: Locale; post: BlogPost 
             {column && (
               <>
                 {' › '}
-                <Link href={columnPath(lang, column.id)}>
-                  {lang === 'zh' ? column.zh.name : column.en.name}
-                </Link>
+                <Link href={columnPath(lang, column.id)}>{columnName(column, lang)}</Link>
                 {stage && (
                   <>
                     {' › '}
@@ -105,11 +117,38 @@ export default function PostView({ lang, post }: { lang: Locale; post: BlogPost 
         <MDXRemote source={post.source} options={mdxOptions} components={{ Embed, NoteFrame }} />
       </div>
 
+      {column && (previous || next) && (
+        <nav className="chapter-nav" aria-label={lang === 'zh' ? '上下篇' : 'Previous and next'}>
+          {previous ? (
+            <Link className="chapter-nav-link chapter-nav-prev" href={postPath(lang, previous.slug)}>
+              <span>{lang === 'zh' ? '上一课' : 'Previous'}</span>
+              <strong>{previous.title}</strong>
+            </Link>
+          ) : (
+            <span className="chapter-nav-spacer" aria-hidden="true" />
+          )}
+          {next ? (
+            <Link className="chapter-nav-link chapter-nav-next" href={postPath(lang, next.slug)}>
+              <span>{lang === 'zh' ? '下一课' : 'Next'}</span>
+              <strong>{next.title}</strong>
+            </Link>
+          ) : (
+            <span className="chapter-nav-spacer" aria-hidden="true" />
+          )}
+        </nav>
+      )}
+
       <footer className="blog-post-footer">
-        {category && (
-          <Link className="text-link" href={categoryPath(lang, post.category)}>
-            ← {categoryName(category, lang)}
+        {column ? (
+          <Link className="text-link" href={columnPath(lang, column.id)}>
+            ← {columnName(column, lang)}
           </Link>
+        ) : (
+          category && (
+            <Link className="text-link" href={categoryPath(lang, post.category)}>
+              ← {categoryName(category, lang)}
+            </Link>
+          )
         )}
         <Link className="text-link" href={homeHref}>
           {lang === 'zh' ? '回到首页' : 'Back to home'}

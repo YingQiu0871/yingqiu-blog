@@ -57,7 +57,7 @@ export default function ChineseIndexPage() {
         <h1>五个栏目</h1>
         <p>
           浮光是现在的我，旧笺是过去的我，流声是我喜欢的，求索是我追寻的，
-          拾句是我从他人的文字里遇见并留下的。
+          笔谈是我自己写下的长文与整理稿。
         </p>
       </header>
       <div className="category-grid">

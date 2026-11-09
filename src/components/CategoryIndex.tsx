@@ -2,7 +2,7 @@ import type { Locale } from '@/lib/i18n/config';
 import { getColumnPosts, getPosts } from '@/lib/blog';
 import { categoryName, type Category } from '@/lib/categories';
 import Link from 'next/link';
-import { COLUMNS, columnPath, stagePath } from '@/lib/columns';
+import { columnCountLabel, columnPath, getColumnsOfCategory, stagePath } from '@/lib/columns';
 import PostCard from '@/components/PostCard';
 import PlaylistIndex from '@/components/PlaylistIndex';
 
@@ -13,7 +13,7 @@ export default function CategoryIndex({
   lang: Locale;
   category: Category;
 }) {
-  const columns = COLUMNS.filter((column) => column.category === category.id);
+  const columns = getColumnsOfCategory(category.id);
   // Posts that belong to a column are reached through that column's card, so
   // the section list only shows the remaining posts.
   const posts = getPosts(lang, { category: category.id }).filter((post) => !post.column);
@@ -31,6 +31,12 @@ export default function CategoryIndex({
         const colCopy = lang === 'zh' ? column.zh : column.en;
         const colPosts = getColumnPosts(lang, column.id);
         const total = colPosts.length;
+        const hasStages = column.stages.length > 0;
+        const meta = hasStages
+          ? lang === 'zh'
+            ? `${columnCountLabel(column, lang, total)} · ${column.stages.length} 个阶段`
+            : `${columnCountLabel(column, lang, total)} · ${column.stages.length} stages`
+          : columnCountLabel(column, lang, total);
         return (
           <section key={column.id} className="column-feature" aria-labelledby={`column-${column.id}`}>
             <div className="column-feature-head">
@@ -40,38 +46,36 @@ export default function CategoryIndex({
                   <Link href={columnPath(lang, column.id)}>{colCopy.name}</Link>
                 </h2>
                 <p>{colCopy.description}</p>
-                <p className="column-feature-meta">
-                  {lang === 'zh'
-                    ? `${total} 篇笔记 · ${column.stages.length} 个阶段`
-                    : `${total} ${total === 1 ? 'note' : 'notes'} · ${column.stages.length} stages`}
-                </p>
+                <p className="column-feature-meta">{meta}</p>
               </div>
               <Link className="column-feature-cta" href={columnPath(lang, column.id)}>
                 {lang === 'zh' ? '进入专栏' : 'Open column'}
                 <span aria-hidden="true"> →</span>
               </Link>
             </div>
-            <ul className="column-feature-stages">
-              {column.stages.map((stage) => {
-                const count = colPosts.filter((post) => post.stage === stage.id).length;
-                return (
-                  <li key={stage.id}>
-                    <Link href={stagePath(lang, column.id, stage.id)} data-empty={count === 0 || undefined}>
-                      <strong>{lang === 'zh' ? stage.zh.name : stage.en.name}</strong>
-                      <span>
-                        {count === 0
-                          ? lang === 'zh'
-                            ? '整理中'
-                            : 'Soon'
-                          : lang === 'zh'
-                            ? `${count} 篇`
-                            : `${count} ${count === 1 ? 'note' : 'notes'}`}
-                      </span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
+            {hasStages && (
+              <ul className="column-feature-stages">
+                {column.stages.map((stage) => {
+                  const count = colPosts.filter((post) => post.stage === stage.id).length;
+                  return (
+                    <li key={stage.id}>
+                      <Link href={stagePath(lang, column.id, stage.id)} data-empty={count === 0 || undefined}>
+                        <strong>{lang === 'zh' ? stage.zh.name : stage.en.name}</strong>
+                        <span>
+                          {count === 0
+                            ? lang === 'zh'
+                              ? '整理中'
+                              : 'Soon'
+                            : lang === 'zh'
+                              ? `${count} 篇`
+                              : `${count} ${count === 1 ? 'note' : 'notes'}`}
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
           </section>
         );
       })}

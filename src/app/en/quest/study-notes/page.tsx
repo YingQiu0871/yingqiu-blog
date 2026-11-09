@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { COLUMNS } from '@/lib/columns';
+import { getColumn } from '@/lib/columns';
 import { createPageMetadata } from '@/lib/metadata';
 import ColumnIndex from '@/components/ColumnIndex';
 
 export const dynamic = 'force-static';
 
-const column = COLUMNS[0];
+const column = getColumn('study-notes')!;
 
 export function generateMetadata(): Metadata {
   return createPageMetadata('en', `/en/quest/${column.en.slug}/`, {

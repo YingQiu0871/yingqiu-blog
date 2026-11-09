@@ -4,15 +4,18 @@
  * These are long-lived structural sections — do not grow this list as new
  * posts appear; topics belong to `tags` instead. URLs are also stable:
  *
- *   zh: /fuguang/ /jiujian/ /liusheng/ /qiushu/ /shiju/
- *   en: /en/moments/ /en/old-letters/ /en/music/ /en/quest/ /en/quotes/
+ *   zh: /fuguang/ /jiujian/ /liusheng/ /qiushu/ /bitan/
+ *   en: /en/moments/ /en/old-letters/ /en/music/ /en/quest/ /en/essays/
  *
  * Narrative identity:
  *   浮光 = the self of now · 旧笺 = the self of then · 流声 = what I love
- *   求索 = what I seek · 拾句 = what I meet in other people's words and keep
+ *   求索 = what I seek · 笔谈 = what I write: original essays and long-form notes
+ *
+ * 笔谈 (bitan) replaced the earlier 拾句 (shiju, quotes) section in November
+ * 2026. No post had been filed under shiju, so the id and both slugs changed.
  */
 
-export const CATEGORY_IDS = ['fuguang', 'jiujian', 'liusheng', 'qiushu', 'shiju'] as const;
+export const CATEGORY_IDS = ['fuguang', 'jiujian', 'liusheng', 'qiushu', 'bitan'] as const;
 export type CategoryId = (typeof CATEGORY_IDS)[number];
 
 export type CategoryLocaleCopy = {
@@ -100,19 +103,19 @@ export const CATEGORIES: Category[] = [
     },
   },
   {
-    id: 'shiju',
+    id: 'bitan',
     accent: '#9b7fd4',
     zh: {
-      name: '拾句',
-      slug: 'shiju',
-      description: '摘抄、诗词与书中的句子，从他人的文字里留下。',
-      homeLine: '我遇见的 · 摘句、诗词与阅读',
+      name: '笔谈',
+      slug: 'bitan',
+      description: '原创长文与整理稿：把一件事想清楚，再写下来。',
+      homeLine: '我写下的 · 原创长文与整理稿',
     },
     en: {
-      name: 'Quotes',
-      slug: 'quotes',
-      description: 'Quotes and poems kept from other people\u2019s words.',
-      homeLine: 'What I meet — lines kept from reading',
+      name: 'Essays',
+      slug: 'essays',
+      description: 'Original essays and long-form notes: thinking something through, then writing it down.',
+      homeLine: 'What I write — essays and long-form notes',
     },
   },
 ];

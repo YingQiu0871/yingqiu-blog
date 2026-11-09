@@ -26,7 +26,7 @@ export type BlogPost = {
   originalDate?: string;
   /** For 旧笺: a short "rereading it years later" note shown before the body. */
   rereadNote?: string;
-  /** For 拾句 (shiju): the quoted text itself. */
+  /** Optional pull quote shown above the body (kept from the former 拾句 section). */
   quote?: string;
   quoteSource?: string;
   /** Optional cover image path, e.g. `/images/covers/summer-2026.jpg`. */
