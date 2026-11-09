@@ -5,7 +5,7 @@
     <link>https://blog.yingqiu.me/</link>
     <description>Notes, letters and fragments by Yingqiu — life, old writings, music, reading, and the long road of learning.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Nov 2026 11:47:50 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 12:16:55 GMT</lastBuildDate>
     <item>
       <title>Overview · What this course covers and how to read it</title>
       <link>https://blog.yingqiu.me/en/posts/bit-course-00/</link>
@@ -486,7 +486,7 @@
       <title>第01课 · 趋势结束后的震荡与交易选择</title>
       <link>https://blog.yingqiu.me/posts/bit-course-01/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-01/</guid>
-      <description>主跌浪之后的反弹为什么必然转为震荡，箱体内部为什么没有确定性，以及一笔好交易需要的开仓逻辑、小止损与持仓心态。</description>
+      <description>趋势走完必须震荡，箱体内部没有确定性；一笔好交易靠的是建立在情绪周期划分上的开仓逻辑、小止损和平稳的持仓心态。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -501,7 +501,7 @@
       <title>第02课 · 箱体震荡的区间判断与复盘方法</title>
       <link>https://blog.yingqiu.me/posts/bit-course-02/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-02/</guid>
-      <description>用 TRB 日线讲清一个箱体怎样从初期走到末期、箱体内部为什么没有确定性、空单该等哪种结构，再带着大饼 15 分钟图演示每天的复盘方法。</description>
+      <description>一个箱体怎样从初期走到末期，为什么箱体内部没有确定性、只在边缘收敛处出手，以及每天带着问题一根一根翻 K 线的复盘方法。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -516,7 +516,7 @@
       <title>第03课 · 突破进场与逆势交易的得失</title>
       <link>https://blog.yingqiu.me/posts/bit-course-03/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-03/</guid>
-      <description>逐单复盘一周的 STORJ、BSV、WLD、SOL、TRB、MINA 交易，讲清大分歧与小分歧的不同做法、为什么不做逆势单、分仓为什么是容错的核心。</description>
+      <description>大分歧与小分歧的做法为什么不同，顺势单只有一个启动位置而逆势单要试很多遍，亏损为什么全来自逻辑不清的上头单，分仓怎样提供容错。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -531,7 +531,7 @@
       <title>第04课 · 浮盈回撤中的心态与多头逻辑</title>
       <link>https://blog.yingqiu.me/posts/bit-course-04/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-04/</guid>
-      <description>复盘一周里 TRB、SOL、GST、LINK、ARK 的多空单子，讲逆势单为什么没有好下场、重仓怎样毁掉有效止损，以及一段标准龙头主升浪该在哪介入、哪里止损。</description>
+      <description>上头的几种表现：逆势单、重仓毁掉有效止损、假突破时出掉有成本优势的底仓；以及一段标准龙头主升浪该在哪介入、止损放哪。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -546,7 +546,7 @@
       <title>第05课 · 突破进场与止损执行</title>
       <link>https://blog.yingqiu.me/posts/bit-course-05/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-05/</guid>
-      <description>复盘 TRB、LINK、以太、ORDI、BNT 一周的突破单，讲高位为什么不能打突破、空单该开在哪、重仓加在流动性差的币上有多危险，再给出大饼和以太未来三个月的节奏预演。</description>
+      <description>一周突破单的亏损几乎都出在同一个地方：做在高位突破位而不是启动位。拆解多单和空单各自该开在哪，以及高位重仓加流动性差的币会怎样把底仓一起丢掉。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -561,7 +561,7 @@
       <title>第06课 · 进场点位与心态控制</title>
       <link>https://blog.yingqiu.me/posts/bit-course-06/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-06/</guid>
-      <description>逐笔复盘一周亏损单，找出进场做高、止损放错、逆势上头三个病根，再清点这轮龙头为什么都抓到却没赚钱，并给出下周关注的几只币。</description>
+      <description>一周亏损单的共同病根是一个没意识到的转变：从回踩企稳位进场变成了高位打突破。拆解一笔单子要回答的两个问题、有效止损只有一个位置，以及龙头全抓到却没赚钱的原因。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -576,7 +576,7 @@
       <title>第07课 · 大级别突破与交易心态</title>
       <link>https://blog.yingqiu.me/posts/bit-course-07/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-07/</guid>
-      <description>复盘一周里逻辑相同的突破单，讲清追高为什么必须轻仓、方向对了就反复试错、抓大放小的进场原则，再逐个给出下周关注的山寨及持仓目标和止损。</description>
+      <description>大级别结构够了的突破可以追，但追单的止损只能放在启动附近，所以仓位必须轻。再讲方向对了就在小级别反复试错，以及抓大放小的进场原则和这一轮山寨的做法。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -591,7 +591,7 @@
       <title>第08课 · 调整阶段的趋势与机会判断</title>
       <link>https://blog.yingqiu.me/posts/bit-course-08/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-08/</guid>
-      <description>大饼反弹到 4 万 2 后为什么难做，山寨为何没有独立行情，再用 USTC 和 BIGTIME 讲清主升浪里哪些位置能做、哪些是垃圾行情。</description>
+      <description>用 USTC 和 BIGTIME 两只龙头拆一轮主升浪里能做的位置：关键压力位的突破尝试、大分歧后的二次探底、突破后拿到加速，以及五浪走完后为什么都是垃圾行情。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -606,7 +606,7 @@
       <title>第09课 · 行情末期的补涨与撤退信号</title>
       <link>https://blog.yingqiu.me/posts/bit-course-09/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-09/</guid>
-      <description>以 ORDI 和 BIGTIME 为例，讲龙头与大饼共振的节奏、大饼见顶后资金撤退与补涨的规律，以及主升浪中两次分歧承接的做法。</description>
+      <description>龙头和大饼共振的三步节奏：大饼盘整末期启动、波段顶部撤退、之后只剩补涨余热。错过启动只做分歧承接，高位不追多也不摸空。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -621,7 +621,7 @@
       <title>第10课 · 止损执行与交易心态</title>
       <link>https://blog.yingqiu.me/posts/bit-course-10/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-10/</guid>
-      <description>讲止损的核心思路、稳定盈利的三个标志、看得懂与做得对的区别，并复盘一笔 ORDI 顺势多单的进场、止损与离场。</description>
+      <description>止损放在市场的关键点位，碰到就代表方向短期不成立；看得懂的行情不等于好做的行情，只做有确定性的顺势点位。附一笔 ORDI 多单的案例。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -636,7 +636,7 @@
       <title>第11课 · 市场轮动中的龙头共性</title>
       <link>https://blog.yingqiu.me/posts/bit-course-11/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-11/</guid>
-      <description>大饼箱体高位的两个确定与两个不确定、以太守住 2100 的意义，以及 ORDI 见顶后市场每天换龙头的轮动为什么不好做、为什么要降仓。</description>
+      <description>龙头有共识才好做：ORDI 见顶后市场每天换龙头，只有拉起来才知道谁是龙头，表面的赚钱效应是陷阱。大饼箱体高位不好赚钱，这种行情该降仓防守。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -651,7 +651,7 @@
       <title>第12课 · 逆势单的风险与止损心态</title>
       <link>https://blog.yingqiu.me/posts/bit-course-12/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-12/</guid>
-      <description>复盘一周亏掉四万 U 的单子：WLD 箱底反弹、INJ 八笔逆势空单、ACE 的空单与多单，讲逆势单为什么无解、止损为什么必须带、仓位为什么要降。</description>
+      <description>一周亏四万 U 的原因只有三个：仓位大、止损小、做逆势。用 WLD、INJ、ACE 三组单子讲逆势单为什么无解、箱体内部为什么没有确定性、好单子为什么也要带止损。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -666,7 +666,7 @@
       <title>第13课 · 看多与做多的区别</title>
       <link>https://blog.yingqiu.me/posts/bit-course-13/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-13/</guid>
-      <description>大饼高位为什么看多却不做多、以太率先突破是什么信号、大饼和以太的短线结构，以及杠杆上限、买定离手和消息不改变趋势的几条原则。</description>
+      <description>大饼高位获利盘未消化，看多不等于做多，调整前只做短线；以太率先突破才是积极做多的信号。附杠杆上限、买定离手和消息不改变趋势三条原则。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -681,7 +681,7 @@
       <title>第14课 · 选择有规律的行情</title>
       <link>https://blog.yingqiu.me/posts/bit-course-14/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-14/</guid>
-      <description>复盘一周单子：ACE这种没有规律的币为什么不碰，TRB、ICP、以太、大饼、ORDI每笔单的开仓逻辑与止损位置，以及高位边拉边跑的纪律。</description>
+      <description>控盘的币没有规律不碰；有规律的行情里，开仓位置决定止损大小和单子拿不拿得住；龙头到了高位只能边拉边跑。以ACE、TRB、ICP、以太、ORDI为例。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -696,7 +696,7 @@
       <title>第16课 · 震荡期的耐心与操作节奏</title>
       <link>https://blog.yingqiu.me/posts/bit-course-16/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-16/</guid>
-      <description>大饼从18000起的反弹已到鱼尾阶段，看多但不做长，调整只有用空间或用时间两种走法；消息只是刺激不改趋势，以太独立走强时才是下一轮大行情的信号。</description>
+      <description>大饼从18000起的反弹已到鱼尾，看多但只做短；调整只有用空间或用时间两种消化方式；消息只是刺激，以太独立走强才是下一轮大行情的信号。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -711,7 +711,7 @@
       <title>第17课 · 顺势交易的空间与突破逻辑</title>
       <link>https://blog.yingqiu.me/posts/bit-course-17/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-17/</guid>
-      <description>用ICP和BLUR两笔多单讲清顺势做突破的三个条件和市场氛围的决定作用，用大饼和ORDI两笔空单讲逆势单为什么难拿、加速必须减仓，再回答什么叫突破、龙头的特征。</description>
+      <description>顺势做突破要同时满足空间、顺势、箱体三条，拿多久由市场氛围决定；逆势单做对了也难拿，一旦加速必须减仓。附什么叫突破、龙头的特征。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -726,7 +726,7 @@
       <title>第18课 · 行情调整的级别与周期</title>
       <link>https://blog.yingqiu.me/posts/bit-course-18/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-18/</guid>
-      <description>大饼两个月的上涨结束后怎样定义当下的调整级别，逆势空单为什么时间站在自己这边，调整后向上向下两种剧本的交易含义，以及把一整轮周期当教材的复盘方法。</description>
+      <description>两个月的上涨结束后，调整的级别怎么定，为什么这时逆势空单可以拿而新单不能开，调整完向上、向下两种剧本各意味着什么。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -741,7 +741,7 @@
       <title>第19课 · 从市场环境识别逆势单</title>
       <link>https://blog.yingqiu.me/posts/bit-course-19/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-19/</guid>
-      <description>复盘上周 TIA、大饼空单与 ING、OP、以太、ETC 多单，说明同样的图形为何结果两极，以及逆势单该如何处理。</description>
+      <description>上周六笔单子只有两类，同样的结构有环境支撑和没有环境结果两极；逆势单为什么天然难拿，没开在启动点又该怎么介入。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -756,7 +756,7 @@
       <title>第20课 · 市场环境中的交易逻辑</title>
       <link>https://blog.yingqiu.me/posts/bit-course-20/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-20/</guid>
-      <description>复盘春节前后大饼二波以及 TIA、ZETA、ORDI、LPT、ICP 几笔单子的开仓逻辑，区分共振行情与独立板块行情的介入方式。</description>
+      <description>春节前后大饼二波里的 TIA、ORDI、ZETA、LPT 四笔多单分成两类：跟大饼共振的和独立板块的，介入节点和看法各不相同，而市场环境排在所有技术之前。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -771,7 +771,7 @@
       <title>第21课 · 共振与补涨的机会选择</title>
       <link>https://blog.yingqiu.me/posts/bit-course-21/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-21/</guid>
-      <description>复盘大饼冲到六万五这一周里 PEPE、狗狗币、LTC、SOL 的机会，讲清共振龙头为什么好做、补涨为什么不流畅，以及下一步的两个机会。</description>
+      <description>大饼冲到六万五这一周，机会分大饼、共振龙头、补涨三层：PEPE 为什么是龙头，LTC、SOL、狗狗币的补涨为什么不流畅，怎样用春夏秋冬判断阶段。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -786,7 +786,7 @@
       <title>第23课 · 市场周期与短线机会</title>
       <link>https://blog.yingqiu.me/posts/bit-course-23/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-23/</guid>
-      <description>大饼冲新高后进入冬天，为什么仍能做 WLD；再以 PEPE 五分钟图走一遍有逻辑的七笔短线，以及我自己在 PEPE 上做烂的反思。</description>
+      <description>同样是砸完之后的冬天，为什么这次还能做 WLD；再用 PEPE 五分钟图拆一遍龙头主升浪里顺势的七笔短线，以及底仓下车后为什么必须做回来。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -801,7 +801,7 @@
       <title>第24课 · 调整期的节奏与龙头机会</title>
       <link>https://blog.yingqiu.me/posts/bit-course-24/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-24/</guid>
-      <description>大饼高位反复插针后为什么调不深，调整期该用什么节奏参与，以及为什么跟大饼共振起来的龙头才是下一段最有确定性的机会。</description>
+      <description>上涨途中反复插针的大饼为什么调不深，牛市氛围下调整期该用多激进的节奏参与，以及为什么跟大饼共振起来的龙头比任何结构都更有确定性。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -816,7 +816,7 @@
       <title>第25课 · 顺应市场情绪与建立交易体系</title>
       <link>https://blog.yingqiu.me/posts/bit-course-25/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-25/</guid>
-      <description>复盘上周大饼调整期里唯一一个绝佳的反弹买点，解释为什么在弱势里左侧建底仓，以及根据市场情绪做趋势、靠总结和回撤建立自己体系的方法。</description>
+      <description>调整周期里的反弹为什么只能等右侧信号，62000 那个下降趋势终结的拐点好在哪，以及只跟市场情绪做趋势、靠复盘和回撤建立体系的方法。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -831,7 +831,7 @@
       <title>第26课 · 复盘亏损与找回交易纪律</title>
       <link>https://blog.yingqiu.me/posts/bit-course-26/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-26/</guid>
-      <description>把一周里 ETHFI、PEPE、BCH、SUI 的亏损单一笔一笔拆开，分清体系内的正常磨损和怕踏空导致的无逻辑单，再讲止损和仓位为什么是命。</description>
+      <description>把一周里 ETHFI、PEPE、BCH、SUI 的亏损单逐笔拆开，分清体系内的正常磨损和怕踏空导致的无逻辑单，再讲为什么止损和仓位是唯一的保命线。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -846,7 +846,7 @@
       <title>第27课 · 行情阶段的划分与仓位管理</title>
       <link>https://blog.yingqiu.me/posts/bit-course-27/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-27/</guid>
-      <description>完整过一遍交易体系的三个维度：春夏秋冬的市场周期、一个币从启动到箱体的六个有逻辑点位，以及决定心态的分仓低杠杆，再用亏掉的四十万刀做对照。</description>
+      <description>交易体系的三个维度：市场周期决定该不该做，一个币从生到死的六个点位决定在哪做，分仓低杠杆决定拿不拿得住；用亏掉的四十万刀做反例。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -861,7 +861,7 @@
       <title>第28课 · 箱体震荡中的突破与止损</title>
       <link>https://blog.yingqiu.me/posts/bit-course-28/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-28/</guid>
-      <description>复盘大饼高位箱体里的两笔单子：箱底向下突破的短空和假突破后的多单，讲清为什么不能直接追、拐点和止损止盈放哪。</description>
+      <description>高位箱体里只有两个位置有逻辑：上沿下来的第一次反弹和盘整好之后的突破。用一笔短空和一笔假突破多单讲突破为什么不追、止损止盈放哪。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -876,7 +876,7 @@
       <title>第29课 · 主升浪与箱体中的进出场逻辑</title>
       <link>https://blog.yingqiu.me/posts/bit-course-29/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-29/</guid>
-      <description>用 CEL 和 TRB 两段行情讲清：山寨启动先看大饼周期，再划压力位，突破、承接、分歧、二波每一步怎么进怎么出。</description>
+      <description>山寨能不能做先看大饼周期，再划压力位。用 CEL 讲主升浪里小分歧只承接不突破、大分歧后等二波，用 TRB 讲箱体结构的币只能等突破。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -891,7 +891,7 @@
       <title>第30课 · 逆势短空与分批止盈</title>
       <link>https://blog.yingqiu.me/posts/bit-course-30/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-30/</guid>
-      <description>复盘 PEPE 突破多单、大饼趋势线单的分批止盈和两次失败的短空，讲清箱体里为什么预期要小、止盈要分批、箱体顶不能空。</description>
+      <description>箱体内部的单子不是主升，预期要小、止盈要分批；箱体顶没有做空逻辑，没有高位五浪和假突破就只能短空。用大饼趋势线单和 PEPE 两笔单子说明。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -906,7 +906,7 @@
       <title>第31课 · 龙头识别与第二波机会</title>
       <link>https://blog.yingqiu.me/posts/bit-course-31/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-31/</guid>
-      <description>以太暴拉后山寨季开启，复盘为什么选 PEOPLE、为什么敢在前高前打突破、怎么判断谁是龙头，以及为什么要盯龙头的二波。</description>
+      <description>以太暴拉之后第一反应是找山寨龙头：选前面有过异动的币，情绪明牌时敢在前高前打突破，龙头看谁最流畅，后面的机会在龙头二波。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
@@ -921,7 +921,7 @@
       <title>第32课 · 龙头延续与补涨机会的取舍</title>
       <link>https://blog.yingqiu.me/posts/bit-course-32/</link>
       <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-32/</guid>
-      <description>PEOPLE 二波怎么看、下周两个相对确定的机会、为什么 PEPE 不值得再盯、补涨为什么只是退路，以及追高时仓位和止损怎么配。</description>
+      <description>龙头突破回踩后当主升浪刚启动看，只盯最强的两只；补涨永远是错过龙头之后的退路；追高就降仓位、放合理止损，不反复挨小止损。</description>
       <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
       <language>zh-CN</language>
       <category>笔谈</category>
