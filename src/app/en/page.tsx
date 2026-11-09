@@ -61,8 +61,8 @@ export default function EnglishIndexPage() {
         <h1>Five sections</h1>
         <p>
           Moments are the self of now, Old Letters the self of then, Music what
-          I love, Quest what I seek, and Quotes what I meet in other people&apos;s
-          words and keep.
+          I love, Quest what I seek, and Essays what I write down myself: long-form
+          pieces and edited notes.
         </p>
       </header>
       <div className="category-grid">

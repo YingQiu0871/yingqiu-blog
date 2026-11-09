@@ -1079,7 +1079,7 @@ h3,
 .cat-jiujian { color: #9a6b33; background: rgba(217, 160, 102, 0.16); }
 .cat-liusheng { color: #2270a8; background: rgba(95, 178, 232, 0.16); }
 .cat-qiushu { color: #2f5fae; background: rgba(74, 127, 212, 0.15); }
-.cat-shiju { color: #6f4fa6; background: rgba(155, 127, 212, 0.16); }
+.cat-bitan { color: #6f4fa6; background: rgba(155, 127, 212, 0.16); }
 
 .card-original-year {
   color: #8a6d3f;
@@ -1090,7 +1090,7 @@ h3,
 :root[data-theme='dark'] .cat-jiujian { color: #e0b880; }
 :root[data-theme='dark'] .cat-liusheng { color: #8fc9f0; }
 :root[data-theme='dark'] .cat-qiushu { color: #86a9e8; }
-:root[data-theme='dark'] .cat-shiju { color: #b49ce0; }
+:root[data-theme='dark'] .cat-bitan { color: #b49ce0; }
 :root[data-theme='dark'] .card-original-year { color: #e0b880; }
 
 .card-cover {
@@ -1928,5 +1928,66 @@ a.tag:hover {
   .column-feature-cta,
   .column-feature-stages a {
     transition: none;
+  }
+}
+
+/* Flat column (chapters): count line under the heading, previous / next links under a post. */
+.column-count {
+  margin-top: 6px;
+  color: var(--blue);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+.chapter-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 28px;
+}
+.chapter-nav-link {
+  display: grid;
+  gap: 4px;
+  padding: 16px 20px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease,
+    background 200ms ease;
+}
+.chapter-nav-link:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--pink) 60%, var(--glass-border));
+  background: color-mix(in srgb, var(--pink) 10%, var(--glass));
+}
+.chapter-nav-link span {
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.chapter-nav-link strong {
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+.chapter-nav-link:hover strong {
+  color: var(--pink-deep);
+}
+.chapter-nav-next {
+  text-align: right;
+}
+@media (max-width: 640px) {
+  .chapter-nav {
+    grid-template-columns: 1fr;
+  }
+  .chapter-nav-spacer {
+    display: none;
+  }
+  .chapter-nav-next {
+    text-align: left;
   }
 }

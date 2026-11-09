@@ -14,7 +14,7 @@ const CATEGORY_LABELS = {
   jiujian: { en: 'Old Letters', zh: '旧笺' },
   liusheng: { en: 'Music', zh: '流声' },
   qiushu: { en: 'Quest', zh: '求索' },
-  shiju: { en: 'Quotes', zh: '拾句' },
+  bitan: { en: 'Essays', zh: '笔谈' },
 };
 
 const escapeXml = (value) =>

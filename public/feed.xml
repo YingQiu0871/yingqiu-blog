@@ -5,7 +5,2196 @@
     <link>https://blog.yingqiu.me/</link>
     <description>Notes, letters and fragments by Yingqiu — life, old writings, music, reading, and the long road of learning.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 15 Aug 2026 15:31:01 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 11:47:50 GMT</lastBuildDate>
+    <item>
+      <title>Overview · What this course covers and how to read it</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-00/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-00/</guid>
+      <description>Where the 32 lessons come from, how they were edited, the arc of the course, and the rules that run through every session.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Market Cycles</category>
+      <category>Review</category>
+    </item>
+    <item>
+      <title>Lesson 01 · Consolidation and Trade Selection After a Trend Ends</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-01/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-01/</guid>
+      <description>Why a finished trend always turns into a range, why trading inside the box has no edge, and the three conditions of a good trade.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Market Cycles</category>
+      <category>Range Trading</category>
+      <category>Take Profit</category>
+      <category>Counter-trend</category>
+    </item>
+    <item>
+      <title>Lesson 02 · Reading a Range and How to Review Charts</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-02/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-02/</guid>
+      <description>How a trading box forms and matures, where a short inside it has any edge, and a step-by-step method for daily chart review.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Range Trading</category>
+      <category>Review</category>
+      <category>False Breakouts</category>
+      <category>Main Uptrend</category>
+    </item>
+    <item>
+      <title>Lesson 03 · Breakout Entries and the Cost of Counter-trend Trades</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-03/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-03/</guid>
+      <description>A trade-by-trade review of one week: big versus small corrections inside an uptrend, why counter-trend shorts fail, and why position splitting saved the curve.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Breakouts</category>
+      <category>Counter-trend</category>
+      <category>False Breakouts</category>
+      <category>Position Sizing</category>
+    </item>
+    <item>
+      <title>Lesson 04 · Psychology Under Drawdown and the Long Thesis</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-04/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-04/</guid>
+      <description>A week of TRB, SOL, GST, LINK and ARK trades reviewed: why counter-trend entries fail, how oversizing kills stops, and where a leader uptrend is entered.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Counter-trend</category>
+      <category>Position Sizing</category>
+      <category>Psychology</category>
+      <category>Leaders</category>
+    </item>
+    <item>
+      <title>Lesson 05 · Breakout Entries and Stop Execution</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-05/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-05/</guid>
+      <description>A week of breakout trades on TRB, LINK, ETH, ORDI and BNT, why high-level breakouts fail, and a three-month roadmap for BTC and ETH.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Breakouts</category>
+      <category>Stop Loss</category>
+      <category>Position Sizing</category>
+      <category>Market Environment</category>
+    </item>
+    <item>
+      <title>Lesson 06 · Entry Points and Emotional Control</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-06/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-06/</guid>
+      <description>A trade-by-trade review of a losing week: entries made too high, stops placed wrong, counter-trend tilt, and why catching every leader still made no money.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Review</category>
+      <category>Psychology</category>
+      <category>Counter-trend</category>
+      <category>Leaders</category>
+    </item>
+    <item>
+      <title>Lesson 07 · Large-Scale Breakouts and Trading Psychology</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-07/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-07/</guid>
+      <description>Why a breakout that chases must be sized light, how repeated small-stop attempts win when the big picture is right, and the altcoin watchlist with targets.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Breakouts</category>
+      <category>Review</category>
+      <category>Position Sizing</category>
+      <category>Coin Selection</category>
+    </item>
+    <item>
+      <title>Lesson 08 · Reading Trends and Opportunities in a Correction</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-08/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-08/</guid>
+      <description>Why BTC near 42,000 gets hard to trade, why alts lack independent moves, and how the USTC and BIGTIME runs show which positions in a leader are worth taking.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Market Environment</category>
+      <category>Leaders</category>
+      <category>Correction Scale</category>
+      <category>Main Uptrend</category>
+    </item>
+    <item>
+      <title>Lesson 09 · Catch-up Rallies and Exit Signals at the End of a Move</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-09/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-09/</guid>
+      <description>How leaders like ORDI and BIGTIME move in step with BTC, when capital retreats, and how to trade divergences in a main uptrend.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Leaders</category>
+      <category>Catch-up Rallies</category>
+      <category>Resonance</category>
+      <category>Market Cycles</category>
+    </item>
+    <item>
+      <title>Lesson 10 · Executing Stops and Trading Psychology</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-10/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-10/</guid>
+      <description>Where a stop belongs, three signs of a stable edge, why understanding a chart is not the same as trading it, and an ORDI long reviewed.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Stop Loss</category>
+      <category>Psychology</category>
+      <category>Trend Following</category>
+      <category>Position Sizing</category>
+    </item>
+    <item>
+      <title>Lesson 11 · What Leaders Have in Common During Rotation</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-11/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-11/</guid>
+      <description>BTC at the top of its box, why ETH must hold 2100, and why a market that changes its leader every day is a trap worth cutting exposure for.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Leaders</category>
+      <category>Market Environment</category>
+      <category>Range Trading</category>
+      <category>Position Sizing</category>
+    </item>
+    <item>
+      <title>Lesson 12 · Counter-trend Risk and the Stop-Loss Mindset</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-12/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-12/</guid>
+      <description>A review of a losing week in WLD, INJ and ACE: why counter-trend shorts have no solution, why every trade carries a stop, and why size must come down.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Counter-trend</category>
+      <category>Stop Loss</category>
+      <category>Position Sizing</category>
+      <category>Psychology</category>
+    </item>
+    <item>
+      <title>Lesson 13 · Being Bullish Is Not the Same as Buying</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-13/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-13/</guid>
+      <description>Why BTC at a high is bullish but not a buy, the ETH breakout signal to wait for, leverage limits, and why news never changes a trend.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Market Environment</category>
+      <category>Range Trading</category>
+      <category>Position Sizing</category>
+      <category>Psychology</category>
+    </item>
+    <item>
+      <title>Lesson 14 · Choose Markets That Follow Rules</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-14/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-14/</guid>
+      <description>A weekly trade review: why manipulated coins are untouchable, breakout entries on TRB and ICP, and exit discipline on ORDI at the top.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Review</category>
+      <category>Breakouts</category>
+      <category>Main Uptrend</category>
+      <category>Leaders</category>
+    </item>
+    <item>
+      <title>Lesson 16 · Patience and Rhythm in a Range</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-16/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-16/</guid>
+      <description>BTC is in the tail end of a rebound: stay long-biased but trade short, ignore news, and watch for ETH to lead the next leg.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Market Environment</category>
+      <category>Take Profit</category>
+      <category>Position Sizing</category>
+      <category>Psychology</category>
+    </item>
+    <item>
+      <title>Lesson 17 · Space and Breakout Logic in Trend Trading</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-17/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-17/</guid>
+      <description>Two altcoin breakout longs and two counter-trend shorts show the three conditions for a trend trade and why shorts are so hard to hold.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Trend Following</category>
+      <category>Breakouts</category>
+      <category>Counter-trend</category>
+      <category>Leaders</category>
+    </item>
+    <item>
+      <title>Lesson 18 · The Scale and Cycle of a Correction</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-18/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-18/</guid>
+      <description>How to size the correction after a two-month BTC rally, why a counter-trend short can be held, and what each direction out of the range means.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Correction Scale</category>
+      <category>Market Cycles</category>
+      <category>Counter-trend</category>
+      <category>Review</category>
+    </item>
+    <item>
+      <title>Lesson 19 · Reading Counter-trend Trades from the Market Environment</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-19/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-19/</guid>
+      <description>A review of last week’s TIA and BTC shorts and four longs, showing why identical setups diverge and how to handle counter-trend trades.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Counter-trend</category>
+      <category>Market Environment</category>
+      <category>Resonance</category>
+      <category>Review</category>
+    </item>
+    <item>
+      <title>Lesson 20 · Trading Logic Inside the Market Environment</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-20/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-20/</guid>
+      <description>Reviewing the BTC second wave and the TIA, ZETA, ORDI, LPT and ICP trades, separating resonance plays from independent sector moves.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Resonance</category>
+      <category>Main Uptrend</category>
+      <category>Market Environment</category>
+      <category>Review</category>
+    </item>
+    <item>
+      <title>Lesson 21 · Choosing Between Resonance and Catch-up Trades</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-21/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-21/</guid>
+      <description>A review of the week BTC ran to 65000: why PEPE was the trade, why DOGE, LTC and SOL catch-ups felt bad, and the two setups to wait for.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Resonance</category>
+      <category>Catch-up Rallies</category>
+      <category>Leaders</category>
+      <category>Market Environment</category>
+    </item>
+    <item>
+      <title>Lesson 23 · Market Cycles and Short-term Opportunities</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-23/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-23/</guid>
+      <description>Why a winter market can still carry one or two coins, a seven-trade walk through PEPE on the five-minute chart, and a frank review of my own mistakes on it.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Market Cycles</category>
+      <category>Leaders</category>
+      <category>Main Uptrend</category>
+      <category>Review</category>
+    </item>
+    <item>
+      <title>Lesson 24 · Pacing a Correction and Spotting the Leader</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-24/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-24/</guid>
+      <description>Why BTC is not correcting the usual 20 percent, how to stay aggressive in a hot market, and why leaders that rally with BTC matter.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Correction Scale</category>
+      <category>Leaders</category>
+      <category>Resonance</category>
+      <category>Market Environment</category>
+    </item>
+    <item>
+      <title>Lesson 25 · Following Market Mood and Building a System</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-25/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-25/</guid>
+      <description>A missed perfect rebound entry, why a light left-side base position makes sense in a bull mood, and how drawdowns build a trading system.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Market Cycles</category>
+      <category>Market Environment</category>
+      <category>Review</category>
+      <category>Psychology</category>
+    </item>
+    <item>
+      <title>Lesson 26 · Reviewing Losses and Regaining Discipline</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-26/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-26/</guid>
+      <description>A trade-by-trade review of a losing week on ETHFI, PEPE, BCH and SUI, separating system losses from FOMO mistakes.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Review</category>
+      <category>Stop Loss</category>
+      <category>Psychology</category>
+      <category>Counter-trend</category>
+    </item>
+    <item>
+      <title>Lesson 27 · Market Stages and Position Management</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-27/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-27/</guid>
+      <description>The full trading framework: seasonal market cycles, the six logical entry points in the life of a coin, and why sizing decides your psychology.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Market Cycles</category>
+      <category>Range Trading</category>
+      <category>Main Uptrend</category>
+      <category>Position Sizing</category>
+    </item>
+    <item>
+      <title>Lesson 28 · Breakouts and Stop Losses Inside a Range</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-28/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-28/</guid>
+      <description>Two trades from a BTC high-level range: a short on the downside break and a long on the false breakout, with entry timing and stops.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Range Trading</category>
+      <category>Breakouts</category>
+      <category>False Breakouts</category>
+      <category>Stop Loss</category>
+    </item>
+    <item>
+      <title>Lesson 29 · Entries and Exits in Main Uptrends and Ranges</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-29/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-29/</guid>
+      <description>CEL and TRB as case studies: read the BTC cycle first, mark resistance, then trade breakouts, pullbacks and divergence waves.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Main Uptrend</category>
+      <category>Range Trading</category>
+      <category>Breakouts</category>
+      <category>Resonance</category>
+    </item>
+    <item>
+      <title>Lesson 30 · Counter-trend Shorts and Scaling Out</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-30/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-30/</guid>
+      <description>A PEPE breakout long, a BTC trendline trade exited in three parts, and two failed PEPE shorts explain why ranges demand modest expectations.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Take Profit</category>
+      <category>Range Trading</category>
+      <category>Counter-trend</category>
+      <category>Breakouts</category>
+    </item>
+    <item>
+      <title>Lesson 31 · Spotting the Leader and the Second Wave</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-31/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-31/</guid>
+      <description>After the ETH surge, how PEOPLE was chosen, why the breakout was taken early, and why the next move belongs to the leader.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Leaders</category>
+      <category>Coin Selection</category>
+      <category>Market Cycles</category>
+      <category>Catch-up Rallies</category>
+    </item>
+    <item>
+      <title>Lesson 32 · Leader Continuation Versus Catch-up Trades</title>
+      <link>https://blog.yingqiu.me/en/posts/bit-course-32/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/bit-course-32/</guid>
+      <description>Reading the second wave in PEOPLE, two likely setups for the week, why catch-up trades are a fallback, and sizing when chasing.</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Essays</category>
+      <category>Bit Langlang Course</category>
+      <category>Trading</category>
+      <category>Leaders</category>
+      <category>Catch-up Rallies</category>
+      <category>Main Uptrend</category>
+      <category>Stop Loss</category>
+    </item>
+    <item>
+      <title>总览 · 这门课讲了什么，怎么读</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-00/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-00/</guid>
+      <description>32 场直播课的整理说明：材料来源、整理原则、课程脉络，以及贯穿全课的几条核心规则。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>情绪周期</category>
+      <category>复盘</category>
+    </item>
+    <item>
+      <title>第01课 · 趋势结束后的震荡与交易选择</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-01/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-01/</guid>
+      <description>主跌浪之后的反弹为什么必然转为震荡，箱体内部为什么没有确定性，以及一笔好交易需要的开仓逻辑、小止损与持仓心态。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>情绪周期</category>
+      <category>箱体震荡</category>
+      <category>止盈</category>
+      <category>逆势单</category>
+    </item>
+    <item>
+      <title>第02课 · 箱体震荡的区间判断与复盘方法</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-02/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-02/</guid>
+      <description>用 TRB 日线讲清一个箱体怎样从初期走到末期、箱体内部为什么没有确定性、空单该等哪种结构，再带着大饼 15 分钟图演示每天的复盘方法。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>箱体震荡</category>
+      <category>复盘</category>
+      <category>假突破</category>
+      <category>主升浪</category>
+    </item>
+    <item>
+      <title>第03课 · 突破进场与逆势交易的得失</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-03/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-03/</guid>
+      <description>逐单复盘一周的 STORJ、BSV、WLD、SOL、TRB、MINA 交易，讲清大分歧与小分歧的不同做法、为什么不做逆势单、分仓为什么是容错的核心。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>突破</category>
+      <category>逆势单</category>
+      <category>假突破</category>
+      <category>仓位</category>
+    </item>
+    <item>
+      <title>第04课 · 浮盈回撤中的心态与多头逻辑</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-04/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-04/</guid>
+      <description>复盘一周里 TRB、SOL、GST、LINK、ARK 的多空单子，讲逆势单为什么没有好下场、重仓怎样毁掉有效止损，以及一段标准龙头主升浪该在哪介入、哪里止损。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>逆势单</category>
+      <category>仓位</category>
+      <category>心态</category>
+      <category>龙头</category>
+    </item>
+    <item>
+      <title>第05课 · 突破进场与止损执行</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-05/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-05/</guid>
+      <description>复盘 TRB、LINK、以太、ORDI、BNT 一周的突破单，讲高位为什么不能打突破、空单该开在哪、重仓加在流动性差的币上有多危险，再给出大饼和以太未来三个月的节奏预演。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>突破</category>
+      <category>止损</category>
+      <category>仓位</category>
+      <category>市场环境</category>
+    </item>
+    <item>
+      <title>第06课 · 进场点位与心态控制</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-06/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-06/</guid>
+      <description>逐笔复盘一周亏损单，找出进场做高、止损放错、逆势上头三个病根，再清点这轮龙头为什么都抓到却没赚钱，并给出下周关注的几只币。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>复盘</category>
+      <category>心态</category>
+      <category>逆势单</category>
+      <category>龙头</category>
+    </item>
+    <item>
+      <title>第07课 · 大级别突破与交易心态</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-07/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-07/</guid>
+      <description>复盘一周里逻辑相同的突破单，讲清追高为什么必须轻仓、方向对了就反复试错、抓大放小的进场原则，再逐个给出下周关注的山寨及持仓目标和止损。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>突破</category>
+      <category>复盘</category>
+      <category>仓位</category>
+      <category>选币</category>
+    </item>
+    <item>
+      <title>第08课 · 调整阶段的趋势与机会判断</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-08/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-08/</guid>
+      <description>大饼反弹到 4 万 2 后为什么难做，山寨为何没有独立行情，再用 USTC 和 BIGTIME 讲清主升浪里哪些位置能做、哪些是垃圾行情。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>市场环境</category>
+      <category>龙头</category>
+      <category>调整级别</category>
+      <category>主升浪</category>
+    </item>
+    <item>
+      <title>第09课 · 行情末期的补涨与撤退信号</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-09/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-09/</guid>
+      <description>以 ORDI 和 BIGTIME 为例，讲龙头与大饼共振的节奏、大饼见顶后资金撤退与补涨的规律，以及主升浪中两次分歧承接的做法。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>龙头</category>
+      <category>补涨</category>
+      <category>共振</category>
+      <category>情绪周期</category>
+    </item>
+    <item>
+      <title>第10课 · 止损执行与交易心态</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-10/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-10/</guid>
+      <description>讲止损的核心思路、稳定盈利的三个标志、看得懂与做得对的区别，并复盘一笔 ORDI 顺势多单的进场、止损与离场。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>止损</category>
+      <category>心态</category>
+      <category>顺势</category>
+      <category>仓位</category>
+    </item>
+    <item>
+      <title>第11课 · 市场轮动中的龙头共性</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-11/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-11/</guid>
+      <description>大饼箱体高位的两个确定与两个不确定、以太守住 2100 的意义，以及 ORDI 见顶后市场每天换龙头的轮动为什么不好做、为什么要降仓。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>龙头</category>
+      <category>市场环境</category>
+      <category>箱体震荡</category>
+      <category>仓位</category>
+    </item>
+    <item>
+      <title>第12课 · 逆势单的风险与止损心态</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-12/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-12/</guid>
+      <description>复盘一周亏掉四万 U 的单子：WLD 箱底反弹、INJ 八笔逆势空单、ACE 的空单与多单，讲逆势单为什么无解、止损为什么必须带、仓位为什么要降。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>逆势单</category>
+      <category>止损</category>
+      <category>仓位</category>
+      <category>心态</category>
+    </item>
+    <item>
+      <title>第13课 · 看多与做多的区别</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-13/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-13/</guid>
+      <description>大饼高位为什么看多却不做多、以太率先突破是什么信号、大饼和以太的短线结构，以及杠杆上限、买定离手和消息不改变趋势的几条原则。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>市场环境</category>
+      <category>箱体震荡</category>
+      <category>仓位</category>
+      <category>心态</category>
+    </item>
+    <item>
+      <title>第14课 · 选择有规律的行情</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-14/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-14/</guid>
+      <description>复盘一周单子：ACE这种没有规律的币为什么不碰，TRB、ICP、以太、大饼、ORDI每笔单的开仓逻辑与止损位置，以及高位边拉边跑的纪律。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>复盘</category>
+      <category>突破</category>
+      <category>主升浪</category>
+      <category>龙头</category>
+    </item>
+    <item>
+      <title>第16课 · 震荡期的耐心与操作节奏</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-16/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-16/</guid>
+      <description>大饼从18000起的反弹已到鱼尾阶段，看多但不做长，调整只有用空间或用时间两种走法；消息只是刺激不改趋势，以太独立走强时才是下一轮大行情的信号。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>市场环境</category>
+      <category>止盈</category>
+      <category>仓位</category>
+      <category>心态</category>
+    </item>
+    <item>
+      <title>第17课 · 顺势交易的空间与突破逻辑</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-17/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-17/</guid>
+      <description>用ICP和BLUR两笔多单讲清顺势做突破的三个条件和市场氛围的决定作用，用大饼和ORDI两笔空单讲逆势单为什么难拿、加速必须减仓，再回答什么叫突破、龙头的特征。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>顺势</category>
+      <category>突破</category>
+      <category>逆势单</category>
+      <category>龙头</category>
+    </item>
+    <item>
+      <title>第18课 · 行情调整的级别与周期</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-18/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-18/</guid>
+      <description>大饼两个月的上涨结束后怎样定义当下的调整级别，逆势空单为什么时间站在自己这边，调整后向上向下两种剧本的交易含义，以及把一整轮周期当教材的复盘方法。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>调整级别</category>
+      <category>情绪周期</category>
+      <category>逆势单</category>
+      <category>复盘</category>
+    </item>
+    <item>
+      <title>第19课 · 从市场环境识别逆势单</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-19/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-19/</guid>
+      <description>复盘上周 TIA、大饼空单与 ING、OP、以太、ETC 多单，说明同样的图形为何结果两极，以及逆势单该如何处理。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>逆势单</category>
+      <category>市场环境</category>
+      <category>共振</category>
+      <category>复盘</category>
+    </item>
+    <item>
+      <title>第20课 · 市场环境中的交易逻辑</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-20/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-20/</guid>
+      <description>复盘春节前后大饼二波以及 TIA、ZETA、ORDI、LPT、ICP 几笔单子的开仓逻辑，区分共振行情与独立板块行情的介入方式。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>共振</category>
+      <category>主升浪</category>
+      <category>市场环境</category>
+      <category>复盘</category>
+    </item>
+    <item>
+      <title>第21课 · 共振与补涨的机会选择</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-21/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-21/</guid>
+      <description>复盘大饼冲到六万五这一周里 PEPE、狗狗币、LTC、SOL 的机会，讲清共振龙头为什么好做、补涨为什么不流畅，以及下一步的两个机会。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>共振</category>
+      <category>补涨</category>
+      <category>龙头</category>
+      <category>市场环境</category>
+    </item>
+    <item>
+      <title>第23课 · 市场周期与短线机会</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-23/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-23/</guid>
+      <description>大饼冲新高后进入冬天，为什么仍能做 WLD；再以 PEPE 五分钟图走一遍有逻辑的七笔短线，以及我自己在 PEPE 上做烂的反思。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>情绪周期</category>
+      <category>龙头</category>
+      <category>主升浪</category>
+      <category>复盘</category>
+    </item>
+    <item>
+      <title>第24课 · 调整期的节奏与龙头机会</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-24/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-24/</guid>
+      <description>大饼高位反复插针后为什么调不深，调整期该用什么节奏参与，以及为什么跟大饼共振起来的龙头才是下一段最有确定性的机会。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>调整级别</category>
+      <category>龙头</category>
+      <category>共振</category>
+      <category>市场环境</category>
+    </item>
+    <item>
+      <title>第25课 · 顺应市场情绪与建立交易体系</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-25/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-25/</guid>
+      <description>复盘上周大饼调整期里唯一一个绝佳的反弹买点，解释为什么在弱势里左侧建底仓，以及根据市场情绪做趋势、靠总结和回撤建立自己体系的方法。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>情绪周期</category>
+      <category>市场环境</category>
+      <category>复盘</category>
+      <category>心态</category>
+    </item>
+    <item>
+      <title>第26课 · 复盘亏损与找回交易纪律</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-26/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-26/</guid>
+      <description>把一周里 ETHFI、PEPE、BCH、SUI 的亏损单一笔一笔拆开，分清体系内的正常磨损和怕踏空导致的无逻辑单，再讲止损和仓位为什么是命。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>复盘</category>
+      <category>止损</category>
+      <category>心态</category>
+      <category>逆势单</category>
+    </item>
+    <item>
+      <title>第27课 · 行情阶段的划分与仓位管理</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-27/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-27/</guid>
+      <description>完整过一遍交易体系的三个维度：春夏秋冬的市场周期、一个币从启动到箱体的六个有逻辑点位，以及决定心态的分仓低杠杆，再用亏掉的四十万刀做对照。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>情绪周期</category>
+      <category>箱体震荡</category>
+      <category>主升浪</category>
+      <category>仓位</category>
+    </item>
+    <item>
+      <title>第28课 · 箱体震荡中的突破与止损</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-28/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-28/</guid>
+      <description>复盘大饼高位箱体里的两笔单子：箱底向下突破的短空和假突破后的多单，讲清为什么不能直接追、拐点和止损止盈放哪。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>箱体震荡</category>
+      <category>突破</category>
+      <category>假突破</category>
+      <category>止损</category>
+    </item>
+    <item>
+      <title>第29课 · 主升浪与箱体中的进出场逻辑</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-29/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-29/</guid>
+      <description>用 CEL 和 TRB 两段行情讲清：山寨启动先看大饼周期，再划压力位，突破、承接、分歧、二波每一步怎么进怎么出。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>主升浪</category>
+      <category>箱体震荡</category>
+      <category>突破</category>
+      <category>共振</category>
+    </item>
+    <item>
+      <title>第30课 · 逆势短空与分批止盈</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-30/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-30/</guid>
+      <description>复盘 PEPE 突破多单、大饼趋势线单的分批止盈和两次失败的短空，讲清箱体里为什么预期要小、止盈要分批、箱体顶不能空。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>止盈</category>
+      <category>箱体震荡</category>
+      <category>逆势单</category>
+      <category>突破</category>
+    </item>
+    <item>
+      <title>第31课 · 龙头识别与第二波机会</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-31/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-31/</guid>
+      <description>以太暴拉后山寨季开启，复盘为什么选 PEOPLE、为什么敢在前高前打突破、怎么判断谁是龙头，以及为什么要盯龙头的二波。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>龙头</category>
+      <category>选币</category>
+      <category>情绪周期</category>
+      <category>补涨</category>
+    </item>
+    <item>
+      <title>第32课 · 龙头延续与补涨机会的取舍</title>
+      <link>https://blog.yingqiu.me/posts/bit-course-32/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/bit-course-32/</guid>
+      <description>PEOPLE 二波怎么看、下周两个相对确定的机会、为什么 PEPE 不值得再盯、补涨为什么只是退路，以及追高时仓位和止损怎么配。</description>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>笔谈</category>
+      <category>Bit浪浪直播课</category>
+      <category>交易</category>
+      <category>龙头</category>
+      <category>补涨</category>
+      <category>主升浪</category>
+      <category>止损</category>
+    </item>
+    <item>
+      <title>Updates in Molecular Biology · Lecture Notes</title>
+      <link>https://blog.yingqiu.me/en/posts/m1-molecular-biology-update-lectures/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/m1-molecular-biology-update-lectures/</guid>
+      <description>Bilingual lecture notes, one section per class.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>lecture notes</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>OTU06 Structure Elucidation of Natural and Synthetic Compounds · Lecture Notes</title>
+      <link>https://blog.yingqiu.me/en/posts/m1-otu06-structure-elucidation-lectures/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/m1-otu06-structure-elucidation-lectures/</guid>
+      <description>Bilingual lecture notes, one section per class.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>lecture notes</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>OTU3 Gene Cloning Practical</title>
+      <link>https://blog.yingqiu.me/en/posts/m1-otu3-gene-cloning/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/m1-otu3-gene-cloning/</guid>
+      <description>Plasmid extraction and diagnostic restriction digest (day 3).</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>gene cloning</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>TU02 Infectiology</title>
+      <link>https://blog.yingqiu.me/en/posts/m1-tu02-infectiology/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/m1-tu02-infectiology/</guid>
+      <description>Bilingual review of bacteriology, virology, parasitology and mycology, plus lecture notes by class date.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>lecture notes</category>
+      <category>Infectiology</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>TU03 Pathophysiology of Major Functions</title>
+      <link>https://blog.yingqiu.me/en/posts/m1-tu03-pathophysiology/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/m1-tu03-pathophysiology/</guid>
+      <description>Cardiovascular, immune and organ pathophysiology: past-exam key points and an eight-day core-mechanism review, plus lecture notes by class date.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>lecture notes</category>
+      <category>pathophysiology</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>TU04 Immunopathology &amp; Hemostasis</title>
+      <link>https://blog.yingqiu.me/en/posts/m1-tu04-immunopathology-hemostasis/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/m1-tu04-immunopathology-hemostasis/</guid>
+      <description>Immunopathology, hemostasis and thrombosis, in bilingual memorisation format, plus lecture notes by class date.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>lecture notes</category>
+      <category>hemostasis</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>TU05 Cancer Cell Biology</title>
+      <link>https://blog.yingqiu.me/en/posts/m1-tu05-cancer-cell-biology/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/m1-tu05-cancer-cell-biology/</guid>
+      <description>Lecture key points, multiple-choice and true/false bank, fill-in questions and a figure-question answer framework, plus lecture notes by class date.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>lecture notes</category>
+      <category>cancer biology</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>TU06 Pharmaceutical Engineering</title>
+      <link>https://blog.yingqiu.me/en/posts/m1-tu06-pharmaceutical-engineering/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/m1-tu06-pharmaceutical-engineering/</guid>
+      <description>Solid and liquid dosage forms: bilingual closed-book exam pack, plus lecture notes by class date.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>lecture notes</category>
+      <category>pharmaceutical engineering</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>TU07 Medicinal Chemist’s Toolbox</title>
+      <link>https://blog.yingqiu.me/en/posts/m1-tu07-medicinal-chemist-toolbox/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/m1-tu07-medicinal-chemist-toolbox/</guid>
+      <description>Drug discovery strategies, natural products, synthetic routes and named reactions, oral-exam vocabulary, plus lecture notes by class date.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>lecture notes</category>
+      <category>medicinal chemistry</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>TU08 Biotechnology</title>
+      <link>https://blog.yingqiu.me/en/posts/m1-tu08-biotechnology/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/m1-tu08-biotechnology/</guid>
+      <description>Biodrugs, quality control, the gene cloning and expression workflow, and molecular tools, plus lecture notes by class date.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>lecture notes</category>
+      <category>biotechnology</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>TU09 Analytical Sciences</title>
+      <link>https://blog.yingqiu.me/en/posts/m1-tu09-analytical-sciences/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/m1-tu09-analytical-sciences/</guid>
+      <description>An IR interpretation method and NMR class notes, plus lecture notes by class date.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>lecture notes</category>
+      <category>analytical sciences</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>TU17 Pharmaceutical Engineering II</title>
+      <link>https://blog.yingqiu.me/en/posts/tu17-pharmaceutical-engineering-ii/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/tu17-pharmaceutical-engineering-ii/</guid>
+      <description>Liposomes, nanomedicine, polar lipids, micellar solubilisation, cyclodextrins, drug delivery and biological barriers, 3D printing of medicines — key points, formulas and a bilingual glossary.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M2</category>
+      <category>D2HP</category>
+      <category>pharmaceutical engineering</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 1 (Autumn) · Advanced Mathematics</title>
+      <link>https://blog.yingqiu.me/en/posts/y1-advanced-math/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y1-advanced-math/</guid>
+      <description>Handwritten review notes: limits, derivatives, integrals, differential equations, multivariable calculus and linear algebra.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 1</category>
+      <category>mathematics</category>
+      <category>handwritten</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 1 (Spring) · Anatomy and Physiology</title>
+      <link>https://blog.yingqiu.me/en/posts/y1-anatomy-physiology/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y1-anatomy-physiology/</guid>
+      <description>Physiology key points, anatomy exam topics and physiology practice questions.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 1</category>
+      <category>anatomy</category>
+      <category>physiology</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 1 (Autumn) · Chemistry</title>
+      <link>https://blog.yingqiu.me/en/posts/y1-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y1-chemistry/</guid>
+      <description>Handwritten review notes: key points, problems, short answers and chemical equilibrium.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 1</category>
+      <category>chemistry</category>
+      <category>handwritten</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 1 (Spring) · Basic Principles of Marxism</title>
+      <link>https://blog.yingqiu.me/en/posts/y1-marxism/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y1-marxism/</guid>
+      <description>Review points on materialism, dialectics, epistemology, historical materialism and political economy.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 1</category>
+      <category>Marxism</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 1 (Spring) · Organic Chemistry</title>
+      <link>https://blog.yingqiu.me/en/posts/y1-organic-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y1-organic-chemistry/</guid>
+      <description>Key-point summary of organic chemistry, with handwritten notes on multiple-choice questions.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 1</category>
+      <category>organic chemistry</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 1 (Autumn) · University Physics</title>
+      <link>https://blog.yingqiu.me/en/posts/y1-physics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y1-physics/</guid>
+      <description>Handwritten review notes: key problems and multiple-choice questions.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 1</category>
+      <category>physics</category>
+      <category>handwritten</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 1 (Spring) · Visual Basic Programming</title>
+      <link>https://blog.yingqiu.me/en/posts/y1-visual-basic/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y1-visual-basic/</guid>
+      <description>Visual Basic question bank and homework exercises.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 1</category>
+      <category>Visual Basic</category>
+      <category>programming</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 2 (Autumn) · Analytical Chemistry</title>
+      <link>https://blog.yingqiu.me/en/posts/y2-analytical-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y2-analytical-chemistry/</guid>
+      <description>Short-answer and calculation quiz.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 2</category>
+      <category>Analytical Chemistry</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 2 (Autumn) · Biochemistry</title>
+      <link>https://blog.yingqiu.me/en/posts/y2-biochemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y2-biochemistry/</guid>
+      <description>Key points, definitions and long-answer questions.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 2</category>
+      <category>Biochemistry</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 2 (Autumn) · Medical Statistics</title>
+      <link>https://blog.yingqiu.me/en/posts/y2-biostatistics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y2-biostatistics/</guid>
+      <description>Handwritten notes and worked solutions: hypothesis tests, ANOVA, regression and correlation.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 2</category>
+      <category>Medical Statistics</category>
+      <category>handwritten</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 2 (Spring) · Instrumental Analysis</title>
+      <link>https://blog.yingqiu.me/en/posts/y2-instrumental-analysis/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y2-instrumental-analysis/</guid>
+      <description>Multiple choice, fill-in and short answers, experiment design, and handwritten worked calculations.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 2</category>
+      <category>Instrumental Analysis</category>
+      <category>handwritten</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 2 (Autumn) · Laboratory Animal Science</title>
+      <link>https://blog.yingqiu.me/en/posts/y2-laboratory-animal-science/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y2-laboratory-animal-science/</guid>
+      <description>Essay questions from the final exam, with answers.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 2</category>
+      <category>Laboratory Animal Science</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 2 (Autumn) · Outline of Modern Chinese History</title>
+      <link>https://blog.yingqiu.me/en/posts/y2-modern-history/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y2-modern-history/</guid>
+      <description>Key points and topic-by-topic multiple-choice questions.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 2</category>
+      <category>Outline of Modern Chinese History</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 2 (Autumn) · Pharmaceutical English</title>
+      <link>https://blog.yingqiu.me/en/posts/y2-pharmaceutical-english/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y2-pharmaceutical-english/</guid>
+      <description>Key vocabulary and expressions for the exam.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 2</category>
+      <category>Pharmaceutical English</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 2 (Spring) · Pharmacology</title>
+      <link>https://blog.yingqiu.me/en/posts/y2-pharmacology/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y2-pharmacology/</guid>
+      <description>Key drugs, mnemonics, definitions and short-answer questions.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 2</category>
+      <category>Pharmacology</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 2 (Autumn) · Physical Chemistry</title>
+      <link>https://blog.yingqiu.me/en/posts/y2-physical-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y2-physical-chemistry/</guid>
+      <description>Chapter-by-chapter key points and lab notes.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 2</category>
+      <category>Physical Chemistry</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Spring) · Biopharmaceutics</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-biopharmaceutics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-biopharmaceutics/</guid>
+      <description>Summary, definitions, multiple choice and short answers.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Biopharmaceutics</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Spring) · Modern Drug Delivery Systems</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-drug-delivery-systems/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-drug-delivery-systems/</guid>
+      <description>Definitions, short and long questions, and a summary.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Modern Drug Delivery Systems</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Autumn) · Food Therapy and Processing</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-food-therapy/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-food-therapy/</guid>
+      <description>Course paper: green tea in food therapy.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Food Therapy and Processing</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Autumn) · Industrial Pharmaceutics</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-industrial-pharmaceutics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-industrial-pharmaceutics/</guid>
+      <description>Multiple choice, true/false, definitions, short answers, calculations and formulation design.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Industrial Pharmaceutics</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Autumn) · Medicinal Chemistry</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-medicinal-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-medicinal-chemistry/</guid>
+      <description>Summary, structure-activity relationships, mechanisms, definitions, short answers and question banks.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Medicinal Chemistry</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Autumn) · Natural Medicinal Chemistry</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-natural-medicinal-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-natural-medicinal-chemistry/</guid>
+      <description>Definitions, fill-in, short and long answers, exercises, structure drawings and a course paper on extraction of plant actives.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Natural Medicinal Chemistry</category>
+      <category>handwritten</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Autumn) · Pharmaceutical Analysis</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-pharmaceutical-analysis-1/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-pharmaceutical-analysis-1/</guid>
+      <description>Review outline, key points and quality-analysis plans.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Pharmaceutical Analysis</category>
+      <category>handwritten</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Spring) · Pharmaceutical Analysis II</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-pharmaceutical-analysis-2/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-pharmaceutical-analysis-2/</guid>
+      <description>Review outline, fill-in, short answers, comprehensive questions and quality analysis.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Pharmaceutical Analysis II</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Spring) · Pharmaceutical Engineering</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-pharmaceutical-engineering/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-pharmaceutical-engineering/</guid>
+      <description>Definitions, short and long answers, calculations and process flow charts.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Pharmaceutical Engineering</category>
+      <category>handwritten</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Spring) · Pharmaceutical English</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-pharmaceutical-english/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-pharmaceutical-english/</guid>
+      <description>Vocabulary, translation and exercises.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Pharmaceutical English</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Spring) · Pharmaceutical Equipment and Plant Design</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-pharmaceutical-equipment/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-pharmaceutical-equipment/</guid>
+      <description>Definitions, short and long answers, and diagram-reading questions.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Pharmaceutical Equipment and Plant Design</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Autumn) · Pharmaceutical Polymers</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-pharmaceutical-polymers/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-pharmaceutical-polymers/</guid>
+      <description>Definitions, short answers, formulation analysis and abbreviations.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Pharmaceutical Polymers</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Autumn) · Pharmaceutics</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-pharmaceutics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-pharmaceutics/</guid>
+      <description>Exam points, formulation analysis and calculations, definitions.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Pharmaceutics</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Autumn) · Pharmacognosy</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-pharmacognosy/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-pharmacognosy/</guid>
+      <description>Definitions and key points (open-book exam).</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Pharmacognosy</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Spring) · Pharmacokinetics</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-pharmacokinetics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-pharmacokinetics/</guid>
+      <description>Definitions, multiple choice, short answers, calculation methods (handwritten) and design questions.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Pharmacokinetics</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Autumn) · Pharmacy Administration</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-pharmacy-administration/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-pharmacy-administration/</guid>
+      <description>Definitions, multiple choice, short and long answers.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Pharmacy Administration</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 3 (Autumn) · Physical Pharmaceutics</title>
+      <link>https://blog.yingqiu.me/en/posts/y3-physical-pharmaceutics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y3-physical-pharmaceutics/</guid>
+      <description>Key points, definitions, short and long answers, with handwritten notes.</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 3</category>
+      <category>Physical Pharmaceutics</category>
+      <category>handwritten</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 4 (Autumn) · Bioanalysis</title>
+      <link>https://blog.yingqiu.me/en/posts/y4-bioanalysis/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y4-bioanalysis/</guid>
+      <description>Key points, short questions and multiple choice (midterm review).</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 4</category>
+      <category>Bioanalysis</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 4 (Autumn) · Clinical Pharmacy</title>
+      <link>https://blog.yingqiu.me/en/posts/y4-clinical-pharmacy/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y4-clinical-pharmacy/</guid>
+      <description>Multiple choice, short answers and case analysis (midterm review).</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 4</category>
+      <category>Clinical Pharmacy</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 4 (Autumn) · Medicinal Chemistry (new edition)</title>
+      <link>https://blog.yingqiu.me/en/posts/y4-medicinal-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y4-medicinal-chemistry/</guid>
+      <description>Definitions, multiple choice, short and long answers, SAR and colour reactions (midterm review).</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 4</category>
+      <category>Medicinal Chemistry (new edition)</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>Year 4 (Autumn) · New Drug Research and Development</title>
+      <link>https://blog.yingqiu.me/en/posts/y4-new-drug-development/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/y4-new-drug-development/</guid>
+      <description>Worked examples (midterm review).</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>Year 4</category>
+      <category>New Drug Research and Development</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>分子生物学更新 · 课堂笔记</title>
+      <link>https://blog.yingqiu.me/posts/m1-molecular-biology-update-lectures/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/m1-molecular-biology-update-lectures/</guid>
+      <description>分子生物学基础回顾——按上课日期整理的中英对照课堂笔记。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>课堂笔记</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>OTU06 天然与合成化合物结构解析 · 课堂笔记</title>
+      <link>https://blog.yingqiu.me/posts/m1-otu06-structure-elucidation-lectures/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/m1-otu06-structure-elucidation-lectures/</guid>
+      <description>NMR 与 MS 结构解析实践——按上课日期整理的中英对照课堂笔记。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>课堂笔记</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>OTU3 基因克隆实验 · Gene Cloning Practical</title>
+      <link>https://blog.yingqiu.me/posts/m1-otu3-gene-cloning/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/m1-otu3-gene-cloning/</guid>
+      <description>质粒提取与诊断性酶切（Day 3）。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>基因克隆</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>TU02 感染学 · Infectiology</title>
+      <link>https://blog.yingqiu.me/posts/m1-tu02-infectiology/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/m1-tu02-infectiology/</guid>
+      <description>细菌学、病毒学、寄生虫学与真菌学、中英对照复习，附按上课日期整理的课堂笔记。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>课堂笔记</category>
+      <category>感染学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>TU03 主要功能的病理生理学 · Pathophysiology of Major Functions</title>
+      <link>https://blog.yingqiu.me/posts/m1-tu03-pathophysiology/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/m1-tu03-pathophysiology/</guid>
+      <description>心血管、免疫与器官病理生理、往年考点、八天核心机制，附按上课日期整理的课堂笔记。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>课堂笔记</category>
+      <category>病理生理学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>TU04 免疫病理学与止血失调 · Immunopathology &amp; Hemostasis</title>
+      <link>https://blog.yingqiu.me/posts/m1-tu04-immunopathology-hemostasis/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/m1-tu04-immunopathology-hemostasis/</guid>
+      <description>免疫病理、止血与血栓、中英对照背诵版，附按上课日期整理的课堂笔记。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>课堂笔记</category>
+      <category>免疫病理</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>TU05 癌症细胞生物学 · Cancer Cell Biology</title>
+      <link>https://blog.yingqiu.me/posts/m1-tu05-cancer-cell-biology/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/m1-tu05-cancer-cell-biology/</guid>
+      <description>课件知识点、选择 / 判断、填空、图题答题框架，附按上课日期整理的课堂笔记。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>课堂笔记</category>
+      <category>癌症细胞生物学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>TU06 制药工程学 · Pharmaceutical Engineering</title>
+      <link>https://blog.yingqiu.me/posts/m1-tu06-pharmaceutical-engineering/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/m1-tu06-pharmaceutical-engineering/</guid>
+      <description>固体与液体制剂、闭卷考试通关包（中英对照），附按上课日期整理的课堂笔记。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>课堂笔记</category>
+      <category>制药工程</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>TU07 药物化学家的工具箱 · Medicinal Chemist’s Toolbox</title>
+      <link>https://blog.yingqiu.me/posts/m1-tu07-medicinal-chemist-toolbox/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/m1-tu07-medicinal-chemist-toolbox/</guid>
+      <description>药物发现策略、天然产物、合成路线与人名反应、口试词汇，附按上课日期整理的课堂笔记。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>课堂笔记</category>
+      <category>药物化学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>TU08 生物技术学 · Biotechnology</title>
+      <link>https://blog.yingqiu.me/posts/m1-tu08-biotechnology/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/m1-tu08-biotechnology/</guid>
+      <description>生物药、质量控制、基因克隆全流程、分子工具，附按上课日期整理的课堂笔记。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>课堂笔记</category>
+      <category>生物技术</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>TU09 分析科学 · Analytical Sciences</title>
+      <link>https://blog.yingqiu.me/posts/m1-tu09-analytical-sciences/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/m1-tu09-analytical-sciences/</guid>
+      <description>IR 解谱套路、NMR 笔记，附按上课日期整理的课堂笔记。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M1</category>
+      <category>D2HP</category>
+      <category>课堂笔记</category>
+      <category>分析科学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>TU17 制药工程 II · Pharmaceutical Engineering II</title>
+      <link>https://blog.yingqiu.me/posts/tu17-pharmaceutical-engineering-ii/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/tu17-pharmaceutical-engineering-ii/</guid>
+      <description>脂质体、纳米医学、极性脂质、胶束增溶、环糊精、药物递送与生物屏障、药物 3D 打印——重点讲解、公式与中英词表。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M2</category>
+      <category>D2HP</category>
+      <category>制药工程</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大一上 · 高等数学</title>
+      <link>https://blog.yingqiu.me/posts/y1-advanced-math/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y1-advanced-math/</guid>
+      <description>手写复习笔记：函数与极限、导数、积分、微分方程、多元函数与线性代数。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大一</category>
+      <category>高等数学</category>
+      <category>手写笔记</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大一下 · 解剖生理学</title>
+      <link>https://blog.yingqiu.me/posts/y1-anatomy-physiology/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y1-anatomy-physiology/</guid>
+      <description>生理重点、解剖考前知识点与生理学练习题。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大一</category>
+      <category>解剖生理学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大一上 · 化学</title>
+      <link>https://blog.yingqiu.me/posts/y1-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y1-chemistry/</guid>
+      <description>手写复习笔记：考点总结、大题、简答题与化学平衡。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大一</category>
+      <category>化学</category>
+      <category>手写笔记</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大一下 · 马克思主义基本原理</title>
+      <link>https://blog.yingqiu.me/posts/y1-marxism/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y1-marxism/</guid>
+      <description>导论、唯物论、辩证法、认识论、唯物史观与政治经济学复习要点。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大一</category>
+      <category>马克思主义基本原理</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大一下 · 有机化学</title>
+      <link>https://blog.yingqiu.me/posts/y1-organic-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y1-organic-chemistry/</guid>
+      <description>有机化学重点总结，附选择题手写笔记。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大一</category>
+      <category>有机化学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大一上 · 大学物理</title>
+      <link>https://blog.yingqiu.me/posts/y1-physics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y1-physics/</guid>
+      <description>手写复习笔记：必考大题与必考选择题。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大一</category>
+      <category>大学物理</category>
+      <category>手写笔记</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大一下 · VB 程序设计</title>
+      <link>https://blog.yingqiu.me/posts/y1-visual-basic/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y1-visual-basic/</guid>
+      <description>Visual Basic 习题库与课后作业整理。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大一</category>
+      <category>VB</category>
+      <category>程序设计</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大二上 · 分析化学</title>
+      <link>https://blog.yingqiu.me/posts/y2-analytical-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y2-analytical-chemistry/</guid>
+      <description>简答与计算小测。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大二</category>
+      <category>分析化学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大二上 · 生物化学</title>
+      <link>https://blog.yingqiu.me/posts/y2-biochemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y2-biochemistry/</guid>
+      <description>终极重点、重点、名词解释、大题。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大二</category>
+      <category>生物化学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大二上 · 医药数理统计</title>
+      <link>https://blog.yingqiu.me/posts/y2-biostatistics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y2-biostatistics/</guid>
+      <description>手写解题笔记、假设检验、方差分析、回归与相关。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大二</category>
+      <category>医药数理统计</category>
+      <category>手写笔记</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大二下 · 仪器分析</title>
+      <link>https://blog.yingqiu.me/posts/y2-instrumental-analysis/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y2-instrumental-analysis/</guid>
+      <description>选择填空简答、简答、实验设计、手写计算题。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大二</category>
+      <category>仪器分析</category>
+      <category>手写笔记</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大二上 · 实验动物学</title>
+      <link>https://blog.yingqiu.me/posts/y2-laboratory-animal-science/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y2-laboratory-animal-science/</guid>
+      <description>期末论述题整理。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大二</category>
+      <category>实验动物学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大二上 · 中国近现代史纲要</title>
+      <link>https://blog.yingqiu.me/posts/y2-modern-history/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y2-modern-history/</guid>
+      <description>重点整理、分专题选择题。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大二</category>
+      <category>中国近现代史纲要</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大二上 · 药学通识英语</title>
+      <link>https://blog.yingqiu.me/posts/y2-pharmaceutical-english/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y2-pharmaceutical-english/</guid>
+      <description>考试重点词汇与表达。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大二</category>
+      <category>药学通识英语</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大二下 · 药理学</title>
+      <link>https://blog.yingqiu.me/posts/y2-pharmacology/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y2-pharmacology/</guid>
+      <description>重点药物、口诀、名词解释、简答问答。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大二</category>
+      <category>药理学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大二上 · 物理化学</title>
+      <link>https://blog.yingqiu.me/posts/y2-physical-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y2-physical-chemistry/</guid>
+      <description>分章知识点、物化实验。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大二</category>
+      <category>物理化学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三下 · 生物药剂学</title>
+      <link>https://blog.yingqiu.me/posts/y3-biopharmaceutics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-biopharmaceutics/</guid>
+      <description>知识整理、名词解释、选择、问答。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>生物药剂学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三下 · 现代给药系统专论</title>
+      <link>https://blog.yingqiu.me/posts/y3-drug-delivery-systems/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-drug-delivery-systems/</guid>
+      <description>名词解释、小题、大题、综合整理。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>现代给药系统专论</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三上 · 食疗加工学</title>
+      <link>https://blog.yingqiu.me/posts/y3-food-therapy/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-food-therapy/</guid>
+      <description>课程论文：绿茶的食疗探析。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>食疗加工学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三上 · 工业药剂学</title>
+      <link>https://blog.yingqiu.me/posts/y3-industrial-pharmaceutics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-industrial-pharmaceutics/</guid>
+      <description>选择、判断、名词解释、简答、论述、计算、处方设计。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>工业药剂学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三上 · 药物化学</title>
+      <link>https://blog.yingqiu.me/posts/y3-medicinal-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-medicinal-chemistry/</guid>
+      <description>总结、构效关系、名词解释、简答、论述、题库。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>药物化学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三上 · 天然药物化学</title>
+      <link>https://blog.yingqiu.me/posts/y3-natural-medicinal-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-natural-medicinal-chemistry/</guid>
+      <description>名词解释、填空、简答、论述、习题、结构式。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>天然药物化学</category>
+      <category>手写笔记</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三上 · 药物分析</title>
+      <link>https://blog.yingqiu.me/posts/y3-pharmaceutical-analysis-1/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-pharmaceutical-analysis-1/</guid>
+      <description>复习提纲、重点、质量分析方案。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>药物分析</category>
+      <category>手写笔记</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三下 · 药物分析</title>
+      <link>https://blog.yingqiu.me/posts/y3-pharmaceutical-analysis-2/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-pharmaceutical-analysis-2/</guid>
+      <description>复习提纲、填空、简答、综合题、质量分析。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>药物分析</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三下 · 制剂工程学</title>
+      <link>https://blog.yingqiu.me/posts/y3-pharmaceutical-engineering/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-pharmaceutical-engineering/</guid>
+      <description>名词解释、小题、简答、论述、计算、工艺流程图。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>制剂工程学</category>
+      <category>手写笔记</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三下 · 药学英语</title>
+      <link>https://blog.yingqiu.me/posts/y3-pharmaceutical-english/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-pharmaceutical-english/</guid>
+      <description>词汇、翻译、课堂练习、期中复习。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>药学英语</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三下 · 制药设备与车间设计</title>
+      <link>https://blog.yingqiu.me/posts/y3-pharmaceutical-equipment/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-pharmaceutical-equipment/</guid>
+      <description>名词解释、选填、简答、论述、识图题。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>制药设备与车间设计</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三上 · 药用高分子材料</title>
+      <link>https://blog.yingqiu.me/posts/y3-pharmaceutical-polymers/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-pharmaceutical-polymers/</guid>
+      <description>名词解释、简答、处方分析、英文缩写。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>药用高分子材料</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三上 · 药剂学</title>
+      <link>https://blog.yingqiu.me/posts/y3-pharmaceutics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-pharmaceutics/</guid>
+      <description>考点、处方分析及计算、名词解释。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>药剂学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三上 · 生药学</title>
+      <link>https://blog.yingqiu.me/posts/y3-pharmacognosy/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-pharmacognosy/</guid>
+      <description>名词解释与重点（开卷）。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>生药学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三下 · 药物动力学</title>
+      <link>https://blog.yingqiu.me/posts/y3-pharmacokinetics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-pharmacokinetics/</guid>
+      <description>名词解释、选择、填空、简答、计算、设计。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>药物动力学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三上 · 药事管理学</title>
+      <link>https://blog.yingqiu.me/posts/y3-pharmacy-administration/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-pharmacy-administration/</guid>
+      <description>名词解释、选择、简答、论述。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>药事管理学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大三上 · 物理药剂学</title>
+      <link>https://blog.yingqiu.me/posts/y3-physical-pharmaceutics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y3-physical-pharmaceutics/</guid>
+      <description>重点、重中之重、名词解释、简答、论述、课堂划题。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大三</category>
+      <category>物理药剂学</category>
+      <category>手写笔记</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大四上 · 体内药物分析</title>
+      <link>https://blog.yingqiu.me/posts/y4-bioanalysis/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y4-bioanalysis/</guid>
+      <description>重点、小题、选择（期中复习）。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大四</category>
+      <category>体内药物分析</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大四上 · 临床药学</title>
+      <link>https://blog.yingqiu.me/posts/y4-clinical-pharmacy/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y4-clinical-pharmacy/</guid>
+      <description>选择、问答、案例分析（期中复习）。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大四</category>
+      <category>临床药学</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大四上 · 药物化学（新版）</title>
+      <link>https://blog.yingqiu.me/posts/y4-medicinal-chemistry/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y4-medicinal-chemistry/</guid>
+      <description>名词解释、选择、简答、论述、构效关系、颜色反应（期中复习）。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大四</category>
+      <category>药物化学（新版）</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>大四上 · 新药研究与开发</title>
+      <link>https://blog.yingqiu.me/posts/y4-new-drug-development/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/y4-new-drug-development/</guid>
+      <description>实例分析（期中复习）。</description>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>大四</category>
+      <category>新药研究与开发</category>
+      <category>学习笔记</category>
+    </item>
+    <item>
+      <title>TU23 Introduction to Chemometrics</title>
+      <link>https://blog.yingqiu.me/en/posts/tu23-chemometrics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/en/posts/tu23-chemometrics/</guid>
+      <description>Bilingual study notes: introduction to chemometrics, Python and matrices, statistics, PCA, databases and data management.</description>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <language>en-GB</language>
+      <category>Quest</category>
+      <category>M2</category>
+      <category>D2HP</category>
+      <category>chemometrics</category>
+      <category>study notes</category>
+    </item>
+    <item>
+      <title>TU23 化学计量学 · Chemometrics</title>
+      <link>https://blog.yingqiu.me/posts/tu23-chemometrics/</link>
+      <guid isPermaLink="true">https://blog.yingqiu.me/posts/tu23-chemometrics/</guid>
+      <description>化学计量学导论、Python 与矩阵基础、统计分析、PCA、数据库与数据管理——中英对照学习笔记。</description>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
+      <language>zh-CN</language>
+      <category>求索</category>
+      <category>M2</category>
+      <category>D2HP</category>
+      <category>化学计量学</category>
+      <category>学习笔记</category>
+    </item>
     <item>
       <title>A Letter about Phones and Computers (Kunming No.1)</title>
       <link>https://blog.yingqiu.me/en/posts/kunming-no1-letter/</link>
