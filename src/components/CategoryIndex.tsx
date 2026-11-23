@@ -34,8 +34,8 @@ export default function CategoryIndex({
         const hasStages = column.stages.length > 0;
         const meta = hasStages
           ? lang === 'zh'
-            ? `${columnCountLabel(column, lang, total)} · ${column.stages.length} 个阶段`
-            : `${columnCountLabel(column, lang, total)} · ${column.stages.length} stages`
+            ? `${columnCountLabel(column, lang, total)} · ${column.stages.length} 个${column.zh.stageWord}`
+            : `${columnCountLabel(column, lang, total)} · ${column.stages.length} ${column.en.stageWord}`
           : columnCountLabel(column, lang, total);
         return (
           <section key={column.id} className="column-feature" aria-labelledby={`column-${column.id}`}>
@@ -54,7 +54,7 @@ export default function CategoryIndex({
               </Link>
             </div>
             {hasStages && (
-              <ul className="column-feature-stages">
+              <ul className="column-feature-stages" data-count={column.stages.length}>
                 {column.stages.map((stage) => {
                   const count = colPosts.filter((post) => post.stage === stage.id).length;
                   return (

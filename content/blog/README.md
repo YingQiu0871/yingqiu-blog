@@ -75,13 +75,20 @@ stage: y1        # y1 大一 · y2 大二 · y3 大三 · y4 大四 · m1 · m2
 
 没写 `stage` 的笔记不会出现在任何阶段页里。
 
-### 笔谈 › 万倍Bit浪浪直播课（bit-course，不带阶段）
+### 笔谈 › 币圈笔记（crypto-notes，带分组）
 
-`/bitan/bit-langlang/`，英文 `/en/essays/bit-langlang-course/`。32 节直播课的整理稿，文件名 `bit-course-00.mdx`（总览）到 `bit-course-32.mdx`，按文件名排序，所以新加一节时沿用两位数编号即可：
+`/bitan/biquan-biji/`，英文 `/en/essays/crypto-notes/`。关于加密货币的内容都放这里，分三组，每组一页：
+
+| stage | 中文 | 内容 | 排序 |
+| ----- | ---- | ---- | ---- |
+| intro | 入门 | 从零开始的入门笔记 | 按标题 |
+| reading | 读书笔记 | 读交易员长文、专访、推文归档后的归纳 | 按标题 |
+| course | 直播课整理 | 万倍Bit浪浪直播课，`bit-course-00.mdx`（总览）到 `bit-course-32.mdx` | 按文件名，文章底部有上一篇 / 下一篇 |
 
 ```yaml
 category: bitan
-column: bit-course
+column: crypto-notes
+stage: reading   # intro · reading · course
 ```
 
-来源是 io.traderax.net 公开整理的语音转写稿；整理规范（去口语、按话题分节、保留全部方法内容、纠正识别错字）记录在每篇文章开头的来源引用块之后的正文里即可，不另设字段。
+读书笔记一律写成归纳并在开头注明出处、链接原文，不转载原文。直播课原来是独立专栏，旧地址 `/bitan/bit-langlang/` 会跳转到 `course` 分组页。

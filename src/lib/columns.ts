@@ -3,22 +3,26 @@
  * may grow over time; a post joins one via `column` (+ optional `stage`) in
  * its front matter.
  *
- *   求索 › 学习笔记 (study-notes)      zh: /qiushu/xuexi-biji/   en: /en/quest/study-notes/
- *   笔谈 › 万倍Bit浪浪直播课 (bit-course) zh: /bitan/bit-langlang/  en: /en/essays/bit-langlang-course/
+ *   求索 › 学习笔记 (study-notes)   zh: /qiushu/xuexi-biji/   en: /en/quest/study-notes/
+ *   笔谈 › 币圈笔记 (crypto-notes)  zh: /bitan/biquan-biji/    en: /en/essays/crypto-notes/
  *
  * A column either has stages (posts are grouped, each stage gets its own page)
  * or none (posts are listed in slug order on the column page, like chapters).
+ * A stage marked `sequential` is read in slug order with previous / next links,
+ * e.g. the 32-lesson live course under 币圈笔记.
  */
 
 import { getCategory, type CategoryId } from '@/lib/categories';
 
-export const STAGE_IDS = ['y1', 'y2', 'y3', 'y4', 'm1', 'm2'] as const;
+export const STAGE_IDS = ['y1', 'y2', 'y3', 'y4', 'm1', 'm2', 'intro', 'reading', 'course'] as const;
 export type StageId = (typeof STAGE_IDS)[number];
 
 export type Stage = {
   id: StageId;
   zh: { name: string; note: string };
   en: { name: string; note: string };
+  /** Posts form a numbered series: list them by slug and link previous / next. */
+  sequential?: boolean;
 };
 
 export const STUDY_NOTES_STAGES: Stage[] = [
@@ -30,7 +34,26 @@ export const STUDY_NOTES_STAGES: Stage[] = [
   { id: 'm2', zh: { name: 'M2', note: '硕士二年级 · 巴黎萨克雷大学' }, en: { name: 'M2', note: 'Master’s year 2 · Université Paris-Saclay' } },
 ];
 
-export const COLUMN_IDS = ['study-notes', 'bit-course'] as const;
+export const CRYPTO_NOTES_STAGES: Stage[] = [
+  {
+    id: 'intro',
+    zh: { name: '入门', note: '从零开始：概念、工具、风险与规则' },
+    en: { name: 'Basics', note: 'From zero: concepts, tools, risks and rules' },
+  },
+  {
+    id: 'reading',
+    zh: { name: '读书笔记', note: '读交易员的长文、专访和推文归档后做的归纳' },
+    en: { name: 'Reading Notes', note: 'Summaries of traders’ essays, interviews and post archives' },
+  },
+  {
+    id: 'course',
+    zh: { name: '直播课整理', note: '万倍Bit浪浪直播课：2023 年 9 月到 2024 年 6 月的 30 课' },
+    en: { name: 'Course Notes', note: 'Bit Langlang live course: 30 lessons, September 2023 to June 2024' },
+    sequential: true,
+  },
+];
+
+export const COLUMN_IDS = ['study-notes', 'crypto-notes'] as const;
 export type ColumnId = (typeof COLUMN_IDS)[number];
 
 export type ColumnLocaleCopy = {
@@ -39,6 +62,8 @@ export type ColumnLocaleCopy = {
   description: string;
   /** Word for one post in this column, e.g. 笔记 / 课. */
   unit: string;
+  /** Word for the column's groups, e.g. 阶段 / 分组 (en: stages / groups). */
+  stageWord: string;
 };
 
 export type Column = {
@@ -60,33 +85,36 @@ export const COLUMNS: Column[] = [
       slug: 'xuexi-biji',
       description: '从大一到 M2，按学习阶段整理的课程与读书笔记。',
       unit: '篇笔记',
+      stageWord: '阶段',
     },
     en: {
       name: 'Study Notes',
       slug: 'study-notes',
       description: 'Course and reading notes, organised by stage — from first year to M2.',
       unit: 'note',
+      stageWord: 'stages',
     },
     stages: STUDY_NOTES_STAGES,
   },
   {
-    id: 'bit-course',
+    id: 'crypto-notes',
     category: 'bitan',
     zh: {
-      name: '万倍Bit浪浪直播课',
-      slug: 'bit-langlang',
-      description:
-        '2023 年 9 月到 2024 年 6 月的 32 场直播课，从语音转写稿整理成文：情绪周期、箱体与突破、龙头与补涨、止损与心态。',
-      unit: '课',
+      name: '币圈笔记',
+      slug: 'biquan-biji',
+      description: '关于加密货币的笔记：从零开始的入门、读交易员文字后的归纳，以及一门直播课的整理稿。',
+      unit: '篇',
+      stageWord: '分组',
     },
     en: {
-      name: 'Bit Langlang Live Course',
-      slug: 'bit-langlang-course',
+      name: 'Crypto Notes',
+      slug: 'crypto-notes',
       description:
-        'Thirty-two live trading lessons (September 2023 to June 2024), edited from speech transcripts: market cycles, ranges and breakouts, leaders and catch-up moves, stops and psychology.',
-      unit: 'lesson',
+        'Notes on crypto: a primer from zero, summaries of what traders have written and said, and an edited live course.',
+      unit: 'note',
+      stageWord: 'groups',
     },
-    stages: [],
+    stages: CRYPTO_NOTES_STAGES,
   },
 ];
 

@@ -48,7 +48,7 @@ export default function ColumnIndex({ lang, column }: { lang: Locale; column: Co
           </div>
         )
       ) : (
-        <div className="stage-grid">
+        <div className="stage-grid" data-count={column.stages.length}>
           {column.stages.map((stage) => {
             const count = posts.filter((post) => post.stage === stage.id).length;
             const sc = lang === 'zh' ? stage.zh : stage.en;

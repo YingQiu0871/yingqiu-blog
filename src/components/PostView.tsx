@@ -17,6 +17,7 @@ import { getColumn, columnName, columnPath, stageName, stagePath } from '@/lib/c
 import { categoryName, categoryPath, getCategory, tagPath } from '@/lib/categories';
 import { Embed, MusicList, NoteFrame } from '@/components/embeds';
 import { flatColumnPosts } from '@/components/ColumnIndex';
+import { stagePosts } from '@/components/StageIndex';
 
 const mdxOptions = {
   mdxOptions: {
@@ -33,11 +34,16 @@ export default function PostView({ lang, post }: { lang: Locale; post: BlogPost 
   const stage = column?.stages.find((item) => item.id === post.stage);
   const homeHref = lang === 'zh' ? '/' : '/en/';
 
-  // In a flat column (chapters read in order) offer previous / next links.
+  // In a flat column or a sequential stage (chapters read in order) offer previous / next links.
   let previous: BlogPost | undefined;
   let next: BlogPost | undefined;
-  if (column && column.stages.length === 0) {
-    const siblings = flatColumnPosts(lang, column);
+  const siblings =
+    column && column.stages.length === 0
+      ? flatColumnPosts(lang, column)
+      : column && stage?.sequential
+        ? stagePosts(lang, column, stage)
+        : undefined;
+  if (siblings) {
     const index = siblings.findIndex((item) => item.slug === post.slug);
     if (index >= 0) {
       previous = siblings[index - 1];
@@ -121,7 +127,7 @@ export default function PostView({ lang, post }: { lang: Locale; post: BlogPost 
         <nav className="chapter-nav" aria-label={lang === 'zh' ? '上下篇' : 'Previous and next'}>
           {previous ? (
             <Link className="chapter-nav-link chapter-nav-prev" href={postPath(lang, previous.slug)}>
-              <span>{lang === 'zh' ? '上一课' : 'Previous'}</span>
+              <span>{lang === 'zh' ? '上一篇' : 'Previous'}</span>
               <strong>{previous.title}</strong>
             </Link>
           ) : (
@@ -129,7 +135,7 @@ export default function PostView({ lang, post }: { lang: Locale; post: BlogPost 
           )}
           {next ? (
             <Link className="chapter-nav-link chapter-nav-next" href={postPath(lang, next.slug)}>
-              <span>{lang === 'zh' ? '下一课' : 'Next'}</span>
+              <span>{lang === 'zh' ? '下一篇' : 'Next'}</span>
               <strong>{next.title}</strong>
             </Link>
           ) : (
