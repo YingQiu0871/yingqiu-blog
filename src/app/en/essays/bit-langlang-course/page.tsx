@@ -1,19 +1,24 @@
-import type { Metadata } from 'next';
-import { columnPath, getColumn } from '@/lib/columns';
-import { createPageMetadata } from '@/lib/metadata';
-import ColumnIndex from '@/components/ColumnIndex';
+import Link from 'next/link';
+import { stagePath } from '@/lib/columns';
 
 export const dynamic = 'force-static';
 
-const column = getColumn('bit-course')!;
+const target = stagePath('en', 'crypto-notes', 'course');
 
-export function generateMetadata(): Metadata {
-  return createPageMetadata('en', columnPath('en', column.id), {
-    en: { title: column.en.name, description: column.en.description },
-    zh: { title: column.zh.name, description: column.zh.description },
-  });
-}
+export const metadata = { robots: { index: false } };
 
-export default function EnglishBitCoursePage() {
-  return <ColumnIndex lang="en" column={column} />;
+/** The live course moved into the crypto-notes column; keep the old address working. */
+export default function LegacyBitCoursePage() {
+  return (
+    <div className="content-card blog-fallback">
+      <meta httpEquiv="refresh" content={`0; url=${target}`} />
+      <h1>This column has moved</h1>
+      <p>The Bit Langlang live course now lives under Crypto Notes, in the Course Notes group.</p>
+      <div className="blog-fallback-actions">
+        <Link className="button" href={target}>
+          Go to the new address
+        </Link>
+      </div>
+    </div>
+  );
 }

@@ -5,6 +5,14 @@ import { categoryName, categoryPath, getCategory } from '@/lib/categories';
 import { columnPath, stagePath, type Column, type Stage } from '@/lib/columns';
 import PostCard from '@/components/PostCard';
 
+/** Posts of one stage in reading order. */
+export function stagePosts(lang: Locale, column: Column, stage: Stage) {
+  const posts = getColumnPosts(lang, column.id).filter((post) => post.stage === stage.id);
+  return stage.sequential
+    ? posts.sort((a, b) => a.slug.localeCompare(b.slug))
+    : posts.sort((a, b) => (a.title < b.title ? -1 : a.title > b.title ? 1 : 0));
+}
+
 /** One stage (e.g. 大一) of a column, on its own page. */
 export default function StageIndex({
   lang,
@@ -15,10 +23,9 @@ export default function StageIndex({
   column: Column;
   stage: Stage;
 }) {
-  // Course notes read best in title order (e.g. 大一上 before 大一下, TU17 before TU23).
-  const posts = getColumnPosts(lang, column.id)
-    .filter((post) => post.stage === stage.id)
-    .sort((a, b) => (a.title < b.title ? -1 : a.title > b.title ? 1 : 0));
+  // Course notes read best in title order (e.g. 大一上 before 大一下, TU17 before TU23);
+  // a sequential stage is a numbered series and follows its slugs instead.
+  const posts = stagePosts(lang, column, stage);
   const category = getCategory(column.category);
   const colName = lang === 'zh' ? column.zh.name : column.en.name;
   const sc = lang === 'zh' ? stage.zh : stage.en;
@@ -35,7 +42,11 @@ export default function StageIndex({
         <p>{sc.note}</p>
       </header>
 
-      <nav className="stage-tabs" aria-label={lang === 'zh' ? '学习阶段' : 'Stages'}>
+      <nav
+        className="stage-tabs"
+        data-count={column.stages.length}
+        aria-label={lang === 'zh' ? '专栏分组' : 'Column groups'}
+      >
         {column.stages.map((item) => (
           <Link
             key={item.id}
@@ -52,8 +63,8 @@ export default function StageIndex({
         <div className="content-card empty-state">
           <p>
             {lang === 'zh'
-              ? '这一阶段的笔记还在整理中。'
-              : 'Notes for this stage are still being gathered.'}
+              ? '这一部分还在整理中。'
+              : 'This part is still being gathered.'}
           </p>
         </div>
       ) : (

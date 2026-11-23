@@ -1991,3 +1991,9 @@ a.tag:hover {
     text-align: left;
   }
 }
+
+/* Columns with three groups (e.g. 币圈笔记): three equal cells instead of the six-stage layout. */
+.stage-tabs[data-count='3'],
+.column-feature-stages[data-count='3'] {
+  grid-template-columns: repeat(3, 1fr);
+}
