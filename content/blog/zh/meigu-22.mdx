@@ -7,7 +7,7 @@ column: us-stocks
 tags: [美股笔记, 投资, 量化, ETF, 指数]
 ---
 
-2021 年 5 月底，一只叫 MTUM 的 ETF 做了一次例行的半年调仓。富国银行事先估算，它有 68% 的持仓要换掉。调完以后，金融股从原来的 1.5% 变成了三分之一，科技股从 42% 降到 18%，苹果、微软、Adobe 和英伟达这四家 4 月还排在它的前十大持仓里，到 6 月已经一股不剩。
+2021 年 5 月底，一只叫 MTUM 的 ETF 做了一次例行的半年调仓。富国银行事先估算，它有 68% 的持仓要换掉。据研究机构 CFRA 调仓之后的清点，金融股从 4 月底的 1.5% 变成了三分之一，科技股从 42% 降到 18%，原先的前十大持仓有六只被整个剔了出去，苹果和微软都在里面。
 
 基金的名字、代码、费率都没有变，里面装的东西却换了一多半。买因子基金，买到的是一条选股规则，规则今天选中谁、明天选中谁，持有人事先并不知道。
 
@@ -39,13 +39,13 @@ tags: [美股笔记, 投资, 量化, ETF, 指数]
 
 ## 价值因子的十三年
 
-价值是资格最老的因子，也是让人等得最久的一个。从 2007 年到 2020 年 8 月，按 Alpha Architect 转述的一些口径，它经历了有记录以来最深也最长的一次回撤。AQR 的创始人 Cliff Asness 在 2020 年 5 月写道，那一年的第一季度是学术界那个标准价值因子自 1963 年以来最差的一个季度，往前推到 1926 年也只排第二。罗素 1000 价值指数 2020 年全年只涨了 2.8%，同一年大型科技股涨得让人眼花。
+价值是资格最老的因子，也是让人等得最久的一个。Rob Arnott、Campbell Harvey 等四位作者在《金融分析师杂志》上算过一笔账：从 2007 年到 2020 年年中，价值因子的回撤拖了十三年半，2007 年按它建仓的人到这时候亏掉了大约 55%。AQR 的创始人 Cliff Asness 在 2020 年 5 月写道，那一年的第一季度是学术界那个标准价值因子自 1963 年以来最差的一个季度，往前推到 1926 年也只排第二。罗素 1000 价值指数 2020 年全年只涨了 2.8%，同一年罗素 1000 成长指数涨了 38.5%。
 
-Asness 那篇文章要回答的问题是：价值投资是不是死了？他的答案是没有。他算了便宜股和贵股之间的估值差距，正常年份贵的那一组市净率大约是便宜那一组的 5.4 倍，2020 年 3 月底接近 12 倍，在五十多年的数据里排在最高的位置。把科技股去掉、把最大的公司去掉、换成市销率或者市盈率来量，结论都差不多。
+Asness 那篇文章要回答的问题是：价值投资是不是死了？他的答案是没有。他算了便宜股和贵股之间的估值差距：从 1967 年底算起，贵的那一组市净率的中位数大约是便宜那一组的 5.4 倍，2020 年 3 月底接近 12 倍，在五十多年的数据里排在最高的位置。把科技、电信和传媒股去掉，或者把市值最大的那 5% 公司去掉，这个差距照样排在历史数据的百分之九十九以上。他的意思是，价值股落后了这么多年，很大一部分是贵的股票被买得更贵了。
 
-后来呢？罗素 1000 价值指数 2021 年涨了 25.2%，2022 年大盘跌了将近两成，它只跌 7.5%。看上去是回来了。但是 2023 年以后领涨的又是那几家最大的科技公司，价值再一次落在后面。
+后来呢？罗素 1000 价值指数 2021 年涨了 25.2%；2022 年成长指数跌了 29.1%，它只跌 7.5%。看上去是回来了。但是 2023 和 2024 两年领涨的又是成长股，成长指数分别涨了 42.7% 和 33.4%，价值指数只有 11.5% 和 14.4%，再一次落在后面。
 
-读到这里我才明白"因子长期有效"这句话的分量。十三年，足够一个基金经理被换掉三次，足够一个普通人把"长期"两个字忘得干干净净。论文里一条平滑上升的曲线，落到某个具体的人身上，可能是他整个三十多岁。
+读到这里我才明白"因子长期有效"这句话的分量。十三年，足够一个基金经理被换掉好几次。论文里一条平滑上升的曲线，落到某个具体的人身上，可能是他整个三十多岁。
 
 ## 动量崩溃
 
@@ -53,13 +53,13 @@ Asness 那篇文章要回答的问题是：价值投资是不是死了？他的�
 
 为什么偏偏在大跌之后的反弹里出事？大跌过后，"过去的输家"恰好是跌得最深、对大盘最敏感的那批股票，"过去的赢家"则是在下跌里守得住、不怎么跟着大盘动的那一批，动量组合于是不知不觉变成了做多迟钝的、做空一碰就跳的。两位作者算过，这时候输家组合的贝塔可以超过 3，赢家组合的贝塔却不到 0.5。市场一旦掉头向上，被做空的那一边涨得比大盘猛得多。
 
-MTUM 这样的 ETF 只做多、不做空，不会输得那么惨，它的毛病是慢。指数半年才调一次，看的又是过去 6 个月和 12 个月的涨幅，市场转了向它要过很久才跟上。2021 年 5 月那一次就是这样：金融和能源已经涨了大半年它才换进去，后来的报道说它是在价值股的高点接的盘。这只基金的招募说明书里写着，最近一个财年的换手率是 107%，等于一年里把整个组合换了一遍还多。
+MTUM 这样的 ETF 只做多、不做空，不会输得那么惨，它的毛病是慢。指数半年才调一次，看的又是过去 6 个月和 12 个月的涨幅，市场转了向它要过很久才跟上。2021 年 5 月那一次就是这样，金融股已经涨了大半年它才换进去。这只基金 2021 年底的招募说明书里写着，上一个财年的换手率是 107%，等于一年里把整个组合换了一遍还多。
 
 ## 低波动没有说好的那么稳
 
-USMV 买的是波动最小的一篮子美股，公用事业、医疗和必需消费品占得多，科技占得少。它在 2022 年确实管用：大盘跌了将近两成，它只跌了大约 9%。
+USMV 买的是波动最小的一篮子美股，和大盘相比，医疗、必需消费品和公用事业占得多，科技占得少。它在 2022 年确实管用：大盘跌了将近两成，它只跌了 9.4%。
 
-可是 2020 年 2 月到 3 月那一次，它没有护住。按晨星的统计，USMV 从高点到低点跌了 33.1%，全市场指数基金 ITOT 跌 35.0%，几乎没有差别；随后的反弹里它又慢了一大截，到 2020 年底只跟上了市场涨幅的 64%。过去波动小，不等于下一场危机里跌得少。再往后看，截至 2026 年 5 月的五年里，USMV 的回报大约是 45%，同期 SPY 大约是 92%，投资者从里面净撤走了约 130 亿美元。
+可是 2020 年 2 月到 3 月那一次，它没有护住。按晨星的统计，USMV 从高点到低点跌了 33.1%，全市场指数基金 ITOT 跌 35.0%，几乎没有差别；随后的反弹里它又慢了一大截，到 2020 年底只跟上了市场涨幅的 64%。过去波动小，不等于下一场危机里跌得少。再往后看，按 iShares 2026 年 9 月底的基金资料，USMV 过去五年年化 7.52%，折成累计大约是 44%（按 1.0752 的五次方算）。24/7 Wall St. 在 2026 年 5 月做过对比，同样长的五年里它的回报不到 SPY 的一半，投资者从里面净撤走了一百多亿美元。
 
 低波动因子在论文里的卖点是"风险更低、回报不低"。放到最近这五年，它兑现了前半句。
 
@@ -75,17 +75,17 @@ USMV 买的是波动最小的一篮子美股，公用事业、医疗和必需消
 - 因子能赚钱的解释有风险补偿、别人的行为偏差和数据巧合三种，发表之后收益普遍变薄。
 - 价值因子从 2007 年落后到 2020 年，一个"长期有效"的因子可以让人等十几年。
 - 动量在大跌之后的急速反弹里最危险，半年一调的动量 ETF 则常常慢半拍。
-- 因子 ETF 买到的是一条规则，不是一份跑赢大盘的保证。
+- 因子 ETF 买到的是一条选股规则，它不保证哪一年能跑赢大盘。
 
 ## 资料来源
 
 - MTUM 2021 年 5 月调仓前的估算：[Wealth Management, A $16 Billion Quant ETF Is Poised to Reshuffle 68% of Portfolio](https://www.wealthmanagement.com/etfs/a-16-billion-quant-etf-is-poised-to-reshuffle-68-of-portfolio)
-- 调仓后的行业权重：[ETF Trends](https://www.etftrends.com/2021/06/the-top-momentum-etf-struck-a-value-pose-as-expected/)
+- CFRA 对调仓后持仓的清点：[ETF Trends, The Top Momentum ETF Struck a Value Pose as Expected](https://www.etftrends.com/2021/06/the-top-momentum-etf-struck-a-value-pose-as-expected/)
 - MTUM 的费率、换手率和指数编制方法：[iShares Trust Form 497K, SEC EDGAR](https://www.sec.gov/Archives/edgar/data/1100663/000119312521345268/d224119d497k.htm)
 - Fama 和 French 1992 年论文摘要：[The Cross-Section of Expected Stock Returns](https://www.casact.org/abstract/cross-section-expected-stock-returns)
 - 因子发表后的收益衰减：[CFA Institute 对 McLean 和 Pontiff 论文的摘要](https://rpc.cfainstitute.org/research/cfa-digest/2016/06/does-academic-research-destroy-stock-return-predictability-digest-summary)
+- 价值因子十三年半的回撤：[Arnott, Harvey, Kalesnik and Linnainmaa, Reports of Value's Death May Be Greatly Exaggerated, Financial Analysts Journal](https://rpc.cfainstitute.org/research/financial-analysts-journal/2020/reports-of-values-death-may-be-greatly-exaggerated)
 - 价值因子的估值差距：[AQR, Is (Systematic) Value Investing Dead?](https://www.aqr.com/insights/perspectives/is-systematic-value-investing-dead)
-- 2007 到 2020 年价值回撤的说法：[Alpha Architect](https://alphaarchitect.com/the-relationship-between-the-value-premium-and-interest-rates/)
-- 罗素 1000 价值指数的年度回报：[YCharts](https://ycharts.com/indices/^RLV)
+- 罗素 1000 价值和成长指数的年度回报：[FTSE Russell, Russell U.S. Growth and Value Indexes](https://www.lseg.com/content/dam/ftse-russell/en_us/documents/other/russell-us-growth-and-value-indexes.pdf)
 - 动量崩溃：[Daniel and Moskowitz, Momentum Crashes, NBER](https://www.nber.org/system/files/working_papers/w20439/w20439.pdf)
-- USMV 的回撤和近五年表现：[Morningstar](https://www.morningstar.com/funds/how-3-types-low-volatility-etfs-have-fared-during-recent-market-turmoil)、[24/7 Wall St.](https://247wallst.com/investing/2026/05/26/usmvs-minimum-volatility-promise-got-trounced-by-the-sp-500-wait-for-redemption-or-run/)
+- USMV 的年度回报、2020 年回撤和近五年表现：[iShares 基金资料](https://www.ishares.com/us/literature/fact-sheet/usmv-ishares-msci-usa-min-vol-factor-etf-fund-fact-sheet-en-us.pdf)、[Morningstar](https://www.morningstar.com/funds/how-3-types-low-volatility-etfs-have-fared-during-recent-market-turmoil)、[24/7 Wall St.](https://247wallst.com/investing/2026/05/26/usmvs-minimum-volatility-promise-got-trounced-by-the-sp-500-wait-for-redemption-or-run/)
