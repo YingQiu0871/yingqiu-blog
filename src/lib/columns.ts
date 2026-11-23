@@ -5,6 +5,7 @@
  *
  *   求索 › 学习笔记 (study-notes)   zh: /qiushu/xuexi-biji/   en: /en/quest/study-notes/
  *   笔谈 › 币圈笔记 (crypto-notes)  zh: /bitan/biquan-biji/    en: /en/essays/crypto-notes/
+ *   笔谈 › 美股笔记 (us-stocks)     zh: /bitan/meigu-biji/     en: /en/essays/us-stock-notes/
  *
  * A column either has stages (posts are grouped, each stage gets its own page)
  * or none (posts are listed in slug order on the column page, like chapters).
@@ -53,7 +54,7 @@ export const CRYPTO_NOTES_STAGES: Stage[] = [
   },
 ];
 
-export const COLUMN_IDS = ['study-notes', 'crypto-notes'] as const;
+export const COLUMN_IDS = ['study-notes', 'crypto-notes', 'us-stocks'] as const;
 export type ColumnId = (typeof COLUMN_IDS)[number];
 
 export type ColumnLocaleCopy = {
@@ -115,6 +116,27 @@ export const COLUMNS: Column[] = [
       stageWord: 'groups',
     },
     stages: CRYPTO_NOTES_STAGES,
+  },
+  {
+    id: 'us-stocks',
+    category: 'bitan',
+    zh: {
+      name: '美股笔记',
+      slug: 'meigu-biji',
+      description:
+        '从零开始的美股长文，一章一篇：市场和账户、指数与 ETF、读财报和估值、利率与政治、趋势和指标、量化与 AI、人性和风险。',
+      unit: '章',
+      stageWord: '分组',
+    },
+    en: {
+      name: 'US Stock Notes',
+      slug: 'us-stock-notes',
+      description:
+        'A long primer on US stocks from zero, one chapter per post: the market, index funds and ETFs, reading companies, rates and politics, trends and indicators, quant and AI, psychology and risk.',
+      unit: 'chapter',
+      stageWord: 'groups',
+    },
+    stages: [],
   },
 ];
 
