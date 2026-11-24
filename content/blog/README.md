@@ -92,3 +92,14 @@ stage: reading   # intro · reading · course
 ```
 
 读书笔记一律写成归纳并在开头注明出处、链接原文，不转载原文。直播课原来是独立专栏，旧地址 `/bitan/bit-langlang/` 会跳转到 `course` 分组页。
+
+### 笔谈 › 美股笔记（us-stocks，不带分组）
+
+`/bitan/meigu-biji/`，英文 `/en/essays/us-stock-notes/`。一组从零开始的美股长文，`meigu-00.mdx`（总览）到 `meigu-28.mdx`，按文件名排序，文章底部有上一篇 / 下一篇。
+
+```yaml
+category: bitan
+column: us-stocks
+```
+
+每章结尾固定两节：「这一章记住什么」和「资料来源」。数字都要能对上来源；不写博主本人的持仓和盈亏，不推荐具体标的。
